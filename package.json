@@ -1,0 +1,10 @@
+{
+  "name": "vesta-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Investor-facing website for Vesta",
+  "scripts": {
+    "check": "node scripts/check-site.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}
