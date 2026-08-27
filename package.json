@@ -5,7 +5,7 @@
   "description": "Investor-facing website for Vesta",
   "scripts": {
     "render": "node scripts/render-site.mjs",
-    "check": "node scripts/render-site.mjs --check && node --check site.js && node --check scripts/render-site.mjs && node --check content/site-content.mjs && node scripts/check-site.mjs",
+    "check": "node scripts/render-site.mjs --check && node --check vesta-site.js && node --check scripts/render-site.mjs && node --check content/site-content.mjs && node scripts/check-site.mjs",
     "build": "node scripts/render-site.mjs && node scripts/build.mjs"
   }
 }

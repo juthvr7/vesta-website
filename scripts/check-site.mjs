@@ -11,8 +11,8 @@ const siteUrl = "https://juthvr7.github.io/vesta-website/";
 const requiredFiles = [
   "index.html",
   "zh/index.html",
-  "styles.css",
-  "site.js",
+  "vesta-site.css",
+  "vesta-site.js",
   "robots.txt",
   "sitemap.xml",
   "og.png",
@@ -33,14 +33,14 @@ const pages = [
     locale: locales.en,
     lang: "en",
     canonical: siteUrl,
-    stylesheet: "./styles.css",
+    stylesheet: "./vesta-site.css",
   },
   {
     path: "zh/index.html",
     locale: locales.zh,
     lang: "zh-CN",
     canonical: `${siteUrl}zh/`,
-    stylesheet: "../styles.css",
+    stylesheet: "../vesta-site.css",
   },
 ];
 
@@ -100,7 +100,7 @@ for (const page of pages) {
   }
 }
 
-const css = await readFile(fromRoot("styles.css"), "utf8");
+const css = await readFile(fromRoot("vesta-site.css"), "utf8");
 for (const match of css.matchAll(/url\(["']?([^"')]+)["']?\)/g)) {
   const reference = match[1];
   if (reference.startsWith("data:") || reference.startsWith("http")) continue;

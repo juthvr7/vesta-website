@@ -6,8 +6,8 @@ await mkdir(output, { recursive: true });
 
 for (const file of [
   "index.html",
-  "styles.css",
-  "site.js",
+  "vesta-site.css",
+  "vesta-site.js",
   "robots.txt",
   "sitemap.xml",
   "og.png",
