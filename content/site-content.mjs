@@ -58,6 +58,10 @@ export const locales = {
       imageAlt:
         "Conceptual spatial computation journey from a typed graph and layered data through tiled execution planning into terrain, roads, cities, and ecosystems",
       visualLabel: "Concept visual / Graph to world",
+      executionEyebrow: "Execution chain",
+      executionTitle: "Every step stays explicit.",
+      executionBody:
+        "Graph source becomes a validated plan, a deterministic invocation, and an immutable result—without hidden host logic.",
       steps: [
         ["01", "Author", "Typed ports, stable identity, versioned parameters."],
         ["02", "Validate", "Structured diagnostics before a plan can exist."],
@@ -91,6 +95,10 @@ export const locales = {
         "Current Vesta Studio development build showing a 3D viewport, details panel, node network, and desktop workspace",
       captureLabel: "Current development capture",
       captureNote: "Authentic Vesta Studio build — interface and workflows continue to evolve.",
+      detailEyebrow: "Inside Studio",
+      detailTitle: "See the graph and the result together.",
+      detailBody:
+        "Viewport, details, docking, and operation status remain connected in one authoring context.",
       gallery: [
         [
           "Graph to viewport",
@@ -252,6 +260,9 @@ export const locales = {
         "每次请求只走一条可观察的执行链。不隐藏引擎分支，也不复制节点语义。",
       imageAlt: "空间计算概念视觉：类型化 Graph 与分层数据经过分块规划，最终形成地形、道路、城市与生态系统",
       visualLabel: "概念视觉 / 从 Graph 到世界",
+      executionEyebrow: "执行链",
+      executionTitle: "每一步，都保持显式。",
+      executionBody: "Graph 源数据依次成为通过验证的计划、确定性 Invocation 与不可变结果，不隐藏宿主逻辑。",
       steps: [
         ["01", "创作", "类型化端口、稳定身份与版本化参数。"],
         ["02", "验证", "只有结构化诊断通过，才允许生成计划。"],
@@ -283,6 +294,9 @@ export const locales = {
       imageAlt: "当前 Vesta Studio 开发构建，包含三维视口、详情面板、节点网络与桌面工作区",
       captureLabel: "当前开发构建",
       captureNote: "真实 Vesta Studio 截图——界面与工作流仍在持续演进。",
+      detailEyebrow: "Studio 内部",
+      detailTitle: "同时看见 Graph 与结果。",
+      detailBody: "视口、详情、Dock 与算子状态保持在同一创作上下文中。",
       gallery: [
         [
           "Graph 到视口",

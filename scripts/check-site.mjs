@@ -7,7 +7,7 @@ import { locales } from "../content/site-content.mjs";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const fromRoot = (...parts) => resolve(root, ...parts);
 const siteUrl = "https://juthvr7.github.io/vesta-website/";
-const assetVersion = "20260828-page-snap-v3";
+const assetVersion = "20260828-screen-layout-v4";
 
 const requiredFiles = [
   "index.html",
@@ -62,9 +62,14 @@ for (const page of pages) {
     `src="${page.stylesheet.replace("vesta-site.css", "vesta-site.js")}?v=${assetVersion}"`,
     'id="product"',
     'id="workflow"',
+    'id="execution"',
     'id="capabilities"',
+    'id="domains"',
     'id="studio"',
+    'id="studio-details"',
+    'id="available"',
     'id="roadmap"',
+    'id="roadmap-phases"',
     'class="hero-poster"',
     'class="domain-strip"',
     'class="domain-bridge"',
@@ -85,6 +90,12 @@ for (const page of pages) {
   const snapPageCount = [...html.matchAll(/\sdata-snap-page(?:\s|>)/g)].length;
   if (snapPageCount !== 12) {
     throw new Error(`${page.path} has ${snapPageCount} snap pages; expected 12.`);
+  }
+
+  for (const pageNumber of Array.from({ length: 12 }, (_, index) => String(index + 1).padStart(2, "0"))) {
+    if (!html.includes(`data-page="${pageNumber}"`)) {
+      throw new Error(`${page.path} is missing page folio ${pageNumber}.`);
+    }
   }
 
   for (const forbidden of [
@@ -139,6 +150,8 @@ for (const marker of [
   "MAGNETIC_WHEEL_THRESHOLD",
   "buildMagneticStops",
   'querySelectorAll("[data-snap-page]")',
+  'querySelectorAll("[data-snap-page][id]")',
+  "activePage?.id",
   "handleMagneticWheel",
   "passive: false",
   "reducedMotionQuery",

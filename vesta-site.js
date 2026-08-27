@@ -177,7 +177,13 @@ menuQuery.addEventListener?.("change", closeDesktopMenu);
 document.querySelectorAll(".locale-link").forEach((link) => {
   link.addEventListener("click", (event) => {
     const target = new URL(link.href, window.location.href);
-    target.hash = window.location.hash;
+    const activePage = [...document.querySelectorAll("[data-snap-page][id]")]
+      .map((page) => ({
+        page,
+        distance: Math.abs(page.getBoundingClientRect().top),
+      }))
+      .sort((a, b) => a.distance - b.distance)[0]?.page;
+    target.hash = activePage?.id ? `#${activePage.id}` : window.location.hash;
     try {
       window.localStorage.setItem("vesta-locale", link.lang.startsWith("zh") ? "zh" : "en");
     } catch {

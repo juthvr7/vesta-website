@@ -22,8 +22,8 @@
     <link rel="alternate" hreflang="zh-CN" href="https://juthvr7.github.io/vesta-website/zh/">
     <link rel="alternate" hreflang="x-default" href="https://juthvr7.github.io/vesta-website/">
     <link rel="preload" as="image" href="../assets/world-composition.webp" fetchpriority="high">
-    <link rel="stylesheet" href="../vesta-site.css?v=20260828-page-snap-v3">
-    <script src="../vesta-site.js?v=20260828-page-snap-v3" defer></script>
+    <link rel="stylesheet" href="../vesta-site.css?v=20260828-screen-layout-v4">
+    <script src="../vesta-site.js?v=20260828-screen-layout-v4" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">跳至主要内容</a>
@@ -52,7 +52,7 @@
     </header>
 
     <main id="main" data-snap-root>
-      <section class="hero snap-page" id="top" data-hero data-snap-page>
+      <section class="hero snap-page" id="top" data-page="01" data-hero data-snap-page>
         <div class="hero-media" aria-hidden="true">
           <img class="hero-poster" src="../assets/world-composition.webp" alt="" width="1536" height="1024" fetchpriority="high">
           <div class="hero-media-vignette"></div>
@@ -74,7 +74,7 @@
         </div>
       </section>
 
-      <section class="thesis section snap-page" id="product" data-snap-page>
+      <section class="thesis section snap-page" id="product" data-page="02" data-snap-page>
         <p class="section-index" data-reveal>01 / 产品</p>
         <div class="thesis-copy">
           <h2 data-reveal>让世界构建从工具拼接，变成可组合系统。</h2>
@@ -102,7 +102,7 @@
       </section>
 
       <section class="system section paged-section" aria-labelledby="workflow-title">
-        <div class="snap-page system-overview-page" id="workflow" data-snap-page>
+        <div class="snap-page system-overview-page" id="workflow" data-page="03" data-snap-page>
           <div class="section-heading">
             <div>
               <p class="eyebrow" data-reveal><span>02</span>系统链路</p>
@@ -115,7 +115,14 @@
             <figcaption><span><i></i>概念视觉 / 从 Graph 到世界</span><b>GRAPH / PLAN / WORLD</b></figcaption>
           </figure>
         </div>
-        <div class="snap-page system-execution-page" data-snap-page>
+        <div class="snap-page system-execution-page" id="execution" data-page="04" data-snap-page>
+          <div class="section-heading subpage-heading">
+            <div>
+              <p class="eyebrow"><span>02 / B</span>执行链</p>
+              <h2>每一步，都保持显式。</h2>
+            </div>
+            <p>Graph 源数据依次成为通过验证的计划、确定性 Invocation 与不可变结果，不隐藏宿主逻辑。</p>
+          </div>
           <div class="system-stage">
             <div class="system-track" aria-hidden="true"></div>
             <div class="system-steps">
@@ -149,7 +156,7 @@
       </section>
 
       <section class="data-section section paged-section" aria-labelledby="capabilities-title">
-        <div class="snap-page data-model-page" id="capabilities" data-snap-page>
+        <div class="snap-page data-model-page" id="capabilities" data-page="05" data-snap-page>
           <div class="data-layout">
             <div class="data-copy">
               <p class="eyebrow" data-reveal><span>03</span>统一空间数据</p>
@@ -180,7 +187,7 @@
           </div>
           <div class="data-chips" data-reveal><span>Mesh</span><span>Heightfield</span><span>Image2D</span><span>Mask2D</span><span>Field2D</span><span>Curves</span><span>Points</span><span>Instances</span></div>
         </div>
-        <div class="snap-page domain-bridge-page" data-snap-page>
+        <div class="snap-page domain-bridge-page" id="domains" data-page="06" data-snap-page>
           <div class="domain-bridge">
             <div class="domain-bridge-copy">
               <p class="eyebrow"><span>03 / B</span>从数据到领域</p>
@@ -193,7 +200,7 @@
       </section>
 
       <section class="studio section paged-section" aria-labelledby="studio-title">
-        <div class="snap-page studio-overview-page" id="studio" data-snap-page>
+        <div class="snap-page studio-overview-page" id="studio" data-page="07" data-snap-page>
           <div class="section-heading">
             <div>
               <p class="eyebrow" data-reveal><span>04</span>Vesta Studio</p>
@@ -216,7 +223,14 @@
             </figcaption>
           </figure>
         </div>
-        <div class="snap-page studio-details-page" data-snap-page>
+        <div class="snap-page studio-details-page" id="studio-details" data-page="08" data-snap-page>
+          <div class="section-heading subpage-heading">
+            <div>
+              <p class="eyebrow"><span>04 / B</span>Studio 内部</p>
+              <h2>同时看见 Graph 与结果。</h2>
+            </div>
+            <p>视口、详情、Dock 与算子状态保持在同一创作上下文中。</p>
+          </div>
           <div class="studio-gallery">
               <figure class="studio-detail-card" data-reveal style="--delay: 0ms">
                 <div class="studio-detail-media">
@@ -247,7 +261,7 @@
                 <span>03</span><strong>保持响应</strong><p>长时间求值不会阻塞 UI 主线程</p>
               </article></div>
         </div>
-        <div class="snap-page available-page" data-snap-page>
+        <div class="snap-page available-page" id="available" data-page="09" data-snap-page>
           <div class="available-now">
             <div class="available-heading">
               <p class="eyebrow"><span>04 / B</span>当前可用</p>
@@ -278,7 +292,7 @@
       </section>
 
       <section class="future section paged-section" aria-labelledby="roadmap-title">
-        <div class="snap-page architecture-page" id="roadmap" data-snap-page>
+        <div class="snap-page architecture-page" id="roadmap" data-page="10" data-snap-page>
           <div class="section-heading">
             <div>
               <p class="eyebrow" data-reveal><span>05</span>架构</p>
@@ -303,7 +317,7 @@
             </div>
           </div>
         </div>
-        <div class="snap-page roadmap-page" data-snap-page>
+        <div class="snap-page roadmap-page" id="roadmap-phases" data-page="11" data-snap-page>
           <div class="roadmap-block">
             <div class="section-heading">
               <div>
@@ -335,7 +349,7 @@
         </div>
       </section>
 
-      <section class="closing section snap-page" id="preview" data-snap-page>
+      <section class="closing section snap-page" id="preview" data-page="12" data-snap-page>
         <div class="closing-visual" aria-hidden="true"><i></i><i></i><i></i><span>V</span></div>
         <p class="eyebrow"><span>VESTA</span>Vesta / 技术预览</p>
         <h2><span>组合系统，</span><em>塑造世界。</em></h2>

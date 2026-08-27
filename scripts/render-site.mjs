@@ -6,7 +6,7 @@ import { locales } from "../content/site-content.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const siteUrl = "https://juthvr7.github.io/vesta-website/";
-const assetVersion = "20260828-page-snap-v3";
+const assetVersion = "20260828-screen-layout-v4";
 const checkOnly = process.argv.includes("--check");
 
 const escapeHtml = (value) =>
@@ -188,7 +188,7 @@ function renderPage(localeKey, copy) {
     </header>
 
     <main id="main" data-snap-root>
-      <section class="hero snap-page" id="top" data-hero data-snap-page>
+      <section class="hero snap-page" id="top" data-page="01" data-hero data-snap-page>
         <div class="hero-media" aria-hidden="true">
           <img class="hero-poster" src="${base}assets/world-composition.webp" alt="" width="1536" height="1024" fetchpriority="high">
           <div class="hero-media-vignette"></div>
@@ -210,7 +210,7 @@ function renderPage(localeKey, copy) {
         </div>
       </section>
 
-      <section class="thesis section snap-page" id="product" data-snap-page>
+      <section class="thesis section snap-page" id="product" data-page="02" data-snap-page>
         <p class="section-index" data-reveal>${e(copy.thesis.index)}</p>
         <div class="thesis-copy">
           <h2 data-reveal>${e(copy.thesis.title)}</h2>
@@ -223,7 +223,7 @@ function renderPage(localeKey, copy) {
       </section>
 
       <section class="system section paged-section" aria-labelledby="workflow-title">
-        <div class="snap-page system-overview-page" id="workflow" data-snap-page>
+        <div class="snap-page system-overview-page" id="workflow" data-page="03" data-snap-page>
           <div class="section-heading">
             <div>
               <p class="eyebrow" data-reveal><span>02</span>${e(copy.system.eyebrow)}</p>
@@ -236,7 +236,14 @@ function renderPage(localeKey, copy) {
             <figcaption><span><i></i>${e(copy.system.visualLabel)}</span><b>GRAPH / PLAN / WORLD</b></figcaption>
           </figure>
         </div>
-        <div class="snap-page system-execution-page" data-snap-page>
+        <div class="snap-page system-execution-page" id="execution" data-page="04" data-snap-page>
+          <div class="section-heading subpage-heading">
+            <div>
+              <p class="eyebrow"><span>02 / B</span>${e(copy.system.executionEyebrow)}</p>
+              <h2>${e(copy.system.executionTitle)}</h2>
+            </div>
+            <p>${e(copy.system.executionBody)}</p>
+          </div>
           <div class="system-stage">
             <div class="system-track" aria-hidden="true"></div>
             <div class="system-steps">${systemSteps}</div>
@@ -246,7 +253,7 @@ function renderPage(localeKey, copy) {
       </section>
 
       <section class="data-section section paged-section" aria-labelledby="capabilities-title">
-        <div class="snap-page data-model-page" id="capabilities" data-snap-page>
+        <div class="snap-page data-model-page" id="capabilities" data-page="05" data-snap-page>
           <div class="data-layout">
             <div class="data-copy">
               <p class="eyebrow" data-reveal><span>03</span>${e(copy.data.eyebrow)}</p>
@@ -261,7 +268,7 @@ function renderPage(localeKey, copy) {
           </div>
           <div class="data-chips" data-reveal>${dataChips}</div>
         </div>
-        <div class="snap-page domain-bridge-page" data-snap-page>
+        <div class="snap-page domain-bridge-page" id="domains" data-page="06" data-snap-page>
           <div class="domain-bridge">
             <div class="domain-bridge-copy">
               <p class="eyebrow"><span>03 / B</span>${e(copy.composition.bridgeEyebrow)}</p>
@@ -274,7 +281,7 @@ function renderPage(localeKey, copy) {
       </section>
 
       <section class="studio section paged-section" aria-labelledby="studio-title">
-        <div class="snap-page studio-overview-page" id="studio" data-snap-page>
+        <div class="snap-page studio-overview-page" id="studio" data-page="07" data-snap-page>
           <div class="section-heading">
             <div>
               <p class="eyebrow" data-reveal><span>04</span>${e(copy.studio.eyebrow)}</p>
@@ -297,11 +304,18 @@ function renderPage(localeKey, copy) {
             </figcaption>
           </figure>
         </div>
-        <div class="snap-page studio-details-page" data-snap-page>
+        <div class="snap-page studio-details-page" id="studio-details" data-page="08" data-snap-page>
+          <div class="section-heading subpage-heading">
+            <div>
+              <p class="eyebrow"><span>04 / B</span>${e(copy.studio.detailEyebrow)}</p>
+              <h2>${e(copy.studio.detailTitle)}</h2>
+            </div>
+            <p>${e(copy.studio.detailBody)}</p>
+          </div>
           <div class="studio-gallery">${studioGallery}</div>
           <div class="studio-facts">${studioFacts}</div>
         </div>
-        <div class="snap-page available-page" data-snap-page>
+        <div class="snap-page available-page" id="available" data-page="09" data-snap-page>
           <div class="available-now">
             <div class="available-heading">
               <p class="eyebrow"><span>04 / B</span>${e(copy.studio.availableEyebrow)}</p>
@@ -314,7 +328,7 @@ function renderPage(localeKey, copy) {
       </section>
 
       <section class="future section paged-section" aria-labelledby="roadmap-title">
-        <div class="snap-page architecture-page" id="roadmap" data-snap-page>
+        <div class="snap-page architecture-page" id="roadmap" data-page="10" data-snap-page>
           <div class="section-heading">
             <div>
               <p class="eyebrow" data-reveal><span>05</span>${e(copy.architecture.eyebrow)}</p>
@@ -339,7 +353,7 @@ function renderPage(localeKey, copy) {
             </div>
           </div>
         </div>
-        <div class="snap-page roadmap-page" data-snap-page>
+        <div class="snap-page roadmap-page" id="roadmap-phases" data-page="11" data-snap-page>
           <div class="roadmap-block">
             <div class="section-heading">
               <div>
@@ -353,7 +367,7 @@ function renderPage(localeKey, copy) {
         </div>
       </section>
 
-      <section class="closing section snap-page" id="preview" data-snap-page>
+      <section class="closing section snap-page" id="preview" data-page="12" data-snap-page>
         <div class="closing-visual" aria-hidden="true"><i></i><i></i><i></i><span>V</span></div>
         <p class="eyebrow"><span>VESTA</span>${e(copy.closing.eyebrow)}</p>
         <h2><span>${e(copy.closing.titleOne)}</span><em>${e(copy.closing.titleTwo)}</em></h2>
