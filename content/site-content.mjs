@@ -55,6 +55,9 @@ export const locales = {
       title: "Intent becomes a reproducible result.",
       intro:
         "Every request follows one observable execution chain. No hidden engine branch, no duplicated node semantics.",
+      imageAlt:
+        "Conceptual spatial computation journey from a typed graph and layered data through tiled execution planning into terrain, roads, cities, and ecosystems",
+      visualLabel: "Concept visual / Graph to world",
       steps: [
         ["01", "Author", "Typed ports, stable identity, versioned parameters."],
         ["02", "Validate", "Structured diagnostics before a plan can exist."],
@@ -88,6 +91,20 @@ export const locales = {
         "Current Vesta Studio development build showing a 3D viewport, details panel, node network, and desktop workspace",
       captureLabel: "Current development capture",
       captureNote: "Authentic Vesta Studio build — interface and workflows continue to evolve.",
+      gallery: [
+        [
+          "Graph to viewport",
+          "A typed SOP chain, its details, and the CPU reference result remain visible together.",
+          "Vesta Studio screenshot showing a 3D primitive preview and a typed SOP node chain",
+          "studio-graph-view.webp",
+        ],
+        [
+          "Workspace language",
+          "Docking, viewport controls, iconography, and operation status share one visual system.",
+          "Vesta Studio screenshot showing the viewport, details panel, docking tabs, and operation board",
+          "studio-workspace-view.webp",
+        ],
+      ],
       availableEyebrow: "Available now",
       availableTitle: "A working execution spine, not a concept reel.",
       availableBody:
@@ -233,6 +250,8 @@ export const locales = {
       title: "让意图成为可复现的结果。",
       intro:
         "每次请求只走一条可观察的执行链。不隐藏引擎分支，也不复制节点语义。",
+      imageAlt: "空间计算概念视觉：类型化 Graph 与分层数据经过分块规划，最终形成地形、道路、城市与生态系统",
+      visualLabel: "概念视觉 / 从 Graph 到世界",
       steps: [
         ["01", "创作", "类型化端口、稳定身份与版本化参数。"],
         ["02", "验证", "只有结构化诊断通过，才允许生成计划。"],
@@ -264,6 +283,20 @@ export const locales = {
       imageAlt: "当前 Vesta Studio 开发构建，包含三维视口、详情面板、节点网络与桌面工作区",
       captureLabel: "当前开发构建",
       captureNote: "真实 Vesta Studio 截图——界面与工作流仍在持续演进。",
+      gallery: [
+        [
+          "Graph 到视口",
+          "类型化 SOP 链、详情数据与 CPU 参考结果在同一工作区内可见。",
+          "Vesta Studio 真实截图，显示三维基础体预览与类型化 SOP 节点链",
+          "studio-graph-view.webp",
+        ],
+        [
+          "工作区语言",
+          "Dock、视口控制、图标与算子状态遵循同一套视觉体系。",
+          "Vesta Studio 真实截图，显示视口、详情面板、Dock 标签与算子状态面板",
+          "studio-workspace-view.webp",
+        ],
+      ],
       availableEyebrow: "当前可用",
       availableTitle: "已经运行的执行主干，而不是概念演示。",
       availableBody:

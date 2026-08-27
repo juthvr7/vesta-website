@@ -83,6 +83,21 @@ function renderPage(localeKey, copy) {
     )
     .join("");
 
+  const studioGallery = copy.studio.gallery
+    .map(
+      ([title, description, alt, image], index) => `
+              <figure class="studio-detail-card" data-reveal style="--delay: ${index * 80}ms">
+                <div class="studio-detail-media">
+                  <img src="${base}assets/${e(image)}" alt="${e(alt)}" loading="lazy" width="1800" height="1125">
+                </div>
+                <figcaption>
+                  <span>0${index + 1}</span>
+                  <div><h3>${e(title)}</h3><p>${e(description)}</p></div>
+                </figcaption>
+              </figure>`,
+    )
+    .join("");
+
   const studioAvailable = copy.studio.available
     .map(
       ([title, description], index) => `
@@ -187,12 +202,12 @@ function renderPage(localeKey, copy) {
         </div>
       </section>
 
-      <div class="domain-strip" aria-label="${isChinese ? "领域组合" : "Composable domains"}">
+      <section class="domain-strip" aria-label="${isChinese ? "领域组合" : "Composable domains"}">
         <div class="domain-strip-track">
           <div class="domain-strip-set">${domains}</div>
           <div class="domain-strip-set" aria-hidden="true">${domains}</div>
         </div>
-      </div>
+      </section>
 
       <section class="thesis section" id="product">
         <p class="section-index" data-reveal>${e(copy.thesis.index)}</p>
@@ -214,6 +229,10 @@ function renderPage(localeKey, copy) {
           </div>
           <p data-reveal>${e(copy.system.intro)}</p>
         </div>
+        <figure class="system-visual" data-reveal>
+          <img src="${base}assets/graph-to-world.webp" alt="${e(copy.system.imageAlt)}" loading="lazy" width="1920" height="853">
+          <figcaption><span><i></i>${e(copy.system.visualLabel)}</span><b>GRAPH / PLAN / WORLD</b></figcaption>
+        </figure>
         <div class="system-stage">
           <div class="system-track" aria-hidden="true"></div>
           <div class="system-steps">${systemSteps}</div>
@@ -267,6 +286,7 @@ function renderPage(localeKey, copy) {
             <p>${e(copy.studio.captureNote)}</p>
           </figcaption>
         </figure>
+        <div class="studio-gallery">${studioGallery}</div>
         <div class="studio-facts">${studioFacts}</div>
         <div class="available-now">
           <div class="available-heading">

@@ -67,12 +67,12 @@
         </div>
       </section>
 
-      <div class="domain-strip" aria-label="Composable domains">
+      <section class="domain-strip" aria-label="Composable domains">
         <div class="domain-strip-track">
           <div class="domain-strip-set"><span>Terrain</span><i aria-hidden="true"></i><span>Roads</span><i aria-hidden="true"></i><span>Blocks</span><i aria-hidden="true"></i><span>Buildings</span><i aria-hidden="true"></i><span>Biomes</span><i aria-hidden="true"></i><span>Ecosystems</span><i aria-hidden="true"></i></div>
           <div class="domain-strip-set" aria-hidden="true"><span>Terrain</span><i aria-hidden="true"></i><span>Roads</span><i aria-hidden="true"></i><span>Blocks</span><i aria-hidden="true"></i><span>Buildings</span><i aria-hidden="true"></i><span>Biomes</span><i aria-hidden="true"></i><span>Ecosystems</span><i aria-hidden="true"></i></div>
         </div>
-      </div>
+      </section>
 
       <section class="thesis section" id="product">
         <p class="section-index" data-reveal>01 / Product</p>
@@ -109,6 +109,10 @@
           </div>
           <p data-reveal>Every request follows one observable execution chain. No hidden engine branch, no duplicated node semantics.</p>
         </div>
+        <figure class="system-visual" data-reveal>
+          <img src="./assets/graph-to-world.webp" alt="Conceptual spatial computation journey from a typed graph and layered data through tiled execution planning into terrain, roads, cities, and ecosystems" loading="lazy" width="1920" height="853">
+          <figcaption><span><i></i>Concept visual / Graph to world</span><b>GRAPH / PLAN / WORLD</b></figcaption>
+        </figure>
         <div class="system-stage">
           <div class="system-track" aria-hidden="true"></div>
           <div class="system-steps">
@@ -202,6 +206,25 @@
             <p>Authentic Vesta Studio build — interface and workflows continue to evolve.</p>
           </figcaption>
         </figure>
+        <div class="studio-gallery">
+              <figure class="studio-detail-card" data-reveal style="--delay: 0ms">
+                <div class="studio-detail-media">
+                  <img src="./assets/studio-graph-view.webp" alt="Vesta Studio screenshot showing a 3D primitive preview and a typed SOP node chain" loading="lazy" width="1800" height="1125">
+                </div>
+                <figcaption>
+                  <span>01</span>
+                  <div><h3>Graph to viewport</h3><p>A typed SOP chain, its details, and the CPU reference result remain visible together.</p></div>
+                </figcaption>
+              </figure>
+              <figure class="studio-detail-card" data-reveal style="--delay: 80ms">
+                <div class="studio-detail-media">
+                  <img src="./assets/studio-workspace-view.webp" alt="Vesta Studio screenshot showing the viewport, details panel, docking tabs, and operation board" loading="lazy" width="1800" height="1125">
+                </div>
+                <figcaption>
+                  <span>02</span>
+                  <div><h3>Workspace language</h3><p>Docking, viewport controls, iconography, and operation status share one visual system.</p></div>
+                </figcaption>
+              </figure></div>
         <div class="studio-facts">
               <article data-reveal style="--delay: 0ms">
                 <span>01</span><strong>Native</strong><p>Rust + Bevy/wgpu desktop application</p>

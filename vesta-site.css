@@ -757,7 +757,8 @@ html[lang="zh-CN"] .hero-build-preview small {
 .hero-visual-note > span i,
 .composition-label i,
 .studio-window figcaption > span i,
-.data-visual figcaption span i {
+.data-visual figcaption span i,
+.system-visual figcaption span i {
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -998,6 +999,66 @@ html[lang="zh-CN"] .thesis-copy > p { line-height: 1.9; }
 
 .thesis-proof h3 { margin: 72px 0 14px; font-size: 24px; font-weight: 430; }
 .thesis-proof article p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+
+.system-visual {
+  position: relative;
+  aspect-ratio: 1920 / 853;
+  margin: 0 0 clamp(24px, 3vw, 42px);
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background: var(--ink-soft);
+  box-shadow: 0 50px 120px rgba(0, 0, 0, 0.28);
+}
+
+.system-visual::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(144, 201, 178, 0.1);
+  background: linear-gradient(90deg, rgba(8, 11, 10, 0.18), transparent 30%, transparent 72%, rgba(8, 11, 10, 0.08));
+  content: "";
+  pointer-events: none;
+}
+
+.system-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.system-visual figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 18px;
+  border-top: 1px solid var(--line);
+  background: rgba(8, 11, 10, 0.78);
+  backdrop-filter: blur(12px);
+}
+
+.system-visual figcaption span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--paper-soft);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.system-visual figcaption b {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
 
 .system-stage {
   position: relative;
@@ -1381,6 +1442,72 @@ html[lang="zh-CN"] .domain-chip-grid span { font-weight: 500; }
 
 .studio-window figcaption { position: relative; }
 .studio-window figcaption p { margin: 0; color: var(--muted); font-size: 11px; }
+
+.studio-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.studio-detail-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  background: #111513;
+}
+
+.studio-detail-media {
+  position: relative;
+  aspect-ratio: 8 / 5;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.studio-detail-media::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 72%, rgba(8, 11, 10, 0.2));
+  content: "";
+  pointer-events: none;
+}
+
+.studio-detail-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(0.9) contrast(1.02) brightness(0.94);
+}
+
+.studio-detail-card figcaption {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 16px;
+  min-height: 116px;
+  padding: 22px 24px;
+}
+
+.studio-detail-card figcaption > span {
+  color: var(--ember-bright);
+  font-family: var(--font-mono);
+  font-size: 9px;
+}
+
+.studio-detail-card h3 {
+  margin: 0 0 8px;
+  font-size: clamp(18px, 1.6vw, 24px);
+  font-weight: 430;
+}
+
+.studio-detail-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.studio-gallery + .studio-facts { margin-top: 18px; }
 
 .studio-facts {
   display: grid;
@@ -1922,6 +2049,8 @@ html[lang="zh-CN"] .roadmap-card h3 { letter-spacing: -0.025em; }
   .thesis-proof h3 { margin-top: 44px; }
   .section-heading { align-items: start; gap: 38px; }
   .system-stage { padding: 28px 22px; }
+  .system-visual { aspect-ratio: 16 / 9; }
+  .system-visual img { object-position: 58% center; }
 
   .system-track {
     top: 72px;
@@ -1968,6 +2097,7 @@ html[lang="zh-CN"] .roadmap-card h3 { letter-spacing: -0.025em; }
   .data-visual figcaption { align-items: flex-start; flex-direction: column; gap: 8px; }
 
   .studio-facts { grid-template-columns: 1fr; }
+  .studio-gallery { grid-template-columns: 1fr; }
   .composition-media { min-height: 800px; }
 
   .composition-copy {
@@ -2044,6 +2174,10 @@ html[lang="zh-CN"] .roadmap-card h3 { letter-spacing: -0.025em; }
 
   .system-rail,
   .data-chips { grid-template-columns: repeat(2, 1fr); }
+
+  .system-visual { aspect-ratio: 4 / 3; }
+  .system-visual img { object-position: 62% center; }
+  .system-visual figcaption b { display: none; }
 
   .domain-bridge { padding: 26px; }
   .domain-chip-grid { grid-template-columns: repeat(2, 1fr); }

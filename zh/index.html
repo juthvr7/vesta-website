@@ -67,12 +67,12 @@
         </div>
       </section>
 
-      <div class="domain-strip" aria-label="领域组合">
+      <section class="domain-strip" aria-label="领域组合">
         <div class="domain-strip-track">
           <div class="domain-strip-set"><span>地形</span><i aria-hidden="true"></i><span>道路</span><i aria-hidden="true"></i><span>街区</span><i aria-hidden="true"></i><span>建筑</span><i aria-hidden="true"></i><span>生物群落</span><i aria-hidden="true"></i><span>生态系统</span><i aria-hidden="true"></i></div>
           <div class="domain-strip-set" aria-hidden="true"><span>地形</span><i aria-hidden="true"></i><span>道路</span><i aria-hidden="true"></i><span>街区</span><i aria-hidden="true"></i><span>建筑</span><i aria-hidden="true"></i><span>生物群落</span><i aria-hidden="true"></i><span>生态系统</span><i aria-hidden="true"></i></div>
         </div>
-      </div>
+      </section>
 
       <section class="thesis section" id="product">
         <p class="section-index" data-reveal>01 / 产品</p>
@@ -109,6 +109,10 @@
           </div>
           <p data-reveal>每次请求只走一条可观察的执行链。不隐藏引擎分支，也不复制节点语义。</p>
         </div>
+        <figure class="system-visual" data-reveal>
+          <img src="../assets/graph-to-world.webp" alt="空间计算概念视觉：类型化 Graph 与分层数据经过分块规划，最终形成地形、道路、城市与生态系统" loading="lazy" width="1920" height="853">
+          <figcaption><span><i></i>概念视觉 / 从 Graph 到世界</span><b>GRAPH / PLAN / WORLD</b></figcaption>
+        </figure>
         <div class="system-stage">
           <div class="system-track" aria-hidden="true"></div>
           <div class="system-steps">
@@ -202,6 +206,25 @@
             <p>真实 Vesta Studio 截图——界面与工作流仍在持续演进。</p>
           </figcaption>
         </figure>
+        <div class="studio-gallery">
+              <figure class="studio-detail-card" data-reveal style="--delay: 0ms">
+                <div class="studio-detail-media">
+                  <img src="../assets/studio-graph-view.webp" alt="Vesta Studio 真实截图，显示三维基础体预览与类型化 SOP 节点链" loading="lazy" width="1800" height="1125">
+                </div>
+                <figcaption>
+                  <span>01</span>
+                  <div><h3>Graph 到视口</h3><p>类型化 SOP 链、详情数据与 CPU 参考结果在同一工作区内可见。</p></div>
+                </figcaption>
+              </figure>
+              <figure class="studio-detail-card" data-reveal style="--delay: 80ms">
+                <div class="studio-detail-media">
+                  <img src="../assets/studio-workspace-view.webp" alt="Vesta Studio 真实截图，显示视口、详情面板、Dock 标签与算子状态面板" loading="lazy" width="1800" height="1125">
+                </div>
+                <figcaption>
+                  <span>02</span>
+                  <div><h3>工作区语言</h3><p>Dock、视口控制、图标与算子状态遵循同一套视觉体系。</p></div>
+                </figcaption>
+              </figure></div>
         <div class="studio-facts">
               <article data-reveal style="--delay: 0ms">
                 <span>01</span><strong>原生桌面</strong><p>Rust + Bevy/wgpu 应用</p>

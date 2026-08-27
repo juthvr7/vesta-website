@@ -21,6 +21,9 @@ const requiredFiles = [
   "assets/unified-data.webp",
   "assets/world-composition.webp",
   "assets/studio-current.webp",
+  "assets/graph-to-world.webp",
+  "assets/studio-graph-view.webp",
+  "assets/studio-workspace-view.webp",
 ];
 
 await Promise.all(requiredFiles.map((file) => access(fromRoot(file))));
@@ -64,6 +67,8 @@ for (const page of pages) {
     'class="domain-strip"',
     'class="domain-bridge"',
     'class="available-now"',
+    'class="system-visual"',
+    'class="studio-gallery"',
     'class="locale-switch"',
   ];
 
@@ -119,6 +124,9 @@ const mediaLimits = [
   ["assets/unified-data.webp", 750_000],
   ["assets/world-composition.webp", 750_000],
   ["assets/studio-current.webp", 750_000],
+  ["assets/graph-to-world.webp", 750_000],
+  ["assets/studio-graph-view.webp", 750_000],
+  ["assets/studio-workspace-view.webp", 750_000],
 ];
 
 for (const [file, maxBytes] of mediaLimits) {
