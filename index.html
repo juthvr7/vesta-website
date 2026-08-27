@@ -22,8 +22,8 @@
     <link rel="alternate" hreflang="zh-CN" href="https://juthvr7.github.io/vesta-website/zh/">
     <link rel="alternate" hreflang="x-default" href="https://juthvr7.github.io/vesta-website/">
     <link rel="preload" as="image" href="./assets/world-composition.webp" fetchpriority="high">
-    <link rel="stylesheet" href="./vesta-site.css?v=20260828-magnetic-v2">
-    <script src="./vesta-site.js?v=20260828-magnetic-v2" defer></script>
+    <link rel="stylesheet" href="./vesta-site.css?v=20260828-page-snap-v3">
+    <script src="./vesta-site.js?v=20260828-page-snap-v3" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -52,7 +52,7 @@
     </header>
 
     <main id="main" data-snap-root>
-      <section class="hero" id="top" data-hero data-snap-panel>
+      <section class="hero snap-page" id="top" data-hero data-snap-page>
         <div class="hero-media" aria-hidden="true">
           <img class="hero-poster" src="./assets/world-composition.webp" alt="" width="1536" height="1024" fetchpriority="high">
           <div class="hero-media-vignette"></div>
@@ -74,7 +74,7 @@
         </div>
       </section>
 
-      <section class="thesis section" id="product" data-snap-panel>
+      <section class="thesis section snap-page" id="product" data-snap-page>
         <p class="section-index" data-reveal>01 / Product</p>
         <div class="thesis-copy">
           <h2 data-reveal>Turn a fragmented toolchain into one composable system.</h2>
@@ -101,21 +101,24 @@
         </div>
       </section>
 
-      <section class="system section" id="workflow" data-snap-panel>
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow" data-reveal><span>02</span>The system</p>
-            <h2 data-reveal>Intent becomes a reproducible result.</h2>
+      <section class="system section paged-section" aria-labelledby="workflow-title">
+        <div class="snap-page system-overview-page" id="workflow" data-snap-page>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-reveal><span>02</span>The system</p>
+              <h2 id="workflow-title" data-reveal>Intent becomes a reproducible result.</h2>
+            </div>
+            <p data-reveal>Every request follows one observable execution chain. No hidden engine branch, no duplicated node semantics.</p>
           </div>
-          <p data-reveal>Every request follows one observable execution chain. No hidden engine branch, no duplicated node semantics.</p>
+          <figure class="system-visual" data-reveal>
+            <img src="./assets/graph-to-world.webp" alt="Conceptual spatial computation journey from a typed graph and layered data through tiled execution planning into terrain, roads, cities, and ecosystems" loading="lazy" width="1920" height="853">
+            <figcaption><span><i></i>Concept visual / Graph to world</span><b>GRAPH / PLAN / WORLD</b></figcaption>
+          </figure>
         </div>
-        <figure class="system-visual" data-reveal>
-          <img src="./assets/graph-to-world.webp" alt="Conceptual spatial computation journey from a typed graph and layered data through tiled execution planning into terrain, roads, cities, and ecosystems" loading="lazy" width="1920" height="853">
-          <figcaption><span><i></i>Concept visual / Graph to world</span><b>GRAPH / PLAN / WORLD</b></figcaption>
-        </figure>
-        <div class="system-stage">
-          <div class="system-track" aria-hidden="true"></div>
-          <div class="system-steps">
+        <div class="snap-page system-execution-page" data-snap-page>
+          <div class="system-stage">
+            <div class="system-track" aria-hidden="true"></div>
+            <div class="system-steps">
               <article class="system-step">
                 <span class="step-number">01</span>
                 <div class="step-node" aria-hidden="true"><i></i></div>
@@ -140,17 +143,19 @@
                 <h3>Deliver</h3>
                 <p>Immutable typed results for Studio, CLI, Worker, or engine adapters.</p>
               </article></div>
-          <div class="system-rail"><span><i></i>Graph source<small>01</small></span><span><i></i>Execution plan<small>02</small></span><span><i></i>CPU reference<small>03</small></span><span><i></i>Result handle<small>04</small></span></div>
+            <div class="system-rail"><span><i></i>Graph source<small>01</small></span><span><i></i>Execution plan<small>02</small></span><span><i></i>CPU reference<small>03</small></span><span><i></i>Result handle<small>04</small></span></div>
+          </div>
         </div>
       </section>
 
-      <section class="data-section section" id="capabilities" data-snap-panel>
-        <div class="data-layout">
-          <div class="data-copy">
-            <p class="eyebrow" data-reveal><span>03</span>Unified spatial data</p>
-            <h2 data-reveal>Different data. One execution language.</h2>
-            <p class="section-lede" data-reveal>A heightfield is not an image. A mask is not a field. Vesta keeps their semantics explicit while letting them move through the same typed graph and evaluation model.</p>
-            <div class="data-type-list">
+      <section class="data-section section paged-section" aria-labelledby="capabilities-title">
+        <div class="snap-page data-model-page" id="capabilities" data-snap-page>
+          <div class="data-layout">
+            <div class="data-copy">
+              <p class="eyebrow" data-reveal><span>03</span>Unified spatial data</p>
+              <h2 id="capabilities-title" data-reveal>Different data. One execution language.</h2>
+              <p class="section-lede" data-reveal>A heightfield is not an image. A mask is not a field. Vesta keeps their semantics explicit while letting them move through the same typed graph and evaluation model.</p>
+              <div class="data-type-list">
               <article data-reveal style="--delay: 0ms">
                 <span>01</span>
                 <div><h3>Geometry</h3><p>Points, vertices, primitives, typed attributes</p></div>
@@ -167,46 +172,52 @@
                 <span>04</span>
                 <div><h3>Curves &amp; points</h3><p>Stable elements for roads, placement, and spatial composition</p></div>
               </article></div>
+            </div>
+            <figure class="data-visual" data-reveal>
+              <img src="./assets/unified-data.webp" alt="Conceptual data landscape transitioning from heightfield contours to mesh, curves, and point instances" loading="lazy" width="1920" height="819">
+              <figcaption><span><i></i>Concept visual / shared data model</span><b>DATA / 001</b></figcaption>
+            </figure>
           </div>
-          <figure class="data-visual" data-reveal>
-            <img src="./assets/unified-data.webp" alt="Conceptual data landscape transitioning from heightfield contours to mesh, curves, and point instances" loading="lazy" width="1920" height="819">
-            <figcaption><span><i></i>Concept visual / shared data model</span><b>DATA / 001</b></figcaption>
-          </figure>
+          <div class="data-chips" data-reveal><span>Mesh</span><span>Heightfield</span><span>Image2D</span><span>Mask2D</span><span>Field2D</span><span>Curves</span><span>Points</span><span>Instances</span></div>
         </div>
-        <div class="data-chips" data-reveal><span>Mesh</span><span>Heightfield</span><span>Image2D</span><span>Mask2D</span><span>Field2D</span><span>Curves</span><span>Points</span><span>Instances</span></div>
-        <div class="domain-bridge">
-          <div class="domain-bridge-copy">
-            <p class="eyebrow"><span>03 / B</span>From data to domains</p>
-            <h3>Typed foundations below. Composable domains above.</h3>
-            <p>General operations remain reusable while domain packages add the rules needed to coordinate terrain, infrastructure, buildings, and ecosystems.</p>
+        <div class="snap-page domain-bridge-page" data-snap-page>
+          <div class="domain-bridge">
+            <div class="domain-bridge-copy">
+              <p class="eyebrow"><span>03 / B</span>From data to domains</p>
+              <h3>Typed foundations below. Composable domains above.</h3>
+              <p>General operations remain reusable while domain packages add the rules needed to coordinate terrain, infrastructure, buildings, and ecosystems.</p>
+            </div>
+            <div class="domain-chip-grid"><span>Terrain</span><span>Roads</span><span>Blocks</span><span>Buildings</span><span>Biomes</span><span>Ecosystems</span></div>
           </div>
-          <div class="domain-chip-grid"><span>Terrain</span><span>Roads</span><span>Blocks</span><span>Buildings</span><span>Biomes</span><span>Ecosystems</span></div>
         </div>
       </section>
 
-      <section class="studio section" id="studio" data-snap-panel>
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow" data-reveal><span>04</span>Vesta Studio</p>
-            <h2 data-reveal>Built as a real desktop tool.</h2>
+      <section class="studio section paged-section" aria-labelledby="studio-title">
+        <div class="snap-page studio-overview-page" id="studio" data-snap-page>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-reveal><span>04</span>Vesta Studio</p>
+              <h2 id="studio-title" data-reveal>Built as a real desktop tool.</h2>
+            </div>
+            <p data-reveal>Studio is the authoring host around the same Core used by automation and future engine adapters. Its workspace, docking system, viewport, CPU reference preview, and operation development tools are already running; authoring and input gates continue to advance.</p>
           </div>
-          <p data-reveal>Studio is the authoring host around the same Core used by automation and future engine adapters. Its workspace, docking system, viewport, CPU reference preview, and operation development tools are already running; authoring and input gates continue to advance.</p>
+          <figure class="studio-window" data-reveal>
+            <div class="window-bar" aria-hidden="true">
+              <span><i></i><i></i><i></i></span>
+              <b>VESTA STUDIO / DEVELOPMENT BUILD</b>
+              <small>LOCAL CPU</small>
+            </div>
+            <div class="studio-screen">
+              <img src="./assets/studio-current.webp" alt="Current Vesta Studio development build showing a 3D viewport, details panel, node network, and desktop workspace" loading="lazy" width="1800" height="1125">
+            </div>
+            <figcaption>
+              <span><i></i>Current development capture</span>
+              <p>Authentic Vesta Studio build — interface and workflows continue to evolve.</p>
+            </figcaption>
+          </figure>
         </div>
-        <figure class="studio-window" data-reveal>
-          <div class="window-bar" aria-hidden="true">
-            <span><i></i><i></i><i></i></span>
-            <b>VESTA STUDIO / DEVELOPMENT BUILD</b>
-            <small>LOCAL CPU</small>
-          </div>
-          <div class="studio-screen">
-            <img src="./assets/studio-current.webp" alt="Current Vesta Studio development build showing a 3D viewport, details panel, node network, and desktop workspace" loading="lazy" width="1800" height="1125">
-          </div>
-          <figcaption>
-            <span><i></i>Current development capture</span>
-            <p>Authentic Vesta Studio build — interface and workflows continue to evolve.</p>
-          </figcaption>
-        </figure>
-        <div class="studio-gallery">
+        <div class="snap-page studio-details-page" data-snap-page>
+          <div class="studio-gallery">
               <figure class="studio-detail-card" data-reveal style="--delay: 0ms">
                 <div class="studio-detail-media">
                   <img src="./assets/studio-graph-view.webp" alt="Vesta Studio screenshot showing a 3D primitive preview and a typed SOP node chain" loading="lazy" width="1800" height="1125">
@@ -225,7 +236,7 @@
                   <div><h3>Workspace language</h3><p>Docking, viewport controls, iconography, and operation status share one visual system.</p></div>
                 </figcaption>
               </figure></div>
-        <div class="studio-facts">
+          <div class="studio-facts">
               <article data-reveal style="--delay: 0ms">
                 <span>01</span><strong>Native</strong><p>Rust + Bevy/wgpu desktop application</p>
               </article>
@@ -235,13 +246,15 @@
               <article data-reveal style="--delay: 140ms">
                 <span>03</span><strong>Responsive</strong><p>Long evaluation stays off the UI thread</p>
               </article></div>
-        <div class="available-now">
-          <div class="available-heading">
-            <p class="eyebrow"><span>04 / B</span>Available now</p>
-            <h3>A working execution spine, not a concept reel.</h3>
-            <p>The current build already carries authored graph data through validation, planning, deterministic CPU execution, caching, preview, and export.</p>
-          </div>
-          <div class="available-grid">
+        </div>
+        <div class="snap-page available-page" data-snap-page>
+          <div class="available-now">
+            <div class="available-heading">
+              <p class="eyebrow"><span>04 / B</span>Available now</p>
+              <h3>A working execution spine, not a concept reel.</h3>
+              <p>The current build already carries authored graph data through validation, planning, deterministic CPU execution, caching, preview, and export.</p>
+            </div>
+            <div class="available-grid">
               <article>
                 <span>01</span><div><strong>Versioned Graph</strong><p>Source, schema, validation, and compilation</p></div>
               </article>
@@ -260,42 +273,46 @@
               <article>
                 <span>06</span><div><strong>Studio workspace</strong><p>Docking, viewport, graph tools, and CPU preview</p></div>
               </article></div>
+          </div>
         </div>
       </section>
 
-      <section class="future section" id="roadmap" data-snap-panel>
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow" data-reveal><span>05</span>Architecture</p>
-            <h2 data-reveal>One enduring core. Thin hosts. Explicit backends.</h2>
-          </div>
-          <p data-reveal>Vesta separates authoring data, execution plans, and generated results. Hosts express intent; Core owns semantics; backends execute prepared invocations.</p>
-        </div>
-        <div class="architecture-map" data-reveal>
-          <div class="architecture-grid" aria-hidden="true"></div>
-          <div class="architecture-layer architecture-hosts">
-            <p>Hosts</p><div><span>Studio</span><span>CLI</span><span>Worker</span><span>Engine adapters</span></div>
-          </div>
-          <div class="architecture-flow" aria-hidden="true"><i></i><span>INTENT</span></div>
-          <div class="architecture-core">
-            <div class="core-heading"><p>Authoritative Core</p><span>ENGINE INDEPENDENT</span></div>
-            <div><span>Graph</span><span>Compiler</span><span>Planner</span><span>Executor</span><span>Cache</span><span>Diagnostics</span></div>
-          </div>
-          <div class="architecture-flow" aria-hidden="true"><i></i><span>PLAN</span></div>
-          <div class="architecture-bottom">
-            <div class="architecture-layer architecture-backends"><p>Execution</p><div><span class="backend backend-active"><i></i>CPU reference<small>active</small></span><span class="backend backend-future"><i></i>GPU compute<small>future</small></span><span class="backend backend-future"><i></i>External worker<small>future</small></span></div></div>
-            <div class="architecture-layer architecture-results"><p>Typed results</p><div><span>Geometry</span><span>Heightfield</span><span>Raster</span><span>Curves</span><span>Points</span><span>Instances</span></div></div>
-          </div>
-        </div>
-        <div class="roadmap-block">
+      <section class="future section paged-section" aria-labelledby="roadmap-title">
+        <div class="snap-page architecture-page" id="roadmap" data-snap-page>
           <div class="section-heading">
             <div>
-              <p class="eyebrow"><span>05 / B</span>Development</p>
-              <h2>Build the semantics first. Scale the experience outward.</h2>
+              <p class="eyebrow" data-reveal><span>05</span>Architecture</p>
+              <h2 id="roadmap-title" data-reveal>One enduring core. Thin hosts. Explicit backends.</h2>
             </div>
-            <p>The roadmap deliberately establishes deterministic behavior and authoring foundations before widening the integration surface.</p>
+            <p data-reveal>Vesta separates authoring data, execution plans, and generated results. Hosts express intent; Core owns semantics; backends execute prepared invocations.</p>
           </div>
-          <div class="roadmap-grid">
+          <div class="architecture-map" data-reveal>
+            <div class="architecture-grid" aria-hidden="true"></div>
+            <div class="architecture-layer architecture-hosts">
+              <p>Hosts</p><div><span>Studio</span><span>CLI</span><span>Worker</span><span>Engine adapters</span></div>
+            </div>
+            <div class="architecture-flow" aria-hidden="true"><i></i><span>INTENT</span></div>
+            <div class="architecture-core">
+              <div class="core-heading"><p>Authoritative Core</p><span>ENGINE INDEPENDENT</span></div>
+              <div><span>Graph</span><span>Compiler</span><span>Planner</span><span>Executor</span><span>Cache</span><span>Diagnostics</span></div>
+            </div>
+            <div class="architecture-flow" aria-hidden="true"><i></i><span>PLAN</span></div>
+            <div class="architecture-bottom">
+              <div class="architecture-layer architecture-backends"><p>Execution</p><div><span class="backend backend-active"><i></i>CPU reference<small>active</small></span><span class="backend backend-future"><i></i>GPU compute<small>future</small></span><span class="backend backend-future"><i></i>External worker<small>future</small></span></div></div>
+              <div class="architecture-layer architecture-results"><p>Typed results</p><div><span>Geometry</span><span>Heightfield</span><span>Raster</span><span>Curves</span><span>Points</span><span>Instances</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="snap-page roadmap-page" data-snap-page>
+          <div class="roadmap-block">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow"><span>05 / B</span>Development</p>
+                <h2>Build the semantics first. Scale the experience outward.</h2>
+              </div>
+              <p>The roadmap deliberately establishes deterministic behavior and authoring foundations before widening the integration surface.</p>
+            </div>
+            <div class="roadmap-grid">
               <article class="roadmap-card roadmap-done" data-reveal style="--delay: 0ms">
                 <div class="roadmap-index">01</div>
                 <p class="roadmap-state"><i></i>Available now</p>
@@ -314,10 +331,11 @@
                 <h3>Stable integration surface</h3>
                 <p>Versioned SDK/C ABI, the first Unreal vertical slice, and focused GPU backend validation behind an explicit contract.</p>
               </article></div>
+          </div>
         </div>
       </section>
 
-      <section class="closing section" id="preview" data-snap-panel>
+      <section class="closing section snap-page" id="preview" data-snap-page>
         <div class="closing-visual" aria-hidden="true"><i></i><i></i><i></i><span>V</span></div>
         <p class="eyebrow"><span>VESTA</span>Vesta / Technical preview</p>
         <h2><span>Compose systems.</span><em>Shape worlds.</em></h2>

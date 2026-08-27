@@ -7,7 +7,7 @@ import { locales } from "../content/site-content.mjs";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const fromRoot = (...parts) => resolve(root, ...parts);
 const siteUrl = "https://juthvr7.github.io/vesta-website/";
-const assetVersion = "20260828-magnetic-v2";
+const assetVersion = "20260828-page-snap-v3";
 
 const requiredFiles = [
   "index.html",
@@ -73,7 +73,7 @@ for (const page of pages) {
     'class="studio-gallery"',
     'class="locale-switch"',
     'data-snap-root',
-    'data-snap-panel',
+    'data-snap-page',
   ];
 
   for (const marker of markers) {
@@ -82,12 +82,18 @@ for (const page of pages) {
     }
   }
 
-  const snapPanelCount = [...html.matchAll(/\sdata-snap-panel(?:\s|>)/g)].length;
-  if (snapPanelCount !== 7) {
-    throw new Error(`${page.path} has ${snapPanelCount} snap panels; expected 7.`);
+  const snapPageCount = [...html.matchAll(/\sdata-snap-page(?:\s|>)/g)].length;
+  if (snapPageCount !== 12) {
+    throw new Error(`${page.path} has ${snapPageCount} snap pages; expected 12.`);
   }
 
-  for (const forbidden of ["<video", "data-hero-video", "vesta-worlds-loop.mp4", 'class="hero-proof"']) {
+  for (const forbidden of [
+    "<video",
+    "data-hero-video",
+    "vesta-worlds-loop.mp4",
+    'class="hero-proof"',
+    "data-snap-panel",
+  ]) {
     if (html.includes(forbidden)) {
       throw new Error(`${page.path} contains removed homepage motion markup: ${forbidden}`);
     }
@@ -123,7 +129,7 @@ for (const page of pages) {
 const css = await readFile(fromRoot("vesta-site.css"), "utf8");
 const javascript = await readFile(fromRoot("vesta-site.js"), "utf8");
 
-for (const marker of ["overscroll-behavior-y: none", "scroll-padding-top: 68px"]) {
+for (const marker of ["scroll-snap-type: y mandatory", "scroll-snap-align: start"]) {
   if (!css.includes(marker)) {
     throw new Error(`vesta-site.css is missing magnetic-scroll marker: ${marker}`);
   }
@@ -132,6 +138,7 @@ for (const marker of ["overscroll-behavior-y: none", "scroll-padding-top: 68px"]
 for (const marker of [
   "MAGNETIC_WHEEL_THRESHOLD",
   "buildMagneticStops",
+  'querySelectorAll("[data-snap-page]")',
   "handleMagneticWheel",
   "passive: false",
   "reducedMotionQuery",

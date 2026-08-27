@@ -6,7 +6,7 @@ import { locales } from "../content/site-content.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const siteUrl = "https://juthvr7.github.io/vesta-website/";
-const assetVersion = "20260828-magnetic-v2";
+const assetVersion = "20260828-page-snap-v3";
 const checkOnly = process.argv.includes("--check");
 
 const escapeHtml = (value) =>
@@ -188,7 +188,7 @@ function renderPage(localeKey, copy) {
     </header>
 
     <main id="main" data-snap-root>
-      <section class="hero" id="top" data-hero data-snap-panel>
+      <section class="hero snap-page" id="top" data-hero data-snap-page>
         <div class="hero-media" aria-hidden="true">
           <img class="hero-poster" src="${base}assets/world-composition.webp" alt="" width="1536" height="1024" fetchpriority="high">
           <div class="hero-media-vignette"></div>
@@ -210,7 +210,7 @@ function renderPage(localeKey, copy) {
         </div>
       </section>
 
-      <section class="thesis section" id="product" data-snap-panel>
+      <section class="thesis section snap-page" id="product" data-snap-page>
         <p class="section-index" data-reveal>${e(copy.thesis.index)}</p>
         <div class="thesis-copy">
           <h2 data-reveal>${e(copy.thesis.title)}</h2>
@@ -222,120 +222,138 @@ function renderPage(localeKey, copy) {
         </div>
       </section>
 
-      <section class="system section" id="workflow" data-snap-panel>
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow" data-reveal><span>02</span>${e(copy.system.eyebrow)}</p>
-            <h2 data-reveal>${e(copy.system.title)}</h2>
-          </div>
-          <p data-reveal>${e(copy.system.intro)}</p>
-        </div>
-        <figure class="system-visual" data-reveal>
-          <img src="${base}assets/graph-to-world.webp" alt="${e(copy.system.imageAlt)}" loading="lazy" width="1920" height="853">
-          <figcaption><span><i></i>${e(copy.system.visualLabel)}</span><b>GRAPH / PLAN / WORLD</b></figcaption>
-        </figure>
-        <div class="system-stage">
-          <div class="system-track" aria-hidden="true"></div>
-          <div class="system-steps">${systemSteps}</div>
-          <div class="system-rail">${systemRail}</div>
-        </div>
-      </section>
-
-      <section class="data-section section" id="capabilities" data-snap-panel>
-        <div class="data-layout">
-          <div class="data-copy">
-            <p class="eyebrow" data-reveal><span>03</span>${e(copy.data.eyebrow)}</p>
-            <h2 data-reveal>${e(copy.data.title)}</h2>
-            <p class="section-lede" data-reveal>${e(copy.data.body)}</p>
-            <div class="data-type-list">${dataTypes}</div>
-          </div>
-          <figure class="data-visual" data-reveal>
-            <img src="${base}assets/unified-data.webp" alt="${e(copy.data.imageAlt)}" loading="lazy" width="1920" height="819">
-            <figcaption><span><i></i>${e(copy.data.visualLabel)}</span><b>DATA / 001</b></figcaption>
-          </figure>
-        </div>
-        <div class="data-chips" data-reveal>${dataChips}</div>
-        <div class="domain-bridge">
-          <div class="domain-bridge-copy">
-            <p class="eyebrow"><span>03 / B</span>${e(copy.composition.bridgeEyebrow)}</p>
-            <h3>${e(copy.composition.bridgeTitle)}</h3>
-            <p>${e(copy.composition.bridgeBody)}</p>
-          </div>
-          <div class="domain-chip-grid">${domainChips}</div>
-        </div>
-      </section>
-
-      <section class="studio section" id="studio" data-snap-panel>
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow" data-reveal><span>04</span>${e(copy.studio.eyebrow)}</p>
-            <h2 data-reveal>${e(copy.studio.title)}</h2>
-          </div>
-          <p data-reveal>${e(copy.studio.body)}</p>
-        </div>
-        <figure class="studio-window" data-reveal>
-          <div class="window-bar" aria-hidden="true">
-            <span><i></i><i></i><i></i></span>
-            <b>VESTA STUDIO / DEVELOPMENT BUILD</b>
-            <small>LOCAL CPU</small>
-          </div>
-          <div class="studio-screen">
-            <img src="${base}assets/studio-current.webp" alt="${e(copy.studio.imageAlt)}" loading="lazy" width="1800" height="1125">
-          </div>
-          <figcaption>
-            <span><i></i>${e(copy.studio.captureLabel)}</span>
-            <p>${e(copy.studio.captureNote)}</p>
-          </figcaption>
-        </figure>
-        <div class="studio-gallery">${studioGallery}</div>
-        <div class="studio-facts">${studioFacts}</div>
-        <div class="available-now">
-          <div class="available-heading">
-            <p class="eyebrow"><span>04 / B</span>${e(copy.studio.availableEyebrow)}</p>
-            <h3>${e(copy.studio.availableTitle)}</h3>
-            <p>${e(copy.studio.availableBody)}</p>
-          </div>
-          <div class="available-grid">${studioAvailable}</div>
-        </div>
-      </section>
-
-      <section class="future section" id="roadmap" data-snap-panel>
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow" data-reveal><span>05</span>${e(copy.architecture.eyebrow)}</p>
-            <h2 data-reveal>${e(copy.architecture.title)}</h2>
-          </div>
-          <p data-reveal>${e(copy.architecture.body)}</p>
-        </div>
-        <div class="architecture-map" data-reveal>
-          <div class="architecture-grid" aria-hidden="true"></div>
-          <div class="architecture-layer architecture-hosts">
-            <p>${e(copy.architecture.hostsLabel)}</p><div>${hostChips}</div>
-          </div>
-          <div class="architecture-flow" aria-hidden="true"><i></i><span>INTENT</span></div>
-          <div class="architecture-core">
-            <div class="core-heading"><p>${e(copy.architecture.coreLabel)}</p><span>ENGINE INDEPENDENT</span></div>
-            <div>${coreChips}</div>
-          </div>
-          <div class="architecture-flow" aria-hidden="true"><i></i><span>PLAN</span></div>
-          <div class="architecture-bottom">
-            <div class="architecture-layer architecture-backends"><p>${e(copy.architecture.backendLabel)}</p><div>${backendChips}</div></div>
-            <div class="architecture-layer architecture-results"><p>${e(copy.architecture.resultLabel)}</p><div>${resultChips}</div></div>
-          </div>
-        </div>
-        <div class="roadmap-block">
+      <section class="system section paged-section" aria-labelledby="workflow-title">
+        <div class="snap-page system-overview-page" id="workflow" data-snap-page>
           <div class="section-heading">
             <div>
-              <p class="eyebrow"><span>05 / B</span>${e(copy.roadmap.eyebrow)}</p>
-              <h2>${e(copy.roadmap.title)}</h2>
+              <p class="eyebrow" data-reveal><span>02</span>${e(copy.system.eyebrow)}</p>
+              <h2 id="workflow-title" data-reveal>${e(copy.system.title)}</h2>
             </div>
-            <p>${e(copy.roadmap.body)}</p>
+            <p data-reveal>${e(copy.system.intro)}</p>
           </div>
-          <div class="roadmap-grid">${roadmapStages}</div>
+          <figure class="system-visual" data-reveal>
+            <img src="${base}assets/graph-to-world.webp" alt="${e(copy.system.imageAlt)}" loading="lazy" width="1920" height="853">
+            <figcaption><span><i></i>${e(copy.system.visualLabel)}</span><b>GRAPH / PLAN / WORLD</b></figcaption>
+          </figure>
+        </div>
+        <div class="snap-page system-execution-page" data-snap-page>
+          <div class="system-stage">
+            <div class="system-track" aria-hidden="true"></div>
+            <div class="system-steps">${systemSteps}</div>
+            <div class="system-rail">${systemRail}</div>
+          </div>
         </div>
       </section>
 
-      <section class="closing section" id="preview" data-snap-panel>
+      <section class="data-section section paged-section" aria-labelledby="capabilities-title">
+        <div class="snap-page data-model-page" id="capabilities" data-snap-page>
+          <div class="data-layout">
+            <div class="data-copy">
+              <p class="eyebrow" data-reveal><span>03</span>${e(copy.data.eyebrow)}</p>
+              <h2 id="capabilities-title" data-reveal>${e(copy.data.title)}</h2>
+              <p class="section-lede" data-reveal>${e(copy.data.body)}</p>
+              <div class="data-type-list">${dataTypes}</div>
+            </div>
+            <figure class="data-visual" data-reveal>
+              <img src="${base}assets/unified-data.webp" alt="${e(copy.data.imageAlt)}" loading="lazy" width="1920" height="819">
+              <figcaption><span><i></i>${e(copy.data.visualLabel)}</span><b>DATA / 001</b></figcaption>
+            </figure>
+          </div>
+          <div class="data-chips" data-reveal>${dataChips}</div>
+        </div>
+        <div class="snap-page domain-bridge-page" data-snap-page>
+          <div class="domain-bridge">
+            <div class="domain-bridge-copy">
+              <p class="eyebrow"><span>03 / B</span>${e(copy.composition.bridgeEyebrow)}</p>
+              <h3>${e(copy.composition.bridgeTitle)}</h3>
+              <p>${e(copy.composition.bridgeBody)}</p>
+            </div>
+            <div class="domain-chip-grid">${domainChips}</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="studio section paged-section" aria-labelledby="studio-title">
+        <div class="snap-page studio-overview-page" id="studio" data-snap-page>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-reveal><span>04</span>${e(copy.studio.eyebrow)}</p>
+              <h2 id="studio-title" data-reveal>${e(copy.studio.title)}</h2>
+            </div>
+            <p data-reveal>${e(copy.studio.body)}</p>
+          </div>
+          <figure class="studio-window" data-reveal>
+            <div class="window-bar" aria-hidden="true">
+              <span><i></i><i></i><i></i></span>
+              <b>VESTA STUDIO / DEVELOPMENT BUILD</b>
+              <small>LOCAL CPU</small>
+            </div>
+            <div class="studio-screen">
+              <img src="${base}assets/studio-current.webp" alt="${e(copy.studio.imageAlt)}" loading="lazy" width="1800" height="1125">
+            </div>
+            <figcaption>
+              <span><i></i>${e(copy.studio.captureLabel)}</span>
+              <p>${e(copy.studio.captureNote)}</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="snap-page studio-details-page" data-snap-page>
+          <div class="studio-gallery">${studioGallery}</div>
+          <div class="studio-facts">${studioFacts}</div>
+        </div>
+        <div class="snap-page available-page" data-snap-page>
+          <div class="available-now">
+            <div class="available-heading">
+              <p class="eyebrow"><span>04 / B</span>${e(copy.studio.availableEyebrow)}</p>
+              <h3>${e(copy.studio.availableTitle)}</h3>
+              <p>${e(copy.studio.availableBody)}</p>
+            </div>
+            <div class="available-grid">${studioAvailable}</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="future section paged-section" aria-labelledby="roadmap-title">
+        <div class="snap-page architecture-page" id="roadmap" data-snap-page>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow" data-reveal><span>05</span>${e(copy.architecture.eyebrow)}</p>
+              <h2 id="roadmap-title" data-reveal>${e(copy.architecture.title)}</h2>
+            </div>
+            <p data-reveal>${e(copy.architecture.body)}</p>
+          </div>
+          <div class="architecture-map" data-reveal>
+            <div class="architecture-grid" aria-hidden="true"></div>
+            <div class="architecture-layer architecture-hosts">
+              <p>${e(copy.architecture.hostsLabel)}</p><div>${hostChips}</div>
+            </div>
+            <div class="architecture-flow" aria-hidden="true"><i></i><span>INTENT</span></div>
+            <div class="architecture-core">
+              <div class="core-heading"><p>${e(copy.architecture.coreLabel)}</p><span>ENGINE INDEPENDENT</span></div>
+              <div>${coreChips}</div>
+            </div>
+            <div class="architecture-flow" aria-hidden="true"><i></i><span>PLAN</span></div>
+            <div class="architecture-bottom">
+              <div class="architecture-layer architecture-backends"><p>${e(copy.architecture.backendLabel)}</p><div>${backendChips}</div></div>
+              <div class="architecture-layer architecture-results"><p>${e(copy.architecture.resultLabel)}</p><div>${resultChips}</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="snap-page roadmap-page" data-snap-page>
+          <div class="roadmap-block">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow"><span>05 / B</span>${e(copy.roadmap.eyebrow)}</p>
+                <h2>${e(copy.roadmap.title)}</h2>
+              </div>
+              <p>${e(copy.roadmap.body)}</p>
+            </div>
+            <div class="roadmap-grid">${roadmapStages}</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing section snap-page" id="preview" data-snap-page>
         <div class="closing-visual" aria-hidden="true"><i></i><i></i><i></i><span>V</span></div>
         <p class="eyebrow"><span>VESTA</span>${e(copy.closing.eyebrow)}</p>
         <h2><span>${e(copy.closing.titleOne)}</span><em>${e(copy.closing.titleTwo)}</em></h2>

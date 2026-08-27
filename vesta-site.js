@@ -4,7 +4,6 @@ const menuQuery = window.matchMedia("(max-width: 1180px)");
 const snapViewportQuery = window.matchMedia("(min-width: 861px)");
 const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 const MAGNETIC_WHEEL_THRESHOLD = 42;
-const MAGNETIC_HEADER_OFFSET = 68;
 const MAGNETIC_LOCK_MS = 640;
 
 let magneticWheelTotal = 0;
@@ -26,33 +25,14 @@ const updateMagneticScroll = () => {
 
 const buildMagneticStops = () => {
   const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-  const pageSize = Math.max(520, window.innerHeight - MAGNETIC_HEADER_OFFSET);
-  const anchors = [...document.querySelectorAll("[data-snap-panel]")]
-    .map((panel, index) => {
-      const offset = index === 0 ? 0 : MAGNETIC_HEADER_OFFSET;
-      return Math.min(maxScroll, Math.max(0, panel.getBoundingClientRect().top + window.scrollY - offset));
-    })
+  const anchors = [...document.querySelectorAll("[data-snap-page]")]
+    .map((page) =>
+      Math.min(maxScroll, Math.max(0, page.getBoundingClientRect().top + window.scrollY)),
+    )
     .filter((position, index, positions) => index === 0 || position > positions[index - 1] + 4);
-
-  const stops = [0];
-  for (let index = 0; index < anchors.length; index += 1) {
-    const start = anchors[index];
-    const end = anchors[index + 1] ?? maxScroll;
-    if (start > stops.at(-1) + 4) stops.push(start);
-
-    for (
-      let position = start + pageSize;
-      position < end - pageSize * 0.32;
-      position += pageSize
-    ) {
-      stops.push(Math.min(maxScroll, position));
-    }
-
-    if (end > stops.at(-1) + 4) stops.push(end);
-  }
-
-  if (maxScroll > stops.at(-1) + 4) stops.push(maxScroll);
-  return stops;
+  if (!anchors.length || anchors[0] > 4) anchors.unshift(0);
+  if (maxScroll > anchors.at(-1) + 4) anchors.push(maxScroll);
+  return anchors;
 };
 
 const nestedScrollerCanMove = (target, delta) => {
