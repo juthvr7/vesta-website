@@ -7,8 +7,8 @@ export const locales = {
       "Vesta is an engine-independent procedural editor and deterministic spatial computing platform for building coherent worlds.",
     localeName: "EN",
     nav: {
-      system: "System",
-      data: "Data",
+      product: "Product",
+      workflow: "Workflow",
       studio: "Studio",
       roadmap: "Roadmap",
     },
@@ -20,7 +20,7 @@ export const locales = {
       lineOne: "One graph.",
       lineTwo: "Every world.",
       lede:
-        "Vesta unifies terrain, geometry, imagery, and placement in one typed, deterministic spatial computing system—shared by Studio, CLI, Worker, and engine adapters.",
+        "Vesta is an engine-independent procedural worldbuilding and spatial computing system. One typed graph connects terrain, roads, cities, buildings, and ecosystems.",
       primaryCta: "See the system",
       secondaryCta: "View the current build",
       visualLabel: "Conceptual system visualization",
@@ -39,15 +39,15 @@ export const locales = {
       ],
     },
     thesis: {
-      index: "01 / Thesis",
-      title: "Worldbuilding tools should compose, not fragment.",
+      index: "01 / Product",
+      title: "Turn a fragmented toolchain into one composable system.",
       body:
-        "Terrain, geometry, raster processing, placement, and engine delivery are usually separate islands. Vesta turns them into one durable flow—from authored intent to reproducible result.",
-      proofLabel: "The Vesta difference",
+        "Terrain, geometry, raster processing, placement, and engine delivery usually live in separate tools. Vesta connects them through one authoritative graph and one execution model.",
+      proofLabel: "What defines Vesta",
       proof: [
-        ["One source", "A versioned graph remains the authority across every host."],
-        ["One runtime", "Validation, planning, execution, caching, and diagnostics stay in Core."],
-        ["Many outcomes", "The same system can produce geometry, fields, worlds, or engine-ready data."],
+        ["Typed by design", "Ports and data preserve meaning instead of collapsing into generic values."],
+        ["Reproducible", "Versioned semantics, explicit seeds, and deterministic execution make results durable."],
+        ["Host neutral", "The same Core serves Studio, CLI, Worker, and future engine adapters."],
       ],
     },
     system: {
@@ -88,6 +88,18 @@ export const locales = {
         "Current Vesta Studio development build showing a 3D viewport, details panel, node network, and desktop workspace",
       captureLabel: "Current development capture",
       captureNote: "Authentic Vesta Studio build — interface and workflows continue to evolve.",
+      availableEyebrow: "Available now",
+      availableTitle: "A working execution spine, not a concept reel.",
+      availableBody:
+        "The current build already carries authored graph data through validation, planning, deterministic CPU execution, caching, preview, and export.",
+      available: [
+        ["Versioned Graph", "Source, schema, validation, and compilation"],
+        ["Explicit planning", "Backend assignment, bounds, LOD, seed, and budget"],
+        ["CPU reference", "Deterministic evaluation with cooperative cancellation"],
+        ["Content cache", "Request-aware, content-addressed reusable results"],
+        ["CLI pipeline", "Load, validate, plan, execute, and export"],
+        ["Studio workspace", "Docking, viewport, graph tools, and CPU preview"],
+      ],
       facts: [
         ["Native", "Rust + Bevy/wgpu desktop application"],
         ["Shared", "The UI does not own a second graph runtime"],
@@ -99,6 +111,10 @@ export const locales = {
       title: "From primitive operations to coherent worlds.",
       body:
         "General data and graph foundations sit below domain packages. Terrain, roads, urban systems, buildings, biomes, and ecosystems can then compose without collapsing into one monolith.",
+      bridgeEyebrow: "From data to domains",
+      bridgeTitle: "Typed foundations below. Composable domains above.",
+      bridgeBody:
+        "General operations remain reusable while domain packages add the rules needed to coordinate terrain, infrastructure, buildings, and ecosystems.",
       imageAlt:
         "Conceptual procedural world progressing from mountain terrain and rivers to roads, urban blocks, buildings, and vegetation",
       visualLabel: "Concept visual / future domain composition",
@@ -169,8 +185,8 @@ export const locales = {
       "Vesta 是一个引擎无关的程序化编辑器与确定性空间计算平台，用统一系统构建连贯世界。",
     localeName: "中文",
     nav: {
-      system: "系统",
-      data: "数据",
+      product: "产品",
+      workflow: "工作方式",
       studio: "Studio",
       roadmap: "路线",
     },
@@ -182,7 +198,7 @@ export const locales = {
       lineOne: "一张图谱，",
       lineTwo: "构成万千世界。",
       lede:
-        "Vesta 将地形、几何、影像与放置统一到一套类型化、确定性的空间计算系统，并让同一份 Graph 运行于 Studio、CLI、Worker 与引擎适配器。",
+        "Vesta 是一套引擎无关的程序化世界构建与空间计算系统，用同一张类型化 Graph 连接地形、道路、城市、建筑与生态系统。",
       primaryCta: "了解系统",
       secondaryCta: "查看当前构建",
       visualLabel: "系统概念视觉",
@@ -201,15 +217,15 @@ export const locales = {
       ],
     },
     thesis: {
-      index: "01 / 命题",
-      title: "世界构建工具应该彼此组合，而不是继续割裂。",
+      index: "01 / 产品",
+      title: "让世界构建从工具拼接，变成可组合系统。",
       body:
-        "地形、几何、栅格处理、资产放置与引擎交付通常各自为岛。Vesta 把它们连接成一条持久链路——从创作意图到可复现结果。",
-      proofLabel: "Vesta 的不同之处",
+        "地形、几何、栅格处理、资产放置与引擎交付通常分散在不同工具中。Vesta 用一份权威 Graph 与一套执行模型把它们连接起来。",
+      proofLabel: "Vesta 的核心定义",
       proof: [
-        ["一份源数据", "版本化 Graph 在所有宿主中保持权威。"],
-        ["一套运行时", "验证、规划、执行、缓存与诊断统一归属 Core。"],
-        ["多种结果", "同一个系统可以输出几何、场、世界或引擎可消费的数据。"],
+        ["类型即语义", "端口与数据保持明确含义，不退化成通用属性集合。"],
+        ["结果可复现", "版本化语义、显式 Seed 与确定性执行让结果长期可靠。"],
+        ["宿主无关", "同一套 Core 服务于 Studio、CLI、Worker 与未来的引擎适配器。"],
       ],
     },
     system: {
@@ -248,6 +264,18 @@ export const locales = {
       imageAlt: "当前 Vesta Studio 开发构建，包含三维视口、详情面板、节点网络与桌面工作区",
       captureLabel: "当前开发构建",
       captureNote: "真实 Vesta Studio 截图——界面与工作流仍在持续演进。",
+      availableEyebrow: "当前可用",
+      availableTitle: "已经运行的执行主干，而不是概念演示。",
+      availableBody:
+        "当前构建已经能够让作者 Graph 经过验证、规划、确定性 CPU 执行、缓存、预览与导出。",
+      available: [
+        ["版本化 Graph", "Source、Schema、验证与编译"],
+        ["显式规划", "后端分配、范围、LOD、Seed 与预算"],
+        ["CPU 参考后端", "确定性求值与协作式取消"],
+        ["内容缓存", "感知请求、内容寻址的可复用结果"],
+        ["CLI 全链路", "加载、验证、规划、执行与导出"],
+        ["Studio 工作区", "Dock、视口、Graph 工具与 CPU 预览"],
+      ],
       facts: [
         ["原生桌面", "Rust + Bevy/wgpu 应用"],
         ["共享权威", "UI 不拥有第二套 Graph Runtime"],
@@ -259,6 +287,10 @@ export const locales = {
       title: "从基础算子，走向连贯世界。",
       body:
         "通用 Data 与 Graph 位于领域包下方。地形、道路、城市、建筑、生物群落与生态系统在其上组合，而不坍缩成一个巨型单体。",
+      bridgeEyebrow: "从数据到领域",
+      bridgeTitle: "下层保持类型化，上层实现可组合。",
+      bridgeBody:
+        "通用算子保持复用，领域包在其上加入必要规则，让地形、基础设施、建筑与生态系统彼此协调。",
       imageAlt: "程序化世界概念视觉，从山地河流逐步发展为道路、城市街区、建筑与植被",
       visualLabel: "概念视觉 / 未来领域组合",
       domains: ["地形", "道路", "街区", "建筑", "生物群落", "生态系统"],

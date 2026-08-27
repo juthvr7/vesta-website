@@ -25,8 +25,8 @@ function renderPage(localeKey, copy) {
   const enHref = isChinese ? "../" : "./";
   const zhHref = isChinese ? "./" : "./zh/";
   const navItems = [
-    ["system", copy.nav.system],
-    ["data", copy.nav.data],
+    ["product", copy.nav.product],
+    ["workflow", copy.nav.workflow],
     ["studio", copy.nav.studio],
     ["roadmap", copy.nav.roadmap],
   ];
@@ -49,7 +49,7 @@ function renderPage(localeKey, copy) {
   const systemSteps = copy.system.steps
     .map(
       ([number, title, description], index) => `
-              <article class="system-step" data-system-step="${index}" data-reveal style="--delay: ${index * 90}ms">
+              <article class="system-step">
                 <span class="step-number">${e(number)}</span>
                 <div class="step-node" aria-hidden="true"><i></i></div>
                 <h3>${e(title)}</h3>
@@ -83,9 +83,19 @@ function renderPage(localeKey, copy) {
     )
     .join("");
 
+  const studioAvailable = copy.studio.available
+    .map(
+      ([title, description], index) => `
+              <article>
+                <span>0${index + 1}</span><div><strong>${e(title)}</strong><p>${e(description)}</p></div>
+              </article>`,
+    )
+    .join("");
+
   const domains = copy.composition.domains
     .map((domain) => `<span>${e(domain)}</span><i aria-hidden="true"></i>`)
     .join("");
+  const domainChips = copy.composition.domains.map((domain) => `<span>${e(domain)}</span>`).join("");
 
   const hostChips = copy.architecture.hosts.map((host) => `<span>${e(host)}</span>`).join("");
   const coreChips = copy.architecture.core.map((item) => `<span>${e(item)}</span>`).join("");
@@ -168,18 +178,23 @@ function renderPage(localeKey, copy) {
           <div class="hero-media-vignette"></div>
         </div>
         <div class="hero-copy">
-          <p class="eyebrow hero-eyebrow"><span>V / 01</span>${e(copy.composition.eyebrow)}</p>
+          <p class="eyebrow hero-eyebrow"><span>V / 01</span>${e(copy.hero.eyebrow)}</p>
           <h1>${e(copy.composition.title)}</h1>
-          <p class="hero-lede">${e(copy.composition.body)}</p>
+          <p class="hero-lede">${e(copy.hero.lede)}</p>
         </div>
         <div class="hero-visual-note">
           <span><i></i>${e(copy.composition.visualLabel)}</span>
         </div>
       </section>
 
-      <div class="domain-strip" aria-label="${isChinese ? "领域组合" : "Composable domains"}">${domains}</div>
+      <div class="domain-strip" aria-label="${isChinese ? "领域组合" : "Composable domains"}">
+        <div class="domain-strip-track">
+          <div class="domain-strip-set">${domains}</div>
+          <div class="domain-strip-set" aria-hidden="true">${domains}</div>
+        </div>
+      </div>
 
-      <section class="thesis section" id="vision">
+      <section class="thesis section" id="product">
         <p class="section-index" data-reveal>${e(copy.thesis.index)}</p>
         <div class="thesis-copy">
           <h2 data-reveal>${e(copy.thesis.title)}</h2>
@@ -191,7 +206,7 @@ function renderPage(localeKey, copy) {
         </div>
       </section>
 
-      <section class="system section" id="system" data-system>
+      <section class="system section" id="workflow">
         <div class="section-heading">
           <div>
             <p class="eyebrow" data-reveal><span>02</span>${e(copy.system.eyebrow)}</p>
@@ -200,13 +215,13 @@ function renderPage(localeKey, copy) {
           <p data-reveal>${e(copy.system.intro)}</p>
         </div>
         <div class="system-stage">
-          <div class="system-track" aria-hidden="true"><i data-system-tracer></i></div>
+          <div class="system-track" aria-hidden="true"></div>
           <div class="system-steps">${systemSteps}</div>
-          <div class="system-rail" data-reveal>${systemRail}</div>
+          <div class="system-rail">${systemRail}</div>
         </div>
       </section>
 
-      <section class="data-section section" id="data">
+      <section class="data-section section" id="capabilities">
         <div class="data-layout">
           <div class="data-copy">
             <p class="eyebrow" data-reveal><span>03</span>${e(copy.data.eyebrow)}</p>
@@ -214,13 +229,20 @@ function renderPage(localeKey, copy) {
             <p class="section-lede" data-reveal>${e(copy.data.body)}</p>
             <div class="data-type-list">${dataTypes}</div>
           </div>
-          <figure class="data-visual" data-reveal data-visual>
+          <figure class="data-visual" data-reveal>
             <img src="${base}assets/unified-data.webp" alt="${e(copy.data.imageAlt)}" loading="lazy" width="1920" height="819">
-            <div class="data-lens" aria-hidden="true"></div>
             <figcaption><span><i></i>${e(copy.data.visualLabel)}</span><b>DATA / 001</b></figcaption>
           </figure>
         </div>
         <div class="data-chips" data-reveal>${dataChips}</div>
+        <div class="domain-bridge">
+          <div class="domain-bridge-copy">
+            <p class="eyebrow"><span>03 / B</span>${e(copy.composition.bridgeEyebrow)}</p>
+            <h3>${e(copy.composition.bridgeTitle)}</h3>
+            <p>${e(copy.composition.bridgeBody)}</p>
+          </div>
+          <div class="domain-chip-grid">${domainChips}</div>
+        </div>
       </section>
 
       <section class="studio section" id="studio">
@@ -239,7 +261,6 @@ function renderPage(localeKey, copy) {
           </div>
           <div class="studio-screen">
             <img src="${base}assets/studio-current.webp" alt="${e(copy.studio.imageAlt)}" loading="lazy" width="1800" height="1125">
-            <div class="studio-scanline" aria-hidden="true"></div>
           </div>
           <figcaption>
             <span><i></i>${e(copy.studio.captureLabel)}</span>
@@ -247,9 +268,17 @@ function renderPage(localeKey, copy) {
           </figcaption>
         </figure>
         <div class="studio-facts">${studioFacts}</div>
+        <div class="available-now">
+          <div class="available-heading">
+            <p class="eyebrow"><span>04 / B</span>${e(copy.studio.availableEyebrow)}</p>
+            <h3>${e(copy.studio.availableTitle)}</h3>
+            <p>${e(copy.studio.availableBody)}</p>
+          </div>
+          <div class="available-grid">${studioAvailable}</div>
+        </div>
       </section>
 
-      <section class="architecture section" id="architecture">
+      <section class="future section" id="roadmap">
         <div class="section-heading">
           <div>
             <p class="eyebrow" data-reveal><span>05</span>${e(copy.architecture.eyebrow)}</p>
@@ -273,25 +302,24 @@ function renderPage(localeKey, copy) {
             <div class="architecture-layer architecture-results"><p>${e(copy.architecture.resultLabel)}</p><div>${resultChips}</div></div>
           </div>
         </div>
-      </section>
-
-      <section class="roadmap section" id="roadmap">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow" data-reveal><span>06</span>${e(copy.roadmap.eyebrow)}</p>
-            <h2 data-reveal>${e(copy.roadmap.title)}</h2>
+        <div class="roadmap-block">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow"><span>05 / B</span>${e(copy.roadmap.eyebrow)}</p>
+              <h2>${e(copy.roadmap.title)}</h2>
+            </div>
+            <p>${e(copy.roadmap.body)}</p>
           </div>
-          <p data-reveal>${e(copy.roadmap.body)}</p>
+          <div class="roadmap-grid">${roadmapStages}</div>
         </div>
-        <div class="roadmap-grid">${roadmapStages}</div>
       </section>
 
       <section class="closing section" id="preview">
         <div class="closing-visual" aria-hidden="true"><i></i><i></i><i></i><span>V</span></div>
-        <p class="eyebrow" data-reveal><span>07</span>${e(copy.closing.eyebrow)}</p>
-        <h2 data-reveal><span>${e(copy.closing.titleOne)}</span><em>${e(copy.closing.titleTwo)}</em></h2>
-        <p data-reveal>${e(copy.closing.body)}</p>
-        <a class="button button-primary" href="#top" data-reveal>${e(copy.closing.backToTop)}<span aria-hidden="true">↑</span></a>
+        <p class="eyebrow"><span>VESTA</span>${e(copy.closing.eyebrow)}</p>
+        <h2><span>${e(copy.closing.titleOne)}</span><em>${e(copy.closing.titleTwo)}</em></h2>
+        <p>${e(copy.closing.body)}</p>
+        <a class="button button-primary" href="#top">${e(copy.closing.backToTop)}<span aria-hidden="true">↑</span></a>
       </section>
     </main>
 

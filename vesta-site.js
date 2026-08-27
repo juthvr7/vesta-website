@@ -1,26 +1,6 @@
 document.documentElement.classList.add("js");
 
-const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-const mobileQuery = window.matchMedia("(max-width: 860px)");
 const menuQuery = window.matchMedia("(max-width: 1180px)");
-const reducedMotion = reducedMotionQuery.matches;
-
-const revealItems = document.querySelectorAll("[data-reveal]:not(.is-visible)");
-if (reducedMotion || !("IntersectionObserver" in window)) {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
-} else {
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      });
-    },
-    { rootMargin: "0px 0px -8%", threshold: 0.12 },
-  );
-  revealItems.forEach((item) => revealObserver.observe(item));
-}
 
 const header = document.querySelector("[data-header]");
 const progressBar = document.querySelector(".scroll-progress span");
@@ -112,63 +92,4 @@ if ("IntersectionObserver" in window && observedSections.length) {
     { rootMargin: "-25% 0px -60%", threshold: [0, 0.25, 0.55] },
   );
   observedSections.forEach((section) => sectionObserver.observe(section));
-}
-
-const system = document.querySelector("[data-system]");
-const systemSteps = [...document.querySelectorAll("[data-system-step]")];
-const systemTracer = document.querySelector("[data-system-tracer]");
-let systemTimer = 0;
-let activeSystemStep = 0;
-
-const showSystemStep = (index) => {
-  activeSystemStep = index;
-  systemSteps.forEach((step, stepIndex) => step.classList.toggle("is-active", stepIndex === index));
-  if (!systemTracer || systemSteps.length < 2) return;
-  const position = `${(index / (systemSteps.length - 1)) * 100}%`;
-  if (mobileQuery.matches) {
-    systemTracer.style.top = position;
-    systemTracer.style.left = "50%";
-  } else {
-    systemTracer.style.left = position;
-    systemTracer.style.top = "50%";
-  }
-};
-
-const stopSystemCycle = () => {
-  window.clearInterval(systemTimer);
-  systemTimer = 0;
-};
-
-const startSystemCycle = () => {
-  if (reducedMotion || systemTimer || systemSteps.length < 2) return;
-  systemTimer = window.setInterval(() => {
-    showSystemStep((activeSystemStep + 1) % systemSteps.length);
-  }, 1550);
-};
-
-if (system && systemSteps.length) {
-  showSystemStep(0);
-  if (!reducedMotion && "IntersectionObserver" in window) {
-    const systemObserver = new IntersectionObserver(
-      ([entry]) => (entry.isIntersecting ? startSystemCycle() : stopSystemCycle()),
-      { threshold: 0.2 },
-    );
-    systemObserver.observe(system);
-  }
-  mobileQuery.addEventListener?.("change", () => showSystemStep(activeSystemStep));
-}
-
-const dataVisual = document.querySelector("[data-visual]");
-if (dataVisual && !reducedMotion && window.matchMedia("(pointer: fine)").matches) {
-  dataVisual.addEventListener("pointermove", (event) => {
-    const bounds = dataVisual.getBoundingClientRect();
-    const x = ((event.clientX - bounds.left) / bounds.width) * 100;
-    const y = ((event.clientY - bounds.top) / bounds.height) * 100;
-    dataVisual.style.setProperty("--lens-x", `${Math.max(0, Math.min(100, x))}%`);
-    dataVisual.style.setProperty("--lens-y", `${Math.max(0, Math.min(100, y))}%`);
-  });
-  dataVisual.addEventListener("pointerleave", () => {
-    dataVisual.style.setProperty("--lens-x", "64%");
-    dataVisual.style.setProperty("--lens-y", "40%");
-  });
 }

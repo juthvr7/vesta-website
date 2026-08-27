@@ -55,13 +55,15 @@ for (const page of pages) {
     '<link rel="alternate" hreflang="zh-CN"',
     '<link rel="alternate" hreflang="x-default"',
     `href="${page.stylesheet}"`,
-    'id="system"',
-    'id="data"',
+    'id="product"',
+    'id="workflow"',
+    'id="capabilities"',
     'id="studio"',
-    'id="architecture"',
     'id="roadmap"',
     'class="hero-poster"',
     'class="domain-strip"',
+    'class="domain-bridge"',
+    'class="available-now"',
     'class="locale-switch"',
   ];
 

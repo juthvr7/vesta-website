@@ -36,7 +36,7 @@
         <span class="brand-name">Vesta</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation" data-nav>
-        <a href="#system" data-nav-link>System</a><a href="#data" data-nav-link>Data</a><a href="#studio" data-nav-link>Studio</a><a href="#roadmap" data-nav-link>Roadmap</a>
+        <a href="#product" data-nav-link>Product</a><a href="#workflow" data-nav-link>Workflow</a><a href="#studio" data-nav-link>Studio</a><a href="#roadmap" data-nav-link>Roadmap</a>
       </nav>
       <div class="header-actions">
         <p class="build-label"><span></span>In development</p>
@@ -58,45 +58,50 @@
           <div class="hero-media-vignette"></div>
         </div>
         <div class="hero-copy">
-          <p class="eyebrow hero-eyebrow"><span>V / 01</span>World composition</p>
+          <p class="eyebrow hero-eyebrow"><span>V / 01</span>Engine-independent procedural systems</p>
           <h1>From primitive operations to coherent worlds.</h1>
-          <p class="hero-lede">General data and graph foundations sit below domain packages. Terrain, roads, urban systems, buildings, biomes, and ecosystems can then compose without collapsing into one monolith.</p>
+          <p class="hero-lede">Vesta is an engine-independent procedural worldbuilding and spatial computing system. One typed graph connects terrain, roads, cities, buildings, and ecosystems.</p>
         </div>
         <div class="hero-visual-note">
           <span><i></i>Concept visual / future domain composition</span>
         </div>
       </section>
 
-      <div class="domain-strip" aria-label="Composable domains"><span>Terrain</span><i aria-hidden="true"></i><span>Roads</span><i aria-hidden="true"></i><span>Blocks</span><i aria-hidden="true"></i><span>Buildings</span><i aria-hidden="true"></i><span>Biomes</span><i aria-hidden="true"></i><span>Ecosystems</span><i aria-hidden="true"></i></div>
+      <div class="domain-strip" aria-label="Composable domains">
+        <div class="domain-strip-track">
+          <div class="domain-strip-set"><span>Terrain</span><i aria-hidden="true"></i><span>Roads</span><i aria-hidden="true"></i><span>Blocks</span><i aria-hidden="true"></i><span>Buildings</span><i aria-hidden="true"></i><span>Biomes</span><i aria-hidden="true"></i><span>Ecosystems</span><i aria-hidden="true"></i></div>
+          <div class="domain-strip-set" aria-hidden="true"><span>Terrain</span><i aria-hidden="true"></i><span>Roads</span><i aria-hidden="true"></i><span>Blocks</span><i aria-hidden="true"></i><span>Buildings</span><i aria-hidden="true"></i><span>Biomes</span><i aria-hidden="true"></i><span>Ecosystems</span><i aria-hidden="true"></i></div>
+        </div>
+      </div>
 
-      <section class="thesis section" id="vision">
-        <p class="section-index" data-reveal>01 / Thesis</p>
+      <section class="thesis section" id="product">
+        <p class="section-index" data-reveal>01 / Product</p>
         <div class="thesis-copy">
-          <h2 data-reveal>Worldbuilding tools should compose, not fragment.</h2>
-          <p data-reveal>Terrain, geometry, raster processing, placement, and engine delivery are usually separate islands. Vesta turns them into one durable flow—from authored intent to reproducible result.</p>
+          <h2 data-reveal>Turn a fragmented toolchain into one composable system.</h2>
+          <p data-reveal>Terrain, geometry, raster processing, placement, and engine delivery usually live in separate tools. Vesta connects them through one authoritative graph and one execution model.</p>
         </div>
         <div class="thesis-proof">
-          <p class="micro-label" data-reveal>The Vesta difference</p>
+          <p class="micro-label" data-reveal>What defines Vesta</p>
           <div>
               <article data-reveal style="--delay: 0ms">
                 <span>01</span>
-                <h3>One source</h3>
-                <p>A versioned graph remains the authority across every host.</p>
+                <h3>Typed by design</h3>
+                <p>Ports and data preserve meaning instead of collapsing into generic values.</p>
               </article>
               <article data-reveal style="--delay: 80ms">
                 <span>02</span>
-                <h3>One runtime</h3>
-                <p>Validation, planning, execution, caching, and diagnostics stay in Core.</p>
+                <h3>Reproducible</h3>
+                <p>Versioned semantics, explicit seeds, and deterministic execution make results durable.</p>
               </article>
               <article data-reveal style="--delay: 160ms">
                 <span>03</span>
-                <h3>Many outcomes</h3>
-                <p>The same system can produce geometry, fields, worlds, or engine-ready data.</p>
+                <h3>Host neutral</h3>
+                <p>The same Core serves Studio, CLI, Worker, and future engine adapters.</p>
               </article></div>
         </div>
       </section>
 
-      <section class="system section" id="system" data-system>
+      <section class="system section" id="workflow">
         <div class="section-heading">
           <div>
             <p class="eyebrow" data-reveal><span>02</span>The system</p>
@@ -105,37 +110,37 @@
           <p data-reveal>Every request follows one observable execution chain. No hidden engine branch, no duplicated node semantics.</p>
         </div>
         <div class="system-stage">
-          <div class="system-track" aria-hidden="true"><i data-system-tracer></i></div>
+          <div class="system-track" aria-hidden="true"></div>
           <div class="system-steps">
-              <article class="system-step" data-system-step="0" data-reveal style="--delay: 0ms">
+              <article class="system-step">
                 <span class="step-number">01</span>
                 <div class="step-node" aria-hidden="true"><i></i></div>
                 <h3>Author</h3>
                 <p>Typed ports, stable identity, versioned parameters.</p>
               </article>
-              <article class="system-step" data-system-step="1" data-reveal style="--delay: 90ms">
+              <article class="system-step">
                 <span class="step-number">02</span>
                 <div class="step-node" aria-hidden="true"><i></i></div>
                 <h3>Validate</h3>
                 <p>Structured diagnostics before a plan can exist.</p>
               </article>
-              <article class="system-step" data-system-step="2" data-reveal style="--delay: 180ms">
+              <article class="system-step">
                 <span class="step-number">03</span>
                 <div class="step-node" aria-hidden="true"><i></i></div>
                 <h3>Plan &amp; evaluate</h3>
                 <p>Explicit backend, bounds, LOD, seed, budget, and cache.</p>
               </article>
-              <article class="system-step" data-system-step="3" data-reveal style="--delay: 270ms">
+              <article class="system-step">
                 <span class="step-number">04</span>
                 <div class="step-node" aria-hidden="true"><i></i></div>
                 <h3>Deliver</h3>
                 <p>Immutable typed results for Studio, CLI, Worker, or engine adapters.</p>
               </article></div>
-          <div class="system-rail" data-reveal><span><i></i>Graph source<small>01</small></span><span><i></i>Execution plan<small>02</small></span><span><i></i>CPU reference<small>03</small></span><span><i></i>Result handle<small>04</small></span></div>
+          <div class="system-rail"><span><i></i>Graph source<small>01</small></span><span><i></i>Execution plan<small>02</small></span><span><i></i>CPU reference<small>03</small></span><span><i></i>Result handle<small>04</small></span></div>
         </div>
       </section>
 
-      <section class="data-section section" id="data">
+      <section class="data-section section" id="capabilities">
         <div class="data-layout">
           <div class="data-copy">
             <p class="eyebrow" data-reveal><span>03</span>Unified spatial data</p>
@@ -159,13 +164,20 @@
                 <div><h3>Curves &amp; points</h3><p>Stable elements for roads, placement, and spatial composition</p></div>
               </article></div>
           </div>
-          <figure class="data-visual" data-reveal data-visual>
+          <figure class="data-visual" data-reveal>
             <img src="./assets/unified-data.webp" alt="Conceptual data landscape transitioning from heightfield contours to mesh, curves, and point instances" loading="lazy" width="1920" height="819">
-            <div class="data-lens" aria-hidden="true"></div>
             <figcaption><span><i></i>Concept visual / shared data model</span><b>DATA / 001</b></figcaption>
           </figure>
         </div>
         <div class="data-chips" data-reveal><span>Mesh</span><span>Heightfield</span><span>Image2D</span><span>Mask2D</span><span>Field2D</span><span>Curves</span><span>Points</span><span>Instances</span></div>
+        <div class="domain-bridge">
+          <div class="domain-bridge-copy">
+            <p class="eyebrow"><span>03 / B</span>From data to domains</p>
+            <h3>Typed foundations below. Composable domains above.</h3>
+            <p>General operations remain reusable while domain packages add the rules needed to coordinate terrain, infrastructure, buildings, and ecosystems.</p>
+          </div>
+          <div class="domain-chip-grid"><span>Terrain</span><span>Roads</span><span>Blocks</span><span>Buildings</span><span>Biomes</span><span>Ecosystems</span></div>
+        </div>
       </section>
 
       <section class="studio section" id="studio">
@@ -184,7 +196,6 @@
           </div>
           <div class="studio-screen">
             <img src="./assets/studio-current.webp" alt="Current Vesta Studio development build showing a 3D viewport, details panel, node network, and desktop workspace" loading="lazy" width="1800" height="1125">
-            <div class="studio-scanline" aria-hidden="true"></div>
           </div>
           <figcaption>
             <span><i></i>Current development capture</span>
@@ -201,9 +212,35 @@
               <article data-reveal style="--delay: 140ms">
                 <span>03</span><strong>Responsive</strong><p>Long evaluation stays off the UI thread</p>
               </article></div>
+        <div class="available-now">
+          <div class="available-heading">
+            <p class="eyebrow"><span>04 / B</span>Available now</p>
+            <h3>A working execution spine, not a concept reel.</h3>
+            <p>The current build already carries authored graph data through validation, planning, deterministic CPU execution, caching, preview, and export.</p>
+          </div>
+          <div class="available-grid">
+              <article>
+                <span>01</span><div><strong>Versioned Graph</strong><p>Source, schema, validation, and compilation</p></div>
+              </article>
+              <article>
+                <span>02</span><div><strong>Explicit planning</strong><p>Backend assignment, bounds, LOD, seed, and budget</p></div>
+              </article>
+              <article>
+                <span>03</span><div><strong>CPU reference</strong><p>Deterministic evaluation with cooperative cancellation</p></div>
+              </article>
+              <article>
+                <span>04</span><div><strong>Content cache</strong><p>Request-aware, content-addressed reusable results</p></div>
+              </article>
+              <article>
+                <span>05</span><div><strong>CLI pipeline</strong><p>Load, validate, plan, execute, and export</p></div>
+              </article>
+              <article>
+                <span>06</span><div><strong>Studio workspace</strong><p>Docking, viewport, graph tools, and CPU preview</p></div>
+              </article></div>
+        </div>
       </section>
 
-      <section class="architecture section" id="architecture">
+      <section class="future section" id="roadmap">
         <div class="section-heading">
           <div>
             <p class="eyebrow" data-reveal><span>05</span>Architecture</p>
@@ -227,17 +264,15 @@
             <div class="architecture-layer architecture-results"><p>Typed results</p><div><span>Geometry</span><span>Heightfield</span><span>Raster</span><span>Curves</span><span>Points</span><span>Instances</span></div></div>
           </div>
         </div>
-      </section>
-
-      <section class="roadmap section" id="roadmap">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow" data-reveal><span>06</span>Development</p>
-            <h2 data-reveal>Build the semantics first. Scale the experience outward.</h2>
+        <div class="roadmap-block">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow"><span>05 / B</span>Development</p>
+              <h2>Build the semantics first. Scale the experience outward.</h2>
+            </div>
+            <p>The roadmap deliberately establishes deterministic behavior and authoring foundations before widening the integration surface.</p>
           </div>
-          <p data-reveal>The roadmap deliberately establishes deterministic behavior and authoring foundations before widening the integration surface.</p>
-        </div>
-        <div class="roadmap-grid">
+          <div class="roadmap-grid">
               <article class="roadmap-card roadmap-done" data-reveal style="--delay: 0ms">
                 <div class="roadmap-index">01</div>
                 <p class="roadmap-state"><i></i>Available now</p>
@@ -256,14 +291,15 @@
                 <h3>Stable integration surface</h3>
                 <p>Versioned SDK/C ABI, the first Unreal vertical slice, and focused GPU backend validation behind an explicit contract.</p>
               </article></div>
+        </div>
       </section>
 
       <section class="closing section" id="preview">
         <div class="closing-visual" aria-hidden="true"><i></i><i></i><i></i><span>V</span></div>
-        <p class="eyebrow" data-reveal><span>07</span>Vesta / Technical preview</p>
-        <h2 data-reveal><span>Compose systems.</span><em>Shape worlds.</em></h2>
-        <p data-reveal>A private technical preview is in preparation.</p>
-        <a class="button button-primary" href="#top" data-reveal>Back to top<span aria-hidden="true">↑</span></a>
+        <p class="eyebrow"><span>VESTA</span>Vesta / Technical preview</p>
+        <h2><span>Compose systems.</span><em>Shape worlds.</em></h2>
+        <p>A private technical preview is in preparation.</p>
+        <a class="button button-primary" href="#top">Back to top<span aria-hidden="true">↑</span></a>
       </section>
     </main>
 
