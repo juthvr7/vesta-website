@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-locale="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#080b0a">
+    <meta name="description" content="Vesta 是一个引擎无关的程序化编辑器与确定性空间计算平台，用统一系统构建连贯世界。">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:url" content="https://juthvr7.github.io/vesta-website/zh/">
+    <meta property="og:title" content="Vesta — 一张图，构成万千世界。">
+    <meta property="og:description" content="Vesta 是一个引擎无关的程序化编辑器与确定性空间计算平台，用统一系统构建连贯世界。">
+    <meta property="og:image" content="https://juthvr7.github.io/vesta-website/og.png">
+    <meta property="og:image:alt" content="Vesta — 一张图，构成万千世界。">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vesta — 一张图，构成万千世界。">
+    <meta name="twitter:description" content="Vesta 是一个引擎无关的程序化编辑器与确定性空间计算平台，用统一系统构建连贯世界。">
+    <meta name="twitter:image" content="https://juthvr7.github.io/vesta-website/og.png">
+    <title>Vesta — 一张图，构成万千世界。</title>
+    <link rel="canonical" href="https://juthvr7.github.io/vesta-website/zh/">
+    <link rel="alternate" hreflang="en" href="https://juthvr7.github.io/vesta-website/">
+    <link rel="alternate" hreflang="zh-CN" href="https://juthvr7.github.io/vesta-website/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://juthvr7.github.io/vesta-website/">
+    <link rel="preload" as="image" href="../assets/world-system.webp" fetchpriority="high">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳至主要内容</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    <div class="ambient-layer" aria-hidden="true"><i></i><i></i><i></i></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Vesta home">
+        <span class="brand-mark" aria-hidden="true"><i></i><b>V</b></span>
+        <span class="brand-name">Vesta</span>
+      </a>
+      <nav class="site-nav" aria-label="主要导航" data-nav>
+        <a href="#system" data-nav-link>系统</a><a href="#data" data-nav-link>数据</a><a href="#studio" data-nav-link>Studio</a><a href="#roadmap" data-nav-link>路线</a>
+      </nav>
+      <div class="header-actions">
+        <p class="build-label"><span></span>开发中</p>
+        <div class="locale-switch" role="group" aria-label="语言">
+          <a class="locale-link" href="../" lang="en">EN</a>
+          <i aria-hidden="true"></i>
+          <a class="locale-link" href="./" lang="zh-CN" aria-current="page">中文</a>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false" data-open-label="打开导航" data-close-label="关闭导航" data-menu-toggle>
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" data-hero>
+        <div class="hero-media" aria-hidden="true">
+          <video poster="../assets/world-system.webp" autoplay muted loop playsinline preload="metadata" data-hero-video>
+            <source src="../assets/vesta-worlds-loop.mp4" type="video/mp4">
+          </video>
+          <div class="hero-media-grid"></div>
+          <div class="hero-media-scan"></div>
+          <div class="hero-media-vignette"></div>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow" data-reveal><span>V / 01</span>引擎无关的程序化世界系统</p>
+          <h1 data-reveal style="--delay: 80ms">
+            <span>一张图，</span>
+            <em>构成万千世界。</em>
+          </h1>
+          <p class="hero-lede" data-reveal style="--delay: 150ms">Vesta 将地形、几何、影像、放置与宿主引擎统一进一套类型化、确定性的空间计算系统。</p>
+          <div class="hero-actions" data-reveal style="--delay: 220ms">
+            <a class="button button-primary" href="#system">了解系统<span aria-hidden="true">↘</span></a>
+            <a class="button button-quiet" href="#studio">查看当前构建<span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="hero-visual-note" data-reveal style="--delay: 280ms">
+          <span><i></i>系统概念视觉</span>
+          <button type="button" data-video-toggle data-label-pause="暂停动态短片" data-label-play="播放动态短片" aria-label="暂停动态短片">
+            <i></i><b>动态</b>
+          </button>
+        </div>
+        <div class="hero-signals">
+            <article class="signal-card" data-reveal style="--delay: 0ms">
+              <span>01</span>
+              <div><strong>类型化图谱</strong><small>让空间数据使用同一种语言</small></div>
+            </article>
+            <article class="signal-card" data-reveal style="--delay: 70ms">
+              <span>02</span>
+              <div><strong>确定性</strong><small>显式 Seed 与版本化语义</small></div>
+            </article>
+            <article class="signal-card" data-reveal style="--delay: 140ms">
+              <span>03</span>
+              <div><strong>按需求值</strong><small>范围、分辨率、LOD 与目标输出</small></div>
+            </article>
+            <article class="signal-card" data-reveal style="--delay: 210ms">
+              <span>04</span>
+              <div><strong>宿主无关</strong><small>Studio、CLI、Worker 与引擎</small></div>
+            </article></div>
+      </section>
+
+      <div class="signal-marquee" aria-hidden="true">
+        <div>
+          <span>GRAPH</span><i></i><span>GEOMETRY</span><i></i><span>HEIGHTFIELD</span><i></i><span>RASTER</span><i></i><span>CURVES</span><i></i><span>POINTS</span><i></i><span>COMPUTE</span><i></i><span>DELIVER</span><i></i>
+          <span>GRAPH</span><i></i><span>GEOMETRY</span><i></i><span>HEIGHTFIELD</span><i></i><span>RASTER</span><i></i><span>CURVES</span><i></i><span>POINTS</span><i></i><span>COMPUTE</span><i></i><span>DELIVER</span><i></i>
+        </div>
+      </div>
+
+      <section class="thesis section" id="vision">
+        <p class="section-index" data-reveal>01 / 命题</p>
+        <div class="thesis-copy">
+          <h2 data-reveal>世界构建工具应该彼此组合，而不是继续割裂。</h2>
+          <p data-reveal>地形、几何、栅格处理、资产放置与引擎交付通常各自为岛。Vesta 把它们连接成一条持久链路——从创作意图到可复现结果。</p>
+        </div>
+        <div class="thesis-proof">
+          <p class="micro-label" data-reveal>Vesta 的不同之处</p>
+          <div>
+              <article data-reveal style="--delay: 0ms">
+                <span>01</span>
+                <h3>一份源数据</h3>
+                <p>版本化 Graph 在所有宿主中保持权威。</p>
+              </article>
+              <article data-reveal style="--delay: 80ms">
+                <span>02</span>
+                <h3>一套运行时</h3>
+                <p>验证、规划、执行、缓存与诊断统一归属 Core。</p>
+              </article>
+              <article data-reveal style="--delay: 160ms">
+                <span>03</span>
+                <h3>多种结果</h3>
+                <p>同一个系统可以输出几何、场、世界或引擎可消费的数据。</p>
+              </article></div>
+        </div>
+      </section>
+
+      <section class="system section" id="system" data-system>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-reveal><span>02</span>系统链路</p>
+            <h2 data-reveal>让意图成为可复现的结果。</h2>
+          </div>
+          <p data-reveal>每次请求只走一条可观察的执行链。不隐藏引擎分支，也不复制节点语义。</p>
+        </div>
+        <div class="system-stage">
+          <div class="system-track" aria-hidden="true"><i data-system-tracer></i></div>
+          <div class="system-steps">
+              <article class="system-step" data-system-step="0" data-reveal style="--delay: 0ms">
+                <span class="step-number">01</span>
+                <div class="step-node" aria-hidden="true"><i></i></div>
+                <h3>创作</h3>
+                <p>类型化端口、稳定身份与版本化参数。</p>
+              </article>
+              <article class="system-step" data-system-step="1" data-reveal style="--delay: 90ms">
+                <span class="step-number">02</span>
+                <div class="step-node" aria-hidden="true"><i></i></div>
+                <h3>验证</h3>
+                <p>只有结构化诊断通过，才允许生成计划。</p>
+              </article>
+              <article class="system-step" data-system-step="2" data-reveal style="--delay: 180ms">
+                <span class="step-number">03</span>
+                <div class="step-node" aria-hidden="true"><i></i></div>
+                <h3>规划与求值</h3>
+                <p>显式后端、范围、LOD、Seed、预算与缓存。</p>
+              </article>
+              <article class="system-step" data-system-step="3" data-reveal style="--delay: 270ms">
+                <span class="step-number">04</span>
+                <div class="step-node" aria-hidden="true"><i></i></div>
+                <h3>交付</h3>
+                <p>向 Studio、CLI、Worker 或引擎适配器返回不可变类型化结果。</p>
+              </article></div>
+          <div class="system-rail" data-reveal><span><i></i>Graph 源数据<small>01</small></span><span><i></i>执行计划<small>02</small></span><span><i></i>CPU 参考后端<small>03</small></span><span><i></i>结果句柄<small>04</small></span></div>
+        </div>
+      </section>
+
+      <section class="data-section section" id="data">
+        <div class="data-layout">
+          <div class="data-copy">
+            <p class="eyebrow" data-reveal><span>03</span>统一空间数据</p>
+            <h2 data-reveal>数据各有语义，执行共享语言。</h2>
+            <p class="section-lede" data-reveal>Heightfield 不是普通图片，Mask 也不是 Field。Vesta 显式保留它们的语义，同时让所有数据进入同一套类型化 Graph 与求值模型。</p>
+            <div class="data-type-list">
+              <article data-reveal style="--delay: 0ms">
+                <span>01</span>
+                <div><h3>几何</h3><p>Point、Vertex、Primitive 与类型化 Attribute</p></div>
+              </article>
+              <article data-reveal style="--delay: 65ms">
+                <span>02</span>
+                <div><h3>高度场</h3><p>单位、范围、分辨率与 Halo 感知求值</p></div>
+              </article>
+              <article data-reveal style="--delay: 130ms">
+                <span>03</span>
+                <div><h3>栅格与场</h3><p>显式通道、数值范围、坐标与转换语义</p></div>
+              </article>
+              <article data-reveal style="--delay: 195ms">
+                <span>04</span>
+                <div><h3>曲线与点</h3><p>为道路、放置和空间组合提供稳定元素</p></div>
+              </article></div>
+          </div>
+          <figure class="data-visual" data-reveal data-visual>
+            <img src="../assets/unified-data.webp" alt="概念数据地形，从等高线过渡到网格、曲线与点实例" loading="lazy" width="1920" height="819">
+            <div class="data-lens" aria-hidden="true"></div>
+            <figcaption><span><i></i>概念视觉 / 统一数据模型</span><b>DATA / 001</b></figcaption>
+          </figure>
+        </div>
+        <div class="data-chips" data-reveal><span>Mesh</span><span>Heightfield</span><span>Image2D</span><span>Mask2D</span><span>Field2D</span><span>Curves</span><span>Points</span><span>Instances</span></div>
+      </section>
+
+      <section class="studio section" id="studio">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-reveal><span>04</span>Vesta Studio</p>
+            <h2 data-reveal>把它做成真正的桌面创作工具。</h2>
+          </div>
+          <p data-reveal>Studio 是围绕同一套 Core 构建的创作宿主，自动化与未来的引擎适配器也使用这套 Core。工作区、Dock、视口、CPU 参考预览与算子开发工具已经运行；创作能力与输入门禁仍在持续推进。</p>
+        </div>
+        <figure class="studio-window" data-reveal>
+          <div class="window-bar" aria-hidden="true">
+            <span><i></i><i></i><i></i></span>
+            <b>VESTA STUDIO / DEVELOPMENT BUILD</b>
+            <small>LOCAL CPU</small>
+          </div>
+          <div class="studio-screen">
+            <img src="../assets/studio-current.webp" alt="当前 Vesta Studio 开发构建，包含三维视口、详情面板、节点网络与桌面工作区" loading="lazy" width="1800" height="1125">
+            <div class="studio-scanline" aria-hidden="true"></div>
+          </div>
+          <figcaption>
+            <span><i></i>当前开发构建</span>
+            <p>真实 Vesta Studio 截图——界面与工作流仍在持续演进。</p>
+          </figcaption>
+        </figure>
+        <div class="studio-facts">
+              <article data-reveal style="--delay: 0ms">
+                <span>01</span><strong>原生桌面</strong><p>Rust + Bevy/wgpu 应用</p>
+              </article>
+              <article data-reveal style="--delay: 70ms">
+                <span>02</span><strong>共享权威</strong><p>UI 不拥有第二套 Graph Runtime</p>
+              </article>
+              <article data-reveal style="--delay: 140ms">
+                <span>03</span><strong>保持响应</strong><p>长时间求值不会阻塞 UI 主线程</p>
+              </article></div>
+      </section>
+
+      <section class="composition" id="composition">
+        <div class="composition-media">
+          <img src="../assets/world-composition.webp" alt="程序化世界概念视觉，从山地河流逐步发展为道路、城市街区、建筑与植被" loading="lazy" width="1536" height="1024">
+          <div class="composition-shade" aria-hidden="true"></div>
+          <div class="composition-copy">
+            <p class="eyebrow" data-reveal><span>05</span>世界组合</p>
+            <h2 data-reveal>从基础算子，走向连贯世界。</h2>
+            <p data-reveal>通用 Data 与 Graph 位于领域包下方。地形、道路、城市、建筑、生物群落与生态系统在其上组合，而不坍缩成一个巨型单体。</p>
+          </div>
+          <p class="composition-label"><i></i>概念视觉 / 未来领域组合</p>
+        </div>
+        <div class="domain-marquee" aria-hidden="true"><div><span>地形</span><i aria-hidden="true"></i><span>道路</span><i aria-hidden="true"></i><span>街区</span><i aria-hidden="true"></i><span>建筑</span><i aria-hidden="true"></i><span>生物群落</span><i aria-hidden="true"></i><span>生态系统</span><i aria-hidden="true"></i><span>地形</span><i aria-hidden="true"></i><span>道路</span><i aria-hidden="true"></i><span>街区</span><i aria-hidden="true"></i><span>建筑</span><i aria-hidden="true"></i><span>生物群落</span><i aria-hidden="true"></i><span>生态系统</span><i aria-hidden="true"></i></div></div>
+      </section>
+
+      <section class="architecture section" id="architecture">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-reveal><span>06</span>架构</p>
+            <h2 data-reveal>一个持久核心，轻量宿主，显式后端。</h2>
+          </div>
+          <p data-reveal>Vesta 分离作者数据、执行计划与生成结果。宿主表达意图，Core 拥有语义，Backend 只执行准备完成的 Invocation。</p>
+        </div>
+        <div class="architecture-map" data-reveal>
+          <div class="architecture-grid" aria-hidden="true"></div>
+          <div class="architecture-layer architecture-hosts">
+            <p>宿主</p><div><span>Studio</span><span>CLI</span><span>Worker</span><span>引擎适配器</span></div>
+          </div>
+          <div class="architecture-flow" aria-hidden="true"><i></i><span>INTENT</span></div>
+          <div class="architecture-core">
+            <div class="core-heading"><p>权威 Core</p><span>ENGINE INDEPENDENT</span></div>
+            <div><span>Graph</span><span>Compiler</span><span>Planner</span><span>Executor</span><span>Cache</span><span>Diagnostics</span></div>
+          </div>
+          <div class="architecture-flow" aria-hidden="true"><i></i><span>PLAN</span></div>
+          <div class="architecture-bottom">
+            <div class="architecture-layer architecture-backends"><p>执行后端</p><div><span class="backend backend-active"><i></i>CPU 参考后端<small>已启用</small></span><span class="backend backend-future"><i></i>GPU Compute<small>后续</small></span><span class="backend backend-future"><i></i>外部 Worker<small>后续</small></span></div></div>
+            <div class="architecture-layer architecture-results"><p>类型化结果</p><div><span>Geometry</span><span>Heightfield</span><span>Raster</span><span>Curves</span><span>Points</span><span>Instances</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="roadmap section" id="roadmap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-reveal><span>07</span>开发路线</p>
+            <h2 data-reveal>先稳定语义，再向外扩展体验。</h2>
+          </div>
+          <p data-reveal>路线会先建立确定性行为与创作基础，再逐步扩大集成边界。</p>
+        </div>
+        <div class="roadmap-grid">
+              <article class="roadmap-card roadmap-done" data-reveal style="--delay: 0ms">
+                <div class="roadmap-index">01</div>
+                <p class="roadmap-state"><i></i>当前可用</p>
+                <h3>Core 执行主干</h3>
+                <p>版本化 Graph Source、验证、编译、显式后端分配、确定性 CPU 求值、内容寻址缓存与 CLI 全链路。</p>
+              </article>
+              <article class="roadmap-card roadmap-active" data-reveal style="--delay: 85ms">
+                <div class="roadmap-index">02</div>
+                <p class="roadmap-state"><i></i>持续推进</p>
+                <h3>Studio 与算子深度</h3>
+                <p>桌面工作区、视口与 Graph 工作流、性能、算子对齐，以及尚未完成的交互验收门禁。</p>
+              </article>
+              <article class="roadmap-card roadmap-next" data-reveal style="--delay: 170ms">
+                <div class="roadmap-index">03</div>
+                <p class="roadmap-state"><i></i>下一阶段</p>
+                <h3>稳定集成边界</h3>
+                <p>版本化 SDK/C ABI、第一条 Unreal 垂直切片，以及位于显式契约之后的 GPU 后端验证。</p>
+              </article></div>
+      </section>
+
+      <section class="closing section" id="preview">
+        <div class="closing-visual" aria-hidden="true"><i></i><i></i><i></i><span>V</span></div>
+        <p class="eyebrow" data-reveal><span>08</span>Vesta / 技术预览</p>
+        <h2 data-reveal><span>组合系统，</span><em>塑造世界。</em></h2>
+        <p data-reveal>私有技术预览正在准备中。</p>
+        <a class="button button-primary" href="#top" data-reveal>返回顶部<span aria-hidden="true">↑</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="#top" aria-label="Vesta home">
+        <span class="brand-mark" aria-hidden="true"><i></i><b>V</b></span><span class="brand-name">Vesta</span>
+      </a>
+      <p>独立程序化世界系统</p>
+      <p>持续公开迭代 / 2026</p>
+    </footer>
+  </body>
+</html>

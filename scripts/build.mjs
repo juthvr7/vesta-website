@@ -4,14 +4,21 @@ const output = new URL("../dist/", import.meta.url);
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 
-for (const file of ["index.html", "styles.css", "site.js", "robots.txt", "sitemap.xml"]) {
+for (const file of [
+  "index.html",
+  "styles.css",
+  "site.js",
+  "robots.txt",
+  "sitemap.xml",
+  "og.png",
+]) {
   await cp(new URL(`../${file}`, import.meta.url), new URL(file, output));
 }
 
-try {
-  await cp(new URL("../og.png", import.meta.url), new URL("og.png", output));
-} catch (error) {
-  if (error.code !== "ENOENT") throw error;
+for (const directory of ["assets", "zh"]) {
+  await cp(new URL(`../${directory}/`, import.meta.url), new URL(`${directory}/`, output), {
+    recursive: true,
+  });
 }
 
-console.log("Built static site in dist/.");
+console.log("Built bilingual static site in dist/.");

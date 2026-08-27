@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://juthvr7.github.io/vesta-website/sitemap.xml
