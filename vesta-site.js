@@ -129,6 +129,38 @@ if (hero && !reducedMotion && window.matchMedia("(pointer: fine)").matches) {
   });
 }
 
+const heroFlowSteps = [...document.querySelectorAll("[data-hero-flow-step]")];
+let heroFlowTimer = 0;
+let activeHeroFlowStep = 0;
+
+const showHeroFlowStep = (index) => {
+  activeHeroFlowStep = index;
+  heroFlowSteps.forEach((step, stepIndex) => step.classList.toggle("is-active", stepIndex === index));
+};
+
+const stopHeroFlow = () => {
+  window.clearInterval(heroFlowTimer);
+  heroFlowTimer = 0;
+};
+
+const startHeroFlow = () => {
+  if (reducedMotion || heroFlowTimer || heroFlowSteps.length < 2) return;
+  heroFlowTimer = window.setInterval(() => {
+    showHeroFlowStep((activeHeroFlowStep + 1) % heroFlowSteps.length);
+  }, 1350);
+};
+
+if (hero && heroFlowSteps.length) {
+  showHeroFlowStep(0);
+  if (!reducedMotion && "IntersectionObserver" in window) {
+    const heroFlowObserver = new IntersectionObserver(
+      ([entry]) => (entry.isIntersecting ? startHeroFlow() : stopHeroFlow()),
+      { threshold: 0.1 },
+    );
+    heroFlowObserver.observe(hero);
+  }
+}
+
 const heroVideo = document.querySelector("[data-hero-video]");
 const videoToggle = document.querySelector("[data-video-toggle]");
 

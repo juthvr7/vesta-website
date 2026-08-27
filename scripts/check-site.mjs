@@ -64,6 +64,9 @@ for (const page of pages) {
     'id="roadmap"',
     'data-hero-video',
     'data-video-toggle',
+    'class="hero-proof"',
+    'data-hero-flow-step',
+    'class="hero-build-preview"',
     'class="locale-switch"',
   ];
 

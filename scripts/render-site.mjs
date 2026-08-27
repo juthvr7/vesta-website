@@ -45,6 +45,15 @@ function renderPage(localeKey, copy) {
     )
     .join("");
 
+  const heroFlow = copy.hero.flowSteps
+    .map(
+      (label, index) => `
+              <div class="hero-flow-step${index === 0 ? " is-active" : ""}" data-hero-flow-step>
+                <span>0${index + 1}</span><i></i><b>${e(label)}</b>
+              </div>${index < copy.hero.flowSteps.length - 1 ? '<span class="hero-flow-link"><i></i></span>' : ""}`,
+    )
+    .join("");
+
   const thesisProof = copy.thesis.proof
     .map(
       ([title, description], index) => `
@@ -193,6 +202,25 @@ function renderPage(localeKey, copy) {
             <a class="button button-quiet" href="#studio">${e(copy.hero.secondaryCta)}<span aria-hidden="true">→</span></a>
           </div>
         </div>
+        <aside class="hero-proof" aria-label="${e(copy.hero.proofLabel)}" data-reveal style="--delay: 250ms">
+          <div class="hero-proof-heading">
+            <span><i></i>${e(copy.hero.flowLabel)}</span>
+            <b>${e(copy.hero.flowState)}</b>
+          </div>
+          <div class="hero-proof-flow">${heroFlow}</div>
+          <a class="hero-build-preview" href="#studio">
+            <figure>
+              <img src="${base}assets/studio-current.webp" alt="" width="1800" height="1125">
+              <i aria-hidden="true"></i>
+            </figure>
+            <div>
+              <span>${e(copy.hero.buildLabel)}</span>
+              <strong>${e(copy.hero.buildTitle)}</strong>
+              <small>${e(copy.hero.buildMeta)}</small>
+            </div>
+            <b aria-hidden="true">↘</b>
+          </a>
+        </aside>
         <div class="hero-visual-note" data-reveal style="--delay: 280ms">
           <span><i></i>${e(copy.hero.visualLabel)}</span>
           <button type="button" data-video-toggle data-label-pause="${e(copy.hero.videoPause)}" data-label-play="${e(copy.hero.videoPlay)}" aria-label="${e(copy.hero.videoPause)}">
