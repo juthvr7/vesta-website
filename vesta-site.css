@@ -37,16 +37,11 @@ html {
 }
 
 html.magnetic-scroll {
+  overscroll-behavior-y: none;
   scroll-padding-top: 68px;
-  scroll-snap-type: y mandatory;
 }
 
 [data-snap-panel] { min-height: 100svh; }
-
-.magnetic-scroll [data-snap-panel] {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
 
 body {
   min-width: 320px;
@@ -2222,13 +2217,6 @@ html[lang="zh-CN"] .roadmap-card h3 { letter-spacing: -0.025em; }
 
 @media (prefers-reduced-motion: reduce) {
   :root { scroll-behavior: auto; }
-
-  html { scroll-snap-type: none !important; }
-
-  [data-snap-panel] {
-    scroll-snap-align: none !important;
-    scroll-snap-stop: normal !important;
-  }
 
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

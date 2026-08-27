@@ -6,6 +6,7 @@ import { locales } from "../content/site-content.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const siteUrl = "https://juthvr7.github.io/vesta-website/";
+const assetVersion = "20260828-magnetic-v2";
 const checkOnly = process.argv.includes("--check");
 
 const escapeHtml = (value) =>
@@ -157,8 +158,8 @@ function renderPage(localeKey, copy) {
     <link rel="alternate" hreflang="zh-CN" href="${siteUrl}zh/">
     <link rel="alternate" hreflang="x-default" href="${siteUrl}">
     <link rel="preload" as="image" href="${base}assets/world-composition.webp" fetchpriority="high">
-    <link rel="stylesheet" href="${base}vesta-site.css">
-    <script src="${base}vesta-site.js" defer></script>
+    <link rel="stylesheet" href="${base}vesta-site.css?v=${assetVersion}">
+    <script src="${base}vesta-site.js?v=${assetVersion}" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">${isChinese ? "跳至主要内容" : "Skip to main content"}</a>

@@ -3,17 +3,142 @@ document.documentElement.classList.add("js");
 const menuQuery = window.matchMedia("(max-width: 1180px)");
 const snapViewportQuery = window.matchMedia("(min-width: 861px)");
 const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+const MAGNETIC_WHEEL_THRESHOLD = 42;
+const MAGNETIC_HEADER_OFFSET = 68;
+const MAGNETIC_LOCK_MS = 640;
+
+let magneticWheelTotal = 0;
+let magneticWheelResetTimer = 0;
+let magneticUnlockTimer = 0;
+let magneticLocked = false;
+let magneticLockUntil = 0;
+
+const magneticScrollEnabled = () =>
+  snapViewportQuery.matches && !reducedMotionQuery.matches;
 
 const updateMagneticScroll = () => {
   document.documentElement.classList.toggle(
     "magnetic-scroll",
-    snapViewportQuery.matches && !reducedMotionQuery.matches,
+    magneticScrollEnabled(),
   );
+  magneticWheelTotal = 0;
+};
+
+const buildMagneticStops = () => {
+  const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+  const pageSize = Math.max(520, window.innerHeight - MAGNETIC_HEADER_OFFSET);
+  const anchors = [...document.querySelectorAll("[data-snap-panel]")]
+    .map((panel, index) => {
+      const offset = index === 0 ? 0 : MAGNETIC_HEADER_OFFSET;
+      return Math.min(maxScroll, Math.max(0, panel.getBoundingClientRect().top + window.scrollY - offset));
+    })
+    .filter((position, index, positions) => index === 0 || position > positions[index - 1] + 4);
+
+  const stops = [0];
+  for (let index = 0; index < anchors.length; index += 1) {
+    const start = anchors[index];
+    const end = anchors[index + 1] ?? maxScroll;
+    if (start > stops.at(-1) + 4) stops.push(start);
+
+    for (
+      let position = start + pageSize;
+      position < end - pageSize * 0.32;
+      position += pageSize
+    ) {
+      stops.push(Math.min(maxScroll, position));
+    }
+
+    if (end > stops.at(-1) + 4) stops.push(end);
+  }
+
+  if (maxScroll > stops.at(-1) + 4) stops.push(maxScroll);
+  return stops;
+};
+
+const nestedScrollerCanMove = (target, delta) => {
+  let element = target instanceof Element ? target : null;
+  while (element && element !== document.body) {
+    const style = window.getComputedStyle(element);
+    const scrollable = /(auto|scroll|overlay)/.test(style.overflowY);
+    if (scrollable && element.scrollHeight > element.clientHeight + 1) {
+      if (delta > 0 && element.scrollTop + element.clientHeight < element.scrollHeight - 1) return true;
+      if (delta < 0 && element.scrollTop > 1) return true;
+    }
+    element = element.parentElement;
+  }
+  return false;
+};
+
+const scheduleMagneticUnlock = () => {
+  window.clearTimeout(magneticUnlockTimer);
+  const wait = Math.max(160, magneticLockUntil - performance.now());
+  magneticUnlockTimer = window.setTimeout(() => {
+    if (performance.now() < magneticLockUntil) {
+      scheduleMagneticUnlock();
+      return;
+    }
+    magneticLocked = false;
+    document.documentElement.classList.remove("is-magnetic-scrolling");
+  }, wait);
+};
+
+const handleMagneticWheel = (event) => {
+  if (
+    !magneticScrollEnabled() ||
+    event.defaultPrevented ||
+    event.ctrlKey ||
+    event.metaKey ||
+    Math.abs(event.deltaX) > Math.abs(event.deltaY)
+  ) {
+    return;
+  }
+
+  const modeScale = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? window.innerHeight : 1;
+  const delta = event.deltaY * modeScale;
+  if (!delta || nestedScrollerCanMove(event.target, delta)) return;
+
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  if ((delta < 0 && window.scrollY <= 1) || (delta > 0 && window.scrollY >= maxScroll - 1)) return;
+
+  event.preventDefault();
+
+  if (magneticLocked) {
+    scheduleMagneticUnlock();
+    return;
+  }
+
+  if (Math.sign(magneticWheelTotal) !== Math.sign(delta)) magneticWheelTotal = 0;
+  magneticWheelTotal += delta;
+
+  window.clearTimeout(magneticWheelResetTimer);
+  magneticWheelResetTimer = window.setTimeout(() => {
+    magneticWheelTotal = 0;
+  }, 150);
+
+  if (Math.abs(magneticWheelTotal) < MAGNETIC_WHEEL_THRESHOLD) return;
+
+  const direction = Math.sign(magneticWheelTotal);
+  const current = window.scrollY;
+  const tolerance = Math.max(18, window.innerHeight * 0.025);
+  const stops = buildMagneticStops();
+  const target = direction > 0
+    ? stops.find((position) => position > current + tolerance)
+    : [...stops].reverse().find((position) => position < current - tolerance);
+
+  magneticWheelTotal = 0;
+  if (target === undefined) return;
+
+  magneticLocked = true;
+  magneticLockUntil = performance.now() + MAGNETIC_LOCK_MS;
+  document.documentElement.classList.add("is-magnetic-scrolling");
+  window.scrollTo({ top: target, behavior: "smooth" });
+  scheduleMagneticUnlock();
 };
 
 updateMagneticScroll();
 snapViewportQuery.addEventListener?.("change", updateMagneticScroll);
 reducedMotionQuery.addEventListener?.("change", updateMagneticScroll);
+window.addEventListener("wheel", handleMagneticWheel, { passive: false });
 
 const header = document.querySelector("[data-header]");
 const progressBar = document.querySelector(".scroll-progress span");

@@ -7,6 +7,7 @@ import { locales } from "../content/site-content.mjs";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const fromRoot = (...parts) => resolve(root, ...parts);
 const siteUrl = "https://juthvr7.github.io/vesta-website/";
+const assetVersion = "20260828-magnetic-v2";
 
 const requiredFiles = [
   "index.html",
@@ -57,7 +58,8 @@ for (const page of pages) {
     '<link rel="alternate" hreflang="en"',
     '<link rel="alternate" hreflang="zh-CN"',
     '<link rel="alternate" hreflang="x-default"',
-    `href="${page.stylesheet}"`,
+    `href="${page.stylesheet}?v=${assetVersion}"`,
+    `src="${page.stylesheet.replace("vesta-site.css", "vesta-site.js")}?v=${assetVersion}"`,
     'id="product"',
     'id="workflow"',
     'id="capabilities"',
@@ -121,13 +123,19 @@ for (const page of pages) {
 const css = await readFile(fromRoot("vesta-site.css"), "utf8");
 const javascript = await readFile(fromRoot("vesta-site.js"), "utf8");
 
-for (const marker of ["scroll-snap-type: y mandatory", "scroll-snap-stop: always"]) {
+for (const marker of ["overscroll-behavior-y: none", "scroll-padding-top: 68px"]) {
   if (!css.includes(marker)) {
     throw new Error(`vesta-site.css is missing magnetic-scroll marker: ${marker}`);
   }
 }
 
-for (const marker of ["magnetic-scroll", "snapViewportQuery", "reducedMotionQuery"]) {
+for (const marker of [
+  "MAGNETIC_WHEEL_THRESHOLD",
+  "buildMagneticStops",
+  "handleMagneticWheel",
+  "passive: false",
+  "reducedMotionQuery",
+]) {
   if (!javascript.includes(marker)) {
     throw new Error(`vesta-site.js is missing magnetic-scroll marker: ${marker}`);
   }
