@@ -21,7 +21,7 @@
     <link rel="alternate" hreflang="en" href="https://juthvr7.github.io/vesta-website/">
     <link rel="alternate" hreflang="zh-CN" href="https://juthvr7.github.io/vesta-website/zh/">
     <link rel="alternate" hreflang="x-default" href="https://juthvr7.github.io/vesta-website/">
-    <link rel="preload" as="image" href="../assets/world-system.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="../assets/world-composition.webp" fetchpriority="high">
     <link rel="stylesheet" href="../vesta-site.css">
     <script src="../vesta-site.js" defer></script>
   </head>
@@ -54,87 +54,20 @@
     <main id="main">
       <section class="hero" id="top" data-hero>
         <div class="hero-media" aria-hidden="true">
-          <video poster="../assets/world-system.webp" autoplay muted loop playsinline preload="metadata" data-hero-video>
-            <source src="../assets/vesta-worlds-loop.mp4" type="video/mp4">
-          </video>
-          <div class="hero-media-grid"></div>
-          <div class="hero-media-scan"></div>
+          <img class="hero-poster" src="../assets/world-composition.webp" alt="" width="1536" height="1024" fetchpriority="high">
           <div class="hero-media-vignette"></div>
         </div>
         <div class="hero-copy">
-          <p class="eyebrow hero-eyebrow" data-reveal><span>V / 01</span>引擎无关的程序化世界系统</p>
-          <h1 data-reveal style="--delay: 80ms">
-            <span>一张图谱，</span>
-            <em>构成万千世界。</em>
-          </h1>
-          <p class="hero-lede" data-reveal style="--delay: 150ms">Vesta 将地形、几何、影像与放置统一到一套类型化、确定性的空间计算系统，并让同一份 Graph 运行于 Studio、CLI、Worker 与引擎适配器。</p>
-          <div class="hero-actions" data-reveal style="--delay: 220ms">
-            <a class="button button-primary" href="#system">了解系统<span aria-hidden="true">↘</span></a>
-            <a class="button button-quiet" href="#studio">查看当前构建<span aria-hidden="true">→</span></a>
-          </div>
+          <p class="eyebrow hero-eyebrow"><span>V / 01</span>世界组合</p>
+          <h1>从基础算子，走向连贯世界。</h1>
+          <p class="hero-lede">通用 Data 与 Graph 位于领域包下方。地形、道路、城市、建筑、生物群落与生态系统在其上组合，而不坍缩成一个巨型单体。</p>
         </div>
-        <aside class="hero-proof" aria-label="Vesta 计算链路" data-reveal style="--delay: 250ms">
-          <div class="hero-proof-heading">
-            <span><i></i>实时计算链路</span>
-            <b>确定性 / CPU</b>
-          </div>
-          <div class="hero-proof-flow">
-              <div class="hero-flow-step is-active" data-hero-flow-step>
-                <span>01</span><i></i><b>Graph</b>
-              </div><span class="hero-flow-link"><i></i></span>
-              <div class="hero-flow-step" data-hero-flow-step>
-                <span>02</span><i></i><b>验证</b>
-              </div><span class="hero-flow-link"><i></i></span>
-              <div class="hero-flow-step" data-hero-flow-step>
-                <span>03</span><i></i><b>求值</b>
-              </div><span class="hero-flow-link"><i></i></span>
-              <div class="hero-flow-step" data-hero-flow-step>
-                <span>04</span><i></i><b>结果</b>
-              </div></div>
-          <a class="hero-build-preview" href="#studio">
-            <figure>
-              <img src="../assets/studio-current.webp" alt="" width="1800" height="1125">
-              <i aria-hidden="true"></i>
-            </figure>
-            <div>
-              <span>真实构建</span>
-              <strong>Vesta Studio</strong>
-              <small>Graph / 视口 / CPU 预览</small>
-            </div>
-            <b aria-hidden="true">↘</b>
-          </a>
-        </aside>
-        <div class="hero-visual-note" data-reveal style="--delay: 280ms">
-          <span><i></i>系统概念视觉</span>
-          <button type="button" data-video-toggle data-label-pause="暂停动态短片" data-label-play="播放动态短片" aria-label="暂停动态短片">
-            <i></i><b>动态</b>
-          </button>
+        <div class="hero-visual-note">
+          <span><i></i>概念视觉 / 未来领域组合</span>
         </div>
-        <div class="hero-signals">
-            <article class="signal-card" data-reveal style="--delay: 0ms">
-              <span>01</span>
-              <div><strong>类型化图谱</strong><small>让空间数据使用同一种语言</small></div>
-            </article>
-            <article class="signal-card" data-reveal style="--delay: 70ms">
-              <span>02</span>
-              <div><strong>确定性</strong><small>显式 Seed 与版本化语义</small></div>
-            </article>
-            <article class="signal-card" data-reveal style="--delay: 140ms">
-              <span>03</span>
-              <div><strong>按需求值</strong><small>范围、分辨率、LOD 与目标输出</small></div>
-            </article>
-            <article class="signal-card" data-reveal style="--delay: 210ms">
-              <span>04</span>
-              <div><strong>宿主无关</strong><small>Studio、CLI、Worker 与引擎</small></div>
-            </article></div>
       </section>
 
-      <div class="signal-marquee" aria-hidden="true">
-        <div>
-          <span>GRAPH</span><i></i><span>GEOMETRY</span><i></i><span>HEIGHTFIELD</span><i></i><span>RASTER</span><i></i><span>CURVES</span><i></i><span>POINTS</span><i></i><span>COMPUTE</span><i></i><span>DELIVER</span><i></i>
-          <span>GRAPH</span><i></i><span>GEOMETRY</span><i></i><span>HEIGHTFIELD</span><i></i><span>RASTER</span><i></i><span>CURVES</span><i></i><span>POINTS</span><i></i><span>COMPUTE</span><i></i><span>DELIVER</span><i></i>
-        </div>
-      </div>
+      <div class="domain-strip" aria-label="领域组合"><span>地形</span><i aria-hidden="true"></i><span>道路</span><i aria-hidden="true"></i><span>街区</span><i aria-hidden="true"></i><span>建筑</span><i aria-hidden="true"></i><span>生物群落</span><i aria-hidden="true"></i><span>生态系统</span><i aria-hidden="true"></i></div>
 
       <section class="thesis section" id="vision">
         <p class="section-index" data-reveal>01 / 命题</p>
@@ -270,24 +203,10 @@
               </article></div>
       </section>
 
-      <section class="composition" id="composition">
-        <div class="composition-media">
-          <img src="../assets/world-composition.webp" alt="程序化世界概念视觉，从山地河流逐步发展为道路、城市街区、建筑与植被" loading="lazy" width="1536" height="1024">
-          <div class="composition-shade" aria-hidden="true"></div>
-          <div class="composition-copy">
-            <p class="eyebrow" data-reveal><span>05</span>世界组合</p>
-            <h2 data-reveal>从基础算子，走向连贯世界。</h2>
-            <p data-reveal>通用 Data 与 Graph 位于领域包下方。地形、道路、城市、建筑、生物群落与生态系统在其上组合，而不坍缩成一个巨型单体。</p>
-          </div>
-          <p class="composition-label"><i></i>概念视觉 / 未来领域组合</p>
-        </div>
-        <div class="domain-marquee" aria-hidden="true"><div><span>地形</span><i aria-hidden="true"></i><span>道路</span><i aria-hidden="true"></i><span>街区</span><i aria-hidden="true"></i><span>建筑</span><i aria-hidden="true"></i><span>生物群落</span><i aria-hidden="true"></i><span>生态系统</span><i aria-hidden="true"></i><span>地形</span><i aria-hidden="true"></i><span>道路</span><i aria-hidden="true"></i><span>街区</span><i aria-hidden="true"></i><span>建筑</span><i aria-hidden="true"></i><span>生物群落</span><i aria-hidden="true"></i><span>生态系统</span><i aria-hidden="true"></i></div></div>
-      </section>
-
       <section class="architecture section" id="architecture">
         <div class="section-heading">
           <div>
-            <p class="eyebrow" data-reveal><span>06</span>架构</p>
+            <p class="eyebrow" data-reveal><span>05</span>架构</p>
             <h2 data-reveal>一个持久核心，轻量宿主，显式后端。</h2>
           </div>
           <p data-reveal>Vesta 分离作者数据、执行计划与生成结果。宿主表达意图，Core 拥有语义，Backend 只执行准备完成的 Invocation。</p>
@@ -313,7 +232,7 @@
       <section class="roadmap section" id="roadmap">
         <div class="section-heading">
           <div>
-            <p class="eyebrow" data-reveal><span>07</span>开发路线</p>
+            <p class="eyebrow" data-reveal><span>06</span>开发路线</p>
             <h2 data-reveal>先稳定语义，再向外扩展体验。</h2>
           </div>
           <p data-reveal>路线会先建立确定性行为与创作基础，再逐步扩大集成边界。</p>
@@ -341,7 +260,7 @@
 
       <section class="closing section" id="preview">
         <div class="closing-visual" aria-hidden="true"><i></i><i></i><i></i><span>V</span></div>
-        <p class="eyebrow" data-reveal><span>08</span>Vesta / 技术预览</p>
+        <p class="eyebrow" data-reveal><span>07</span>Vesta / 技术预览</p>
         <h2 data-reveal><span>组合系统，</span><em>塑造世界。</em></h2>
         <p data-reveal>私有技术预览正在准备中。</p>
         <a class="button button-primary" href="#top" data-reveal>返回顶部<span aria-hidden="true">↑</span></a>

@@ -18,11 +18,9 @@ const requiredFiles = [
   "og.png",
   "content/site-content.mjs",
   "scripts/render-site.mjs",
-  "assets/world-system.webp",
   "assets/unified-data.webp",
   "assets/world-composition.webp",
   "assets/studio-current.webp",
-  "assets/vesta-worlds-loop.mp4",
 ];
 
 await Promise.all(requiredFiles.map((file) => access(fromRoot(file))));
@@ -62,17 +60,20 @@ for (const page of pages) {
     'id="studio"',
     'id="architecture"',
     'id="roadmap"',
-    'data-hero-video',
-    'data-video-toggle',
-    'class="hero-proof"',
-    'data-hero-flow-step',
-    'class="hero-build-preview"',
+    'class="hero-poster"',
+    'class="domain-strip"',
     'class="locale-switch"',
   ];
 
   for (const marker of markers) {
     if (!html.includes(marker)) {
       throw new Error(`${page.path} is missing required marker: ${marker}`);
+    }
+  }
+
+  for (const forbidden of ["<video", "data-hero-video", "vesta-worlds-loop.mp4", 'class="hero-proof"']) {
+    if (html.includes(forbidden)) {
+      throw new Error(`${page.path} contains removed homepage motion markup: ${forbidden}`);
     }
   }
 
@@ -113,8 +114,6 @@ for (const match of css.matchAll(/url\(["']?([^"')]+)["']?\)/g)) {
 }
 
 const mediaLimits = [
-  ["assets/vesta-worlds-loop.mp4", 5_000_000],
-  ["assets/world-system.webp", 750_000],
   ["assets/unified-data.webp", 750_000],
   ["assets/world-composition.webp", 750_000],
   ["assets/studio-current.webp", 750_000],

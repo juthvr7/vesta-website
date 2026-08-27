@@ -35,25 +35,6 @@ function renderPage(localeKey, copy) {
     .map(([target, label]) => `<a href="#${target}" data-nav-link>${e(label)}</a>`)
     .join("");
 
-  const heroSignals = copy.hero.signals
-    .map(
-      ([title, description], index) => `
-            <article class="signal-card" data-reveal style="--delay: ${index * 70}ms">
-              <span>0${index + 1}</span>
-              <div><strong>${e(title)}</strong><small>${e(description)}</small></div>
-            </article>`,
-    )
-    .join("");
-
-  const heroFlow = copy.hero.flowSteps
-    .map(
-      (label, index) => `
-              <div class="hero-flow-step${index === 0 ? " is-active" : ""}" data-hero-flow-step>
-                <span>0${index + 1}</span><i></i><b>${e(label)}</b>
-              </div>${index < copy.hero.flowSteps.length - 1 ? '<span class="hero-flow-link"><i></i></span>' : ""}`,
-    )
-    .join("");
-
   const thesisProof = copy.thesis.proof
     .map(
       ([title, description], index) => `
@@ -150,7 +131,7 @@ function renderPage(localeKey, copy) {
     <link rel="alternate" hreflang="en" href="${siteUrl}">
     <link rel="alternate" hreflang="zh-CN" href="${siteUrl}zh/">
     <link rel="alternate" hreflang="x-default" href="${siteUrl}">
-    <link rel="preload" as="image" href="${base}assets/world-system.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="${base}assets/world-composition.webp" fetchpriority="high">
     <link rel="stylesheet" href="${base}vesta-site.css">
     <script src="${base}vesta-site.js" defer></script>
   </head>
@@ -183,59 +164,20 @@ function renderPage(localeKey, copy) {
     <main id="main">
       <section class="hero" id="top" data-hero>
         <div class="hero-media" aria-hidden="true">
-          <video poster="${base}assets/world-system.webp" autoplay muted loop playsinline preload="metadata" data-hero-video>
-            <source src="${base}assets/vesta-worlds-loop.mp4" type="video/mp4">
-          </video>
-          <div class="hero-media-grid"></div>
-          <div class="hero-media-scan"></div>
+          <img class="hero-poster" src="${base}assets/world-composition.webp" alt="" width="1536" height="1024" fetchpriority="high">
           <div class="hero-media-vignette"></div>
         </div>
         <div class="hero-copy">
-          <p class="eyebrow hero-eyebrow" data-reveal><span>V / 01</span>${e(copy.hero.eyebrow)}</p>
-          <h1 data-reveal style="--delay: 80ms">
-            <span>${e(copy.hero.lineOne)}</span>
-            <em>${e(copy.hero.lineTwo)}</em>
-          </h1>
-          <p class="hero-lede" data-reveal style="--delay: 150ms">${e(copy.hero.lede)}</p>
-          <div class="hero-actions" data-reveal style="--delay: 220ms">
-            <a class="button button-primary" href="#system">${e(copy.hero.primaryCta)}<span aria-hidden="true">↘</span></a>
-            <a class="button button-quiet" href="#studio">${e(copy.hero.secondaryCta)}<span aria-hidden="true">→</span></a>
-          </div>
+          <p class="eyebrow hero-eyebrow"><span>V / 01</span>${e(copy.composition.eyebrow)}</p>
+          <h1>${e(copy.composition.title)}</h1>
+          <p class="hero-lede">${e(copy.composition.body)}</p>
         </div>
-        <aside class="hero-proof" aria-label="${e(copy.hero.proofLabel)}" data-reveal style="--delay: 250ms">
-          <div class="hero-proof-heading">
-            <span><i></i>${e(copy.hero.flowLabel)}</span>
-            <b>${e(copy.hero.flowState)}</b>
-          </div>
-          <div class="hero-proof-flow">${heroFlow}</div>
-          <a class="hero-build-preview" href="#studio">
-            <figure>
-              <img src="${base}assets/studio-current.webp" alt="" width="1800" height="1125">
-              <i aria-hidden="true"></i>
-            </figure>
-            <div>
-              <span>${e(copy.hero.buildLabel)}</span>
-              <strong>${e(copy.hero.buildTitle)}</strong>
-              <small>${e(copy.hero.buildMeta)}</small>
-            </div>
-            <b aria-hidden="true">↘</b>
-          </a>
-        </aside>
-        <div class="hero-visual-note" data-reveal style="--delay: 280ms">
-          <span><i></i>${e(copy.hero.visualLabel)}</span>
-          <button type="button" data-video-toggle data-label-pause="${e(copy.hero.videoPause)}" data-label-play="${e(copy.hero.videoPlay)}" aria-label="${e(copy.hero.videoPause)}">
-            <i></i><b>${isChinese ? "动态" : "Motion"}</b>
-          </button>
+        <div class="hero-visual-note">
+          <span><i></i>${e(copy.composition.visualLabel)}</span>
         </div>
-        <div class="hero-signals">${heroSignals}</div>
       </section>
 
-      <div class="signal-marquee" aria-hidden="true">
-        <div>
-          <span>GRAPH</span><i></i><span>GEOMETRY</span><i></i><span>HEIGHTFIELD</span><i></i><span>RASTER</span><i></i><span>CURVES</span><i></i><span>POINTS</span><i></i><span>COMPUTE</span><i></i><span>DELIVER</span><i></i>
-          <span>GRAPH</span><i></i><span>GEOMETRY</span><i></i><span>HEIGHTFIELD</span><i></i><span>RASTER</span><i></i><span>CURVES</span><i></i><span>POINTS</span><i></i><span>COMPUTE</span><i></i><span>DELIVER</span><i></i>
-        </div>
-      </div>
+      <div class="domain-strip" aria-label="${isChinese ? "领域组合" : "Composable domains"}">${domains}</div>
 
       <section class="thesis section" id="vision">
         <p class="section-index" data-reveal>${e(copy.thesis.index)}</p>
@@ -307,24 +249,10 @@ function renderPage(localeKey, copy) {
         <div class="studio-facts">${studioFacts}</div>
       </section>
 
-      <section class="composition" id="composition">
-        <div class="composition-media">
-          <img src="${base}assets/world-composition.webp" alt="${e(copy.composition.imageAlt)}" loading="lazy" width="1536" height="1024">
-          <div class="composition-shade" aria-hidden="true"></div>
-          <div class="composition-copy">
-            <p class="eyebrow" data-reveal><span>05</span>${e(copy.composition.eyebrow)}</p>
-            <h2 data-reveal>${e(copy.composition.title)}</h2>
-            <p data-reveal>${e(copy.composition.body)}</p>
-          </div>
-          <p class="composition-label"><i></i>${e(copy.composition.visualLabel)}</p>
-        </div>
-        <div class="domain-marquee" aria-hidden="true"><div>${domains}${domains}</div></div>
-      </section>
-
       <section class="architecture section" id="architecture">
         <div class="section-heading">
           <div>
-            <p class="eyebrow" data-reveal><span>06</span>${e(copy.architecture.eyebrow)}</p>
+            <p class="eyebrow" data-reveal><span>05</span>${e(copy.architecture.eyebrow)}</p>
             <h2 data-reveal>${e(copy.architecture.title)}</h2>
           </div>
           <p data-reveal>${e(copy.architecture.body)}</p>
@@ -350,7 +278,7 @@ function renderPage(localeKey, copy) {
       <section class="roadmap section" id="roadmap">
         <div class="section-heading">
           <div>
-            <p class="eyebrow" data-reveal><span>07</span>${e(copy.roadmap.eyebrow)}</p>
+            <p class="eyebrow" data-reveal><span>06</span>${e(copy.roadmap.eyebrow)}</p>
             <h2 data-reveal>${e(copy.roadmap.title)}</h2>
           </div>
           <p data-reveal>${e(copy.roadmap.body)}</p>
@@ -360,7 +288,7 @@ function renderPage(localeKey, copy) {
 
       <section class="closing section" id="preview">
         <div class="closing-visual" aria-hidden="true"><i></i><i></i><i></i><span>V</span></div>
-        <p class="eyebrow" data-reveal><span>08</span>${e(copy.closing.eyebrow)}</p>
+        <p class="eyebrow" data-reveal><span>07</span>${e(copy.closing.eyebrow)}</p>
         <h2 data-reveal><span>${e(copy.closing.titleOne)}</span><em>${e(copy.closing.titleTwo)}</em></h2>
         <p data-reveal>${e(copy.closing.body)}</p>
         <a class="button button-primary" href="#top" data-reveal>${e(copy.closing.backToTop)}<span aria-hidden="true">↑</span></a>

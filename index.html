@@ -21,7 +21,7 @@
     <link rel="alternate" hreflang="en" href="https://juthvr7.github.io/vesta-website/">
     <link rel="alternate" hreflang="zh-CN" href="https://juthvr7.github.io/vesta-website/zh/">
     <link rel="alternate" hreflang="x-default" href="https://juthvr7.github.io/vesta-website/">
-    <link rel="preload" as="image" href="./assets/world-system.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="./assets/world-composition.webp" fetchpriority="high">
     <link rel="stylesheet" href="./vesta-site.css">
     <script src="./vesta-site.js" defer></script>
   </head>
@@ -54,87 +54,20 @@
     <main id="main">
       <section class="hero" id="top" data-hero>
         <div class="hero-media" aria-hidden="true">
-          <video poster="./assets/world-system.webp" autoplay muted loop playsinline preload="metadata" data-hero-video>
-            <source src="./assets/vesta-worlds-loop.mp4" type="video/mp4">
-          </video>
-          <div class="hero-media-grid"></div>
-          <div class="hero-media-scan"></div>
+          <img class="hero-poster" src="./assets/world-composition.webp" alt="" width="1536" height="1024" fetchpriority="high">
           <div class="hero-media-vignette"></div>
         </div>
         <div class="hero-copy">
-          <p class="eyebrow hero-eyebrow" data-reveal><span>V / 01</span>Engine-independent procedural systems</p>
-          <h1 data-reveal style="--delay: 80ms">
-            <span>One graph.</span>
-            <em>Every world.</em>
-          </h1>
-          <p class="hero-lede" data-reveal style="--delay: 150ms">Vesta unifies terrain, geometry, imagery, and placement in one typed, deterministic spatial computing system—shared by Studio, CLI, Worker, and engine adapters.</p>
-          <div class="hero-actions" data-reveal style="--delay: 220ms">
-            <a class="button button-primary" href="#system">See the system<span aria-hidden="true">↘</span></a>
-            <a class="button button-quiet" href="#studio">View the current build<span aria-hidden="true">→</span></a>
-          </div>
+          <p class="eyebrow hero-eyebrow"><span>V / 01</span>World composition</p>
+          <h1>From primitive operations to coherent worlds.</h1>
+          <p class="hero-lede">General data and graph foundations sit below domain packages. Terrain, roads, urban systems, buildings, biomes, and ecosystems can then compose without collapsing into one monolith.</p>
         </div>
-        <aside class="hero-proof" aria-label="Vesta computation path" data-reveal style="--delay: 250ms">
-          <div class="hero-proof-heading">
-            <span><i></i>Live computation path</span>
-            <b>Deterministic / CPU</b>
-          </div>
-          <div class="hero-proof-flow">
-              <div class="hero-flow-step is-active" data-hero-flow-step>
-                <span>01</span><i></i><b>Graph</b>
-              </div><span class="hero-flow-link"><i></i></span>
-              <div class="hero-flow-step" data-hero-flow-step>
-                <span>02</span><i></i><b>Validate</b>
-              </div><span class="hero-flow-link"><i></i></span>
-              <div class="hero-flow-step" data-hero-flow-step>
-                <span>03</span><i></i><b>Evaluate</b>
-              </div><span class="hero-flow-link"><i></i></span>
-              <div class="hero-flow-step" data-hero-flow-step>
-                <span>04</span><i></i><b>Result</b>
-              </div></div>
-          <a class="hero-build-preview" href="#studio">
-            <figure>
-              <img src="./assets/studio-current.webp" alt="" width="1800" height="1125">
-              <i aria-hidden="true"></i>
-            </figure>
-            <div>
-              <span>Authentic build</span>
-              <strong>Vesta Studio</strong>
-              <small>Graph / Viewport / CPU preview</small>
-            </div>
-            <b aria-hidden="true">↘</b>
-          </a>
-        </aside>
-        <div class="hero-visual-note" data-reveal style="--delay: 280ms">
-          <span><i></i>Conceptual system visualization</span>
-          <button type="button" data-video-toggle data-label-pause="Pause motion film" data-label-play="Play motion film" aria-label="Pause motion film">
-            <i></i><b>Motion</b>
-          </button>
+        <div class="hero-visual-note">
+          <span><i></i>Concept visual / future domain composition</span>
         </div>
-        <div class="hero-signals">
-            <article class="signal-card" data-reveal style="--delay: 0ms">
-              <span>01</span>
-              <div><strong>Typed graph</strong><small>One language for spatial data</small></div>
-            </article>
-            <article class="signal-card" data-reveal style="--delay: 70ms">
-              <span>02</span>
-              <div><strong>Deterministic</strong><small>Explicit seeds and versioned semantics</small></div>
-            </article>
-            <article class="signal-card" data-reveal style="--delay: 140ms">
-              <span>03</span>
-              <div><strong>On demand</strong><small>Bounds, resolution, LOD, output</small></div>
-            </article>
-            <article class="signal-card" data-reveal style="--delay: 210ms">
-              <span>04</span>
-              <div><strong>Host neutral</strong><small>Studio, CLI, Worker, engines</small></div>
-            </article></div>
       </section>
 
-      <div class="signal-marquee" aria-hidden="true">
-        <div>
-          <span>GRAPH</span><i></i><span>GEOMETRY</span><i></i><span>HEIGHTFIELD</span><i></i><span>RASTER</span><i></i><span>CURVES</span><i></i><span>POINTS</span><i></i><span>COMPUTE</span><i></i><span>DELIVER</span><i></i>
-          <span>GRAPH</span><i></i><span>GEOMETRY</span><i></i><span>HEIGHTFIELD</span><i></i><span>RASTER</span><i></i><span>CURVES</span><i></i><span>POINTS</span><i></i><span>COMPUTE</span><i></i><span>DELIVER</span><i></i>
-        </div>
-      </div>
+      <div class="domain-strip" aria-label="Composable domains"><span>Terrain</span><i aria-hidden="true"></i><span>Roads</span><i aria-hidden="true"></i><span>Blocks</span><i aria-hidden="true"></i><span>Buildings</span><i aria-hidden="true"></i><span>Biomes</span><i aria-hidden="true"></i><span>Ecosystems</span><i aria-hidden="true"></i></div>
 
       <section class="thesis section" id="vision">
         <p class="section-index" data-reveal>01 / Thesis</p>
@@ -270,24 +203,10 @@
               </article></div>
       </section>
 
-      <section class="composition" id="composition">
-        <div class="composition-media">
-          <img src="./assets/world-composition.webp" alt="Conceptual procedural world progressing from mountain terrain and rivers to roads, urban blocks, buildings, and vegetation" loading="lazy" width="1536" height="1024">
-          <div class="composition-shade" aria-hidden="true"></div>
-          <div class="composition-copy">
-            <p class="eyebrow" data-reveal><span>05</span>World composition</p>
-            <h2 data-reveal>From primitive operations to coherent worlds.</h2>
-            <p data-reveal>General data and graph foundations sit below domain packages. Terrain, roads, urban systems, buildings, biomes, and ecosystems can then compose without collapsing into one monolith.</p>
-          </div>
-          <p class="composition-label"><i></i>Concept visual / future domain composition</p>
-        </div>
-        <div class="domain-marquee" aria-hidden="true"><div><span>Terrain</span><i aria-hidden="true"></i><span>Roads</span><i aria-hidden="true"></i><span>Blocks</span><i aria-hidden="true"></i><span>Buildings</span><i aria-hidden="true"></i><span>Biomes</span><i aria-hidden="true"></i><span>Ecosystems</span><i aria-hidden="true"></i><span>Terrain</span><i aria-hidden="true"></i><span>Roads</span><i aria-hidden="true"></i><span>Blocks</span><i aria-hidden="true"></i><span>Buildings</span><i aria-hidden="true"></i><span>Biomes</span><i aria-hidden="true"></i><span>Ecosystems</span><i aria-hidden="true"></i></div></div>
-      </section>
-
       <section class="architecture section" id="architecture">
         <div class="section-heading">
           <div>
-            <p class="eyebrow" data-reveal><span>06</span>Architecture</p>
+            <p class="eyebrow" data-reveal><span>05</span>Architecture</p>
             <h2 data-reveal>One enduring core. Thin hosts. Explicit backends.</h2>
           </div>
           <p data-reveal>Vesta separates authoring data, execution plans, and generated results. Hosts express intent; Core owns semantics; backends execute prepared invocations.</p>
@@ -313,7 +232,7 @@
       <section class="roadmap section" id="roadmap">
         <div class="section-heading">
           <div>
-            <p class="eyebrow" data-reveal><span>07</span>Development</p>
+            <p class="eyebrow" data-reveal><span>06</span>Development</p>
             <h2 data-reveal>Build the semantics first. Scale the experience outward.</h2>
           </div>
           <p data-reveal>The roadmap deliberately establishes deterministic behavior and authoring foundations before widening the integration surface.</p>
@@ -341,7 +260,7 @@
 
       <section class="closing section" id="preview">
         <div class="closing-visual" aria-hidden="true"><i></i><i></i><i></i><span>V</span></div>
-        <p class="eyebrow" data-reveal><span>08</span>Vesta / Technical preview</p>
+        <p class="eyebrow" data-reveal><span>07</span>Vesta / Technical preview</p>
         <h2 data-reveal><span>Compose systems.</span><em>Shape worlds.</em></h2>
         <p data-reveal>A private technical preview is in preparation.</p>
         <a class="button button-primary" href="#top" data-reveal>Back to top<span aria-hidden="true">↑</span></a>
