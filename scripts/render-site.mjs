@@ -186,8 +186,8 @@ function renderPage(localeKey, copy) {
       </div>
     </header>
 
-    <main id="main">
-      <section class="hero" id="top" data-hero>
+    <main id="main" data-snap-root>
+      <section class="hero" id="top" data-hero data-snap-panel>
         <div class="hero-media" aria-hidden="true">
           <img class="hero-poster" src="${base}assets/world-composition.webp" alt="" width="1536" height="1024" fetchpriority="high">
           <div class="hero-media-vignette"></div>
@@ -209,7 +209,7 @@ function renderPage(localeKey, copy) {
         </div>
       </section>
 
-      <section class="thesis section" id="product">
+      <section class="thesis section" id="product" data-snap-panel>
         <p class="section-index" data-reveal>${e(copy.thesis.index)}</p>
         <div class="thesis-copy">
           <h2 data-reveal>${e(copy.thesis.title)}</h2>
@@ -221,7 +221,7 @@ function renderPage(localeKey, copy) {
         </div>
       </section>
 
-      <section class="system section" id="workflow">
+      <section class="system section" id="workflow" data-snap-panel>
         <div class="section-heading">
           <div>
             <p class="eyebrow" data-reveal><span>02</span>${e(copy.system.eyebrow)}</p>
@@ -240,7 +240,7 @@ function renderPage(localeKey, copy) {
         </div>
       </section>
 
-      <section class="data-section section" id="capabilities">
+      <section class="data-section section" id="capabilities" data-snap-panel>
         <div class="data-layout">
           <div class="data-copy">
             <p class="eyebrow" data-reveal><span>03</span>${e(copy.data.eyebrow)}</p>
@@ -264,7 +264,7 @@ function renderPage(localeKey, copy) {
         </div>
       </section>
 
-      <section class="studio section" id="studio">
+      <section class="studio section" id="studio" data-snap-panel>
         <div class="section-heading">
           <div>
             <p class="eyebrow" data-reveal><span>04</span>${e(copy.studio.eyebrow)}</p>
@@ -298,7 +298,7 @@ function renderPage(localeKey, copy) {
         </div>
       </section>
 
-      <section class="future section" id="roadmap">
+      <section class="future section" id="roadmap" data-snap-panel>
         <div class="section-heading">
           <div>
             <p class="eyebrow" data-reveal><span>05</span>${e(copy.architecture.eyebrow)}</p>
@@ -334,7 +334,7 @@ function renderPage(localeKey, copy) {
         </div>
       </section>
 
-      <section class="closing section" id="preview">
+      <section class="closing section" id="preview" data-snap-panel>
         <div class="closing-visual" aria-hidden="true"><i></i><i></i><i></i><span>V</span></div>
         <p class="eyebrow"><span>VESTA</span>${e(copy.closing.eyebrow)}</p>
         <h2><span>${e(copy.closing.titleOne)}</span><em>${e(copy.closing.titleTwo)}</em></h2>

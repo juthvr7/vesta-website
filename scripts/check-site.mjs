@@ -70,12 +70,19 @@ for (const page of pages) {
     'class="system-visual"',
     'class="studio-gallery"',
     'class="locale-switch"',
+    'data-snap-root',
+    'data-snap-panel',
   ];
 
   for (const marker of markers) {
     if (!html.includes(marker)) {
       throw new Error(`${page.path} is missing required marker: ${marker}`);
     }
+  }
+
+  const snapPanelCount = [...html.matchAll(/\sdata-snap-panel(?:\s|>)/g)].length;
+  if (snapPanelCount !== 7) {
+    throw new Error(`${page.path} has ${snapPanelCount} snap panels; expected 7.`);
   }
 
   for (const forbidden of ["<video", "data-hero-video", "vesta-worlds-loop.mp4", 'class="hero-proof"']) {
@@ -112,6 +119,20 @@ for (const page of pages) {
 }
 
 const css = await readFile(fromRoot("vesta-site.css"), "utf8");
+const javascript = await readFile(fromRoot("vesta-site.js"), "utf8");
+
+for (const marker of ["scroll-snap-type: y mandatory", "scroll-snap-stop: always"]) {
+  if (!css.includes(marker)) {
+    throw new Error(`vesta-site.css is missing magnetic-scroll marker: ${marker}`);
+  }
+}
+
+for (const marker of ["magnetic-scroll", "snapViewportQuery", "reducedMotionQuery"]) {
+  if (!javascript.includes(marker)) {
+    throw new Error(`vesta-site.js is missing magnetic-scroll marker: ${marker}`);
+  }
+}
+
 for (const match of css.matchAll(/url\(["']?([^"')]+)["']?\)/g)) {
   const reference = match[1];
   if (reference.startsWith("data:") || reference.startsWith("http")) continue;

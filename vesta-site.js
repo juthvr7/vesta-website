@@ -1,6 +1,19 @@
 document.documentElement.classList.add("js");
 
 const menuQuery = window.matchMedia("(max-width: 1180px)");
+const snapViewportQuery = window.matchMedia("(min-width: 861px)");
+const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+const updateMagneticScroll = () => {
+  document.documentElement.classList.toggle(
+    "magnetic-scroll",
+    snapViewportQuery.matches && !reducedMotionQuery.matches,
+  );
+};
+
+updateMagneticScroll();
+snapViewportQuery.addEventListener?.("change", updateMagneticScroll);
+reducedMotionQuery.addEventListener?.("change", updateMagneticScroll);
 
 const header = document.querySelector("[data-header]");
 const progressBar = document.querySelector(".scroll-progress span");
