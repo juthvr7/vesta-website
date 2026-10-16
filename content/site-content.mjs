@@ -1,401 +1,99 @@
 export const locales = {
   en: {
-    htmlLang: "en",
-    ogLocale: "en_US",
-    title: "Vesta — One graph. Every world.",
-    description:
-      "Vesta is an engine-independent procedural editor and deterministic spatial computing platform for building coherent worlds.",
-    localeName: "EN",
-    nav: {
-      product: "Product",
-      workflow: "Workflow",
-      studio: "Studio",
-      roadmap: "Roadmap",
-    },
-    status: "In development",
-    menuOpen: "Open navigation",
-    menuClose: "Close navigation",
+    htmlLang: "en", ogLocale: "en_US", title: "Vesta — Worlds, by you.",
+    description: "An Agent-centered world creation tool in development. Shape terrain, connect systems, and keep your worlds open to change.",
+    skip: "Skip to content", home: "Vesta home", navLabel: "Main navigation",
+    nav: ["Vision", "Films", "In Unreal", "Agent-led creation", "Progress"],
+    menu: "Menu", menuOpen: "Open navigation", menuClose: "Close navigation", languages: "Language", headerCta: "See it take shape",
     hero: {
-      eyebrow: "Engine-independent procedural systems",
-      lineOne: "One graph.",
-      lineTwo: "Every world.",
-      lede:
-        "Vesta is an engine-independent procedural worldbuilding and spatial computing system. One typed graph connects terrain, roads, cities, buildings, and ecosystems.",
-      primaryCta: "See the system",
-      secondaryCta: "View the current build",
-      visualLabel: "Conceptual system visualization",
-      proofLabel: "Vesta computation path",
-      flowLabel: "Live computation path",
-      flowState: "Deterministic / CPU",
-      flowSteps: ["Graph", "Validate", "Evaluate", "Result"],
-      buildLabel: "Authentic build",
-      buildTitle: "Vesta Studio",
-      buildMeta: "Graph / Viewport / CPU preview",
-      signals: [
-        ["Typed graph", "One language for spatial data"],
-        ["Deterministic", "Explicit seeds and versioned semantics"],
-        ["On demand", "Bounds, resolution, LOD, output"],
-        ["Host neutral", "Studio, CLI, Worker, engines"],
-      ],
+      kicker: "A WORLD OF YOUR MAKING.", first: "Worlds,", second: "by ", emphasis: "you.",
+      description: ["An Agent-centered world creation tool.", "From a first idea to a world you can keep shaping."],
+      cta: "Explore the Vesta vision", ctaDetail: "IMAGINE WHAT COMES NEXT", study: "01 / THE RIFT VALLEY",
+      story: ["Between mountains,", "a world finds its story."], principle: "AGENT-LED. PROCEDURALLY GROUNDED.", scroll: "Explore below", concept: "Vision concept · not current product output",
+      alt: "World vision concept: a jade river threads through terraced cliffs, forests, bridges and a hill settlement. AI concept imagery, not current Vesta output.",
     },
-    thesis: {
-      index: "01 / Product",
-      title: "Turn a fragmented toolchain into one composable system.",
-      body:
-        "Terrain, geometry, raster processing, placement, and engine delivery usually live in separate tools. Vesta connects them through one authoritative graph and one execution model.",
-      proofLabel: "What defines Vesta",
-      proof: [
-        ["Typed by design", "Ports and data preserve meaning instead of collapsing into generic values."],
-        ["Reproducible", "Versioned semantics, explicit seeds, and deterministic execution make results durable."],
-        ["Host neutral", "The same Core serves Studio, CLI, Worker, and future engine adapters."],
-      ],
-    },
-    system: {
-      eyebrow: "The system",
-      title: "Intent becomes a reproducible result.",
-      intro:
-        "Every request follows one observable execution chain. No hidden engine branch, no duplicated node semantics.",
-      imageAlt:
-        "Conceptual spatial computation journey from a typed graph and layered data through tiled execution planning into terrain, roads, cities, and ecosystems",
-      visualLabel: "Concept visual / Graph to world",
-      executionEyebrow: "Execution chain",
-      executionTitle: "Every step stays explicit.",
-      executionBody:
-        "Graph source becomes a validated plan, a deterministic invocation, and an immutable result—without hidden host logic.",
-      steps: [
-        ["01", "Author", "Typed ports, stable identity, versioned parameters."],
-        ["02", "Validate", "Structured diagnostics before a plan can exist."],
-        ["03", "Plan & evaluate", "Explicit backend, bounds, LOD, seed, budget, and cache."],
-        ["04", "Deliver", "Immutable typed results for Studio, CLI, Worker, or engine adapters."],
-      ],
-      rail: ["Graph source", "Execution plan", "CPU reference", "Result handle"],
-    },
-    data: {
-      eyebrow: "Unified spatial data",
-      title: "Different data. One execution language.",
-      body:
-        "A heightfield is not an image. A mask is not a field. Vesta keeps their semantics explicit while letting them move through the same typed graph and evaluation model.",
-      imageAlt:
-        "Conceptual data landscape transitioning from heightfield contours to mesh, curves, and point instances",
-      visualLabel: "Concept visual / shared data model",
-      types: [
-        ["Geometry", "Points, vertices, primitives, typed attributes"],
-        ["Heightfield", "Units, bounds, resolution, halo-aware evaluation"],
-        ["Raster & fields", "Explicit channel, range, coordinate, and conversion semantics"],
-        ["Curves & points", "Stable elements for roads, placement, and spatial composition"],
-      ],
-      chips: ["Mesh", "Heightfield", "Image2D", "Mask2D", "Field2D", "Curves", "Points", "Instances"],
-    },
-    studio: {
-      eyebrow: "Vesta Studio",
-      title: "Built as a real desktop tool.",
-      body:
-        "Studio is the authoring host around the same Core used by automation and future engine adapters. Its workspace, docking system, viewport, CPU reference preview, and operation development tools are already running; authoring and input gates continue to advance.",
-      imageAlt:
-        "Current Vesta Studio development build showing a 3D viewport, details panel, node network, and desktop workspace",
-      captureLabel: "Current development capture",
-      captureNote: "Authentic Vesta Studio build — interface and workflows continue to evolve.",
-      detailEyebrow: "Inside Studio",
-      detailTitle: "See the graph and the result together.",
-      detailBody:
-        "Viewport, details, docking, and operation status remain connected in one authoring context.",
+    vision: {
+      kicker: "THE VISION", title: ["Turn places you imagine", "into worlds you can shape."],
+      body: "Terrain is the beginning. Roads connect settlements, buildings respond to place, and ecosystems follow water and climate. Vesta's vision is for Agents and procedural tools to understand, shape and refine these relationships together.",
       gallery: [
-        [
-          "Graph to viewport",
-          "A typed SOP chain, its details, and the CPU reference result remain visible together.",
-          "Vesta Studio screenshot showing a 3D primitive preview and a typed SOP node chain",
-          "studio-graph-view.webp",
-        ],
-        [
-          "Workspace language",
-          "Docking, viewport controls, iconography, and operation status share one visual system.",
-          "Vesta Studio screenshot showing the viewport, details panel, docking tabs, and operation board",
-          "studio-workspace-view.webp",
-        ],
+        { id: "city", category: "01 / CIVILISATION", title: "Make room for life.", body: "Terrain, roads, blocks and buildings", note: "Vision concept · domain tools are being developed", open: "Enlarge the city and roads vision concept", caption: "Make room for life / Cities and roads · vision concept imagery", alt: "City vision concept: a coastal town follows the hills, connecting harbor, bridges, neighborhoods and greenery. AI concept imagery." },
+        { id: "biome", category: "02 / LIVING WORLDS", title: "Let nature connect.", body: "Waterways, biomes and ecosystems", note: "Vision concept · complete ecosystem creation is not yet implemented", open: "Enlarge the ecosystem vision concept", caption: "Let nature connect / Biomes and ecosystems · vision concept imagery", alt: "Ecosystem vision concept: conifers, wetlands, moss and a river form a coherent mountain valley. AI concept imagery." },
       ],
-      availableEyebrow: "Available now",
-      availableTitle: "A working execution spine, not a concept reel.",
-      availableBody:
-        "The current build already carries authored graph data through validation, planning, deterministic CPU execution, caching, preview, and export.",
-      available: [
-        ["Versioned Graph", "Source, schema, validation, and compilation"],
-        ["Explicit planning", "Backend assignment, bounds, LOD, seed, and budget"],
-        ["CPU reference", "Deterministic evaluation with cooperative cancellation"],
-        ["Content cache", "Request-aware, content-addressed reusable results"],
-        ["CLI pipeline", "Load, validate, plan, execute, and export"],
-        ["Studio workspace", "Docking, viewport, graph tools, and CPU preview"],
-      ],
-      facts: [
-        ["Native", "Rust + Bevy/wgpu desktop application"],
-        ["Shared", "The UI does not own a second graph runtime"],
-        ["Responsive", "Long evaluation stays off the UI thread"],
-      ],
+      bridge: "From landforms to environments. From individual assets to connected worlds.",
     },
-    composition: {
-      eyebrow: "World composition",
-      title: "From primitive operations to coherent worlds.",
-      body:
-        "General data and graph foundations sit below domain packages. Terrain, roads, urban systems, buildings, biomes, and ecosystems can then compose without collapsing into one monolith.",
-      bridgeEyebrow: "From data to domains",
-      bridgeTitle: "Typed foundations below. Composable domains above.",
-      bridgeBody:
-        "General operations remain reusable while domain packages add the rules needed to coordinate terrain, infrastructure, buildings, and ecosystems.",
-      imageAlt:
-        "Conceptual procedural world progressing from mountain terrain and rivers to roads, urban blocks, buildings, and vegetation",
-      visualLabel: "Concept visual / future domain composition",
-      domains: ["Terrain", "Roads", "Blocks", "Buildings", "Biomes", "Ecosystems"],
+    motion: {
+      kicker: "REAL OUTPUT. REAL POSSIBILITIES.", title: ["Give a patch of terrain", "a character of its own."],
+      body: ["These films visualize existing Vesta heightfield results.", "From continuous ridges to layered rock terraces,", "each form comes from a reusable procedural process."],
+      pause: "Pause all films", play: "Play the films", mainLabel: "Side-by-side camera study of actual Ridge and Terraces results", ridgeLabel: "Orbit study of an actual Vesta Ridge heightfield result", terracesLabel: "Orbit study of an actual Vesta Terraces heightfield result",
+      titleCategory: "SHAPE / TERRAIN", mainTitle: "One starting point. Different expressions.", outputLabel: ["Ridge → Terraces", "Actual samples · presentation render"], ridgeCaption: "Shape a continuous mountain ridge.", terracesCaption: "Carve a rhythm of layered rock.",
+      note: "Based on actual 512² Vesta CLI output. Only the presentation camera is animated.", sourceToggle: "About these films", sourceBody: "These films visualize precomputed heightfields. They are not recordings of real-time generation, erosion over time, or the Builder interface. Both result sets share the same display relief; original heights are unchanged.", sourceLink: "Sample provenance",
     },
-    architecture: {
-      eyebrow: "Architecture",
-      title: "One enduring core. Thin hosts. Explicit backends.",
-      body:
-        "Vesta separates authoring data, execution plans, and generated results. Hosts express intent; Core owns semantics; backends execute prepared invocations.",
-      hostsLabel: "Hosts",
-      hosts: ["Studio", "CLI", "Worker", "Engine adapters"],
-      coreLabel: "Authoritative Core",
-      core: ["Graph", "Compiler", "Planner", "Executor", "Cache", "Diagnostics"],
-      backendLabel: "Execution",
-      backends: [
-        ["CPU reference", "active"],
-        ["GPU compute", "future"],
-        ["External worker", "future"],
-      ],
-      resultLabel: "Typed results",
-      results: ["Geometry", "Heightfield", "Raster", "Curves", "Points", "Instances"],
+    unreal: {
+      kicker: "FROM ASSET TO ENGINE", title: ["Take the process", "into Unreal."],
+      body: "A Vesta Digital Asset carries its procedural definition and published parameters into Unreal Engine. Import a VDA, work with its parameters, and evaluate the terrain through the Vesta plugin inside the engine.",
+      open: "Enlarge the real Unreal VDA demonstration", alt: "Actual Unreal Engine editor capture showing the Vesta Erosion2 VDA, exposed parameters and evaluated Landscape preview.", caption: "VDA in Unreal Engine / actual development capture",
+      steps: [["01 / IMPORT", "Bring the VDA in."], ["02 / PARAMETERS", "Adjust its published controls."], ["03 / EVALUATE", "See the terrain in Unreal."]],
+      note: "Current verified slice: VDA import, parameter overrides and Heightfield evaluation. Selected terrain operations use UE RHI GPU. This is not a claim that all data types, GPU operations or production delivery workflows are complete.",
     },
-    roadmap: {
-      eyebrow: "Development",
-      title: "Build the semantics first. Scale the experience outward.",
-      body:
-        "The roadmap deliberately establishes deterministic behavior and authoring foundations before widening the integration surface.",
+    agent: {
+      kicker: "AN AGENT AT THE HEART OF CREATION", title: ["You bring the imagination.", "Let an Agent help you create."],
+      body: "Vesta is building an Agent-centered World Builder: plan around your intent, call tools, observe results, and refine together. Professional editing capabilities will come together in the same creative environment, with manual control always available.",
+      steps: [["01 / BRIEF", "Describe a place worth making.", "Turn atmosphere, environments and constraints into a clear creative direction."], ["02 / CREATE", "Connect intent to tools.", "An Agent uses controlled tools to work with the computation and asset capabilities implemented today."], ["03 / REFINE", "Look closer. Keep shaping.", "Adjust parameters, inspect the process and refine a part of the world without losing the whole."]],
+      environment: "ONE CREATIVE ENVIRONMENT", builderTitle: "An Agent-centered creative environment", builderBody: "World context stays in Builder; conversations, models and history stay with the connected Agent. Vesta Agent is connected today. Other Agents will connect through their own adapters.",
+      mapLabel: "Agent collaboration at the center of a World Builder loop linking intent, world preview, procedural tools and manual editing", orbit: ["Creative intent", "World preview", "Procedural tools", "Manual editing"], orbitCore: "At the heart of creation",
+      transition: "Studio currently hosts node, VDA and terrain capabilities. These capabilities will progressively move into World Builder, which will replace Studio as the unified Agent-centered creation tool.",
+    },
+    process: {
+      title: ["Imagine freely.", "Stay in control of the process."], body: ["Agents move the work forward. Procedural structure keeps it editable.", "Inspect, change, undo, and keep what works", "for the next scene and the next idea."],
+      alt: "Current Studio development build showing published Terraces VDA parameters, the graph and terrain preview. These capabilities will move into Builder.", caption: "Actual current development build / Studio", note: "Existing node and VDA capabilities; not the final World Builder interface.",
+    },
+    progress: {
+      kicker: "A WORLD IN PROGRESS", title: ["An ambitious vision.", "Built on tangible progress."], body: ["Vesta is in technical-preview development.", "We are refining terrain and the authoring foundation first,", "then growing the scale and complexity of world creation."],
       stages: [
-        [
-          "Available now",
-          "Core execution spine",
-          "Versioned graph source, validation, compilation, explicit backend assignment, deterministic CPU evaluation, content-addressed caching, and CLI execution.",
-          "done",
-        ],
-        [
-          "Active",
-          "Studio & operation depth",
-          "Desktop workspace, viewport and graph workflows, performance work, operation parity, and the remaining interaction acceptance gates.",
-          "active",
-        ],
-        [
-          "Next",
-          "Stable integration surface",
-          "Versioned SDK/C ABI, the first Unreal vertical slice, and focused GPU backend validation behind an explicit contract.",
-          "next",
-        ],
+        { state: "Verified slices", style: "ready", title: "A tangible beginning.", items: ["Graph / VDA and CLI execution", "Terrain parameters and result previews", "CPU / GPU implementations for selected terrain operations", "Unreal Heightfield execution", "A working Builder–Vesta Agent connection"] },
+        { state: "In development", style: "active", title: "A connected creative experience.", items: ["Agent-centered Builder workflows", "Bringing existing authoring capabilities into Builder", "Interaction, operation depth and result consistency", "Additional Agent adapters"] },
+        { state: "Long-term vision", style: "future", title: "Worlds that work together.", items: ["Terrain, roads, buildings and ecosystems", "Goal-driven planning, evaluation and repair", "Reusable assets and continuous world iteration", "Later expansion into characters and animation", "More complete engine delivery workflows"] },
       ],
+      note: "Status as of October 16, 2026. Verified slices do not imply a complete product or qualified production delivery.",
     },
-    closing: {
-      eyebrow: "Vesta / Technical preview",
-      titleOne: "Compose systems.",
-      titleTwo: "Shape worlds.",
-      body: "A private technical preview is in preparation.",
-      backToTop: "Back to top",
-    },
-    footer: {
-      descriptor: "Independent procedural systems",
-      state: "Built in public iteration / 2026",
-    },
+    closing: { intro: "From a first idea to a world of your own.", first: "What will", second: "you create?", cta: "Follow the progress", detail: "FOLLOW THE DEVELOPMENT" },
+    footer: { state: "AGENTIC WORLD CREATOR / IN DEVELOPMENT", top: "Back to top", copyright: "© 2026 Vesta" }, lightboxClose: "Close image",
   },
-
   zh: {
-    htmlLang: "zh-CN",
-    ogLocale: "zh_CN",
-    title: "Vesta — 一张图，构成万千世界。",
-    description:
-      "Vesta 是一个引擎无关的程序化编辑器与确定性空间计算平台，用统一系统构建连贯世界。",
-    localeName: "中文",
-    nav: {
-      product: "产品",
-      workflow: "工作方式",
-      studio: "Studio",
-      roadmap: "路线",
-    },
-    status: "开发中",
-    menuOpen: "打开导航",
-    menuClose: "关闭导航",
+    htmlLang: "zh-CN", ogLocale: "zh_CN", title: "Vesta — 世界，由你创造。",
+    description: "正在构建的 Agent 中心世界创作工具。从地形出发，连接道路、建筑与生态，让每个世界都能持续编辑和演进。",
+    skip: "跳至内容", home: "Vesta 首页", navLabel: "主导航", nav: ["世界愿景", "效果短片", "Unreal 实证", "Agent 创作", "开发进展"],
+    menu: "菜单", menuOpen: "打开导航", menuClose: "关闭导航", languages: "语言", headerCta: "看见变化",
     hero: {
-      eyebrow: "引擎无关的程序化世界系统",
-      lineOne: "一张图谱，",
-      lineTwo: "构成万千世界。",
-      lede:
-        "Vesta 是一套引擎无关的程序化世界构建与空间计算系统，用同一张类型化 Graph 连接地形、道路、城市、建筑与生态系统。",
-      primaryCta: "了解系统",
-      secondaryCta: "查看当前构建",
-      visualLabel: "系统概念视觉",
-      proofLabel: "Vesta 计算链路",
-      flowLabel: "实时计算链路",
-      flowState: "确定性 / CPU",
-      flowSteps: ["Graph", "验证", "求值", "结果"],
-      buildLabel: "真实构建",
-      buildTitle: "Vesta Studio",
-      buildMeta: "Graph / 视口 / CPU 预览",
-      signals: [
-        ["类型化图谱", "让空间数据使用同一种语言"],
-        ["确定性", "显式 Seed 与版本化语义"],
-        ["按需求值", "范围、分辨率、LOD 与目标输出"],
-        ["宿主无关", "Studio、CLI、Worker 与引擎"],
-      ],
+      kicker: "A WORLD OF YOUR MAKING.", first: "世界，", second: "由你", emphasis: "创造。", description: ["以 Agent 为中心的世界创作工具。", "从一个想法出发，塑造一个可以持续演进的世界。"], cta: "探索 Vesta 的愿景", ctaDetail: "IMAGINE WHAT COMES NEXT", study: "01 / THE RIFT VALLEY", story: ["山川之间，", "世界开始有了故事。"], principle: "AGENT-LED. PROCEDURALLY GROUNDED.", scroll: "向下探索", concept: "愿景概念影像 · 非当前产品输出", alt: "世界愿景概念：河流穿行于层状峡谷，森林、桥梁与聚落沿地形生长。AI 概念影像，非 Vesta 当前生成结果。",
     },
-    thesis: {
-      index: "01 / 产品",
-      title: "让世界构建从工具拼接，变成可组合系统。",
-      body:
-        "地形、几何、栅格处理、资产放置与引擎交付通常分散在不同工具中。Vesta 用一份权威 Graph 与一套执行模型把它们连接起来。",
-      proofLabel: "Vesta 的核心定义",
-      proof: [
-        ["类型即语义", "端口与数据保持明确含义，不退化成通用属性集合。"],
-        ["结果可复现", "版本化语义、显式 Seed 与确定性执行让结果长期可靠。"],
-        ["宿主无关", "同一套 Core 服务于 Studio、CLI、Worker 与未来的引擎适配器。"],
-      ],
-    },
-    system: {
-      eyebrow: "系统链路",
-      title: "让意图成为可复现的结果。",
-      intro:
-        "每次请求只走一条可观察的执行链。不隐藏引擎分支，也不复制节点语义。",
-      imageAlt: "空间计算概念视觉：类型化 Graph 与分层数据经过分块规划，最终形成地形、道路、城市与生态系统",
-      visualLabel: "概念视觉 / 从 Graph 到世界",
-      executionEyebrow: "执行链",
-      executionTitle: "每一步，都保持显式。",
-      executionBody: "Graph 源数据依次成为通过验证的计划、确定性 Invocation 与不可变结果，不隐藏宿主逻辑。",
-      steps: [
-        ["01", "创作", "类型化端口、稳定身份与版本化参数。"],
-        ["02", "验证", "只有结构化诊断通过，才允许生成计划。"],
-        ["03", "规划与求值", "显式后端、范围、LOD、Seed、预算与缓存。"],
-        ["04", "交付", "向 Studio、CLI、Worker 或引擎适配器返回不可变类型化结果。"],
-      ],
-      rail: ["Graph 源数据", "执行计划", "CPU 参考后端", "结果句柄"],
-    },
-    data: {
-      eyebrow: "统一空间数据",
-      title: "数据各有语义，执行共享语言。",
-      body:
-        "Heightfield 不是普通图片，Mask 也不是 Field。Vesta 显式保留它们的语义，同时让所有数据进入同一套类型化 Graph 与求值模型。",
-      imageAlt: "概念数据地形，从等高线过渡到网格、曲线与点实例",
-      visualLabel: "概念视觉 / 统一数据模型",
-      types: [
-        ["几何", "Point、Vertex、Primitive 与类型化 Attribute"],
-        ["高度场", "单位、范围、分辨率与 Halo 感知求值"],
-        ["栅格与场", "显式通道、数值范围、坐标与转换语义"],
-        ["曲线与点", "为道路、放置和空间组合提供稳定元素"],
-      ],
-      chips: ["Mesh", "Heightfield", "Image2D", "Mask2D", "Field2D", "Curves", "Points", "Instances"],
-    },
-    studio: {
-      eyebrow: "Vesta Studio",
-      title: "把它做成真正的桌面创作工具。",
-      body:
-        "Studio 是围绕同一套 Core 构建的创作宿主，自动化与未来的引擎适配器也使用这套 Core。工作区、Dock、视口、CPU 参考预览与算子开发工具已经运行；创作能力与输入门禁仍在持续推进。",
-      imageAlt: "当前 Vesta Studio 开发构建，包含三维视口、详情面板、节点网络与桌面工作区",
-      captureLabel: "当前开发构建",
-      captureNote: "真实 Vesta Studio 截图——界面与工作流仍在持续演进。",
-      detailEyebrow: "Studio 内部",
-      detailTitle: "同时看见 Graph 与结果。",
-      detailBody: "视口、详情、Dock 与算子状态保持在同一创作上下文中。",
+    vision: {
+      kicker: "THE VISION", title: ["把想象中的地方，", "变成可以创造的世界。"], body: "地形是起点。道路连接聚落，建筑回应场所，生态沿水系与气候展开。Vesta 的愿景，是让 Agent 与程序化工具共同理解、塑造和迭代这些关系。",
       gallery: [
-        [
-          "Graph 到视口",
-          "类型化 SOP 链、详情数据与 CPU 参考结果在同一工作区内可见。",
-          "Vesta Studio 真实截图，显示三维基础体预览与类型化 SOP 节点链",
-          "studio-graph-view.webp",
-        ],
-        [
-          "工作区语言",
-          "Dock、视口控制、图标与算子状态遵循同一套视觉体系。",
-          "Vesta Studio 真实截图，显示视口、详情面板、Dock 标签与算子状态面板",
-          "studio-workspace-view.webp",
-        ],
-      ],
-      availableEyebrow: "当前可用",
-      availableTitle: "已经运行的执行主干，而不是概念演示。",
-      availableBody:
-        "当前构建已经能够让作者 Graph 经过验证、规划、确定性 CPU 执行、缓存、预览与导出。",
-      available: [
-        ["版本化 Graph", "Source、Schema、验证与编译"],
-        ["显式规划", "后端分配、范围、LOD、Seed 与预算"],
-        ["CPU 参考后端", "确定性求值与协作式取消"],
-        ["内容缓存", "感知请求、内容寻址的可复用结果"],
-        ["CLI 全链路", "加载、验证、规划、执行与导出"],
-        ["Studio 工作区", "Dock、视口、Graph 工具与 CPU 预览"],
-      ],
-      facts: [
-        ["原生桌面", "Rust + Bevy/wgpu 应用"],
-        ["共享权威", "UI 不拥有第二套 Graph Runtime"],
-        ["保持响应", "长时间求值不会阻塞 UI 主线程"],
-      ],
+        { id: "city", category: "01 / CIVILISATION", title: "连接生活的尺度。", body: "地形、道路、街区与建筑", note: "愿景概念 · 领域能力逐步建设", open: "放大城市与道路愿景概念图", caption: "连接生活的尺度 / 城市与道路 · 愿景概念影像", alt: "城市与道路的愿景概念：沿海城市顺应山坡，桥梁、港湾、街区和绿地共同构成环境。AI 概念影像。" },
+        { id: "biome", category: "02 / LIVING WORLDS", title: "让自然彼此关联。", body: "水系、生物群落与生态系统", note: "愿景概念 · 完整生态创作尚未实现", open: "放大生态愿景概念图", caption: "让自然彼此关联 / 生物群落与生态 · 愿景概念影像", alt: "生态愿景概念：森林、湿地、苔藓与河流在山谷中形成连贯生态。AI 概念影像。" },
+      ], bridge: "从地貌到环境，从单个资产到连贯世界。",
     },
-    composition: {
-      eyebrow: "世界组合",
-      title: "从基础算子，走向连贯世界。",
-      body:
-        "通用 Data 与 Graph 位于领域包下方。地形、道路、城市、建筑、生物群落与生态系统在其上组合，而不坍缩成一个巨型单体。",
-      bridgeEyebrow: "从数据到领域",
-      bridgeTitle: "下层保持类型化，上层实现可组合。",
-      bridgeBody:
-        "通用算子保持复用，领域包在其上加入必要规则，让地形、基础设施、建筑与生态系统彼此协调。",
-      imageAlt: "程序化世界概念视觉，从山地河流逐步发展为道路、城市街区、建筑与植被",
-      visualLabel: "概念视觉 / 未来领域组合",
-      domains: ["地形", "道路", "街区", "建筑", "生物群落", "生态系统"],
+    motion: {
+      kicker: "REAL OUTPUT. REAL POSSIBILITIES.", title: ["先让一片地形，", "有自己的性格。"], body: ["下面是 Vesta 已有高度场结果的展示短片。", "从连续山脊，到层叠岩台，", "每一种形态都来自可复用的程序化过程。"], pause: "暂停所有短片", play: "播放效果短片", mainLabel: "Ridge 与 Terraces 的真实计算结果同相机展示短片", ridgeLabel: "Ridge 连续山脊的真实计算结果环绕展示短片", terracesLabel: "Terraces 层状岩台的真实计算结果环绕展示短片", titleCategory: "SHAPE / 形态", mainTitle: "相同的起点，不同的表达。", outputLabel: ["Ridge → Terraces", "真实样本 · 展示渲染"], ridgeCaption: "塑造连绵的山脊。", terracesCaption: "刻出层叠的岩台。", note: "基于 Vesta CLI 真实输出的 512² 地形；动画仅改变展示相机。", sourceToggle: "查看展示说明", sourceBody: "这些是已计算高度场的可视化短片，不是实时生成速度、侵蚀演化过程或 Builder 界面录屏。两组样本使用相同显示起伏，源高度未改动。", sourceLink: "样本来源记录",
     },
-    architecture: {
-      eyebrow: "架构",
-      title: "一个持久核心，轻量宿主，显式后端。",
-      body:
-        "Vesta 分离作者数据、执行计划与生成结果。宿主表达意图，Core 拥有语义，Backend 只执行准备完成的 Invocation。",
-      hostsLabel: "宿主",
-      hosts: ["Studio", "CLI", "Worker", "引擎适配器"],
-      coreLabel: "权威 Core",
-      core: ["Graph", "Compiler", "Planner", "Executor", "Cache", "Diagnostics"],
-      backendLabel: "执行后端",
-      backends: [
-        ["CPU 参考后端", "已启用"],
-        ["GPU Compute", "后续"],
-        ["外部 Worker", "后续"],
-      ],
-      resultLabel: "类型化结果",
-      results: ["Geometry", "Heightfield", "Raster", "Curves", "Points", "Instances"],
+    unreal: {
+      kicker: "FROM ASSET TO ENGINE", title: ["在 Unreal 中，", "继续创造。"], body: "Vesta Digital Asset 把程序化资产定义与公开参数带进 Unreal Engine。导入 VDA，在引擎里调整参数，通过 Vesta 插件求值并查看地形结果。", open: "放大 Unreal 中运行 VDA 的真实演示", alt: "Unreal Engine 真实编辑器画面，展示 Vesta Erosion2 VDA、公开参数和求值后的 Landscape 预览。", caption: "VDA 在 Unreal Engine 中运行 / 真实开发画面", steps: [["01 / IMPORT", "把 VDA 带入引擎。"], ["02 / PARAMETERS", "调整公开参数。"], ["03 / EVALUATE", "在 Unreal 中查看地形。"]], note: "当前已验证 VDA 导入、参数覆盖和 Heightfield 执行切片；部分地形算子使用 UE RHI GPU。这不代表所有数据类型、GPU 算子或生产交付流程均已完成。",
     },
-    roadmap: {
-      eyebrow: "开发路线",
-      title: "先稳定语义，再向外扩展体验。",
-      body:
-        "路线会先建立确定性行为与创作基础，再逐步扩大集成边界。",
-      stages: [
-        [
-          "当前可用",
-          "Core 执行主干",
-          "版本化 Graph Source、验证、编译、显式后端分配、确定性 CPU 求值、内容寻址缓存与 CLI 全链路。",
-          "done",
-        ],
-        [
-          "持续推进",
-          "Studio 与算子深度",
-          "桌面工作区、视口与 Graph 工作流、性能、算子对齐，以及尚未完成的交互验收门禁。",
-          "active",
-        ],
-        [
-          "下一阶段",
-          "稳定集成边界",
-          "版本化 SDK/C ABI、第一条 Unreal 垂直切片，以及位于显式契约之后的 GPU 后端验证。",
-          "next",
-        ],
-      ],
+    agent: {
+      kicker: "AN AGENT AT THE HEART OF CREATION", title: ["你负责想象。", "让 Agent 参与创造。"], body: "Vesta 正在构建以 Agent 为中心的 World Builder：围绕你的意图提出计划、调用工具、观察结果，再一起修正。专业编辑能力融入同一个创作环境，随时允许人工接管。", steps: [["01 / BRIEF", "说出你想去的地方。", "把环境、气氛与约束，变成清晰的创作方向。"], ["02 / CREATE", "让意图接上工具。", "Agent 通过受控工具使用当前已实现的计算与资产能力。"], ["03 / REFINE", "看见，然后继续雕琢。", "修改参数、检查过程、调整局部，让世界持续演进。"]], environment: "ONE CREATIVE ENVIRONMENT", builderTitle: "以 Agent 为中心的创作环境", builderBody: "世界上下文留在 Builder；会话、模型与历史由连接的 Agent 持有。当前已接通 Vesta Agent，其他 Agent 通过适配器逐步接入。", mapLabel: "World Builder 以 Agent 协作为中心，围绕创作意图、世界预览、程序化工具和人工编辑构建创作闭环", orbit: ["创作意图", "世界预览", "程序化工具", "人工编辑"], orbitCore: "协作的中心", transition: "Studio 是当前节点、VDA 与地形能力的承载前端。未来这些能力将逐步迁入 World Builder，由 Builder 取代 Studio，形成统一的 Agent 中心创作工具。",
     },
-    closing: {
-      eyebrow: "Vesta / 技术预览",
-      titleOne: "组合系统，",
-      titleTwo: "塑造世界。",
-      body: "私有技术预览正在准备中。",
-      backToTop: "返回顶部",
+    process: {
+      title: ["想象可以自由。", "过程仍然可控。"], body: ["Agent 推进工作，程序化过程保留结构。", "你可以查看、修改、撤销，并把有效的过程留下来，", "用于下一个场景、下一次创作。"], alt: "当前 Studio 开发构建：Terraces VDA 公开参数、地形和节点预览；这些能力未来将迁入 Builder。", caption: "当前真实开发构建 / Studio", note: "展示已有节点与 VDA 能力，不代表未来 Builder 的最终界面。",
     },
-    footer: {
-      descriptor: "独立程序化世界系统",
-      state: "持续公开迭代 / 2026",
+    progress: {
+      kicker: "A WORLD IN PROGRESS", title: ["愿景很远。", "从真实的进展出发。"], body: ["Vesta 处于技术预览开发阶段。", "当前先打磨地形与创作底座，", "再逐步拓展世界的规模和复杂度。"], stages: [
+        { state: "已有验证切片", style: "ready", title: "可以看见的起点。", items: ["Graph / VDA 与 CLI 执行链", "地形参数与结果预览", "部分地形算子的 CPU / GPU 实现", "Unreal 高度场执行", "Builder 与 Vesta Agent 真实连接"] },
+        { state: "正在建设", style: "active", title: "连续的创作体验。", items: ["以 Agent 为中心的 Builder 工作流", "现有创作能力向 Builder 汇聚", "交互、算子与结果一致性", "更多 Agent 连接适配"] },
+        { state: "长期愿景", style: "future", title: "彼此关联的世界。", items: ["地形、道路、建筑与生态组合", "围绕目标的计划、评价与修复", "可复用资产与持续世界迭代", "角色与动画的后续扩展", "更完整的引擎交付流程"] },
+      ], note: "状态基准：2026.10.16。已有切片不代表完整产品或生产交付流程已经验收。",
     },
+    closing: { intro: "从一个想法，到一个世界。", first: "What will", second: "you create?", cta: "了解当前进展", detail: "FOLLOW THE DEVELOPMENT" },
+    footer: { state: "AGENTIC WORLD CREATOR / IN DEVELOPMENT", top: "返回顶部", copyright: "© 2026 Vesta" }, lightboxClose: "关闭大图",
   },
 };

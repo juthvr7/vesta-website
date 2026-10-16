@@ -1,408 +1,72 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-
 import { locales } from "../content/site-content.mjs";
+import { site } from "../content/site-config.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const siteUrl = "https://juthvr7.github.io/vesta-website/";
-const assetVersion = "20260828-screen-layout-v4";
 const checkOnly = process.argv.includes("--check");
+const e = value => String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
+const lines = values => values.map(e).join("<br>");
+const title = values => `${e(values[0])}<br><span>${e(values[1])}</span>`;
 
-const escapeHtml = (value) =>
-  String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
-
-const e = escapeHtml;
-
-function renderPage(localeKey, copy) {
-  const isChinese = localeKey === "zh";
-  const base = isChinese ? "../" : "./";
-  const canonical = isChinese ? `${siteUrl}zh/` : siteUrl;
-  const enHref = isChinese ? "../" : "./";
-  const zhHref = isChinese ? "./" : "./zh/";
-  const navItems = [
-    ["product", copy.nav.product],
-    ["workflow", copy.nav.workflow],
-    ["studio", copy.nav.studio],
-    ["roadmap", copy.nav.roadmap],
-  ];
-
-  const nav = navItems
-    .map(([target, label]) => `<a href="#${target}" data-nav-link>${e(label)}</a>`)
-    .join("");
-
-  const thesisProof = copy.thesis.proof
-    .map(
-      ([title, description], index) => `
-              <article data-reveal style="--delay: ${index * 80}ms">
-                <span>0${index + 1}</span>
-                <h3>${e(title)}</h3>
-                <p>${e(description)}</p>
-              </article>`,
-    )
-    .join("");
-
-  const systemSteps = copy.system.steps
-    .map(
-      ([number, title, description], index) => `
-              <article class="system-step">
-                <span class="step-number">${e(number)}</span>
-                <div class="step-node" aria-hidden="true"><i></i></div>
-                <h3>${e(title)}</h3>
-                <p>${e(description)}</p>
-              </article>`,
-    )
-    .join("");
-
-  const systemRail = copy.system.rail
-    .map((item, index) => `<span><i></i>${e(item)}<small>0${index + 1}</small></span>`)
-    .join("");
-
-  const dataTypes = copy.data.types
-    .map(
-      ([title, description], index) => `
-              <article data-reveal style="--delay: ${index * 65}ms">
-                <span>0${index + 1}</span>
-                <div><h3>${e(title)}</h3><p>${e(description)}</p></div>
-              </article>`,
-    )
-    .join("");
-
-  const dataChips = copy.data.chips.map((chip) => `<span>${e(chip)}</span>`).join("");
-
-  const studioFacts = copy.studio.facts
-    .map(
-      ([title, description], index) => `
-              <article data-reveal style="--delay: ${index * 70}ms">
-                <span>0${index + 1}</span><strong>${e(title)}</strong><p>${e(description)}</p>
-              </article>`,
-    )
-    .join("");
-
-  const studioGallery = copy.studio.gallery
-    .map(
-      ([title, description, alt, image], index) => `
-              <figure class="studio-detail-card" data-reveal style="--delay: ${index * 80}ms">
-                <div class="studio-detail-media">
-                  <img src="${base}assets/${e(image)}" alt="${e(alt)}" loading="lazy" width="1800" height="1125">
-                </div>
-                <figcaption>
-                  <span>0${index + 1}</span>
-                  <div><h3>${e(title)}</h3><p>${e(description)}</p></div>
-                </figcaption>
-              </figure>`,
-    )
-    .join("");
-
-  const studioAvailable = copy.studio.available
-    .map(
-      ([title, description], index) => `
-              <article>
-                <span>0${index + 1}</span><div><strong>${e(title)}</strong><p>${e(description)}</p></div>
-              </article>`,
-    )
-    .join("");
-
-  const domains = copy.composition.domains
-    .map((domain) => `<span>${e(domain)}</span><i aria-hidden="true"></i>`)
-    .join("");
-  const domainChips = copy.composition.domains.map((domain) => `<span>${e(domain)}</span>`).join("");
-
-  const hostChips = copy.architecture.hosts.map((host) => `<span>${e(host)}</span>`).join("");
-  const coreChips = copy.architecture.core.map((item) => `<span>${e(item)}</span>`).join("");
-  const backendChips = copy.architecture.backends
-    .map(
-      ([name, state], index) => `<span class="backend ${index === 0 ? "backend-active" : "backend-future"}"><i></i>${e(name)}<small>${e(state)}</small></span>`,
-    )
-    .join("");
-  const resultChips = copy.architecture.results.map((item) => `<span>${e(item)}</span>`).join("");
-
-  const roadmapStages = copy.roadmap.stages
-    .map(
-      ([state, title, description, status], index) => `
-              <article class="roadmap-card roadmap-${e(status)}" data-reveal style="--delay: ${index * 85}ms">
-                <div class="roadmap-index">0${index + 1}</div>
-                <p class="roadmap-state"><i></i>${e(state)}</p>
-                <h3>${e(title)}</h3>
-                <p>${e(description)}</p>
-              </article>`,
-    )
-    .join("");
-
-  return `<!DOCTYPE html>
-<html lang="${e(copy.htmlLang)}" data-locale="${localeKey}">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#080b0a">
-    <meta name="description" content="${e(copy.description)}">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="${e(copy.ogLocale)}">
-    <meta property="og:url" content="${canonical}">
-    <meta property="og:title" content="${e(copy.title)}">
-    <meta property="og:description" content="${e(copy.description)}">
-    <meta property="og:image" content="${siteUrl}og.png">
-    <meta property="og:image:alt" content="${e(copy.title)}">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="${e(copy.title)}">
-    <meta name="twitter:description" content="${e(copy.description)}">
-    <meta name="twitter:image" content="${siteUrl}og.png">
-    <title>${e(copy.title)}</title>
-    <link rel="canonical" href="${canonical}">
-    <link rel="alternate" hreflang="en" href="${siteUrl}">
-    <link rel="alternate" hreflang="zh-CN" href="${siteUrl}zh/">
-    <link rel="alternate" hreflang="x-default" href="${siteUrl}">
-    <link rel="preload" as="image" href="${base}assets/world-composition.webp" fetchpriority="high">
-    <link rel="stylesheet" href="${base}vesta-site.css?v=${assetVersion}">
-    <script src="${base}vesta-site.js?v=${assetVersion}" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">${isChinese ? "跳至主要内容" : "Skip to main content"}</a>
-    <div class="scroll-progress" aria-hidden="true"><span></span></div>
-    <div class="ambient-layer" aria-hidden="true"><i></i><i></i><i></i></div>
-
-    <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="Vesta home">
-        <span class="brand-mark" aria-hidden="true"><i></i><b>V</b></span>
-        <span class="brand-name">Vesta</span>
-      </a>
-      <nav class="site-nav" aria-label="${isChinese ? "主要导航" : "Primary navigation"}" data-nav>
-        ${nav}
-      </nav>
-      <div class="header-actions">
-        <p class="build-label"><span></span>${e(copy.status)}</p>
-        <div class="locale-switch" role="group" aria-label="${isChinese ? "语言" : "Language"}">
-          <a class="locale-link" href="${enHref}" lang="en"${!isChinese ? ' aria-current="page"' : ""}>EN</a>
-          <i aria-hidden="true"></i>
-          <a class="locale-link" href="${zhHref}" lang="zh-CN"${isChinese ? ' aria-current="page"' : ""}>中文</a>
-        </div>
-        <button class="menu-toggle" type="button" aria-label="${e(copy.menuOpen)}" aria-expanded="false" data-open-label="${e(copy.menuOpen)}" data-close-label="${e(copy.menuClose)}" data-menu-toggle>
-          <span></span><span></span>
-        </button>
-      </div>
-    </header>
-
-    <main id="main" data-snap-root>
-      <section class="hero snap-page" id="top" data-page="01" data-hero data-snap-page>
-        <div class="hero-media" aria-hidden="true">
-          <img class="hero-poster" src="${base}assets/world-composition.webp" alt="" width="1536" height="1024" fetchpriority="high">
-          <div class="hero-media-vignette"></div>
-        </div>
-        <div class="hero-copy">
-          <p class="eyebrow hero-eyebrow"><span>V / 01</span>${e(copy.hero.eyebrow)}</p>
-          <h1>${e(copy.composition.title)}</h1>
-          <p class="hero-lede">${e(copy.hero.lede)}</p>
-        </div>
-        <div class="hero-visual-note">
-          <span><i></i>${e(copy.composition.visualLabel)}</span>
-        </div>
-      </section>
-
-      <section class="domain-strip" aria-label="${isChinese ? "领域组合" : "Composable domains"}">
-        <div class="domain-strip-track">
-          <div class="domain-strip-set">${domains}</div>
-          <div class="domain-strip-set" aria-hidden="true">${domains}</div>
-        </div>
-      </section>
-
-      <section class="thesis section snap-page" id="product" data-page="02" data-snap-page>
-        <p class="section-index" data-reveal>${e(copy.thesis.index)}</p>
-        <div class="thesis-copy">
-          <h2 data-reveal>${e(copy.thesis.title)}</h2>
-          <p data-reveal>${e(copy.thesis.body)}</p>
-        </div>
-        <div class="thesis-proof">
-          <p class="micro-label" data-reveal>${e(copy.thesis.proofLabel)}</p>
-          <div>${thesisProof}</div>
-        </div>
-      </section>
-
-      <section class="system section paged-section" aria-labelledby="workflow-title">
-        <div class="snap-page system-overview-page" id="workflow" data-page="03" data-snap-page>
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow" data-reveal><span>02</span>${e(copy.system.eyebrow)}</p>
-              <h2 id="workflow-title" data-reveal>${e(copy.system.title)}</h2>
-            </div>
-            <p data-reveal>${e(copy.system.intro)}</p>
-          </div>
-          <figure class="system-visual" data-reveal>
-            <img src="${base}assets/graph-to-world.webp" alt="${e(copy.system.imageAlt)}" loading="lazy" width="1920" height="853">
-            <figcaption><span><i></i>${e(copy.system.visualLabel)}</span><b>GRAPH / PLAN / WORLD</b></figcaption>
-          </figure>
-        </div>
-        <div class="snap-page system-execution-page" id="execution" data-page="04" data-snap-page>
-          <div class="section-heading subpage-heading">
-            <div>
-              <p class="eyebrow"><span>02 / B</span>${e(copy.system.executionEyebrow)}</p>
-              <h2>${e(copy.system.executionTitle)}</h2>
-            </div>
-            <p>${e(copy.system.executionBody)}</p>
-          </div>
-          <div class="system-stage">
-            <div class="system-track" aria-hidden="true"></div>
-            <div class="system-steps">${systemSteps}</div>
-            <div class="system-rail">${systemRail}</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="data-section section paged-section" aria-labelledby="capabilities-title">
-        <div class="snap-page data-model-page" id="capabilities" data-page="05" data-snap-page>
-          <div class="data-layout">
-            <div class="data-copy">
-              <p class="eyebrow" data-reveal><span>03</span>${e(copy.data.eyebrow)}</p>
-              <h2 id="capabilities-title" data-reveal>${e(copy.data.title)}</h2>
-              <p class="section-lede" data-reveal>${e(copy.data.body)}</p>
-              <div class="data-type-list">${dataTypes}</div>
-            </div>
-            <figure class="data-visual" data-reveal>
-              <img src="${base}assets/unified-data.webp" alt="${e(copy.data.imageAlt)}" loading="lazy" width="1920" height="819">
-              <figcaption><span><i></i>${e(copy.data.visualLabel)}</span><b>DATA / 001</b></figcaption>
-            </figure>
-          </div>
-          <div class="data-chips" data-reveal>${dataChips}</div>
-        </div>
-        <div class="snap-page domain-bridge-page" id="domains" data-page="06" data-snap-page>
-          <div class="domain-bridge">
-            <div class="domain-bridge-copy">
-              <p class="eyebrow"><span>03 / B</span>${e(copy.composition.bridgeEyebrow)}</p>
-              <h3>${e(copy.composition.bridgeTitle)}</h3>
-              <p>${e(copy.composition.bridgeBody)}</p>
-            </div>
-            <div class="domain-chip-grid">${domainChips}</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="studio section paged-section" aria-labelledby="studio-title">
-        <div class="snap-page studio-overview-page" id="studio" data-page="07" data-snap-page>
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow" data-reveal><span>04</span>${e(copy.studio.eyebrow)}</p>
-              <h2 id="studio-title" data-reveal>${e(copy.studio.title)}</h2>
-            </div>
-            <p data-reveal>${e(copy.studio.body)}</p>
-          </div>
-          <figure class="studio-window" data-reveal>
-            <div class="window-bar" aria-hidden="true">
-              <span><i></i><i></i><i></i></span>
-              <b>VESTA STUDIO / DEVELOPMENT BUILD</b>
-              <small>LOCAL CPU</small>
-            </div>
-            <div class="studio-screen">
-              <img src="${base}assets/studio-current.webp" alt="${e(copy.studio.imageAlt)}" loading="lazy" width="1800" height="1125">
-            </div>
-            <figcaption>
-              <span><i></i>${e(copy.studio.captureLabel)}</span>
-              <p>${e(copy.studio.captureNote)}</p>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="snap-page studio-details-page" id="studio-details" data-page="08" data-snap-page>
-          <div class="section-heading subpage-heading">
-            <div>
-              <p class="eyebrow"><span>04 / B</span>${e(copy.studio.detailEyebrow)}</p>
-              <h2>${e(copy.studio.detailTitle)}</h2>
-            </div>
-            <p>${e(copy.studio.detailBody)}</p>
-          </div>
-          <div class="studio-gallery">${studioGallery}</div>
-          <div class="studio-facts">${studioFacts}</div>
-        </div>
-        <div class="snap-page available-page" id="available" data-page="09" data-snap-page>
-          <div class="available-now">
-            <div class="available-heading">
-              <p class="eyebrow"><span>04 / B</span>${e(copy.studio.availableEyebrow)}</p>
-              <h3>${e(copy.studio.availableTitle)}</h3>
-              <p>${e(copy.studio.availableBody)}</p>
-            </div>
-            <div class="available-grid">${studioAvailable}</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="future section paged-section" aria-labelledby="roadmap-title">
-        <div class="snap-page architecture-page" id="roadmap" data-page="10" data-snap-page>
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow" data-reveal><span>05</span>${e(copy.architecture.eyebrow)}</p>
-              <h2 id="roadmap-title" data-reveal>${e(copy.architecture.title)}</h2>
-            </div>
-            <p data-reveal>${e(copy.architecture.body)}</p>
-          </div>
-          <div class="architecture-map" data-reveal>
-            <div class="architecture-grid" aria-hidden="true"></div>
-            <div class="architecture-layer architecture-hosts">
-              <p>${e(copy.architecture.hostsLabel)}</p><div>${hostChips}</div>
-            </div>
-            <div class="architecture-flow" aria-hidden="true"><i></i><span>INTENT</span></div>
-            <div class="architecture-core">
-              <div class="core-heading"><p>${e(copy.architecture.coreLabel)}</p><span>ENGINE INDEPENDENT</span></div>
-              <div>${coreChips}</div>
-            </div>
-            <div class="architecture-flow" aria-hidden="true"><i></i><span>PLAN</span></div>
-            <div class="architecture-bottom">
-              <div class="architecture-layer architecture-backends"><p>${e(copy.architecture.backendLabel)}</p><div>${backendChips}</div></div>
-              <div class="architecture-layer architecture-results"><p>${e(copy.architecture.resultLabel)}</p><div>${resultChips}</div></div>
-            </div>
-          </div>
-        </div>
-        <div class="snap-page roadmap-page" id="roadmap-phases" data-page="11" data-snap-page>
-          <div class="roadmap-block">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow"><span>05 / B</span>${e(copy.roadmap.eyebrow)}</p>
-                <h2>${e(copy.roadmap.title)}</h2>
-              </div>
-              <p>${e(copy.roadmap.body)}</p>
-            </div>
-            <div class="roadmap-grid">${roadmapStages}</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="closing section snap-page" id="preview" data-page="12" data-snap-page>
-        <div class="closing-visual" aria-hidden="true"><i></i><i></i><i></i><span>V</span></div>
-        <p class="eyebrow"><span>VESTA</span>${e(copy.closing.eyebrow)}</p>
-        <h2><span>${e(copy.closing.titleOne)}</span><em>${e(copy.closing.titleTwo)}</em></h2>
-        <p>${e(copy.closing.body)}</p>
-        <a class="button button-primary" href="#top">${e(copy.closing.backToTop)}<span aria-hidden="true">↑</span></a>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <a class="brand" href="#top" aria-label="Vesta home">
-        <span class="brand-mark" aria-hidden="true"><i></i><b>V</b></span><span class="brand-name">Vesta</span>
-      </a>
-      <p>${e(copy.footer.descriptor)}</p>
-      <p>${e(copy.footer.state)}</p>
-    </footer>
-  </body>
+function renderPage(lang, c) {
+  const base = lang === "zh" ? "../" : "./";
+  const media = `${base}${site.media}`;
+  const canonical = `${site.url}${lang === "zh" ? "zh/" : ""}`;
+  const image = (name, alt, {hero = false} = {}) => `<img src="${media}${name}.webp" srcset="${media}${name}-768.webp 768w, ${media}${name}-1280.webp 1280w, ${media}${name}.webp 1672w" sizes="${hero ? "100vw" : "(max-width:760px) 100vw, 55vw"}" alt="${e(alt)}" width="1672" height="941" ${hero ? 'class="hero-image" fetchpriority="high"' : 'loading="lazy" decoding="async"'}>`;
+  const imageButton = (name, alt, label, caption, img) => `<button class="image-button" type="button" data-image="${media}${name}.webp" data-caption="${e(caption)}" aria-label="${e(label)}">${img}<span class="image-expand" aria-hidden="true">↗</span></button>`;
+  const nav = ["vision", "motion", "unreal", "agent", "progress"].map((id, i) => `<a href="#${id}">${e(c.nav[i])}</a>`).join("");
+  return `<!doctype html>
+<html lang="${c.htmlLang}">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101713"><meta name="description" content="${e(c.description)}">
+  <title>${e(c.title)}</title>
+  <link rel="canonical" href="${canonical}">
+  <link rel="alternate" hreflang="en" href="${site.url}"><link rel="alternate" hreflang="zh-CN" href="${site.url}zh/"><link rel="alternate" hreflang="x-default" href="${site.url}">
+  <meta property="og:type" content="website"><meta property="og:site_name" content="Vesta"><meta property="og:locale" content="${c.ogLocale}"><meta property="og:title" content="${e(c.title)}"><meta property="og:description" content="${e(c.description)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${site.url}og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675"><meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="${base}favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="${base}vesta-site.css?v=${site.version}"><script src="${base}vesta-site.js?v=${site.version}" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">${e(c.skip)}</a>
+  <header class="header"><a class="logo" href="#top" aria-label="${e(c.home)}">vesta<span>.</span></a><nav id="navigation" aria-label="${e(c.navLabel)}">${nav}</nav><div class="languages" aria-label="${e(c.languages)}"><a href="${base}" lang="en" hreflang="en" data-language-link ${lang === "en" ? 'aria-current="page"' : ''}>EN</a><span aria-hidden="true">/</span><a href="${base}zh/" lang="zh-CN" hreflang="zh-CN" data-language-link ${lang === "zh" ? 'aria-current="page"' : ''}>中文</a></div><a class="header-cta" href="#motion">${e(c.headerCta)} <span aria-hidden="true">↘</span></a><button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false" aria-label="${e(c.menuOpen)}" data-open-label="${e(c.menuOpen)}" data-close-label="${e(c.menuClose)}">${e(c.menu)} <span aria-hidden="true">☰</span></button></header>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      ${image("world-hero", c.hero.alt, {hero:true})}<div class="hero-shade"></div>
+      <div class="hero-copy"><p class="kicker"><i></i>${e(c.hero.kicker)}</p><h1 id="hero-title">${e(c.hero.first)}<br>${e(c.hero.second)}<span>${e(c.hero.emphasis)}</span></h1><p class="hero-description">${lines(c.hero.description)}</p><a class="round-link" href="#vision"><span class="round-arrow" aria-hidden="true">↗</span><span>${e(c.hero.cta)}<small>${e(c.hero.ctaDetail)}</small></span></a></div>
+      <div class="hero-side"><span>${e(c.hero.study)}</span><p>${lines(c.hero.story)}</p></div><div class="hero-bottom"><p>${e(c.hero.principle)}</p><a href="#vision">${e(c.hero.scroll)} <span aria-hidden="true">↓</span></a><span>${e(c.hero.concept)}</span></div>
+    </section>
+    <section class="vision section" id="vision" aria-labelledby="vision-title"><div class="wrap"><p class="kicker"><span>01</span>${e(c.vision.kicker)}</p><div class="section-head"><h2 id="vision-title">${title(c.vision.title)}</h2><p>${e(c.vision.body)}</p></div></div>
+      <div class="world-gallery">${c.vision.gallery.map(g => `<figure class="gallery-${g.id}">${imageButton(`world-${g.id}`, g.alt, g.open, g.caption, image(`world-${g.id}`, g.alt))}<figcaption><span>${e(g.category)}</span><h3>${e(g.title)}</h3><p>${e(g.body)}</p><small>${e(g.note)}</small></figcaption></figure>`).join("")}</div>
+      <div class="wrap vision-line"><span>${e(c.vision.bridge)}</span><p>TERRAIN <i>→</i> ENVIRONMENTS <i>→</i> WORLDS</p></div>
+    </section>
+    <section class="motion section" id="motion" aria-labelledby="motion-title"><div class="wrap"><p class="kicker"><span>02</span>${e(c.motion.kicker)}</p><div class="section-head"><h2 id="motion-title">${title(c.motion.title)}</h2><div><p>${lines(c.motion.body)}</p><button class="motion-toggle" type="button" aria-pressed="false" data-play-label="${e(c.motion.play)}" data-pause-label="${e(c.motion.pause)}"><span class="toggle-label">${e(c.motion.pause)}</span><span class="toggle-symbol" aria-hidden="true">Ⅱ</span></button></div></div>
+      <div class="film-grid"><figure class="film-main"><div class="film-frame"><video poster="${media}terraces.webp" muted loop playsinline controls preload="metadata" aria-label="${e(c.motion.mainLabel)}"><source src="${media}shape-study-tall.mp4" media="(max-width:760px)" type="video/mp4"><source src="${media}shape-study.mp4" type="video/mp4"></video><span class="film-stamp">VESTA / RESULT STUDY 001</span><div class="film-labels" aria-hidden="true"><span>RIDGE</span><span>TERRACES</span></div></div><figcaption><div><span>${e(c.motion.titleCategory)}</span><h3>${e(c.motion.mainTitle)}</h3></div><p>${lines(c.motion.outputLabel)}</p></figcaption></figure><div class="film-secondary">${["ridge", "terraces"].map(name => `<figure><div class="film-frame"><video src="${media}${name}-orbit.mp4" poster="${media}${name}.webp" muted loop playsinline controls preload="metadata" aria-label="${e(c.motion[`${name}Label`])}"></video></div><figcaption><span>${name.toUpperCase()}</span><p>${e(c.motion[`${name}Caption`])}</p></figcaption></figure>`).join("")}</div></div>
+      <div class="result-note"><p><i></i>${e(c.motion.note)}</p><details><summary>${e(c.motion.sourceToggle)}</summary><p>${e(c.motion.sourceBody)} <a href="${media}provenance.json">${e(c.motion.sourceLink)} ↗</a></p></details></div>
+    </div></section>
+    <section class="unreal section" id="unreal" aria-labelledby="unreal-title"><div class="wrap"><p class="kicker"><span>03</span>${e(c.unreal.kicker)}</p><div class="section-head"><h2 id="unreal-title">${title(c.unreal.title)}</h2><p>${e(c.unreal.body)}</p></div><figure class="unreal-capture">${imageButton("unreal-vda", c.unreal.alt, c.unreal.open, c.unreal.caption, `<img src="${media}unreal-vda.webp" alt="${e(c.unreal.alt)}" width="1632" height="1107" loading="lazy" decoding="async">`)}<figcaption><span class="live-dot"></span>${e(c.unreal.caption)}<span class="capture-tag">EROSION2 / VDA → UE</span></figcaption></figure><div class="engine-steps">${c.unreal.steps.map(s => `<article><span>${e(s[0])}</span><h3>${e(s[1])}</h3></article>`).join("")}</div><p class="engine-note">${e(c.unreal.note)}</p></div></section>
+    <section class="agent section" id="agent" aria-labelledby="agent-title"><div class="wrap"><p class="kicker"><span>04</span>${e(c.agent.kicker)}</p><div class="agent-heading"><h2 id="agent-title">${title(c.agent.title)}</h2><p>${e(c.agent.body)}</p></div><div class="creation-flow">${c.agent.steps.map(s => `<article><span>${e(s[0])}</span><h3>${e(s[1])}</h3><p>${e(s[2])}</p></article>`).join("")}</div><div class="builder-direction"><div><p class="kicker">${e(c.agent.environment)}</p><h3>World Builder<span>${e(c.agent.builderTitle)}</span></h3><p>${e(c.agent.builderBody)}</p></div><div class="orbit-map" role="img" aria-label="${e(c.agent.mapLabel)}">${c.agent.orbit.map((s,i) => `<span class="orbit-label orbit-${"abcd"[i]}">${e(s)}</span>`).join("")}<div class="orbit-core"><span>AGENT</span><small>${e(c.agent.orbitCore)}</small></div></div></div><p class="studio-transition">${e(c.agent.transition)}</p></div></section>
+    <section class="process section"><div class="wrap"><div class="section-head"><h2>${title(c.process.title)}</h2><p>${lines(c.process.body)}</p></div><figure class="process-capture"><img src="${media}studio.webp" alt="${e(c.process.alt)}" width="1800" height="1125" loading="lazy" decoding="async"><figcaption><span>${e(c.process.caption)}</span><p>${e(c.process.note)}</p></figcaption></figure></div></section>
+    <section class="progress section" id="progress" aria-labelledby="progress-title"><div class="wrap"><p class="kicker"><span>05</span>${e(c.progress.kicker)}</p><div class="section-head"><h2 id="progress-title">${title(c.progress.title)}</h2><p>${lines(c.progress.body)}</p></div><div class="progress-grid">${c.progress.stages.map(s => `<article><span class="state"><i class="${s.style}"></i>${e(s.state)}</span><h3>${e(s.title)}</h3><ul>${s.items.map(t => `<li>${e(t)}</li>`).join("")}</ul></article>`).join("")}</div><p class="progress-footnote">${e(c.progress.note)}</p></div></section>
+    <section class="outro"><div class="wrap"><p>${e(c.closing.intro)}</p><h2>${e(c.closing.first)}<br><em>${e(c.closing.second)}</em></h2><a class="round-link" href="#progress"><span class="round-arrow" aria-hidden="true">↗</span><span>${e(c.closing.cta)}<small>${e(c.closing.detail)}</small></span></a><footer class="outro-bottom"><a class="logo" href="#top" aria-label="${e(c.home)}">vesta<span>.</span></a><span>${e(c.footer.state)}</span><a href="#top">${e(c.footer.top)} ↑</a><span>${e(c.footer.copyright)}</span></footer></div></section>
+  </main>
+  <dialog class="lightbox" aria-label="${e(c.unreal.open)}"><button class="lightbox-close" type="button" aria-label="${e(c.lightboxClose)}">${e(c.lightboxClose)} <span aria-hidden="true">×</span></button><img alt=""><p></p></dialog>
+</body>
 </html>
 `;
 }
 
-const outputs = [
-  [resolve(root, "index.html"), renderPage("en", locales.en)],
-  [resolve(root, "zh", "index.html"), renderPage("zh", locales.zh)],
-];
-
-for (const [path, rendered] of outputs) {
+const outputs = new Map(Object.entries(locales).map(([lang, copy]) => [lang === "zh" ? "zh/index.html" : "index.html", renderPage(lang, copy)]));
+outputs.set("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${["", "zh/"].map(path => `  <url><loc>${site.url}${path}</loc><lastmod>${site.updated}</lastmod><xhtml:link rel="alternate" hreflang="en" href="${site.url}"/><xhtml:link rel="alternate" hreflang="zh-CN" href="${site.url}zh/"/><xhtml:link rel="alternate" hreflang="x-default" href="${site.url}"/></url>`).join("\n")}\n</urlset>\n`);
+for (const [path, contents] of outputs) {
+  const destination = resolve(root, path);
   if (checkOnly) {
-    const existing = await readFile(path, "utf8");
-    if (existing !== rendered) {
-      throw new Error(`Generated page is stale: ${path}`);
-    }
+    if (await readFile(destination, "utf8") !== contents) throw new Error(`${path} is stale; run npm run render`);
   } else {
-    await mkdir(dirname(path), { recursive: true });
-    await writeFile(path, rendered, "utf8");
+    await mkdir(dirname(destination), {recursive: true});
+    await writeFile(destination, contents, "utf8");
   }
 }
-
-console.log(checkOnly ? "Generated pages are current." : "Rendered English and Chinese pages.");
+console.log(checkOnly ? "Generated bilingual pages are current." : "Rendered English and Chinese pages.");

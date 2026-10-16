@@ -11,14 +11,15 @@ for (const file of [
   "robots.txt",
   "sitemap.xml",
   "og.png",
+  "favicon.svg",
 ]) {
   await cp(new URL(`../${file}`, import.meta.url), new URL(file, output));
 }
 
-for (const directory of ["assets", "zh"]) {
+for (const directory of ["assets/worlds", "zh"]) {
   await cp(new URL(`../${directory}/`, import.meta.url), new URL(`${directory}/`, output), {
     recursive: true,
   });
 }
 
-console.log("Built bilingual static site in dist/.");
+console.log("Built bilingual static site in dist/ (production media only).");

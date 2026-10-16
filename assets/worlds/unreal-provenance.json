@@ -1,0 +1,36 @@
+{
+  "captured": "2026-10-16",
+  "application": "Unreal Engine 5.8",
+  "asset": "Erosion2 VDA",
+  "image": "unreal-vda.webp",
+  "status": "Ready · UE RHI GPU · CPU input/output stages · Landscape 1021x1021 from 1024x1024",
+  "backend_segments": [
+    {
+      "backend_id": "vesta.backend.cpu",
+      "implementation_version": 1,
+      "nodes": [
+        1,
+        2
+      ]
+    },
+    {
+      "backend_id": "vesta.backend.gpu.ue_rhi",
+      "implementation_version": 1,
+      "nodes": [
+        3,
+        4
+      ]
+    },
+    {
+      "backend_id": "vesta.backend.cpu",
+      "implementation_version": 1,
+      "nodes": [
+        5
+      ]
+    }
+  ],
+  "width": 1024,
+  "height": 1024,
+  "source_capture_sha256": "c52e53e5588532c207566e874eefd17566b12ce9caf655058a00d71f9966e0f7",
+  "treatment": "Actual editor screenshot; lighting and camera changes in an unsaved disposable session; WebP encoding only."
+}
