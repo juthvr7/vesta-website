@@ -17,7 +17,7 @@ const checked = new Set();
 for (const [path, lang] of [["index.html", "en"], ["zh/index.html", "zh-CN"]]) {
   const file = resolve(root, path);
   const html = await readFile(file, "utf8");
-  assert(!html.includes("�"), `${path}: invalid text`);
+  assert(!html.includes("\uFFFD"), `${path}: invalid text`);
   assert(html.includes(`<html lang="${lang}">`));
   assert(html.includes(`rel="canonical" href="${site.url}${path.startsWith("zh/") ? "zh/" : ""}"`));
   for (const code of ["en", "zh-CN", "x-default"]) assert(html.includes(`hreflang="${code}"`));
