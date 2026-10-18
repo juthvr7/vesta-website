@@ -1,0 +1,102 @@
+{
+  "id": "node.catalog-c9c145e6e4bf4e751aff",
+  "operation_version": 2,
+  "contract_sha256": "d9f4e0bd25f1717c91b20e9169d8d34fd5e4ca7e80905aadd56165a424492df3",
+  "catalog_snapshot_sha256": "c8c2e1cb1219490447a95851984bb1e7e388fe8e731c49e68e3d0877c7181cb8",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "auto",
+          "prims",
+          "points",
+          "edges",
+          "vertices"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "auto"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "grouptype",
+        "label": "Group Type",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "group",
+        "label": "Group Name",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "newname",
+        "label": "New Name",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

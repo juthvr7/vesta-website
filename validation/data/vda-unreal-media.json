@@ -1,0 +1,117 @@
+{
+  "render": {
+    "schema_version": 1,
+    "profile": "terrain-comparison-v1",
+    "producer_sha256": "0c7e41cc858744be872de38cded1ec0235c23abe815590bd54ed60a26a497f86",
+    "kind": "existing-result-render",
+    "pixel_size": [
+      1600,
+      1000
+    ],
+    "camera": {
+      "elevation": 40,
+      "azimuth": -65
+    },
+    "display": {
+      "baseline_index": 0,
+      "source_height_offset": 0.5627014636993408,
+      "height_multiplier": 0.008306339768223774,
+      "z_limits": [
+        0,
+        0.24
+      ],
+      "color_range": [
+        0.5627014636993408,
+        24.640705108642578
+      ],
+      "sample_stride": 7,
+      "text_overlay": false
+    },
+    "source_layout": {
+      "shape": [
+        1024,
+        1024
+      ],
+      "bounds": {
+        "x": -128,
+        "y": -128,
+        "width": 256,
+        "height": 256
+      }
+    },
+    "artifacts": [
+      {
+        "id": "reference",
+        "file": "reference.png",
+        "sha256": "c6a27c532689476fd3f2a5fcd7e8fc492f1c4860fab0ead363ae089f8ed3eeb4",
+        "source_result_sha256": "9319a35759937a379056bbb64b61098cb856a49a4a9713347c161723c3995de4",
+        "source_samples_f32_sha256": "6ffff4ad05bf2324aff82021242b2c43fe8dfbcd1c1025c73789e46aacf2baa0",
+        "source_resolution": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "id": "result",
+        "file": "result.png",
+        "sha256": "88f85814c6dc9638c406d4937a525c22c1cc8fa5d43d36afb1b96da17b1e53b5",
+        "source_result_sha256": "1b5265d94aaea9c6c8594af5f921a8b6ab300b5d9448e8a2346eff2bff6d051a",
+        "source_samples_f32_sha256": "75dd6f0c9b7bb64ed65c4b8db34e84103c1f67fc84de72efad0e9efd5b1dba2e",
+        "source_resolution": [
+          1024,
+          1024
+        ]
+      }
+    ]
+  },
+  "derivatives": [
+    {
+      "id": "reference",
+      "master_sha256": "c6a27c532689476fd3f2a5fcd7e8fc492f1c4860fab0ead363ae089f8ed3eeb4",
+      "variants": [
+        {
+          "file": "reference-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "f8a90c3426bab78b34506e521838f17c0f380a8127ea3c1019e08eff356cbe5f"
+        },
+        {
+          "file": "reference-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "75f32a8e52ed33ea005b772a89f9dca932ae52955d0e46697af355364ef83a70"
+        },
+        {
+          "file": "reference.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "bf3dd2a9c6fa77b5f7bfb1480a9a3dcbe58f60b563a97d160c1413bda7c5627a"
+        }
+      ]
+    },
+    {
+      "id": "result",
+      "master_sha256": "88f85814c6dc9638c406d4937a525c22c1cc8fa5d43d36afb1b96da17b1e53b5",
+      "variants": [
+        {
+          "file": "result-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "1d8ed3de93818f4d2fd8520c37b93dfba1a5c66befb9aecb2bce0c88a85cffde"
+        },
+        {
+          "file": "result-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "8698553c375d50d79172b606a0fc25e1dedff38d3ead1cb79faed34c0d619885"
+        },
+        {
+          "file": "result.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "032422a9062d1c5677542fcf8067a6cb1581b1a3a5418ece2f29923e89f88498"
+        }
+      ]
+    }
+  ]
+}

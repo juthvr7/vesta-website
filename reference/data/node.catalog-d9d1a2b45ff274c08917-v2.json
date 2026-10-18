@@ -1,0 +1,85 @@
+{
+  "id": "node.catalog-d9d1a2b45ff274c08917",
+  "operation_version": 2,
+  "contract_sha256": "06602cf2d210230869f8833dba474a668677dd07d69f36d04ecc2f2a4db13c6c",
+  "catalog_snapshot_sha256": "6d833981d2c5f8610eb21e7948137a99ea6e743db4fa2fd9c873a7b7842f6e4c",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      },
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 1,
+        "name": "geometry_1",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Value",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "height_scale",
+        "label": "Height Scale",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "Tuning",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "bias",
+        "label": "Bias",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

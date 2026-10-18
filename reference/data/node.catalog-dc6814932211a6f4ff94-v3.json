@@ -1,0 +1,98 @@
+{
+  "id": "node.catalog-dc6814932211a6f4ff94",
+  "operation_version": 3,
+  "contract_sha256": "ab4389e3b5a63ca2fc77f4cdfae76601d96de3b2a7554329e1773b7a3bf360a2",
+  "catalog_snapshot_sha256": "dac403334d204b843c975bb08ade52e00e3ecea3e14060cc1b0e3515c0c8bbae",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            1,
+            1,
+            1
+          ]
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "scale",
+        "label": "Scale",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rotate",
+        "label": "Rotate",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "translate",
+        "label": "Translate",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

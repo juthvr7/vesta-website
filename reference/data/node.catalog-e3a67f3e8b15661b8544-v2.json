@@ -1,0 +1,245 @@
+{
+  "id": "node.catalog-e3a67f3e8b15661b8544",
+  "operation_version": 2,
+  "contract_sha256": "4ee5799fee0aac6ecd549ef4da12bdb50a45dc02e37bec1a8a07ca85ccfceeb5",
+  "catalog_snapshot_sha256": "8096e002c66cd4a7880befedc9ac5f477cf50aaf25a7e9a34c17d206a33ea33e",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      },
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 1,
+        "name": "reference",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "height"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "base",
+        "label": "Base Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "height"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "patch",
+        "label": "Patch Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "mask"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "mask",
+        "label": "Mask Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "scale",
+        "label": "Uniform Scale",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "heightscale",
+        "label": "Height Scale",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "baseheightscale",
+        "label": "Base Height Scale",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "centerpatch",
+        "label": "Center Patch",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "tx",
+        "label": "Translate X",
+        "max": 1000,
+        "maxStrict": false,
+        "min": -1000,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "tz",
+        "label": "Translate Z",
+        "max": 1000,
+        "maxStrict": false,
+        "min": -1000,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "ry",
+        "label": "Rotate Y",
+        "max": 360,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

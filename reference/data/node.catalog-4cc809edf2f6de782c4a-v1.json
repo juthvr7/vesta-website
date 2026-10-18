@@ -1,0 +1,319 @@
+{
+  "id": "node.catalog-4cc809edf2f6de782c4a",
+  "operation_version": 1,
+  "contract_sha256": "3b8dd7a5aa97a9401023bb73a740081a84b5413d8d2ceed83858cb1f0d50dd9a",
+  "catalog_snapshot_sha256": "683df1619421aed8af9d6e94e13d60022b6cd5f6f48735d5756f531e9e5816e3",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 1,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "smooth",
+          "granular"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "granular"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "slumpmode",
+        "label": "Slump Mode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.3
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rainamount",
+        "label": "Rain Amount",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.05
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "raindensity",
+        "label": "Rain Density",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 200
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "iterations",
+        "label": "Spread Iterations",
+        "max": 200,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "smoothiterations",
+        "label": "Smoothing Iterations",
+        "max": 100,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "domask",
+        "label": "Copy Flow to Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "maskscale",
+        "label": "Copy to Mask",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "doheight",
+        "label": "Adjust Height from Flow",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "heightscale",
+        "label": "Adjust Height",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "height"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "heightlayer",
+        "label": "Height Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "water"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "waterlayer",
+        "label": "Water Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "flow"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "flowlayer",
+        "label": "Flow Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "flowdir"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "flowdirlayer",
+        "label": "Flow Direction Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "seed",
+        "label": "Random Seed",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

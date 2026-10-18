@@ -1,0 +1,228 @@
+{
+  "id": "node.catalog-90545d9afd4bf0c20f18",
+  "operation_version": 2,
+  "contract_sha256": "aa938a17b20085057c0321c1934a1ad575e7c428430cbe1f0609f2f0acf736f3",
+  "catalog_snapshot_sha256": "7cb8b0700ef238d35be4b80c1f68eca6425bbcc6c22e1293caeac0f2dc3a0f56",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      },
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 1,
+        "name": "precipitation_mask",
+        "required": false
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": true,
+        "key": "rain_amount",
+        "label": "Amount",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rain_amountmaskmode",
+        "label": "rain_amountmaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "precipitation"
+        },
+        "disableWhen": "ninputs(\"precipitation_mask\") == 0 || ch(\"rain_amountmaskmode\") == \"maskoff\"",
+        "group": "General",
+        "hideWhen": "ch(\"rain_amountmaskmode\") == \"maskoff\"",
+        "joinWithNext": false,
+        "key": "rain_amountmasklayer",
+        "label": "Amount Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.05
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rain_density",
+        "label": "Density",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rain_expandradius",
+        "label": "Expand Radius",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rain_blurradius",
+        "label": "Blur Radius",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "seed",
+        "label": "Random Seed",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "height"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "heightlayer",
+        "label": "Height Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "water"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "waterlayer",
+        "label": "Water Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

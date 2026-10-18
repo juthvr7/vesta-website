@@ -1,0 +1,355 @@
+{
+  "id": "node.catalog-9b9e34b7d264d6d4b82e",
+  "operation_version": 3,
+  "contract_sha256": "b5584c5b15285461d846a708439b8594d10a7c9508d45d2220a52995d4c278f0",
+  "catalog_snapshot_sha256": "aab07da85a030051acc23dba40fc93d29079e59a30e33ae3ff14445aa2ad10e1",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "height"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "layer",
+        "label": "Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "doborder",
+        "label": "Adjust Border",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": [
+          "constant",
+          "repeat",
+          "streak",
+          "sdf"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "streak"
+        },
+        "disableWhen": "ch(\"doborder\") == off",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "border",
+        "label": "Border Type",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": "ch(\"doborder\") == off",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "borderval",
+        "label": "Border Value",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "dovoltol",
+        "label": "Adjust Compression",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": [
+          "menu",
+          "none",
+          "float16",
+          "int16",
+          "int8",
+          "int1"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "menu"
+        },
+        "disableWhen": "ch(\"dovoltol\") == off",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "compresspreset",
+        "label": "Compression Preset",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": "ch(\"dovoltol\") == off",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "compressiontol",
+        "label": "Compression Tolerance",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": "ch(\"dovoltol\") == off",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "usefp16",
+        "label": "Use 16bit Float",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": [
+          "none",
+          "ordered"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "ordered"
+        },
+        "disableWhen": "ch(\"dovoltol\") == off",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "dither",
+        "label": "Dithering",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [
+      {
+        "disable_when": "{ dovoltol == 0 }",
+        "effect": {
+          "cases": [
+            {
+              "assignments": [
+                {
+                  "parameter": "compressiontol",
+                  "value": {
+                    "type": "ScalarF64",
+                    "value": 0
+                  }
+                },
+                {
+                  "parameter": "usefp16",
+                  "value": {
+                    "type": "Bool",
+                    "value": false
+                  }
+                }
+              ],
+              "token": "none"
+            },
+            {
+              "assignments": [
+                {
+                  "parameter": "compressiontol",
+                  "value": {
+                    "type": "ScalarF64",
+                    "value": 0
+                  }
+                },
+                {
+                  "parameter": "usefp16",
+                  "value": {
+                    "type": "Bool",
+                    "value": true
+                  }
+                }
+              ],
+              "token": "float16"
+            },
+            {
+              "assignments": [
+                {
+                  "parameter": "compressiontol",
+                  "value": {
+                    "type": "ScalarF64",
+                    "value": 0.000015259021896696422
+                  }
+                },
+                {
+                  "parameter": "usefp16",
+                  "value": {
+                    "type": "Bool",
+                    "value": false
+                  }
+                }
+              ],
+              "token": "int16"
+            },
+            {
+              "assignments": [
+                {
+                  "parameter": "compressiontol",
+                  "value": {
+                    "type": "ScalarF64",
+                    "value": 0.00392156862745098
+                  }
+                },
+                {
+                  "parameter": "usefp16",
+                  "value": {
+                    "type": "Bool",
+                    "value": false
+                  }
+                }
+              ],
+              "token": "int8"
+            },
+            {
+              "assignments": [
+                {
+                  "parameter": "compressiontol",
+                  "value": {
+                    "type": "ScalarF64",
+                    "value": 0.5
+                  }
+                },
+                {
+                  "parameter": "usefp16",
+                  "value": {
+                    "type": "Bool",
+                    "value": false
+                  }
+                }
+              ],
+              "token": "int1"
+            }
+          ],
+          "parameter": "compresspreset",
+          "reset_token": "menu",
+          "type": "menu_preset"
+        },
+        "group": "Compression",
+        "hide_when": null,
+        "key": "compresspreset",
+        "label": "Compression Preset",
+        "requires": [
+          {
+            "parameter": "dovoltol",
+            "value": {
+              "type": "Bool",
+              "value": true
+            }
+          }
+        ],
+        "trigger": {
+          "parameter": "compresspreset",
+          "type": "parameter_changed"
+        },
+        "version": 1
+      }
+    ],
+    "unimplementedParameters": []
+  }
+}

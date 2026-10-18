@@ -1,6 +1,6 @@
 export const site = {
   url: "https://juthvr7.github.io/vesta-website/",
-  version: "20261016-worlds-v1",
-  updated: "2026-10-16",
+  version: "20261019-implemented-help-v1",
+  updated: "2026-10-19",
   media: "assets/worlds/",
 };

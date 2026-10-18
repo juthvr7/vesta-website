@@ -1,0 +1,136 @@
+{
+  "id": "node.catalog-00cea0b8a69a09a3a0a1",
+  "operation_version": 2,
+  "contract_sha256": "e60d16c8b96c03cebfc07792a9e37a1d2b1f9b1c9e6ea611fbe7f9985cff11ee",
+  "catalog_snapshot_sha256": "6d7f31a2dce52b40019afbdc5fcb4053f790eccbb48f457f3cf3f8be0528477d",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": true,
+        "key": "create#",
+        "label": "Source",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "mask"
+        },
+        "disableWhen": "ch(\"create#\") == 0",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "srcname#",
+        "label": "Source",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "ch(\"create#\") == 0",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "dstname#",
+        "label": "Destination",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": "ch(\"create#\") == 0",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "copysrc#",
+        "label": "Copy Source Data",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": "ch(\"create#\") == 0",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "replacedst#",
+        "label": "Replace Existing",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

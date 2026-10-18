@@ -1,0 +1,343 @@
+{
+  "id": "node.catalog-347b7c2b2ab8b320ec49",
+  "operation_version": 3,
+  "contract_sha256": "3df690b6349ffc13c3c8027a29875211e6763c3a0fc9855bac1a0768ff663d2b",
+  "catalog_snapshot_sha256": "058f023526d5c103981e090500a00fece497dac93981af7d8f2a799e7d470895",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      },
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 1,
+        "name": "geometry_1",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "height"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "layer",
+        "label": "Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "",
+          "mask"
+        ],
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "maskmode",
+        "label": "Mask Mode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "both",
+          "above",
+          "below"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "both"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "maskdir",
+        "label": "Masking by Geometry",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "height"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "heightlayer",
+        "label": "Height Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "maskdensity",
+        "label": "Density",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "maskinvert",
+        "label": "Invert",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hitfarthest",
+        "label": "Hit Farthest",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "replace",
+          "add",
+          "multiply",
+          "max",
+          "min"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "max"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "combine",
+        "label": "Combine Method",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1000
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "maxraydist",
+        "label": "Max Ray Dist",
+        "max": 1000,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "dojitter",
+        "label": "Supersampling",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 3
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "sample",
+        "label": "Samples",
+        "max": 25,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.25
+        },
+        "disableWhen": "ch(\"sample\") == 1",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "jitter",
+        "label": "Jitter",
+        "max": 5,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "avg",
+          "median",
+          "min",
+          "max"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "median"
+        },
+        "disableWhen": "ch(\"sample\") == 1",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "jittercombine",
+        "label": "Ray Combiner",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": "ch(\"sample\") == 1",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "seed",
+        "label": "Seed",
+        "max": 10,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

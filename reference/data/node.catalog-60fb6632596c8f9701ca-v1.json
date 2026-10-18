@@ -1,0 +1,103 @@
+{
+  "id": "node.catalog-60fb6632596c8f9701ca",
+  "operation_version": 1,
+  "contract_sha256": "3360d466015ffcd8503be7e76609332ee03877063c3b120f76e870f5d4094d09",
+  "catalog_snapshot_sha256": "3406e3d4856dfff3e41e7db71f68a35d1a18cd0eaa599177178aa0f37c1f68ef",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 1,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "Height",
+          "Color"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "Height"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "Output",
+        "label": "Output",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.5
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "Height",
+        "label": "Height",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "Color",
+        "label": "Color",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

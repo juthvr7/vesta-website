@@ -1,0 +1,102 @@
+{
+  "id": "node.catalog-2039243e52bfc59b5972",
+  "operation_version": 1,
+  "contract_sha256": "21e67b905077dfc9abe646ced0f104a8d4e8803e07d2f281e7e49c0ab3b10b55",
+  "catalog_snapshot_sha256": "be0b424b9388a5da07f64a7c715d0d7a4286f35d035db3aab8fc51c43d461546",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 1,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "Standard",
+          "Normalized"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "Standard"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "Mode",
+        "label": "Mode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector2",
+          "value": [
+            0,
+            1
+          ]
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "Value",
+        "label": "Value",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector2"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "Drop",
+        "label": "Drop",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "id": "node.catalog-bb9d74917c23e6532854",
+  "operation_version": 1,
+  "slug": "autolevel",
+  "generated_at": "2026-10-19",
+  "backend": "CPU",
+  "kind": "actual-result-render",
+  "profile": "terrain-comparison-v2",
+  "producer_sha256": "1215579356de6c40f500e93a3210a1259134aff899ae74f80703a9c6722404fc",
+  "pixel_size": [
+    1600,
+    1000
+  ],
+  "text_overlay": false,
+  "variants": [
+    {
+      "id": "input",
+      "en": "Input",
+      "zh": "输入",
+      "parameter": "",
+      "master_sha256": "fa2417f45d9cf5346c74f1731884bbb8e63514bbe5194d8242965bcad35f8127",
+      "source_result_sha256": "9d63aa0270f295e725bbce89c80cb470f048ed91da98b7edfdc066bed2355632",
+      "source_statistics": {
+        "resolution": [
+          64,
+          64
+        ],
+        "range": [
+          0.015625,
+          1
+        ],
+        "samples_f32_sha256": "0be54bc118cdae822fa942e8ba52cae8c40ec111810c17c46c18582da099cfb4"
+      },
+      "variants": [
+        {
+          "file": "input-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "ea41b283b36add2527be0989fee82764ea745661b672c9557c5079a9554f8179"
+        },
+        {
+          "file": "input-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "b1695e4def2fc219bb16c7cdb6912532c0304e3b289cc0f1c2817e26d9d0c02b"
+        },
+        {
+          "file": "input.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "34295e3dbf2c16895718d249a9cc0fc6c6b2bac1e8b76439efb356d9c7b6d22e"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 2,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-f763b1c25454fc3d9ea5",
+            "operation_version": 2,
+            "parameters": {
+              "orient": {
+                "type": "Text",
+                "value": "zx"
+              },
+              "sampling": {
+                "type": "Text",
+                "value": "center"
+              },
+              "initialheight": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "initialmask": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "divisionmode": {
+                "type": "Text",
+                "value": "size"
+              },
+              "gridspacing": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "gridsamples": {
+                "type": "ScalarI64",
+                "value": 512
+              },
+              "scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "size": {
+                "type": "Vector2",
+                "value": [
+                  64,
+                  64
+                ]
+              },
+              "t": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-9ac94c32eb89356b6545",
+            "operation_version": 1,
+            "parameters": {
+              "Scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "Direction": {
+                "type": "ScalarI64",
+                "value": 0
+              },
+              "Edge": {
+                "type": "Text",
+                "value": "Mirror"
+              }
+            }
+          },
+          {
+            "id": 3,
+            "topic": "node.catalog-bb9d74917c23e6532854",
+            "operation_version": 1,
+            "parameters": {}
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          },
+          {
+            "id": 2,
+            "from_node": 2,
+            "from_port": 0,
+            "to_node": 3,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "35c85846fdd2df5dc2080de21d70e684ee72703c4f2a7a425dca92ee6e2828a3",
+      "same_result_as_input": false
+    },
+    {
+      "id": "result",
+      "en": "Result",
+      "zh": "结果",
+      "parameter": "",
+      "master_sha256": "7114b9cc6083e2a80c331873353c2db015c8f0f741072456e44599db14707ddc",
+      "source_result_sha256": "7e6281fa074df3185d24399e1952fcfffcc36360f7fa82a1a080d8b4a162222d",
+      "source_statistics": {
+        "resolution": [
+          64,
+          64
+        ],
+        "range": [
+          0,
+          1
+        ],
+        "samples_f32_sha256": "6f84f2ab816f5ab68e9b2653b69869dd33f34b49a6af3f70da6f6dd7a4dcecbf"
+      },
+      "variants": [
+        {
+          "file": "result-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "ca0e469edf1c9e4dac8fefacf26365b3582893adcea1d02ffae86df9374b2543"
+        },
+        {
+          "file": "result-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "e5739b4ab7a91fe2ae2336cfc0733a6a3c2e18f47b66a1f11db232eef6f6d5e4"
+        },
+        {
+          "file": "result.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "9300afbdbd0dc70f4d980f9b89a14eb0d7b4e9ec073a5d179b4aabe97e476a85"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 3,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-f763b1c25454fc3d9ea5",
+            "operation_version": 2,
+            "parameters": {
+              "orient": {
+                "type": "Text",
+                "value": "zx"
+              },
+              "sampling": {
+                "type": "Text",
+                "value": "center"
+              },
+              "initialheight": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "initialmask": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "divisionmode": {
+                "type": "Text",
+                "value": "size"
+              },
+              "gridspacing": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "gridsamples": {
+                "type": "ScalarI64",
+                "value": 512
+              },
+              "scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "size": {
+                "type": "Vector2",
+                "value": [
+                  64,
+                  64
+                ]
+              },
+              "t": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-9ac94c32eb89356b6545",
+            "operation_version": 1,
+            "parameters": {
+              "Scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "Direction": {
+                "type": "ScalarI64",
+                "value": 0
+              },
+              "Edge": {
+                "type": "Text",
+                "value": "Mirror"
+              }
+            }
+          },
+          {
+            "id": 3,
+            "topic": "node.catalog-bb9d74917c23e6532854",
+            "operation_version": 1,
+            "parameters": {}
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          },
+          {
+            "id": 2,
+            "from_node": 2,
+            "from_port": 0,
+            "to_node": 3,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "77b09c970967ea9620fdc337aa21d2648c20f13cc534b43675ce05ccfada20f6",
+      "same_result_as_input": false
+    }
+  ],
+  "display": {
+    "camera": [
+      32,
+      -62
+    ],
+    "common_color_range": [
+      0,
+      1
+    ],
+    "height_offset": 0,
+    "height_multiplier": 0.2,
+    "extent": [
+      1,
+      1,
+      0.28
+    ],
+    "sample_stride": 1,
+    "vertical_scale_metadata_applied": false
+  }
+}

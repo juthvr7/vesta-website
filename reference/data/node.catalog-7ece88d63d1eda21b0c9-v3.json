@@ -1,0 +1,256 @@
+{
+  "id": "node.catalog-7ece88d63d1eda21b0c9",
+  "operation_version": 3,
+  "contract_sha256": "5973daeeb9b49abc612c3563679a5853f527ea49969aa3bef5f5022bb392a843",
+  "catalog_snapshot_sha256": "8fb10e3e604513c2e2ccbdeee3df0b91b8505c3ebc51a6bc2430e2507c69e4f6",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield",
+        "required": true
+      },
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 1,
+        "name": "mask",
+        "required": false
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "height"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "layer",
+        "label": "Distort Layers",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "mask"
+        },
+        "disableWhen": "ninputs(\"mask\") == 0",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "masklayer",
+        "label": "Mask Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "simplex",
+          "curl"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "curl"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "noisetype",
+        "label": "Noise Type",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 10
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "amp",
+        "label": "Amplitude",
+        "max": 1000,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 100
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "element_size",
+        "label": "Element Size",
+        "max": 1000,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            1,
+            1,
+            1
+          ]
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "element_scale",
+        "label": "Element Scale",
+        "max": null,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "offset",
+        "label": "Offset",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.5
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rough",
+        "label": "Roughness",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 8
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "maxoctave",
+        "label": "Max Octaves",
+        "max": 16,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "steps",
+        "label": "Substeps",
+        "max": 10,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

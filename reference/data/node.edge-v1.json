@@ -1,0 +1,118 @@
+{
+  "id": "node.edge",
+  "study": "edge",
+  "operation_version": 1,
+  "contract_sha256": "ce30b169ee8f1203963183b002a5a13e5a4136a5c5f7f70ec4282a6fbce87bfb",
+  "catalog_snapshot_sha256": "179cce6ca4f0458459b108d1c300caa0b449dec1dcb82b981db398883e18dea0",
+  "contract": {
+    "version": 1,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "Round",
+          "Square",
+          "Precise"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "Square"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "Style",
+        "label": "Style",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.5
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "Size",
+        "label": "Size",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 2
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "Pixels",
+        "label": "Pixels",
+        "max": 500,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.25
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "Softness",
+        "label": "Softness",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null
+  }
+}

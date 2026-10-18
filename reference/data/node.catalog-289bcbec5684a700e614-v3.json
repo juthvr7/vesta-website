@@ -1,0 +1,383 @@
+{
+  "id": "node.catalog-289bcbec5684a700e614",
+  "operation_version": 3,
+  "contract_sha256": "ab08d228384baff1fe5b6f00bd61cb1c2f052e2cc87ccef8c75ab66eb8a3fa73",
+  "catalog_snapshot_sha256": "b9c024fc209556fc90292268d01fbdd1f7f20d060fc04c96ba96c1bfca57366c",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield",
+        "required": true
+      },
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 1,
+        "name": "reference",
+        "required": true
+      },
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 2,
+        "name": "reference2",
+        "required": false
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "replace",
+          "add",
+          "subtract",
+          "diff",
+          "multiply",
+          "max",
+          "min",
+          "blend"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "replace"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "mode",
+        "label": "Layer Mode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.5
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": "ch(\"mode\") != \"blend\"",
+        "joinWithNext": false,
+        "key": "blend",
+        "label": "Blend",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "*"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "layer",
+        "label": "Layers",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "mask"
+        },
+        "disableWhen": "ninputs(\"reference2\") == 0",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "masklayer",
+        "label": "Mask Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": "ninputs(\"reference2\") == 0",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "maskweight",
+        "label": "Mask Strength",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": "ninputs(\"reference2\") == 0",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "invertmask",
+        "label": "Invert Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "base_offset",
+        "label": "Base Offset",
+        "max": 100,
+        "maxStrict": false,
+        "min": -100,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "base_scale",
+        "label": "Base Scale",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "layer_offset",
+        "label": "Layer Offset",
+        "max": 100,
+        "maxStrict": false,
+        "min": -100,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "layer_scale",
+        "label": "Layer Scale",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "final_offset",
+        "label": "Final Offset",
+        "max": 100,
+        "maxStrict": false,
+        "min": -100,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "final_scale",
+        "label": "Final Scale",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": true,
+        "key": "doclampmin",
+        "label": "Clamp Minimum",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": "ch(\"doclampmin\") == off",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "clampmin",
+        "label": "Clamp Minimum",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": true,
+        "key": "doclampmax",
+        "label": "Clamp Maximum",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": "ch(\"doclampmax\") == off",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "clampmax",
+        "label": "Clamp Maximum",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

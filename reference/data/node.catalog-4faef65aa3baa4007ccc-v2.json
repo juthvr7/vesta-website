@@ -1,0 +1,449 @@
+{
+  "id": "node.catalog-4faef65aa3baa4007ccc",
+  "operation_version": 2,
+  "contract_sha256": "7415dfc2bfb912a55e617892897eb551779a09b90ec16e552258b2c42a167a93",
+  "catalog_snapshot_sha256": "d51353ecdbc124552d239ef9be3e00636c3aa3ad2a7dcb81efaa42d5c55b60f6",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": true
+      },
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 1,
+        "name": "reference",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": true,
+        "key": "primitives",
+        "label": "Enable Primitive Groups",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "{ primitives == 0 }",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "primgroups",
+        "label": "Primitive Groups",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "{ primitives == 0 }",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "primnameprefix",
+        "label": "Primitive Group Prefix",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": "{ primitives == 0 }",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": true,
+        "key": "enablematchbyprimattrib",
+        "label": "Enable Match by Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "name"
+        },
+        "disableWhen": "{ primitives == 0 } { enablematchbyprimattrib == 0 }",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "matchbyprimattrib",
+        "label": "Match by Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": true,
+        "key": "points",
+        "label": "Enable Point Groups",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "{ points == 0 }",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "pointgroups",
+        "label": "Point Groups",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "{ points == 0 }",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "pointnameprefix",
+        "label": "Point Group Prefix",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": "{ points == 0 }",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": true,
+        "key": "enablematchbypointattrib",
+        "label": "Enable Match by Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "id"
+        },
+        "disableWhen": "{ points == 0 } { enablematchbypointattrib == 0 }",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "matchbypointattrib",
+        "label": "Match by Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": true,
+        "key": "edges",
+        "label": "Enable Edge Groups",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "{ edges == 0 }",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "edgegroups",
+        "label": "Edge Groups",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "{ edges == 0 }",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "edgenameprefix",
+        "label": "Edge Group Prefix",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": true,
+        "key": "vertices",
+        "label": "Enable Vertex Groups",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "{ vertices == 0 }",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "vertexgroups",
+        "label": "Vertex Groups",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "{ vertices == 0 }",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "vertexnameprefix",
+        "label": "Vertex Group Prefix",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": "{ vertices == 0 }",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": true,
+        "key": "enablematchbyvertexattrib",
+        "label": "Enable Match by Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "id"
+        },
+        "disableWhen": "{ vertices == 0 } { enablematchbyvertexattrib == 0 }",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "matchbyvertexattrib",
+        "label": "Match by Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "skipgroup",
+          "overwrite",
+          "addsuffix"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "skipgroup"
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "groupnameconflict",
+        "label": "Group Name Conflict",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "copyemptygroups",
+        "label": "Copy Empty Groups",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "subject_id": "terrain.terraces",
+  "snapshot_id": "terraces-cpu-2026-10-16",
+  "verified_at": "2026-10-16",
+  "preserved_at": "2026-10-18",
+  "kind": "historical-run-summary",
+  "rerun": false,
+  "operation_version": 2,
+  "implementation_version": 1,
+  "backend": "cpu",
+  "host": "cli",
+  "case_count": 30,
+  "resolutions": [
+    64,
+    128
+  ],
+  "tolerance": 0.000002,
+  "observed_max_abs": 0.0000018924474716186523,
+  "passed": true,
+  "source_report_sha256": "6aaa04b77bd4707ca1c44a81be75af0713952fd3ac625346ec5a880c711097a1",
+  "executable_sha256": "472108be1375810652b6a360c68e634c76454eb4d7e65c20cb23358b309c88ca",
+  "cases": [
+    {
+      "case_id": "terraces_default/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "3aa30d4204373651e9596327b676031fc03b0ff2e5a3fbbd7f21676e5d55d1e0"
+    },
+    {
+      "case_id": "terraces_default/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "1c8defeedc55ec7fdc4d7fdfdc25071b734f80496d2fc39e2ad492f733e490cc"
+    },
+    {
+      "case_id": "terraces_count3/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "1b1afd7f9586050fc236af5e3189917c961978090ef8d7cf33ab4b99b4d85df1"
+    },
+    {
+      "case_id": "terraces_count3/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "064c335e5e2f166052e4b79bddcc4e50002911fae347cfd611e0b7bdcf2f9783"
+    },
+    {
+      "case_id": "terraces_count256/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "5decb3be73264d75e1f35bb4236b46fab54724bc987d7c07e75c17d034abc2f2"
+    },
+    {
+      "case_id": "terraces_count256/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "c532fa31371f2dbaa5a827e636beb4be1dd1fbd0c870db2ed5282ee862d2e355"
+    },
+    {
+      "case_id": "terraces_uniform0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "cc8da1b6c1520d2eaa69a94daf75341beb6fc9bc2223743700688ffa26e05d88"
+    },
+    {
+      "case_id": "terraces_uniform0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "9041b09b10bb304c8cd318c0991d02a07036cc41bd55a17d62385a4601ca5c8a"
+    },
+    {
+      "case_id": "terraces_uniform1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "65950356f78691757a22b43f34710a6267d781aadd92f38b60855df4e40df980"
+    },
+    {
+      "case_id": "terraces_uniform1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "0c04c2a1db89ddc0624d120e32faea2fb17009f4d746bd6f2745e97c10824454"
+    },
+    {
+      "case_id": "terraces_steep0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "d5ad78c2ff89b91ab0c783611c226b8840e9bff09795bd5767b9610535e37253"
+    },
+    {
+      "case_id": "terraces_steep0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "881e25bfc535cf99d511d8c335bca2cd073dc9ecd76a4fb8f3bba38a695147fa"
+    },
+    {
+      "case_id": "terraces_steep1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "1f33f6a058114cf4b30567ad52e5ee56eb60b0a74a15186ffadadaaf43c69478"
+    },
+    {
+      "case_id": "terraces_steep1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "a7ca6acb4b7e2e87d15d0646f5f9316da3a2b4412cf280b4fb6f39bd0485a8f6"
+    },
+    {
+      "case_id": "terraces_intensity0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "0be54bc118cdae822fa942e8ba52cae8c40ec111810c17c46c18582da099cfb4"
+    },
+    {
+      "case_id": "terraces_intensity0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "075a4e29b7598aa7024d7e63de27a10da35e1ba0a1b168be6cc13fab61b439b2"
+    },
+    {
+      "case_id": "terraces_intensity_half/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "032fdc9faf30b17314f1d92b6175975fbf45bd323541b97489bbe9a4e06ca6b9"
+    },
+    {
+      "case_id": "terraces_intensity_half/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "703125bacece7e0d2c6349d8cf9d49dfe1c53db4ca3c40030b9bf43c985c465e"
+    },
+    {
+      "case_id": "terraces_seed65535/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "a56bb4920e8669e1ea13caf41e86c6ea5e38a6fa875c8faf44445b948bc1872b"
+    },
+    {
+      "case_id": "terraces_seed65535/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "9add5d5e693b6e9146d4c3261acdf529f3c73e7521f13264ba7837487d5ce5be"
+    },
+    {
+      "case_id": "terraces_count2/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4e501f1eaada97cfe70967069901134763cfaa57270c49af93b66e17b835e06f"
+    },
+    {
+      "case_id": "terraces_count2/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "865a896a928ebf339b23faa6b459450f237264a434bd7e5fe60341397df72f0e"
+    },
+    {
+      "case_id": "terraces_flat0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    {
+      "case_id": "terraces_flat0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "case_id": "terraces_flat1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "3035aac5fb87474c303702f9030301b4e6bb7aee93be3710b8ab8dcea201db70"
+    },
+    {
+      "case_id": "terraces_flat1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "3513f7981d1ead42bde088485afbba413d675b83c061c6362634bcb044bf8613"
+    },
+    {
+      "case_id": "terraces_oblique/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 1.4156103134155273e-7,
+      "reference_sha256": "6c9af8754809524445bc137d1cea45377e77fceaa0390eedfcaae5123f73032c"
+    },
+    {
+      "case_id": "terraces_oblique/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0.0000018924474716186523,
+      "reference_sha256": "e8ce096d64331a64b9404ad4e1fccba79e81d0f7fb1226970f5bc53d8c154a3f"
+    },
+    {
+      "case_id": "terraces_on_ridge/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "3f027e74b82096e58fd4134c30e3c948d6a1e5824203c054a3997f9d5ecfc017"
+    },
+    {
+      "case_id": "terraces_on_ridge/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "d02dd5757d205e20eeb36573ba8a82c34ec5ce933d64d4a7fedc03bc409be608"
+    }
+  ],
+  "limitations": [
+    "Fixed recipes and declared scope only.",
+    "Effect renders are not reference-comparison images.",
+    "No new execution or physical interaction claim.",
+    "CPU evidence does not qualify GPU or engine execution."
+  ]
+}

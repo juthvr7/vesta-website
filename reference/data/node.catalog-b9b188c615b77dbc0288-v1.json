@@ -1,0 +1,60 @@
+{
+  "id": "node.catalog-b9b188c615b77dbc0288",
+  "operation_version": 1,
+  "contract_sha256": "d5101976a366277445a209e64f438d584c93ad9e8ef57e78a9deeeb08f930607",
+  "catalog_snapshot_sha256": "120ff6a80e81ea28eee6c2c90962051b0292739da3ba6865d9917b8c6ce1e112",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 1,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "X",
+          "Y",
+          "XY"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "X"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "Type",
+        "label": "Type",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

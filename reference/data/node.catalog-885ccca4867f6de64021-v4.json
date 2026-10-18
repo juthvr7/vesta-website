@@ -1,0 +1,92 @@
+{
+  "id": "node.catalog-885ccca4867f6de64021",
+  "operation_version": 4,
+  "contract_sha256": "e53306206d701a2136030a3d541ffe48d866091cf9de0ceb0ab7399098a52ce6",
+  "catalog_snapshot_sha256": "d1d1181cc53d8e060e99c7cbdca31104a6c15a778aa590a85da6702efbdd37e4",
+  "presentation_aliases": true,
+  "contract": {
+    "version": 4,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "legacy-catmull-clark",
+          "mantra",
+          "osdcc",
+          "osdloop",
+          "osdbilinear"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "osdcc"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "algorithm",
+        "label": "Algorithm",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "iterations",
+        "label": "Depth",
+        "max": 3,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": [
+      {
+        "default_honored": true,
+        "key": "algorithm",
+        "reason": "只实现了 legacy-catmull-clark/osdcc（Catmull-Clark）与 osdbilinear（双线性）；mantra 是渲染期兼容细分、osdloop 是 OpenSubdiv Loop，尚未实现",
+        "values": [
+          "mantra",
+          "osdloop"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "id": "node.catalog-10d3e9093c0cca3d8871",
+  "operation_version": 3,
+  "contract_sha256": "0c4033ee852661d7d041ed603a86df10467a382545696831991d634d58a41249",
+  "catalog_snapshot_sha256": "0e727083abeb0ff1ac40db026d8995dcc07e59098377a1e731729cf0afd33f34",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "volume_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.1
+        },
+        "disableWhen": null,
+        "group": "Volume",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "voxel_size",
+        "label": "Voxel Size",
+        "max": null,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "Selection",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "group",
+        "label": "Primitive Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "signed_distance",
+          "unsigned_distance",
+          "fog"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "signed_distance"
+        },
+        "disableWhen": null,
+        "group": "Volume",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "mode",
+        "label": "Output Mode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.3
+        },
+        "disableWhen": null,
+        "group": "Volume",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "exterior_band",
+        "label": "Exterior Band (World Units)",
+        "max": null,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.3
+        },
+        "disableWhen": "chs(\"mode\") != \"signed_distance\"",
+        "group": "Volume",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "interior_band",
+        "label": "Interior Band (World Units)",
+        "max": null,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

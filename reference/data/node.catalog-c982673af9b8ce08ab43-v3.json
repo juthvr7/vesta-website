@@ -1,0 +1,76 @@
+{
+  "id": "node.catalog-c982673af9b8ce08ab43",
+  "operation_version": 3,
+  "contract_sha256": "99394cef8de1c6e7a7ca8d4a4b8ae85fbb6a0ddb9bdd26f3e2a49188d5f7c34c",
+  "catalog_snapshot_sha256": "69c7766d03526586cc10c2b96944973f08375e5df7bdedaf07748e99a10a35d2",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 10
+        },
+        "disableWhen": null,
+        "group": "Tuning",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "iterations",
+        "label": "Iterations",
+        "max": 100,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.5
+        },
+        "disableWhen": null,
+        "group": "Tuning",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "lambda",
+        "label": "Lambda",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Element",
+    "halo": 1,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

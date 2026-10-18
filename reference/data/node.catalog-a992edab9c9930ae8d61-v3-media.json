@@ -1,0 +1,553 @@
+{
+  "id": "node.catalog-a992edab9c9930ae8d61",
+  "operation_version": 3,
+  "slug": "peak",
+  "generated_at": "2026-10-19",
+  "backend": "CPU",
+  "kind": "actual-result-render",
+  "profile": "mesh-comparison-v2",
+  "producer_sha256": "5f1dcdbc65c2c6a6aec28566f6f7445b1a71316773a14a0116d849bf9bfa9c9c",
+  "pixel_size": [
+    1600,
+    1000
+  ],
+  "text_overlay": false,
+  "variants": [
+    {
+      "id": "input",
+      "en": "Input",
+      "zh": "输入",
+      "parameter": "",
+      "master_sha256": "8ad3c173b1caf30dc03f63c4aa5581b0593980670ab85c221e9f88bb2dc8fbbe",
+      "source_result_sha256": "e45064d1e71de35c7923a24263d3df15de2f0d5c86b7173454f4e25a5219f55d",
+      "source_statistics": {
+        "points": 26,
+        "faces": 48
+      },
+      "variants": [
+        {
+          "file": "input-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "f916f20ff046f039bd13bb3d9137f2b8bde4f50c1ddcc8eb7027df7c8a02a1e0"
+        },
+        {
+          "file": "input-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "bb0d08b63e9af1e8d0cbb5b6c01b70e74abe716f1a18bf1e6d8b9d835422d966"
+        },
+        {
+          "file": "input.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "7d3cbd82312136dc7a9cf9b61065e3766c99cb50908260c3babfe8270932e366"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 1,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-fb6dbf2191877cdfa567",
+            "operation_version": 6,
+            "parameters": {
+              "type": {
+                "type": "Text",
+                "value": "polymesh"
+              },
+              "surftype": {
+                "type": "Text",
+                "value": "quads"
+              },
+              "rad": {
+                "type": "Vector3",
+                "value": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "t": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "r": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "orient": {
+                "type": "Text",
+                "value": "y"
+              },
+              "freq": {
+                "type": "ScalarI64",
+                "value": 2
+              },
+              "rows": {
+                "type": "ScalarI64",
+                "value": 5
+              },
+              "cols": {
+                "type": "ScalarI64",
+                "value": 8
+              },
+              "orderu": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "orderv": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "imperfect": {
+                "type": "Bool",
+                "value": true
+              },
+              "upole": {
+                "type": "Bool",
+                "value": false
+              },
+              "accurate": {
+                "type": "Bool",
+                "value": true
+              },
+              "triangularpoles": {
+                "type": "Bool",
+                "value": true
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-a992edab9c9930ae8d61",
+            "operation_version": 3,
+            "parameters": {
+              "group": {
+                "type": "Text",
+                "value": ""
+              },
+              "grouptype": {
+                "type": "Text",
+                "value": "guess"
+              },
+              "dist": {
+                "type": "ScalarF64",
+                "value": 0.25
+              },
+              "updatenmls": {
+                "type": "Bool",
+                "value": true
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "aa8acb44b05bd0482dbbc0925c04fa154fd6747df1819b7ce4128a443053bdb5",
+      "same_result_as_input": false
+    },
+    {
+      "id": "first",
+      "en": "dist = 0",
+      "zh": "dist = 0",
+      "parameter": "dist=0",
+      "master_sha256": "8ad3c173b1caf30dc03f63c4aa5581b0593980670ab85c221e9f88bb2dc8fbbe",
+      "source_result_sha256": "e45064d1e71de35c7923a24263d3df15de2f0d5c86b7173454f4e25a5219f55d",
+      "source_statistics": {
+        "points": 26,
+        "faces": 48
+      },
+      "variants": [
+        {
+          "file": "first-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "f916f20ff046f039bd13bb3d9137f2b8bde4f50c1ddcc8eb7027df7c8a02a1e0"
+        },
+        {
+          "file": "first-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "bb0d08b63e9af1e8d0cbb5b6c01b70e74abe716f1a18bf1e6d8b9d835422d966"
+        },
+        {
+          "file": "first.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "7d3cbd82312136dc7a9cf9b61065e3766c99cb50908260c3babfe8270932e366"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 2,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-fb6dbf2191877cdfa567",
+            "operation_version": 6,
+            "parameters": {
+              "type": {
+                "type": "Text",
+                "value": "polymesh"
+              },
+              "surftype": {
+                "type": "Text",
+                "value": "quads"
+              },
+              "rad": {
+                "type": "Vector3",
+                "value": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "t": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "r": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "orient": {
+                "type": "Text",
+                "value": "y"
+              },
+              "freq": {
+                "type": "ScalarI64",
+                "value": 2
+              },
+              "rows": {
+                "type": "ScalarI64",
+                "value": 5
+              },
+              "cols": {
+                "type": "ScalarI64",
+                "value": 8
+              },
+              "orderu": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "orderv": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "imperfect": {
+                "type": "Bool",
+                "value": true
+              },
+              "upole": {
+                "type": "Bool",
+                "value": false
+              },
+              "accurate": {
+                "type": "Bool",
+                "value": true
+              },
+              "triangularpoles": {
+                "type": "Bool",
+                "value": true
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-a992edab9c9930ae8d61",
+            "operation_version": 3,
+            "parameters": {
+              "group": {
+                "type": "Text",
+                "value": ""
+              },
+              "grouptype": {
+                "type": "Text",
+                "value": "guess"
+              },
+              "dist": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "updatenmls": {
+                "type": "Bool",
+                "value": true
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "922cc6cc240422bd2b7e03f51f06e817d37cd47b9ea09f1dea128550ebe0dcc7",
+      "same_result_as_input": true
+    },
+    {
+      "id": "second",
+      "en": "dist = 0.3",
+      "zh": "dist = 0.3",
+      "parameter": "dist=0.3",
+      "master_sha256": "425e8b165d48a219bb1947ebc71ecc30a7cf1b2b7c5160aa446aaa59f2c632a1",
+      "source_result_sha256": "c54e6e0350b5100fcdb0ca8679df1ca01c962a7180c82ba9a85c64340dd5bc92",
+      "source_statistics": {
+        "points": 26,
+        "faces": 48
+      },
+      "variants": [
+        {
+          "file": "second-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "c54106da1db9a32ea9d919cb90ed3280f00cace2a9ad379c83f112133f150bf2"
+        },
+        {
+          "file": "second-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "0852767dd1ce06e209c0c14126281d8f072e7dee4dc232b30e245873f3186b35"
+        },
+        {
+          "file": "second.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "280ccd3af6990f5e091a6b0a463d34c9f8ba06bb8fa014c605814b5e0a97601e"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 2,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-fb6dbf2191877cdfa567",
+            "operation_version": 6,
+            "parameters": {
+              "type": {
+                "type": "Text",
+                "value": "polymesh"
+              },
+              "surftype": {
+                "type": "Text",
+                "value": "quads"
+              },
+              "rad": {
+                "type": "Vector3",
+                "value": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "t": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "r": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "orient": {
+                "type": "Text",
+                "value": "y"
+              },
+              "freq": {
+                "type": "ScalarI64",
+                "value": 2
+              },
+              "rows": {
+                "type": "ScalarI64",
+                "value": 5
+              },
+              "cols": {
+                "type": "ScalarI64",
+                "value": 8
+              },
+              "orderu": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "orderv": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "imperfect": {
+                "type": "Bool",
+                "value": true
+              },
+              "upole": {
+                "type": "Bool",
+                "value": false
+              },
+              "accurate": {
+                "type": "Bool",
+                "value": true
+              },
+              "triangularpoles": {
+                "type": "Bool",
+                "value": true
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-a992edab9c9930ae8d61",
+            "operation_version": 3,
+            "parameters": {
+              "group": {
+                "type": "Text",
+                "value": ""
+              },
+              "grouptype": {
+                "type": "Text",
+                "value": "guess"
+              },
+              "dist": {
+                "type": "ScalarF64",
+                "value": 0.3
+              },
+              "updatenmls": {
+                "type": "Bool",
+                "value": true
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "bfeb6783cd2d0fd84a7b6a1af329308bfc46a98e5755be7fd98ffe473b522d89",
+      "same_result_as_input": false
+    }
+  ],
+  "display": {
+    "camera": [
+      32,
+      -62
+    ],
+    "world_to_display_axes": [
+      "x",
+      "z",
+      "y"
+    ],
+    "center": [
+      0,
+      0,
+      0
+    ],
+    "radius": 1.508,
+    "geometry_scale": 1,
+    "face_decimation": false,
+    "wire_overlay_below_faces": 1200,
+    "two_sided_lighting": true,
+    "ambient": 0.45,
+    "zoom": 1.2
+  }
+}

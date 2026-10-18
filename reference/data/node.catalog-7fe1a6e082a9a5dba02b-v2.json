@@ -1,0 +1,107 @@
+{
+  "id": "node.catalog-7fe1a6e082a9a5dba02b",
+  "operation_version": 2,
+  "contract_sha256": "9983f5e1d0aa95f56cf771c86312d33de39c6bbd8cc48f529fd27040d176837b",
+  "catalog_snapshot_sha256": "e0b75107fbffc98c5f9e053b121d31166cf5379036ef00ae0b52ba7be40b79b1",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "image2d_0",
+        "required": true
+      },
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 1,
+        "name": "mask2d_1",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "image2d_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "box"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "box"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "kernel",
+        "label": "Kernel",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Size",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "radius",
+        "label": "Radius",
+        "max": null,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Tuning",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "iterations",
+        "label": "Iterations",
+        "max": null,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

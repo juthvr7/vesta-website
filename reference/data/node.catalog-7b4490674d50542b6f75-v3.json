@@ -1,0 +1,144 @@
+{
+  "id": "node.catalog-7b4490674d50542b6f75",
+  "operation_version": 3,
+  "contract_sha256": "4f07a073a2080c38aad754be867d3f55f1513cff3335c248a8c99f647b82fd64",
+  "catalog_snapshot_sha256": "0bb2f99e9cef7e3037c8b749ce54b6b7f9c2afec8a32c2ffc66eba243780a2af",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "Selection",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "group",
+        "label": "Point Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.001
+        },
+        "disableWhen": null,
+        "group": "Fuse",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "distance",
+        "label": "Distance",
+        "max": null,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "average",
+          "lowest_id",
+          "highest_id"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "average"
+        },
+        "disableWhen": null,
+        "group": "Fuse",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "position_mode",
+        "label": "Fused Position",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "Output",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "remove_degenerate",
+        "label": "Remove Degenerate Primitives",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": [
+          "representative",
+          "union",
+          "intersection"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "representative"
+        },
+        "disableWhen": null,
+        "group": "Output",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "group_propagation",
+        "label": "Point Group Propagation",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

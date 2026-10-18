@@ -3,6 +3,7 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { locales } from "../content/site-content.mjs";
 import { site } from "../content/site-config.mjs";
+import { validationOutputs, validationSitemapEntries } from "./render-validation.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const checkOnly = process.argv.includes("--check");
@@ -16,7 +17,7 @@ function renderPage(lang, c) {
   const canonical = `${site.url}${lang === "zh" ? "zh/" : ""}`;
   const image = (name, alt, {hero = false} = {}) => `<img src="${media}${name}.webp" srcset="${media}${name}-768.webp 768w, ${media}${name}-1280.webp 1280w, ${media}${name}.webp 1672w" sizes="${hero ? "100vw" : "(max-width:760px) 100vw, 55vw"}" alt="${e(alt)}" width="1672" height="941" ${hero ? 'class="hero-image" fetchpriority="high"' : 'loading="lazy" decoding="async"'}>`;
   const imageButton = (name, alt, label, caption, img) => `<button class="image-button" type="button" data-image="${media}${name}.webp" data-caption="${e(caption)}" aria-label="${e(label)}">${img}<span class="image-expand" aria-hidden="true">↗</span></button>`;
-  const nav = ["vision", "motion", "unreal", "agent", "progress"].map((id, i) => `<a href="#${id}">${e(c.nav[i])}</a>`).join("");
+  const nav = ["vision", "motion", "unreal", "agent", "progress"].map((id, i) => `<a href="#${id}">${e(c.nav[i])}</a>`).join("") + `<a href="${base}${lang === 'zh' ? 'zh/' : ''}validation/">${e(c.validationNav)}</a>`;
   return `<!doctype html>
 <html lang="${c.htmlLang}">
 <head>
@@ -59,7 +60,8 @@ function renderPage(lang, c) {
 }
 
 const outputs = new Map(Object.entries(locales).map(([lang, copy]) => [lang === "zh" ? "zh/index.html" : "index.html", renderPage(lang, copy)]));
-outputs.set("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${["", "zh/"].map(path => `  <url><loc>${site.url}${path}</loc><lastmod>${site.updated}</lastmod><xhtml:link rel="alternate" hreflang="en" href="${site.url}"/><xhtml:link rel="alternate" hreflang="zh-CN" href="${site.url}zh/"/><xhtml:link rel="alternate" hreflang="x-default" href="${site.url}"/></url>`).join("\n")}\n</urlset>\n`);
+for (const [path, content] of validationOutputs()) outputs.set(path, content);
+outputs.set("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${["", "zh/"].map(path => `  <url><loc>${site.url}${path}</loc><lastmod>${site.updated}</lastmod><xhtml:link rel="alternate" hreflang="en" href="${site.url}"/><xhtml:link rel="alternate" hreflang="zh-CN" href="${site.url}zh/"/><xhtml:link rel="alternate" hreflang="x-default" href="${site.url}"/></url>`).join("\n")}\n${validationSitemapEntries()}\n</urlset>\n`);
 for (const [path, contents] of outputs) {
   const destination = resolve(root, path);
   if (checkOnly) {

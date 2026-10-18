@@ -1,0 +1,243 @@
+{
+  "id": "node.catalog-f763b1c25454fc3d9ea5",
+  "operation_version": 2,
+  "contract_sha256": "8b801d321d3ea3318996d90c40a13085386d4ed2de1256fb6bbc9926c75babb4",
+  "catalog_snapshot_sha256": "646b5f2562819a32b0ed3fad82feb4ba7c154b2e42144a43a1a08a6bc705bb22",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "xy",
+          "yz",
+          "zx"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "zx"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "orient",
+        "label": "Orientation",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "center",
+          "corner"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "center"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "sampling",
+        "label": "Sampling",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "initialheight",
+        "label": "Initial Height",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "initialmask",
+        "label": "Initial Mask",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maxaxis",
+          "size"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "size"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "divisionmode",
+        "label": "Division Mode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 2
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "gridspacing",
+        "label": "Grid Spacing",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 512
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "gridsamples",
+        "label": "Grid Samples",
+        "max": 2048,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "scale",
+        "label": "Uniform Scale",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector2",
+          "value": [
+            1000,
+            1000
+          ]
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "size",
+        "label": "Size",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector2"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "t",
+        "label": "Center",
+        "max": 1,
+        "maxStrict": false,
+        "min": -1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

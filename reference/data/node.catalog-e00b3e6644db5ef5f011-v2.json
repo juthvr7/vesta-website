@@ -1,0 +1,1017 @@
+{
+  "id": "node.catalog-e00b3e6644db5ef5f011",
+  "operation_version": 2,
+  "contract_sha256": "d0729d884999f1e0ef8588d603d93d96bec9692c5ee8f33f0c059b818b37ec2c",
+  "catalog_snapshot_sha256": "19f3bce35ee00888bd9c8d7d0870a8691ed03db340426fad482fe729bead236b",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "smooth",
+          "granular"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "smooth"
+        },
+        "disableWhen": null,
+        "group": "Slump/General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "slumpmode",
+        "label": "Slump Mode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 100
+        },
+        "disableWhen": null,
+        "group": "Slump/General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "iterations",
+        "label": "Spread Iterations",
+        "max": 400,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Slump/General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "spread_rate",
+        "label": "Spread Rate",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": "{ doerosion == 1 slumpmode == granular }",
+        "group": "Slump/General",
+        "hideWhen": null,
+        "joinWithNext": true,
+        "key": "repose_angle",
+        "label": "Repose Angle",
+        "max": 90,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": "{ doerosion == 1 slumpmode == granular }",
+        "group": "Slump/General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "reposeanglemaskmode",
+        "label": "reposeanglemaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "{ doerosion == 1 slumpmode == granular } { reposeanglemaskmode == maskoff }",
+        "group": "Slump/General",
+        "hideWhen": "{ reposeanglemaskmode == maskoff }",
+        "joinWithNext": false,
+        "key": "reposeanglemasklayer",
+        "label": "Repose Angle Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 1 }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode != granular }",
+        "joinWithNext": false,
+        "key": "stabilitymasklayer",
+        "label": "Stability Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": "{ slumpmode != granular }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode != granular }",
+        "joinWithNext": false,
+        "key": "quant",
+        "label": "Quantization",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": "{ slumpmode != granular }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode != granular }",
+        "joinWithNext": true,
+        "key": "gridbias",
+        "label": "Grid Bias",
+        "max": 1,
+        "maxStrict": true,
+        "min": -1,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": "{ slumpmode != granular }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode != granular }",
+        "joinWithNext": false,
+        "key": "gridbiasmaskmode",
+        "label": "gridbiasmaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "{ slumpmode != granular } { gridbiasmaskmode == maskoff }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode != granular } { gridbiasmaskmode == maskoff }",
+        "joinWithNext": false,
+        "key": "gridbiasmasklayer",
+        "label": "Grid Bias Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": "{ slumpmode != granular }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode != granular }",
+        "joinWithNext": false,
+        "key": "seed",
+        "label": "Random Seed",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": "{ slumpmode != granular }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode != granular }",
+        "joinWithNext": false,
+        "key": "doerosion",
+        "label": "Do Erosion",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 5
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": false,
+        "key": "globalerosionrate",
+        "label": "Global Erosion Rate",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": true,
+        "key": "erodability",
+        "label": "Erodability",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": false,
+        "key": "erodabilitymaskmode",
+        "label": "erodabilitymaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 } { erodabilitymaskmode == maskoff }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 } { erodabilitymaskmode == maskoff }",
+        "joinWithNext": false,
+        "key": "erodabilitymasklayer",
+        "label": "Erodability Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.35
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": false,
+        "key": "erosionrate",
+        "label": "Erosion Rate",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 90
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": true,
+        "key": "bankangle",
+        "label": "Bank Angle",
+        "max": 90,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": false,
+        "key": "bankanglemaskmode",
+        "label": "bankanglemaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 } { bankanglemaskmode == maskoff }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 } { bankanglemaskmode == maskoff }",
+        "joinWithNext": false,
+        "key": "bankanglemasklayer",
+        "label": "Bank Angle Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": "{ slumpmode == granular }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode == granular }",
+        "joinWithNext": false,
+        "key": "height_factor",
+        "label": "Height Factor",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": "{ slumpmode == granular }",
+        "group": "Slump/General",
+        "hideWhen": "{ slumpmode == granular }",
+        "joinWithNext": false,
+        "key": "entrainment",
+        "label": "Entrainment Rate",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "Slump/General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "openborder",
+        "label": "Allow Material Outflow",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "Slump/General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "add_to_bedrock",
+        "label": "Add to Bedrock",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Advanced Erosion/General",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": true,
+        "key": "removalrate",
+        "label": "Removal Rate",
+        "max": 1,
+        "maxStrict": true,
+        "min": -1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Advanced Erosion/General",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": false,
+        "key": "removalratemaskmode",
+        "label": "removalratemaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 } { removalratemaskmode == maskoff }",
+        "group": "Advanced Erosion/General",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 } { removalratemaskmode == maskoff }",
+        "joinWithNext": false,
+        "key": "removalratemasklayer",
+        "label": "Removal Rate Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 5
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Advanced Erosion/General",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": false,
+        "key": "maxdebrisdepth",
+        "label": "Max Debris Depth",
+        "max": 20,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 40
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Advanced Erosion/Erodability Adjustments",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": false,
+        "key": "erodability_rampupiters",
+        "label": "Ramp-up Iterations",
+        "max": 100,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Advanced Erosion/Erodability Adjustments",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": false,
+        "key": "erodability_initialfactor",
+        "label": "Initial Factor",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Advanced Erosion/Erodability Adjustments",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": false,
+        "key": "erodability_slopefactor",
+        "label": "Slope Factor",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Advanced Erosion/Riverbed",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": false,
+        "key": "bed_erosionratefactor",
+        "label": "Erosion Rate Factor",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.1
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Advanced Erosion/Riverbed",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": true,
+        "key": "bed_depositionrate",
+        "label": "Deposition Rate",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Advanced Erosion/Riverbed",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": false,
+        "key": "bed_depositionratemaskmode",
+        "label": "bed_depositionratemaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 } { bed_depositionratemaskmode == maskoff }",
+        "group": "Advanced Erosion/Riverbed",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 } { bed_depositionratemaskmode == maskoff }",
+        "joinWithNext": false,
+        "key": "bed_depositionratemasklayer",
+        "label": "Deposition Rate Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 10
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Advanced Erosion/Riverbed",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": false,
+        "key": "bed_sedimentcap",
+        "label": "Sediment Capacity",
+        "max": 20,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Advanced Erosion/Riverbank",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": false,
+        "key": "bank_erosionratefactor",
+        "label": "Erosion Rate Factor",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.5
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Advanced Erosion/Riverbank",
+        "hideWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "joinWithNext": false,
+        "key": "bank_maxbankbedwaterratio",
+        "label": "Max Bank to Bed Water Ratio",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "Flow Field/General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "flow_enable",
+        "label": "Calculate Flow Fields",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 0
+        },
+        "disableWhen": "{ flow_enable == 0 }",
+        "group": "Flow Field/General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "flow_smooth_iters",
+        "label": "Smoothing Iterations",
+        "max": 100,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": "{ flow_enable == 0 }",
+        "group": "Flow Field/General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "flow_smooth_rate",
+        "label": "Smoothing Rate",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "height"
+        },
+        "disableWhen": null,
+        "group": "Layer Bindings/Input Layers",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "bedrocklayer",
+        "label": "Bedrock",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "mask"
+        },
+        "disableWhen": null,
+        "group": "Layer Bindings/Input Layers",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "materiallayer",
+        "label": "Material to Slump",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "Layer Bindings/Input Layers",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "entrainedlayer",
+        "label": "Entrained Material",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "{ slumpmode != granular } { doerosion == 0 }",
+        "group": "Layer Bindings/Input Layers",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "sedimentlayer",
+        "label": "Sediment",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "flow"
+        },
+        "disableWhen": "{ flow_enable == 0 }",
+        "group": "Layer Bindings/Output Layers",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "flowlayer",
+        "label": "Flow",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "flowdir"
+        },
+        "disableWhen": "{ flow_enable == 0 }",
+        "group": "Layer Bindings/Output Layers",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "flowdirlayer",
+        "label": "Flow Direction",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

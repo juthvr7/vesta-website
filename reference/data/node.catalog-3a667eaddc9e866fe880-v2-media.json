@@ -1,0 +1,294 @@
+{
+  "id": "node.catalog-3a667eaddc9e866fe880",
+  "operation_version": 2,
+  "slug": "poly-fill",
+  "generated_at": "2026-10-19",
+  "backend": "CPU",
+  "kind": "actual-result-render",
+  "profile": "mesh-comparison-v2",
+  "producer_sha256": "5f1dcdbc65c2c6a6aec28566f6f7445b1a71316773a14a0116d849bf9bfa9c9c",
+  "pixel_size": [
+    1600,
+    1000
+  ],
+  "text_overlay": false,
+  "variants": [
+    {
+      "id": "input",
+      "en": "Input",
+      "zh": "输入",
+      "parameter": "",
+      "master_sha256": "a780a1f9df626dc19d50c81a0cc0b90860673fa7d66a5f4023f70681c7ea746f",
+      "source_result_sha256": "2e70c82f85947f3557dff25afed0e9df3c6c7d4c0bd1d67d63906cd34ff4a3b4",
+      "source_statistics": {
+        "points": 4,
+        "faces": 1
+      },
+      "variants": [
+        {
+          "file": "input-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "9194d1a1d6e5b757c587fbe6db27b4f76e8a57fd3052af158d10354ede6299c1"
+        },
+        {
+          "file": "input-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "0767570fd6c112b7a99b24600b863549d36bc80c9198d77dbdd9135a56c7097d"
+        },
+        {
+          "file": "input.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "343568e7a85d699e4bf7d13c676811a6be67811437fb41c33bb4d9b5c5c5c596"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 1,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-e40c9267dc05ef26d0c6",
+            "operation_version": 5,
+            "parameters": {
+              "primitive_type": {
+                "type": "Text",
+                "value": "poly"
+              },
+              "connectivity": {
+                "type": "Text",
+                "value": "quads"
+              },
+              "orient": {
+                "type": "Text",
+                "value": "xy"
+              },
+              "size_x": {
+                "type": "ScalarF64",
+                "value": 2
+              },
+              "size_y": {
+                "type": "ScalarF64",
+                "value": 2
+              },
+              "subdivisions_x": {
+                "type": "ScalarI64",
+                "value": 1
+              },
+              "subdivisions_y": {
+                "type": "ScalarI64",
+                "value": 1
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-3a667eaddc9e866fe880",
+            "operation_version": 2,
+            "parameters": {
+              "group": {
+                "type": "Text",
+                "value": ""
+              },
+              "complete_loops": {
+                "type": "Bool",
+                "value": true
+              },
+              "fill_mode": {
+                "type": "Text",
+                "value": "triangles"
+              },
+              "patch_group": {
+                "type": "Text",
+                "value": "patch"
+              },
+              "update_normals": {
+                "type": "Bool",
+                "value": true
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "9a6e7d84cf54f5db2c17165c312be1295f02d9580fbe71d6894436f59068bdd9",
+      "same_result_as_input": false
+    },
+    {
+      "id": "result",
+      "en": "Result",
+      "zh": "结果",
+      "parameter": "",
+      "master_sha256": "43d6ee7668429f6ebf8aba5ca4a86a362a49989df2d84540587f6f65bec5ff4f",
+      "source_result_sha256": "6e8168a606ba1f830df7c397426fcd2192a1a51ec1c66e41a34678639f0702dd",
+      "source_statistics": {
+        "points": 4,
+        "faces": 3
+      },
+      "variants": [
+        {
+          "file": "result-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "35554caa247be35d6a49e90f00bd2ddbd934cdc4102236a10dec2a79adbc035a"
+        },
+        {
+          "file": "result-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "8a144553ec99241657f00c4e1103e3e920041b558565ed1c5d6e5974cb98d77b"
+        },
+        {
+          "file": "result.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "b38586e4914033d33dee22b3f091f6f77f10dc582f49dd830679f446d6869694"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 2,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-e40c9267dc05ef26d0c6",
+            "operation_version": 5,
+            "parameters": {
+              "primitive_type": {
+                "type": "Text",
+                "value": "poly"
+              },
+              "connectivity": {
+                "type": "Text",
+                "value": "quads"
+              },
+              "orient": {
+                "type": "Text",
+                "value": "xy"
+              },
+              "size_x": {
+                "type": "ScalarF64",
+                "value": 2
+              },
+              "size_y": {
+                "type": "ScalarF64",
+                "value": 2
+              },
+              "subdivisions_x": {
+                "type": "ScalarI64",
+                "value": 1
+              },
+              "subdivisions_y": {
+                "type": "ScalarI64",
+                "value": 1
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-3a667eaddc9e866fe880",
+            "operation_version": 2,
+            "parameters": {
+              "group": {
+                "type": "Text",
+                "value": ""
+              },
+              "complete_loops": {
+                "type": "Bool",
+                "value": true
+              },
+              "fill_mode": {
+                "type": "Text",
+                "value": "triangles"
+              },
+              "patch_group": {
+                "type": "Text",
+                "value": "patch"
+              },
+              "update_normals": {
+                "type": "Bool",
+                "value": true
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "bdf0cea454bf76e8ca8667444d3c6cd354db8fbc3ec88696bf9e818cbc759a96",
+      "same_result_as_input": false
+    }
+  ],
+  "display": {
+    "camera": [
+      32,
+      -62
+    ],
+    "world_to_display_axes": [
+      "x",
+      "z",
+      "y"
+    ],
+    "center": [
+      0,
+      0,
+      0
+    ],
+    "radius": 1.16,
+    "geometry_scale": 1,
+    "face_decimation": false,
+    "wire_overlay_below_faces": 1200,
+    "two_sided_lighting": true,
+    "ambient": 0.45,
+    "zoom": 1.2
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "id": "node.catalog-c8299bd456c04c627e4a",
+  "operation_version": 2,
+  "contract_sha256": "fbc1623e330a141abf7868634b2b59367f4735a681c554be9cfbb60fd71caa60",
+  "catalog_snapshot_sha256": "c2adfa499e77bf14a84d2fb781d88b8c440692a3648bb8742ea5d5b55c891280",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "field",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "field",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "Range",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "in_min",
+        "label": "In Min",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Range",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "in_max",
+        "label": "In Max",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "Range",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "out_min",
+        "label": "Out Min",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Range",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "out_max",
+        "label": "Out Max",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Element",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "id": "node.catalog-2fd8159ace6451ee577e",
+  "operation_version": 2,
+  "contract_sha256": "52add26e07a5559a10ddd242cc9caa8ccdb80e2ad287fdda964d7d43e0082424",
+  "catalog_snapshot_sha256": "452734657e352510ddf16a1475f90102e2d2d1dc2c1eebf452ae680bffbd0571",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      },
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 1,
+        "name": "bounds_geometry",
+        "required": false
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "replace",
+          "union",
+          "intersect"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "intersect"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "cropmode",
+        "label": "Crop Mode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "cropbylayer",
+        "label": "Crop Mask Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": "chs(\"cropbylayer\") == \"\"",
+        "joinWithNext": false,
+        "key": "keepbelow",
+        "label": "Keep Where Below Crop Value",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.5
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": "chs(\"cropbylayer\") == \"\"",
+        "joinWithNext": false,
+        "key": "cropvalue",
+        "label": "Crop Value",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "xy",
+          "yz",
+          "zx"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "zx"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "orient",
+        "label": "Orientation",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector2",
+          "value": [
+            500,
+            500
+          ]
+        },
+        "disableWhen": "ninputs(\"bounds_geometry\") != 0 || chs(\"cropbylayer\") != \"\"",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "size",
+        "label": "Size",
+        "max": null,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector2"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": "ninputs(\"bounds_geometry\") != 0 || chs(\"cropbylayer\") != \"\"",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "t",
+        "label": "Center",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "voxelpad",
+        "label": "Voxel Padding",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": "ninputs(\"bounds_geometry\") == 0 || chs(\"cropbylayer\") != \"\"",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "usepoints",
+        "label": "Use Point Bounds",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

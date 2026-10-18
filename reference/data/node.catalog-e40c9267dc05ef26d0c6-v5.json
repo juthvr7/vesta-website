@@ -1,0 +1,177 @@
+{
+  "id": "node.catalog-e40c9267dc05ef26d0c6",
+  "operation_version": 5,
+  "contract_sha256": "24d84ae1ef47027d4a8164ea624e9449993441827f357aa1949c0c83b1451f82",
+  "catalog_snapshot_sha256": "74a65856d0d8d5de28a657eab60b5d2a2d0a36f0a0dbd034a9d979d35bec2ef2",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 5,
+    "inputs": [],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "poly"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "poly"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "primitive_type",
+        "label": "Primitive Type",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "triangles",
+          "quads",
+          "alttriangles",
+          "revtriangles"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "quads"
+        },
+        "disableWhen": "ch(\"primitive_type\") == \"points\"",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "connectivity",
+        "label": "Connectivity",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "xy",
+          "yz",
+          "zx"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "zx"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "orient",
+        "label": "Orientation",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 10
+        },
+        "disableWhen": null,
+        "group": "Size",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "size_x",
+        "label": "Size X",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 10
+        },
+        "disableWhen": null,
+        "group": "Size",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "size_y",
+        "label": "Size Y",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 9
+        },
+        "disableWhen": null,
+        "group": "Divisions",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "subdivisions_x",
+        "label": "Columns",
+        "max": null,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 9
+        },
+        "disableWhen": null,
+        "group": "Divisions",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "subdivisions_y",
+        "label": "Rows",
+        "max": null,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

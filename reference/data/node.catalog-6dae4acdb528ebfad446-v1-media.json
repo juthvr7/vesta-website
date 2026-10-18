@@ -1,0 +1,639 @@
+{
+  "id": "node.catalog-6dae4acdb528ebfad446",
+  "operation_version": 1,
+  "slug": "adjust",
+  "generated_at": "2026-10-19",
+  "backend": "CPU",
+  "kind": "actual-result-render",
+  "profile": "terrain-comparison-v2",
+  "producer_sha256": "1215579356de6c40f500e93a3210a1259134aff899ae74f80703a9c6722404fc",
+  "pixel_size": [
+    1600,
+    1000
+  ],
+  "text_overlay": false,
+  "variants": [
+    {
+      "id": "input",
+      "en": "Input",
+      "zh": "输入",
+      "parameter": "",
+      "master_sha256": "20205c2ebd94065f879322278e0888f1a9cfad6137c5c0e847032a6bad6d0dca",
+      "source_result_sha256": "9d63aa0270f295e725bbce89c80cb470f048ed91da98b7edfdc066bed2355632",
+      "source_statistics": {
+        "resolution": [
+          64,
+          64
+        ],
+        "range": [
+          0.015625,
+          1
+        ],
+        "samples_f32_sha256": "0be54bc118cdae822fa942e8ba52cae8c40ec111810c17c46c18582da099cfb4"
+      },
+      "variants": [
+        {
+          "file": "input-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "16cd48d7fce6eac1d0d953eb464860415966acb54f8ffc91b767860d2e486302"
+        },
+        {
+          "file": "input-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "0e19995d2bd9225c1adede6d182a071a2838fea1ecaf6380e282ecb376e76d00"
+        },
+        {
+          "file": "input.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "b05a6fdf7d44114dbd516a9522acf63539cf90402d5fde536742691d160525cb"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 2,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-f763b1c25454fc3d9ea5",
+            "operation_version": 2,
+            "parameters": {
+              "orient": {
+                "type": "Text",
+                "value": "zx"
+              },
+              "sampling": {
+                "type": "Text",
+                "value": "center"
+              },
+              "initialheight": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "initialmask": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "divisionmode": {
+                "type": "Text",
+                "value": "size"
+              },
+              "gridspacing": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "gridsamples": {
+                "type": "ScalarI64",
+                "value": 512
+              },
+              "scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "size": {
+                "type": "Vector2",
+                "value": [
+                  64,
+                  64
+                ]
+              },
+              "t": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-9ac94c32eb89356b6545",
+            "operation_version": 1,
+            "parameters": {
+              "Scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "Direction": {
+                "type": "ScalarI64",
+                "value": 0
+              },
+              "Edge": {
+                "type": "Text",
+                "value": "Mirror"
+              }
+            }
+          },
+          {
+            "id": 3,
+            "topic": "node.catalog-6dae4acdb528ebfad446",
+            "operation_version": 1,
+            "parameters": {
+              "Multiply": {
+                "type": "ScalarF64",
+                "value": 1.5
+              },
+              "Shaper": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "Clamp": {
+                "type": "Vector2",
+                "value": [
+                  0,
+                  1
+                ]
+              },
+              "Clip": {
+                "type": "Vector2",
+                "value": [
+                  0,
+                  1
+                ]
+              },
+              "Drop": {
+                "type": "Bool",
+                "value": false
+              },
+              "Autolevel": {
+                "type": "Bool",
+                "value": false
+              },
+              "Equalize": {
+                "type": "Bool",
+                "value": false
+              },
+              "Strong": {
+                "type": "Bool",
+                "value": false
+              },
+              "Invert": {
+                "type": "Bool",
+                "value": false
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          },
+          {
+            "id": 2,
+            "from_node": 2,
+            "from_port": 0,
+            "to_node": 3,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "abfc16aa89cd5ccdf97fc3debc2ad1a9347f2c157a5e18aa2414d9a7922c76f9",
+      "same_result_as_input": false
+    },
+    {
+      "id": "first",
+      "en": "Multiply = 0.6",
+      "zh": "Multiply = 0.6",
+      "parameter": "Multiply=0.6",
+      "master_sha256": "ad5fae2a66700cc48096751bdb1f971a581c2fcb81e3725c439824c40f6e9dd0",
+      "source_result_sha256": "2d73493cb0bda4ed51a65ea736fdfe8bdbdbe1912a2cc35a0eb540410e92c2f8",
+      "source_statistics": {
+        "resolution": [
+          64,
+          64
+        ],
+        "range": [
+          0.00937500037252903,
+          0.6000000238418579
+        ],
+        "samples_f32_sha256": "eddb038445d1eea64501c3858cb93552d57bbdbcc2f1b75648a42d4012cd96a3"
+      },
+      "variants": [
+        {
+          "file": "first-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "3cc64305c0a228e7506e31094c1575e69ac95282a376a5360d2d2c7b0182164d"
+        },
+        {
+          "file": "first-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "e81a0a047d75ac7f28b348b20fb962f3c5f67a2c5020491734e30a3b03ff1989"
+        },
+        {
+          "file": "first.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "4c2e14b2f2f833d0ef1dd850a7d993735abbf602023eaa76a5fbdb9329da850d"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 3,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-f763b1c25454fc3d9ea5",
+            "operation_version": 2,
+            "parameters": {
+              "orient": {
+                "type": "Text",
+                "value": "zx"
+              },
+              "sampling": {
+                "type": "Text",
+                "value": "center"
+              },
+              "initialheight": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "initialmask": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "divisionmode": {
+                "type": "Text",
+                "value": "size"
+              },
+              "gridspacing": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "gridsamples": {
+                "type": "ScalarI64",
+                "value": 512
+              },
+              "scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "size": {
+                "type": "Vector2",
+                "value": [
+                  64,
+                  64
+                ]
+              },
+              "t": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-9ac94c32eb89356b6545",
+            "operation_version": 1,
+            "parameters": {
+              "Scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "Direction": {
+                "type": "ScalarI64",
+                "value": 0
+              },
+              "Edge": {
+                "type": "Text",
+                "value": "Mirror"
+              }
+            }
+          },
+          {
+            "id": 3,
+            "topic": "node.catalog-6dae4acdb528ebfad446",
+            "operation_version": 1,
+            "parameters": {
+              "Multiply": {
+                "type": "ScalarF64",
+                "value": 0.6
+              },
+              "Shaper": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "Clamp": {
+                "type": "Vector2",
+                "value": [
+                  0,
+                  1
+                ]
+              },
+              "Clip": {
+                "type": "Vector2",
+                "value": [
+                  0,
+                  1
+                ]
+              },
+              "Drop": {
+                "type": "Bool",
+                "value": false
+              },
+              "Autolevel": {
+                "type": "Bool",
+                "value": false
+              },
+              "Equalize": {
+                "type": "Bool",
+                "value": false
+              },
+              "Strong": {
+                "type": "Bool",
+                "value": false
+              },
+              "Invert": {
+                "type": "Bool",
+                "value": false
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          },
+          {
+            "id": 2,
+            "from_node": 2,
+            "from_port": 0,
+            "to_node": 3,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "7450c9ed5b3d2c3dba10082118a4f59683c683165c99f97e371b36edef5aecb1",
+      "same_result_as_input": false
+    },
+    {
+      "id": "second",
+      "en": "Multiply = 1.4",
+      "zh": "Multiply = 1.4",
+      "parameter": "Multiply=1.4",
+      "master_sha256": "a49ebf802281c86895ca6cb3a62c5f1b8c5e3685a47f4b1c6a538fc4a8a83a93",
+      "source_result_sha256": "9e6e278e6c318ca11a20cb9994fa58514b46bf417ef65230ba03bab2a2162c99",
+      "source_statistics": {
+        "resolution": [
+          64,
+          64
+        ],
+        "range": [
+          0.02187499962747097,
+          1
+        ],
+        "samples_f32_sha256": "50b6c1d42657c27f3a3d64403107d0c181d6a7942b10263cd32779742690136f"
+      },
+      "variants": [
+        {
+          "file": "second-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "663f1d41b71a9aea9b7727990ca87f67a24dc453b027812659c377f698e7cd96"
+        },
+        {
+          "file": "second-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "4676c5d45da0e8d18dcee13a08a4204ac78eacd505c3de6ba484974a3fc327c4"
+        },
+        {
+          "file": "second.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "41e65d514283d437f8f4d10564b0a2d4c994df648e91d9c0f90fa8dc93a8d3d4"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 3,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-f763b1c25454fc3d9ea5",
+            "operation_version": 2,
+            "parameters": {
+              "orient": {
+                "type": "Text",
+                "value": "zx"
+              },
+              "sampling": {
+                "type": "Text",
+                "value": "center"
+              },
+              "initialheight": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "initialmask": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "divisionmode": {
+                "type": "Text",
+                "value": "size"
+              },
+              "gridspacing": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "gridsamples": {
+                "type": "ScalarI64",
+                "value": 512
+              },
+              "scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "size": {
+                "type": "Vector2",
+                "value": [
+                  64,
+                  64
+                ]
+              },
+              "t": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-9ac94c32eb89356b6545",
+            "operation_version": 1,
+            "parameters": {
+              "Scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "Direction": {
+                "type": "ScalarI64",
+                "value": 0
+              },
+              "Edge": {
+                "type": "Text",
+                "value": "Mirror"
+              }
+            }
+          },
+          {
+            "id": 3,
+            "topic": "node.catalog-6dae4acdb528ebfad446",
+            "operation_version": 1,
+            "parameters": {
+              "Multiply": {
+                "type": "ScalarF64",
+                "value": 1.4
+              },
+              "Shaper": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "Clamp": {
+                "type": "Vector2",
+                "value": [
+                  0,
+                  1
+                ]
+              },
+              "Clip": {
+                "type": "Vector2",
+                "value": [
+                  0,
+                  1
+                ]
+              },
+              "Drop": {
+                "type": "Bool",
+                "value": false
+              },
+              "Autolevel": {
+                "type": "Bool",
+                "value": false
+              },
+              "Equalize": {
+                "type": "Bool",
+                "value": false
+              },
+              "Strong": {
+                "type": "Bool",
+                "value": false
+              },
+              "Invert": {
+                "type": "Bool",
+                "value": false
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          },
+          {
+            "id": 2,
+            "from_node": 2,
+            "from_port": 0,
+            "to_node": 3,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "9948b874f544e5d76d7711bd1fab8324e9ae782a5269e7fc9c7911af10acd809",
+      "same_result_as_input": false
+    }
+  ],
+  "display": {
+    "camera": [
+      32,
+      -62
+    ],
+    "common_color_range": [
+      0.00937500037252903,
+      1
+    ],
+    "height_offset": 0.00937500037252903,
+    "height_multiplier": 0.20189274455541797,
+    "extent": [
+      1,
+      1,
+      0.28
+    ],
+    "sample_stride": 1,
+    "vertical_scale_metadata_applied": false
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "id": "node.catalog-3f02d468de070b725ad3",
+  "operation_version": 4,
+  "contract_sha256": "56e9e469881055af7e048416e8dfc2bcfb67ac2cb77dcdffd12c2428b7562768",
+  "catalog_snapshot_sha256": "537ebc367757cc0376396cf952adda3c8a1ef1132ec55ebb3bcd56172d6819a8",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 4,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "group",
+        "label": "Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "above",
+          "below",
+          "both"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "above"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "clipop",
+        "label": "Keep",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Plane",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "origin",
+        "label": "Origin",
+        "max": 1,
+        "maxStrict": false,
+        "min": -1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "Plane",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "dist",
+        "label": "Distance",
+        "max": 5,
+        "maxStrict": false,
+        "min": -5,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            1,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Plane",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "dir",
+        "label": "Direction",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": "ch(\"clipop\") != \"both\"",
+        "group": "Groups",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "newg",
+        "label": "Create Groups",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "above_plane"
+        },
+        "disableWhen": "ch(\"clipop\") != \"both\" || ch(\"newg\") == off",
+        "group": "Groups",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "above",
+        "label": "Above Plane",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "below_plane"
+        },
+        "disableWhen": "ch(\"clipop\") != \"both\" || ch(\"newg\") == off",
+        "group": "Groups",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "below",
+        "label": "Below Plane",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "clippts",
+        "label": "Clip Unconnected Points",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": [
+      {
+        "default_honored": true,
+        "key": "clipop",
+        "reason": "the kernel keeps the side the direction points to; below and both are not implemented",
+        "values": [
+          "below",
+          "both"
+        ]
+      },
+      {
+        "default_honored": true,
+        "key": "group",
+        "reason": "the clip is applied to the whole geometry; group filtering is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "newg",
+        "reason": "clipped/unclipped point groups are not created",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "above",
+        "reason": "clipped/unclipped point groups are not created",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "below",
+        "reason": "clipped/unclipped point groups are not created",
+        "values": []
+      },
+      {
+        "default_honored": false,
+        "key": "clippts",
+        "reason": "points that belong to no primitive are left in place",
+        "values": []
+      }
+    ]
+  }
+}

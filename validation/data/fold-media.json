@@ -1,0 +1,187 @@
+{
+  "render": {
+    "schema_version": 1,
+    "profile": "terrain-comparison-v1",
+    "producer_sha256": "0c7e41cc858744be872de38cded1ec0235c23abe815590bd54ed60a26a497f86",
+    "kind": "existing-result-render",
+    "pixel_size": [
+      1600,
+      1000
+    ],
+    "camera": {
+      "elevation": 40,
+      "azimuth": -65
+    },
+    "display": {
+      "baseline_index": 0,
+      "source_height_offset": 0,
+      "height_multiplier": 0.9629201870429872,
+      "z_limits": [
+        0,
+        1.059212205747286
+      ],
+      "color_range": [
+        0,
+        1
+      ],
+      "sample_stride": 7,
+      "text_overlay": false
+    },
+    "source_layout": {
+      "shape": [
+        1024,
+        1024
+      ],
+      "bounds": {
+        "height": 64,
+        "width": 64,
+        "x": -32,
+        "y": -32
+      }
+    },
+    "artifacts": [
+      {
+        "id": "input",
+        "file": "input.png",
+        "sha256": "dbe374f90137234c5007f6bc884c142fa379ea2365066b4a03056cfca00ac6c2",
+        "source_result_sha256": "df3d6305637d745876812e8c13810f694cb9522a742c38e573d9031c36b67075",
+        "source_samples_f32_sha256": "7f8ad71192623d760a2d4cda3388e25c0c865009be75c79e0c75f01d094aa8f8",
+        "source_resolution": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "id": "sine",
+        "file": "sine.png",
+        "sha256": "76e2f494e071e273d61f269bc2277ab2ac3ea5dc0ad0f58021d127f424ee9e5c",
+        "source_result_sha256": "f96f4a455a76840e379014cfcd45f9c16b4ea350bf21614bd66ce008a6234319",
+        "source_samples_f32_sha256": "b43c1913a43f5473960b54b650de09c358f630536a43087b80b728e11ca1380a",
+        "source_resolution": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "id": "triangle",
+        "file": "triangle.png",
+        "sha256": "0676de04a6c6979bb5d1b543b89fb8729fe779d4ca2113f2e6f1085a8ac18a5f",
+        "source_result_sha256": "0947de7fc5c288b175c007e5b7e8dc7887c026d6ec9fcd13aefa7c5622f5b747",
+        "source_samples_f32_sha256": "fca928e8aec3be6f0fa85b66eecc37e52a3b02339f41073b01fcaaf8e2736882",
+        "source_resolution": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "id": "sawtooth",
+        "file": "sawtooth.png",
+        "sha256": "608d912656deb077c786ad1982e5aeab9d7d371a4fb04f242af424cbc7188a2a",
+        "source_result_sha256": "5090d5aece6b8b257a194fd32ef1746f7359964662615f1a339351a08aa4cb06",
+        "source_samples_f32_sha256": "a493a674a0e1bc6d08b390318630dff8cd5660e398e3f39e555abb1c1a0aafe5",
+        "source_resolution": [
+          1024,
+          1024
+        ]
+      }
+    ]
+  },
+  "derivatives": [
+    {
+      "id": "input",
+      "master_sha256": "dbe374f90137234c5007f6bc884c142fa379ea2365066b4a03056cfca00ac6c2",
+      "variants": [
+        {
+          "file": "input-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "bf2c7a1f4d7ace862fde4861844ef7ea25f4dabfb960e63510e53758e2afb8b3"
+        },
+        {
+          "file": "input-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "ee3ea48d67503d0b9c638470be0a6c0979d1b79f001b305ebf44e4c005b21a1b"
+        },
+        {
+          "file": "input.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "4bd84efd3df4e1ccaa8f5cc7c0b49caea73838faae92688cec6837d71208283e"
+        }
+      ]
+    },
+    {
+      "id": "sine",
+      "master_sha256": "76e2f494e071e273d61f269bc2277ab2ac3ea5dc0ad0f58021d127f424ee9e5c",
+      "variants": [
+        {
+          "file": "sine-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "453c3d1be30ad0644d43cc296bd03cc568a0aa7f938f1b5960919b067e6e2dfc"
+        },
+        {
+          "file": "sine-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "643521c87b429ab2995688bb12ab1fdd77dc1b09395dd51f8d9eedb1de2587ae"
+        },
+        {
+          "file": "sine.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "4786a4f95543a3a2c8b495ef6c12b196c46d9c361ba96b08f5707b7bee39528a"
+        }
+      ]
+    },
+    {
+      "id": "triangle",
+      "master_sha256": "0676de04a6c6979bb5d1b543b89fb8729fe779d4ca2113f2e6f1085a8ac18a5f",
+      "variants": [
+        {
+          "file": "triangle-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "d7a5e076c23029a4479ab32b0e6afef5619fce07cb4ccc36afab13223d19bc12"
+        },
+        {
+          "file": "triangle-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "57ccd059b355c74ed36e6e86db6e4cffb3c63501e24f1ba76bd01d4ec3b2fa5f"
+        },
+        {
+          "file": "triangle.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "d7f3c833408b348b99521f78f84bd20e5f4fe488daacb8fb1d0ff2cb1c170c15"
+        }
+      ]
+    },
+    {
+      "id": "sawtooth",
+      "master_sha256": "608d912656deb077c786ad1982e5aeab9d7d371a4fb04f242af424cbc7188a2a",
+      "variants": [
+        {
+          "file": "sawtooth-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "c38e8f7f9111f52249326385b6f6b4ec2c898bd8be8afed257767a779ca7e712"
+        },
+        {
+          "file": "sawtooth-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "65c1550daceae28b66d2c4b78ef361bff6b75785a4374edd115cd2cf395279bc"
+        },
+        {
+          "file": "sawtooth.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "75eb0a8a68cb77abf6983332164f1222387bb5892272f02c25439e34d9a43e8b"
+        }
+      ]
+    }
+  ]
+}

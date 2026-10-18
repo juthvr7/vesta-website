@@ -1,0 +1,35 @@
+{
+  "id": "node.catalog-bb9d74917c23e6532854",
+  "operation_version": 1,
+  "contract_sha256": "ff74c3e81770807085d7163352b803f118f084afdcf08c8ca08ab79a6060b6a3",
+  "catalog_snapshot_sha256": "07cda293572d27be48aa0dd04f4ac48941a439f16758c390ca11bba63b3c3736",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 1,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

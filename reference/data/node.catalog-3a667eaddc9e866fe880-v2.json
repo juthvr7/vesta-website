@@ -1,0 +1,139 @@
+{
+  "id": "node.catalog-3a667eaddc9e866fe880",
+  "operation_version": 2,
+  "contract_sha256": "41e12e3be8fcf81befdc8a136d0f2de8cd47261904b08a4515bba2ce806776f0",
+  "catalog_snapshot_sha256": "8e4f1b09a8f0dedfab0ce4e7dae19ddfbb2510ffe971ef2a621ea33a3772a520",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "Selection",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "group",
+        "label": "Boundary Edge Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": "chs(\"group\") == \"\"",
+        "group": "Selection",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "complete_loops",
+        "label": "Complete Partially Selected Loops",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": [
+          "polygon",
+          "triangles"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "triangles"
+        },
+        "disableWhen": null,
+        "group": "Fill",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "fill_mode",
+        "label": "Fill Mode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "patch"
+        },
+        "disableWhen": null,
+        "group": "Output",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "patch_group",
+        "label": "Patch Primitive Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Output",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "update_normals",
+        "label": "Recompute Point Normals",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

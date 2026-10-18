@@ -1,0 +1,415 @@
+{
+  "schema_version": 1,
+  "subject_id": "terrain.soft-clip",
+  "snapshot_id": "soft-clip-cpu-2026-10-16",
+  "verified_at": "2026-10-16",
+  "preserved_at": "2026-10-18",
+  "kind": "historical-run-summary",
+  "rerun": false,
+  "operation_version": 2,
+  "implementation_version": 1,
+  "backend": "cpu",
+  "host": "cli",
+  "case_count": 64,
+  "resolutions": [
+    64,
+    128
+  ],
+  "tolerance": 0.000002,
+  "observed_max_abs": 1.7881393432617188e-7,
+  "passed": true,
+  "source_report_sha256": "2fbe862d25061841afd6f781c0da42f97e66ce554324e5623aae25187602872f",
+  "executable_sha256": "dc892c580175814a00572ba1d38555d88d62f2e06f112cbdbba698a27b2fe6e1",
+  "cases": [
+    {
+      "case_id": "softclip_above_default/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "ca135d1453fb36c45d761fb2f368fcdc2212c8eabcb5c4ee1070285711ee3840"
+    },
+    {
+      "case_id": "softclip_above_default/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "3ec3059bd69f78e5ef51dac661bbf0a7fcc28da0585cc65bfeb22c29bfe01f11"
+    },
+    {
+      "case_id": "softclip_above_threshold0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "95b23c560316e3b08ec5de8c580a5d8b9177ef1424f7e085f06e551387d367b2"
+    },
+    {
+      "case_id": "softclip_above_threshold0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "291372e683114356421a204fd289620f2d3b739502d92250c16f937e533f2a89"
+    },
+    {
+      "case_id": "softclip_above_threshold1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "0be54bc118cdae822fa942e8ba52cae8c40ec111810c17c46c18582da099cfb4"
+    },
+    {
+      "case_id": "softclip_above_threshold1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "075a4e29b7598aa7024d7e63de27a10da35e1ba0a1b168be6cc13fab61b439b2"
+    },
+    {
+      "case_id": "softclip_above_softness0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "d797a6118f43ea94e398a62147fea83ed49744107e0b4a4d5623faeeddc9b65f"
+    },
+    {
+      "case_id": "softclip_above_softness0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "b7f264c0ed99b645e54ee8ec0c4eb4a2454759d7d5048b5c190388b39b4c3dee"
+    },
+    {
+      "case_id": "softclip_above_softness1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "efa39945ed4ae405ea10d5615997286eb0676a22e37c4d62f2086220c3539353"
+    },
+    {
+      "case_id": "softclip_above_softness1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "cfc7ede1cbdccc326c14fec6e9b6de1fccff5b6c544180f9fed4b8212a55998d"
+    },
+    {
+      "case_id": "softclip_above_clipping0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "0be54bc118cdae822fa942e8ba52cae8c40ec111810c17c46c18582da099cfb4"
+    },
+    {
+      "case_id": "softclip_above_clipping0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "075a4e29b7598aa7024d7e63de27a10da35e1ba0a1b168be6cc13fab61b439b2"
+    },
+    {
+      "case_id": "softclip_above_clippinghalf/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "7603b9594965e4a4c3d32699c755d7cb1a32471eb974fa6ce21ff5a6bcc03154"
+    },
+    {
+      "case_id": "softclip_above_clippinghalf/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "55b9ad242a778b6ce41cd5c6b43b78f75c2ac2a29075ebfc1e1766ae738e47f7"
+    },
+    {
+      "case_id": "softclip_above_interaction/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 5.960464477539063e-8,
+      "reference_sha256": "85accac446d9935dfa53a2e080166f64b4c7d9044b1db24cde9732a0427cca56"
+    },
+    {
+      "case_id": "softclip_above_interaction/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 5.960464477539063e-8,
+      "reference_sha256": "d790f48d6d8ce037af8dba17da47acad0ac5659b216de581bad4fcee8498ddee"
+    },
+    {
+      "case_id": "softclip_above_flat0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    {
+      "case_id": "softclip_above_flat0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "case_id": "softclip_above_flat1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "57038844e28bb7bfb4a207553af8f95443bfae939140cc98251fb4d32882eb50"
+    },
+    {
+      "case_id": "softclip_above_flat1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "ead58e1bb0ab08da4fe2d18e3fafd2db40a5c57f6c11be9b3f73c3d5d421e398"
+    },
+    {
+      "case_id": "softclip_above_flatthreshold/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "softclip_above_flatthreshold/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "softclip_above_on_ridge/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "03cfab33e299f3a68917c20eecafe19f6570f99997cbba315c89ff12ef79ecaf"
+    },
+    {
+      "case_id": "softclip_above_on_ridge/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "b1d03bd31baeed04cd8c550ed4a8e6b477fbb8a1fa2875defe79d9b4213a6e73"
+    },
+    {
+      "case_id": "softclip_above_map0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "ca135d1453fb36c45d761fb2f368fcdc2212c8eabcb5c4ee1070285711ee3840"
+    },
+    {
+      "case_id": "softclip_above_map0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "3ec3059bd69f78e5ef51dac661bbf0a7fcc28da0585cc65bfeb22c29bfe01f11"
+    },
+    {
+      "case_id": "softclip_above_map1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "ca135d1453fb36c45d761fb2f368fcdc2212c8eabcb5c4ee1070285711ee3840"
+    },
+    {
+      "case_id": "softclip_above_map1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "3ec3059bd69f78e5ef51dac661bbf0a7fcc28da0585cc65bfeb22c29bfe01f11"
+    },
+    {
+      "case_id": "softclip_above_mapgradient/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "ca135d1453fb36c45d761fb2f368fcdc2212c8eabcb5c4ee1070285711ee3840"
+    },
+    {
+      "case_id": "softclip_above_mapgradient/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "3ec3059bd69f78e5ef51dac661bbf0a7fcc28da0585cc65bfeb22c29bfe01f11"
+    },
+    {
+      "case_id": "softclip_above_outside_soft/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 1.7881393432617188e-7,
+      "reference_sha256": "e16f54ad5754604b6bb491e6b534bc16515fa5d65106e9e52421d2cc579c3248"
+    },
+    {
+      "case_id": "softclip_above_outside_soft/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 1.7881393432617188e-7,
+      "reference_sha256": "f05a4dbe1c1ea39e5611a8d2af29cf62d2702b45622fbbf2eeee2cc067883212"
+    },
+    {
+      "case_id": "softclip_below_default/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4a4b054168a9d21e89876b940aa0ed2d0e56ae116767f9598aa1d59dff19d3f3"
+    },
+    {
+      "case_id": "softclip_below_default/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "f47aaea6894069792829652b1812aaa1f998512fa8ffef5caeeecdfba0cb7030"
+    },
+    {
+      "case_id": "softclip_below_threshold0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "0be54bc118cdae822fa942e8ba52cae8c40ec111810c17c46c18582da099cfb4"
+    },
+    {
+      "case_id": "softclip_below_threshold0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "075a4e29b7598aa7024d7e63de27a10da35e1ba0a1b168be6cc13fab61b439b2"
+    },
+    {
+      "case_id": "softclip_below_threshold1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "3f5464ce464a61e35a74f3b87ef6fcf0024b7c0b3dd9c494f7974b2dadd5d4e0"
+    },
+    {
+      "case_id": "softclip_below_threshold1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "9f4ee55e8bf094608b795a92c2d5d70bf776b2e20ddc1ee3d1138d1ca8096c54"
+    },
+    {
+      "case_id": "softclip_below_softness0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "a11dc3771bd371aa2c5c139e8f8cc726c74c55d2a2f18c3324e6c54d92628fdf"
+    },
+    {
+      "case_id": "softclip_below_softness0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "a65f5fd123cdda71e645a446549a72d85813abc1c1061b5d39bb6d5028934fb5"
+    },
+    {
+      "case_id": "softclip_below_softness1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "db3ed4fa273e8af1949f35a07913f4f12eb26cda6684f229af0d002154f99fd7"
+    },
+    {
+      "case_id": "softclip_below_softness1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "f81d6d8ea0e94abb2ef66367e0cdc81ce14d03e6de71c2b02cd99abcab12ed8d"
+    },
+    {
+      "case_id": "softclip_below_clipping0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "0be54bc118cdae822fa942e8ba52cae8c40ec111810c17c46c18582da099cfb4"
+    },
+    {
+      "case_id": "softclip_below_clipping0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "075a4e29b7598aa7024d7e63de27a10da35e1ba0a1b168be6cc13fab61b439b2"
+    },
+    {
+      "case_id": "softclip_below_clippinghalf/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "3809ba9ccd56848c2feb81d90c1aeeddd4be5c7b9c47d5ffeb84d27b5d905895"
+    },
+    {
+      "case_id": "softclip_below_clippinghalf/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "89557995a34ff780bfc3fd32532c5c560df7c2594121d47f85bafe0a58e4d4a2"
+    },
+    {
+      "case_id": "softclip_below_interaction/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 5.960464477539063e-8,
+      "reference_sha256": "0985345c79bda2581ff265e4c82f42ed26add4af355a4d0e5e80d63ff187f15f"
+    },
+    {
+      "case_id": "softclip_below_interaction/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 5.960464477539063e-8,
+      "reference_sha256": "01c91d248f8a394b065cb865749f929bccdcc85c6d0d76fadc82ca93a0c941ed"
+    },
+    {
+      "case_id": "softclip_below_flat0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "612d08da54122a8b28ca10e0b7695e253c881d0b78070302ae7c799e80f2f441"
+    },
+    {
+      "case_id": "softclip_below_flat0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "ded6a4068771b3a8c2f2012ab243968781b8b209d0327a8c599c09c2cbafca89"
+    },
+    {
+      "case_id": "softclip_below_flat1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "3035aac5fb87474c303702f9030301b4e6bb7aee93be3710b8ab8dcea201db70"
+    },
+    {
+      "case_id": "softclip_below_flat1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "3513f7981d1ead42bde088485afbba413d675b83c061c6362634bcb044bf8613"
+    },
+    {
+      "case_id": "softclip_below_flatthreshold/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "softclip_below_flatthreshold/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "softclip_below_on_ridge/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "3ccae3b237ebb2aad27e59ad42ec667a04c53882fbac59735fbf60aa5be2ad92"
+    },
+    {
+      "case_id": "softclip_below_on_ridge/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "62741ad944c23f136f2daa3d8c919aabea3bbc1dff7fb94fc62a97a964c77e6a"
+    },
+    {
+      "case_id": "softclip_below_map0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4a4b054168a9d21e89876b940aa0ed2d0e56ae116767f9598aa1d59dff19d3f3"
+    },
+    {
+      "case_id": "softclip_below_map0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "f47aaea6894069792829652b1812aaa1f998512fa8ffef5caeeecdfba0cb7030"
+    },
+    {
+      "case_id": "softclip_below_map1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4a4b054168a9d21e89876b940aa0ed2d0e56ae116767f9598aa1d59dff19d3f3"
+    },
+    {
+      "case_id": "softclip_below_map1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "f47aaea6894069792829652b1812aaa1f998512fa8ffef5caeeecdfba0cb7030"
+    },
+    {
+      "case_id": "softclip_below_mapgradient/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4a4b054168a9d21e89876b940aa0ed2d0e56ae116767f9598aa1d59dff19d3f3"
+    },
+    {
+      "case_id": "softclip_below_mapgradient/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "f47aaea6894069792829652b1812aaa1f998512fa8ffef5caeeecdfba0cb7030"
+    },
+    {
+      "case_id": "softclip_below_outside_soft/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 5.960464477539063e-8,
+      "reference_sha256": "74e4b46d9d3265769d47222dbbf37c177dc5a9e9a0013c61f6729d619d661dde"
+    },
+    {
+      "case_id": "softclip_below_outside_soft/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 5.960464477539063e-8,
+      "reference_sha256": "c514dec127026329be950604630eaff38f7460f51f94e01290944e62b267fc0a"
+    }
+  ],
+  "limitations": [
+    "Fixed recipes and declared scope only.",
+    "Effect renders are not reference-comparison images.",
+    "No new execution or physical interaction claim.",
+    "CPU evidence does not qualify GPU or engine execution."
+  ]
+}

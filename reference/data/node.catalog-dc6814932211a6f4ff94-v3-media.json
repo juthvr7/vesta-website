@@ -1,0 +1,128 @@
+{
+  "id": "node.catalog-dc6814932211a6f4ff94",
+  "operation_version": 3,
+  "slug": "teapot",
+  "generated_at": "2026-10-19",
+  "backend": "CPU",
+  "kind": "actual-result-render",
+  "profile": "mesh-comparison-v2",
+  "producer_sha256": "5f1dcdbc65c2c6a6aec28566f6f7445b1a71316773a14a0116d849bf9bfa9c9c",
+  "pixel_size": [
+    1600,
+    1000
+  ],
+  "text_overlay": false,
+  "variants": [
+    {
+      "id": "result",
+      "en": "Result",
+      "zh": "结果",
+      "parameter": "",
+      "master_sha256": "9f2d0101c37222d001c3d17c6eabeb50be99d41babe3546ab8e9b62840d7d0a8",
+      "source_result_sha256": "8df6b98c2c6d682cf91d6826ce6e035bfd2ed677085071d9200c9e5618a91cbf",
+      "source_statistics": {
+        "points": 530,
+        "faces": 1024
+      },
+      "variants": [
+        {
+          "file": "result-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "ca4b13a0149ea2a2f290c98f7aa21b9bbf865dd076e6eb7bebd46662e46401f1"
+        },
+        {
+          "file": "result-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "c5c4930482dcfda20e8c2f84670b2193ea8f779ee0cd63a4e32fb6a7731f2bc5"
+        },
+        {
+          "file": "result.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "bb0faf8d22572d9c7bf01c9c79508c9eac22b9573b99cfbd2a113caeede0ba5e"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 1,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-dc6814932211a6f4ff94",
+            "operation_version": 3,
+            "parameters": {
+              "scale": {
+                "type": "Vector3",
+                "value": [
+                  1.2,
+                  0.8,
+                  1.5
+                ]
+              },
+              "rotate": {
+                "type": "Vector3",
+                "value": [
+                  10,
+                  20,
+                  30
+                ]
+              },
+              "translate": {
+                "type": "Vector3",
+                "value": [
+                  1,
+                  2,
+                  3
+                ]
+              }
+            }
+          }
+        ],
+        "connections": []
+      },
+      "recipe_sha256": "112e00eb6c27077becf1a4a68f2c62fc24f61ea25e4e7b85570eed87d299f0dc",
+      "same_result_as_input": false
+    }
+  ],
+  "display": {
+    "camera": [
+      32,
+      -62
+    ],
+    "world_to_display_axes": [
+      "x",
+      "z",
+      "y"
+    ],
+    "center": [
+      0.930365334,
+      2.99992075,
+      2.07108055
+    ],
+    "radius": 1.09871460856,
+    "geometry_scale": 1,
+    "face_decimation": false,
+    "wire_overlay_below_faces": 1200,
+    "two_sided_lighting": true,
+    "ambient": 0.45,
+    "zoom": 1.2
+  }
+}

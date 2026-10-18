@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101713"><meta name="description" content="Build a seeded ridge landform, then multiply by the input map. A unit input preserves the generated shape."><title>Ridge · Node reference · User manual — Vesta</title>
+<meta name="validation-bundle" content="e814dc4ca7de3848e433c44c64f12d334f5110695285f9e6242f4630d1eef2f0"><link rel="canonical" href="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-3b6f268370b1db771192/v1/"><link rel="alternate" hreflang="en" href="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-3b6f268370b1db771192/v1/"><link rel="alternate" hreflang="zh-CN" href="https://juthvr7.github.io/vesta-website/zh/reference/nodes/node.catalog-3b6f268370b1db771192/v1/"><link rel="alternate" hreflang="x-default" href="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-3b6f268370b1db771192/v1/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Vesta"><meta property="og:locale" content="en_US"><meta property="og:title" content="Ridge · Node reference · User manual — Vesta"><meta property="og:description" content="Build a seeded ridge landform, then multiply by the input map. A unit input preserves the generated shape."><meta property="og:url" content="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-3b6f268370b1db771192/v1/"><meta property="og:image" content="https://juthvr7.github.io/vesta-website/assets/validation/help/ridge/second.webp"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../../../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../../../vesta-site.css?v=20261019-implemented-help-v1"><link rel="stylesheet" href="../../../../validation.css?v=20261019-implemented-help-v1"><script src="../../../../validation.js?v=20261019-implemented-help-v1" defer></script><script src="../../../../manual-search-index.js?v=20261019-implemented-help-v1" defer></script><script src="../../../../manual-search.js?v=20261019-implemented-help-v1" data-manual-root="../../../../" defer></script></head>
+<body class="validation-page"><a class="skip" href="#main">Skip to content</a>
+<header class="header"><a class="logo" href="../../../../" aria-label="Vesta">vesta<span>.</span></a><nav id="navigation" aria-label="Navigation"><a href="../../../../">Home</a><a href="../../../../validation/" >User manual</a></nav><div class="languages"><a href="../../../../reference/nodes/node.catalog-3b6f268370b1db771192/v1/" data-language-link lang="en" aria-current="page">EN</a><span>/</span><a href="../../../../zh/reference/nodes/node.catalog-3b6f268370b1db771192/v1/" data-language-link lang="zh-CN" >中文</a></div><button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false" aria-label="Menu" data-open-label="Menu" data-close-label="Close">Menu ☰</button></header>
+<div class="framework-layout"><aside class="framework-sidebar"><details class="framework-directory" open><summary>Browse the framework</summary><label class="manual-search-box"><span>Search the manual</span><input type="search" data-manual-search placeholder="Search the manual" aria-label="Search the manual" autocomplete="off"></label><nav aria-label="Browse the framework"><a class="framework-start" href="../../../../validation/" >Start here</a><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/agent-creation/" ><span>01</span>Agent-led creation<small class="chapter-state">In development</small></a></div><div class="framework-group active-chapter"><a class="chapter-link" href="../../../../validation/guide/terrain/" ><span>02</span>Terrain<small class="chapter-state">Verified slices</small></a><div class="framework-branches"><a href="../../../../validation/guide/terrain/#generate">Generate a starting landform</a><a href="../../../../validation/guide/terrain/#shape">Reshape the terrain</a><div class="framework-leaves"><a href="../../../../validation/terrain/edge/" >Terrain boundaries</a><a href="../../../../validation/terrain/terraces/" >Layered slopes</a><a href="../../../../validation/terrain/fold/" >Height waveforms</a><a href="../../../../validation/terrain/soft-clip/" >Soft height control</a></div><a href="../../../../validation/guide/terrain/#simulate">Erosion and material change</a><a href="../../../../validation/guide/terrain/#layers">Masks and local control</a></div></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/geometry-tools/" ><span>03</span>Geometry and node tools<small class="chapter-state">Verified slices</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/world-systems/" ><span>04</span>Connected world systems<small class="chapter-state">Planned direction</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/graph-assets/" ><span>05</span>Graphs and reusable assets<small class="chapter-state">Verified slices</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/engine-delivery/" ><span>06</span>Engine delivery<small class="chapter-state">Verified slices</small></a><div class="framework-leaves"><a href="../../../../validation/workflows/vda-unreal/" >VDA → Unreal study</a></div></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/execution/" ><span>07</span>Data and execution<small class="chapter-state">Shared foundation</small></a></div></nav><nav class="reference-directory" aria-label="Node reference"><p>Node reference</p><a href="../../../../reference/library/" >Node library <small>644</small></a><a href="../../../../reference/library/#implemented">Implemented node references <small>111</small></a><a href="../../../../reference/nodes/node.edge/v1/" >Edge <small>v1</small></a><a href="../../../../reference/nodes/node.fold/v2/" >Fold <small>v2</small></a><a href="../../../../reference/nodes/node.soft-clip/v2/" >SoftClip <small>v2</small></a><a href="../../../../reference/nodes/node.terraces/v2/" >Terraces <small>v2</small></a></nav><a class="manual-download" data-offline-download href="../../../../downloads/vesta-manual.zip">Download offline manual ↓<small>HTML · search · local media</small></a></details></aside><main class="framework-main" id="main"><section class="manual-search-results wrap" hidden><h1>Search results</h1><button type="button" data-clear-search>Clear search</button><p role="status" data-search-status data-empty="No matching chapters or functions."></p><ol></ol></section><div class="manual-document-body"><article class="node-reference wrap"><p class="chapter-breadcrumb"><a href="../../../../reference/library/terrain-generate/#entry-node.catalog-3b6f268370b1db771192-v1">Generation</a> / Node reference</p><p class="kicker">Parameter guide · v1</p><h1>Ridge</h1><p class="framework-lead">Build a seeded ridge landform, then multiply by the input map. A unit input preserves the generated shape.</p><dl class="chapter-io"><div><dt>Documentation edition</dt><dd>2026-10-19</dd></div><div><dt>Operation version</dt><dd>1</dd></div></dl><p class="reference-note">This page documents this exact operation version. Documentation edition and backend implementation versions are separate. All declared parameters are listed. Behavioral explanations and effect media are tracked separately.</p><nav class="chapter-toc"><a href="#ports">Inputs and outputs</a><a href="#parameters">Parameters (6)</a><a href="#examples">Examples and verification</a></nav><section class="capability-section" id="ports"><h2>Inputs and outputs</h2><div class="reference-ports"><section><h3>Inputs</h3><ol><li><strong>heightfield_0</strong> <code>Geometry</code> required</li></ol></section><section><h3>Outputs</h3><ol><li><strong>heightfield_0</strong> <code>Geometry</code> </li></ol></section></div></section><section class="capability-section" id="parameters"><h2>Parameters</h2><p>Contract fields come from a dated Catalog snapshot. Soft slider endpoints do not define hard validation limits. Numeric defaults use a readable display precision; exact typed values remain in the downloadable contract.</p><nav class="parameter-toc"><a href="#parameter-5363616c65">Scale</a><a href="#parameter-486569676874">Height</a><a href="#parameter-446566696e6974696f6e">Definition</a><a href="#parameter-53656564">Seed</a><a href="#parameter-5363616c6558">Scale X</a><a href="#parameter-5363616c6559">Scale Y</a></nav><section class="parameter-reference" id="parameter-5363616c65"><h3><a href="#parameter-5363616c65">Scale <span aria-hidden="true">#</span></a></h3><code>Scale</code><p class="">Controls the ridge landform scale in the composite recipe.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.75</code></dd></div><div><dt>Range endpoints</dt><dd>0.0001 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-486569676874"><h3><a href="#parameter-486569676874">Height <span aria-hidden="true">#</span></a></h3><code>Height</code><p class="">Multiplies the final ridge height. The result has its floor shifted to zero.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.6</code></dd></div><div><dt>Range endpoints</dt><dd>0.0001 (soft) → 2 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-446566696e6974696f6e"><h3><a href="#parameter-446566696e6974696f6e">Definition <span aria-hidden="true">#</span></a></h3><code>Definition</code><p class="">Controls the profile and directed-warp detail of the ridge.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.4</code></dd></div><div><dt>Range endpoints</dt><dd>0.25 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-53656564"><h3><a href="#parameter-53656564">Seed <span aria-hidden="true">#</span></a></h3><code>Seed</code><p class="">Seed shared by the deterministic composite recipe.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarI64</dd></div><div><dt>Default</dt><dd><code>0</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 65535 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-5363616c6558"><h3><a href="#parameter-5363616c6558">Scale X <span aria-hidden="true">#</span></a></h3><code>ScaleX</code><p class="">Anisotropic scale along the first map axis.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>1</code></dd></div><div><dt>Range endpoints</dt><dd>0.0001 (soft) → 2.5 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-5363616c6559"><h3><a href="#parameter-5363616c6559">Scale Y <span aria-hidden="true">#</span></a></h3><code>ScaleY</code><p class="">Anisotropic scale along the second map axis.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>1</code></dd></div><div><dt>Range endpoints</dt><dd>0.0001 (soft) → 2.5 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section></section><section class="capability-section" id="examples"><h2>Examples and verification</h2><p>Actual output rendering · CPU · 2026-10-19</p><div class="reference-media-grid"><figure><button class="image-button" type="button" aria-label="Input" data-image="../../../../assets/validation/help/ridge/input.webp" data-caption="Input"><img src="../../../../assets/validation/help/ridge/input.webp" srcset="../../../../assets/validation/help/ridge/input-768.webp 768w, ../../../../assets/validation/help/ridge/input-1280.webp 1280w, ../../../../assets/validation/help/ridge/input.webp 1600w" sizes="(max-width:760px) 100vw,48vw" alt="Input" width="1600" height="1000" loading="lazy" decoding="async"></button><figcaption>Input<details><summary>Sample parameters and output</summary><pre>{
+  &quot;parameters&quot;: {
+    &quot;Output&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;Height&quot;
+    },
+    &quot;Height&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;Color&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  &quot;output&quot;: {
+    &quot;resolution&quot;: [
+      64,
+      64
+    ],
+    &quot;range&quot;: [
+      1,
+      1
+    ],
+    &quot;samples_f32_sha256&quot;: &quot;3035aac5fb87474c303702f9030301b4e6bb7aee93be3710b8ab8dcea201db70&quot;
+  }
+}</pre></details></figcaption></figure><figure><button class="image-button" type="button" aria-label="Definition = 0.2" data-image="../../../../assets/validation/help/ridge/first.webp" data-caption="Definition = 0.2"><img src="../../../../assets/validation/help/ridge/first.webp" srcset="../../../../assets/validation/help/ridge/first-768.webp 768w, ../../../../assets/validation/help/ridge/first-1280.webp 1280w, ../../../../assets/validation/help/ridge/first.webp 1600w" sizes="(max-width:760px) 100vw,48vw" alt="Definition = 0.2" width="1600" height="1000" loading="lazy" decoding="async"></button><figcaption>Definition = 0.2<details><summary>Sample parameters and output</summary><pre>{
+  &quot;parameters&quot;: {
+    &quot;Scale&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.75
+    },
+    &quot;Height&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.6
+    },
+    &quot;Definition&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.2
+    },
+    &quot;Seed&quot;: {
+      &quot;type&quot;: &quot;ScalarI64&quot;,
+      &quot;value&quot;: 1234
+    },
+    &quot;ScaleX&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;ScaleY&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    }
+  },
+  &quot;output&quot;: {
+    &quot;resolution&quot;: [
+      64,
+      64
+    ],
+    &quot;range&quot;: [
+      0,
+      0.19995231926441193
+    ],
+    &quot;samples_f32_sha256&quot;: &quot;d2684a2b3a2b5830e959e68e84c6488a352a590f65baa1856d46996a1df12916&quot;
+  }
+}</pre></details></figcaption></figure><figure><button class="image-button" type="button" aria-label="Definition = 0.8" data-image="../../../../assets/validation/help/ridge/second.webp" data-caption="Definition = 0.8"><img src="../../../../assets/validation/help/ridge/second.webp" srcset="../../../../assets/validation/help/ridge/second-768.webp 768w, ../../../../assets/validation/help/ridge/second-1280.webp 1280w, ../../../../assets/validation/help/ridge/second.webp 1600w" sizes="(max-width:760px) 100vw,48vw" alt="Definition = 0.8" width="1600" height="1000" loading="lazy" decoding="async"></button><figcaption>Definition = 0.8<details><summary>Sample parameters and output</summary><pre>{
+  &quot;parameters&quot;: {
+    &quot;Scale&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.75
+    },
+    &quot;Height&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.6
+    },
+    &quot;Definition&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.8
+    },
+    &quot;Seed&quot;: {
+      &quot;type&quot;: &quot;ScalarI64&quot;,
+      &quot;value&quot;: 1234
+    },
+    &quot;ScaleX&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;ScaleY&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    }
+  },
+  &quot;output&quot;: {
+    &quot;resolution&quot;: [
+      64,
+      64
+    ],
+    &quot;range&quot;: [
+      0,
+      0.1968446969985962
+    ],
+    &quot;samples_f32_sha256&quot;: &quot;0ebd8ae1784c5c48c55d44c351afa41adf7376ab907986b86e80608ecb5a5926&quot;
+  }
+}</pre></details></figcaption></figure></div><p>These samples illustrate the stated recipe and CPU output. They are not a new acceptance, GPU, performance or native-interaction test.</p><p><a href="../../../../reference/data/node.catalog-3b6f268370b1db771192-v1-media.json">Sample and display-treatment record ↗</a></p><p><a href="../../../../reference/data/node.catalog-3b6f268370b1db771192-v1.json">Download reference contract ↗</a></p><details class="record-details"><summary>Stable help topic</summary><code>node.catalog-3b6f268370b1db771192 · v1</code><code class="snapshot-id">9c3b16cb44208184ec3708b4d44923f05b7b985ae908c77ad7ef23f19e5d7473</code></details></section><section class="chapter-next"><h2>Related content</h2><div><a href="../../../../reference/nodes/node.terraces/v2/">Terraces · v2 ↗</a><a href="../../../../reference/nodes/node.catalog-23657b1038df74670236/v1/">Cone · v1 ↗</a><a href="../../../../reference/nodes/node.catalog-501cee0f37e935fc46a0/v1/">Hemisphere · v1 ↗</a><a href="../../../../reference/nodes/node.catalog-9ac94c32eb89356b6545/v1/">LinearGradient · v1 ↗</a><a href="../../../../reference/nodes/node.catalog-93a12bf4e02fa077617b/v1/">Mountain · v1 ↗</a><a href="../../../../reference/nodes/node.catalog-910271a272a690eca027/v1/">Perlin · v1 ↗</a><a href="../../../../reference/nodes/node.catalog-aece91b56b6ba77c51f6/v1/">RadialGradient · v1 ↗</a></div></section></article></div></main></div>
+<footer class="validation-footer"><div class="wrap"><a class="logo" href="../../../../">vesta<span>.</span></a><div><p>AGENTIC WORLD CREATOR / IN DEVELOPMENT</p><span>Specific evidence, explicit scope. These records do not certify a complete product.</span></div><a href="../../../../validation/">User manual ↗</a></div></footer>
+<dialog class="lightbox" aria-label="The result study"><button class="lightbox-close" type="button" aria-label="Close">Close ×</button><img alt=""><p></p></dialog></body></html>

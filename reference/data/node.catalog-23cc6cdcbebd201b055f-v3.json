@@ -1,0 +1,236 @@
+{
+  "id": "node.catalog-23cc6cdcbebd201b055f",
+  "operation_version": 3,
+  "contract_sha256": "9abff5ed1cbb3b0134c6fb0e8575e8a1f939ecb3ef70775658900b2e2e25e256",
+  "catalog_snapshot_sha256": "72fbffa3c1c3026d129dca4abcd102ee478faf7a728039317b5584a9efd46d10",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield",
+        "required": true
+      },
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 1,
+        "name": "mask",
+        "required": false
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "height"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "layer",
+        "label": "Blur Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "mask"
+        },
+        "disableWhen": "ninputs(\"mask\") == 0",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "masklayer",
+        "label": "Mask Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": "ninputs(\"mask\") == 0",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "maskaware",
+        "label": "Mask Aware Blur",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 10
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": "ch(\"maskaware\") == off || ninputs(\"mask\") == 0",
+        "joinWithNext": false,
+        "key": "iterations",
+        "label": "Iterations",
+        "max": 1000,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": [
+          "blur",
+          "boxblur",
+          "expand",
+          "shrink",
+          "sharpen"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "blur"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": "ch(\"maskaware\") == on && ninputs(\"mask\") != 0",
+        "joinWithNext": false,
+        "key": "method",
+        "label": "Method",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 10
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": "ch(\"maskaware\") == on && ninputs(\"mask\") != 0",
+        "joinWithNext": false,
+        "key": "radius",
+        "label": "Radius",
+        "max": 100,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "none",
+          "constant",
+          "repeat",
+          "streak"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "streak"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": "ch(\"maskaware\") == on && ninputs(\"mask\") != 0",
+        "joinWithNext": false,
+        "key": "bordertype",
+        "label": "Override Border",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": "ch(\"bordertype\") == \"none\"",
+        "group": "General",
+        "hideWhen": "ch(\"maskaware\") == on && ninputs(\"mask\") != 0",
+        "joinWithNext": false,
+        "key": "borderval",
+        "label": "Border Value",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": "ch(\"method\") != \"sharpen\"",
+        "joinWithNext": false,
+        "key": "sharpenstrength",
+        "label": "Sharpen Strength",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

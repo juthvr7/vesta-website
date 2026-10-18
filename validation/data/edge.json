@@ -1,0 +1,566 @@
+{
+  "schema_version": 1,
+  "subject_id": "terrain.edge",
+  "snapshot_id": "edge-cpu-2026-10-18",
+  "verified_at": "2026-10-18",
+  "preserved_at": "2026-10-18",
+  "kind": "historical-run-summary",
+  "rerun": false,
+  "operation_version": 1,
+  "implementation_version": 1,
+  "backend": "cpu",
+  "host": "cli",
+  "case_count": 85,
+  "resolutions": [
+    64,
+    128,
+    1024
+  ],
+  "tolerance": 0.000002,
+  "observed_max_abs": 5.960464477539063e-8,
+  "passed": true,
+  "source_report_sha256": "4595a13f0e25cec3a7c2b1a1988f16cd7c7ecf2a12f5284c5d8ec755c75f64be",
+  "executable_sha256": "d23e366add20ef99d57cd5765f26eb905fc33f5f213dd88b7fa7dad9ef2eed89",
+  "cases": [
+    {
+      "case_id": "edge_square_default/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "139281636c6728f953266c868db4d2363dc3b2ee8a4921ffe5208472ee102d8b"
+    },
+    {
+      "case_id": "edge_square_default/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "445864f5f84c399308dd322f8085129424c29c270c4705dfd54e62be4b4609b6"
+    },
+    {
+      "case_id": "edge_square_flat0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    {
+      "case_id": "edge_square_flat0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "case_id": "edge_square_oblique/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 5.960464477539063e-8,
+      "reference_sha256": "797bfeae15b6aa5d809854f8b9a26ab4d1b2d0807f2654014c5abddd572aca6e"
+    },
+    {
+      "case_id": "edge_square_oblique/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 5.960464477539063e-8,
+      "reference_sha256": "7a1ae2c61cf2d1dd6b44f88a606780d83b59aae0b1899589164800ed5436e5fd"
+    },
+    {
+      "case_id": "edge_square_on_ridge/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 1.4901161193847656e-8,
+      "reference_sha256": "097f6ca13c64347b683dff055b60611f83ba329a0e1d340918b7c1f0580de948"
+    },
+    {
+      "case_id": "edge_square_on_ridge/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 1.4901161193847656e-8,
+      "reference_sha256": "332b7508394419eb99e3b0fc2f51c8706fb802d3751c7282415d67f70d9e6fda"
+    },
+    {
+      "case_id": "edge_square_size0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "6ae4477bda5f80ce756fcdba23e2f8cd1fd3dc32f76fb838ad8d258c9c225c48"
+    },
+    {
+      "case_id": "edge_square_size0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "fb9ff6044c03664175185c9387bed972061cd1ebd970c97cd6a38d1e8462ec37"
+    },
+    {
+      "case_id": "edge_square_size1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "d645b89992944f7ec06929aa65b7a76972843f028d06e7324bef5b6e70d98704"
+    },
+    {
+      "case_id": "edge_square_size1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "7be9ba634edbb87bfdecd2aae57cce05dd7860ae3678ddaf0c8b537d0066ec7b"
+    },
+    {
+      "case_id": "edge_square_size-0_15/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "efb38df8936955057974ed5555913d9166c3904e321933fb8a6f259168ed95fb"
+    },
+    {
+      "case_id": "edge_square_size-0_15/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "cf570643fe36c4d7a804b80aeeec42a0a88e87fc1e5aee65fb0783da330230d7"
+    },
+    {
+      "case_id": "edge_square_size1_2/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "93cbb3e9b82c80633b8e8986e267058bfc3a732dcd9c1a541fca5468b6885758"
+    },
+    {
+      "case_id": "edge_square_size1_2/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "354ea37d244618c158ba9e53a0f7f57154c3a913f928298965e059ed61a74497"
+    },
+    {
+      "case_id": "edge_round_default/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "a2cff4714ca8fdc8b66c39aac44b6aeebe7aafd00be658039f1b07d4e3483207"
+    },
+    {
+      "case_id": "edge_round_default/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "855ef5ae1373d61aaae1bcb4a2f1bd466bbddb6ad59c02acdfa3930943175b10"
+    },
+    {
+      "case_id": "edge_round_flat0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    {
+      "case_id": "edge_round_flat0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "case_id": "edge_round_oblique/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "0b71aef9edeba2f5fc4416e87203aceeb4979302b826a653d45a8097b8effc0c"
+    },
+    {
+      "case_id": "edge_round_oblique/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "9907e7496f548ffa382eac2e55766097c7ed6b9f9770951b61b7f44fd9a2296c"
+    },
+    {
+      "case_id": "edge_round_on_ridge/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "5486957b5b2d39d57c1450e4abe7b63bb49573a6c975ef73332471b6689a94ad"
+    },
+    {
+      "case_id": "edge_round_on_ridge/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "73d8c250ae0c7ec405bdc3154a7807f92e4e37bc395396db1db95e68235691e0"
+    },
+    {
+      "case_id": "edge_round_size0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "1941a830038d3f85635c55d4f5529f215e182406307b9dc284690706f209d4da"
+    },
+    {
+      "case_id": "edge_round_size0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "857eed5994c869238eba701b0b1a9ab2f0543556b82e59d6f1e941230ec1273b"
+    },
+    {
+      "case_id": "edge_round_size1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    {
+      "case_id": "edge_round_size1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "case_id": "edge_round_size-0_15/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "6125f6f45ba6e472a9919f4b8a8cefc125c22f7ccf33060fa45b7fff2dbe355a"
+    },
+    {
+      "case_id": "edge_round_size-0_15/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "3dd9078cda1c31e1d0f4d57fcc01d89e8495302914559e6d6c48787251545f52"
+    },
+    {
+      "case_id": "edge_round_size1_2/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "84c8b95f250510f4d41e5d61d81a284f6003ca76137c7d255dd712d0772d7423"
+    },
+    {
+      "case_id": "edge_round_size1_2/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "574883646f534798ac7ed077c9075018e2afa33ea879959fb5962fc6613328b3"
+    },
+    {
+      "case_id": "edge_precise_default/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "ef3fcec76e62f258040fd94e4c9542d7cb1753517e3ab8a339d0fd5beabc2f1b"
+    },
+    {
+      "case_id": "edge_precise_default/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "8ff79c16a11bf22355526604f988a72fcada6c640f2ddaa33fbc16959689b956"
+    },
+    {
+      "case_id": "edge_precise_flat0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    {
+      "case_id": "edge_precise_flat0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "case_id": "edge_precise_oblique/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 5.960464477539063e-8,
+      "reference_sha256": "6f5facb7774bf79a550765c857445a064b76b44c978a7662cb7e0f5b5d1c0078"
+    },
+    {
+      "case_id": "edge_precise_oblique/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 5.960464477539063e-8,
+      "reference_sha256": "426c9641f8d0ca5386cca7c8f31bf42515cda1878038b7ff30344fb4372e5f9e"
+    },
+    {
+      "case_id": "edge_precise_on_ridge/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "e913315358146bd0acb21f3d94e25e34abc2d5ab244007f2c120de7da7dfa6d2"
+    },
+    {
+      "case_id": "edge_precise_on_ridge/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "eff809d9fa1f86eab4f3c524f9b0db6860b544bfea410200e8a5bfe624da3a23"
+    },
+    {
+      "case_id": "edge_precise_size0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "ef3fcec76e62f258040fd94e4c9542d7cb1753517e3ab8a339d0fd5beabc2f1b"
+    },
+    {
+      "case_id": "edge_precise_size0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "8ff79c16a11bf22355526604f988a72fcada6c640f2ddaa33fbc16959689b956"
+    },
+    {
+      "case_id": "edge_precise_size1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "ef3fcec76e62f258040fd94e4c9542d7cb1753517e3ab8a339d0fd5beabc2f1b"
+    },
+    {
+      "case_id": "edge_precise_size1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "8ff79c16a11bf22355526604f988a72fcada6c640f2ddaa33fbc16959689b956"
+    },
+    {
+      "case_id": "edge_precise_size-0_15/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "ef3fcec76e62f258040fd94e4c9542d7cb1753517e3ab8a339d0fd5beabc2f1b"
+    },
+    {
+      "case_id": "edge_precise_size-0_15/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "8ff79c16a11bf22355526604f988a72fcada6c640f2ddaa33fbc16959689b956"
+    },
+    {
+      "case_id": "edge_precise_size1_2/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "ef3fcec76e62f258040fd94e4c9542d7cb1753517e3ab8a339d0fd5beabc2f1b"
+    },
+    {
+      "case_id": "edge_precise_size1_2/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "8ff79c16a11bf22355526604f988a72fcada6c640f2ddaa33fbc16959689b956"
+    },
+    {
+      "case_id": "edge_round_softness0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "2c4909cdc287507556803c433aef4d9a991116a6a6d44708faf4f59d863fed16"
+    },
+    {
+      "case_id": "edge_round_softness0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "f07a159301b863be1fb1ce103ec346314bc261d5d67cc087538c7ed5ac923a56"
+    },
+    {
+      "case_id": "edge_round_softness0_1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "b7af834f84f9daeeb4b2d9e4543aa54c35cad02d68101547a43772b2e75e5486"
+    },
+    {
+      "case_id": "edge_round_softness0_1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "5bf6a89f3588dac3c86fd02f024e1a811dae9d5d6f79618757ca9ea4fd24f082"
+    },
+    {
+      "case_id": "edge_round_softness0_5/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "467a720cc67ae6b6d89ad5741e86542f515d41e0fa1ebb24917ff966bde0171f"
+    },
+    {
+      "case_id": "edge_round_softness0_5/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "b4bd3c107e90ee1342547d4be3dd7553473849318ff63955a001a5c6abacd09c"
+    },
+    {
+      "case_id": "edge_round_softness1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "eb3f74d3fa684a5fd9986204c17c4bc43d5bb0e990850022335877396276a120"
+    },
+    {
+      "case_id": "edge_round_softness1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "fa2bd10fec347fc9bdfdcc6a34ea6eb41c117f487f8c77cbe6921558ee137ea0"
+    },
+    {
+      "case_id": "edge_round_interaction/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "bf12d84d13b1bc6eff89b8b6f8f5cb9248aacb27086bf93e53e1962914d41d3f"
+    },
+    {
+      "case_id": "edge_round_interaction/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "663c7de84dd7a068fb6f5cf849273a6a194d9417cc9544a587cea986ae42e67f"
+    },
+    {
+      "case_id": "edge_square_ignored/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "139281636c6728f953266c868db4d2363dc3b2ee8a4921ffe5208472ee102d8b"
+    },
+    {
+      "case_id": "edge_square_ignored/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "445864f5f84c399308dd322f8085129424c29c270c4705dfd54e62be4b4609b6"
+    },
+    {
+      "case_id": "edge_round_ignored/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "a2cff4714ca8fdc8b66c39aac44b6aeebe7aafd00be658039f1b07d4e3483207"
+    },
+    {
+      "case_id": "edge_round_ignored/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "855ef5ae1373d61aaae1bcb4a2f1bd466bbddb6ad59c02acdfa3930943175b10"
+    },
+    {
+      "case_id": "edge_precise_pixels0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    {
+      "case_id": "edge_precise_pixels0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "case_id": "edge_precise_pixels1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "6ae4477bda5f80ce756fcdba23e2f8cd1fd3dc32f76fb838ad8d258c9c225c48"
+    },
+    {
+      "case_id": "edge_precise_pixels1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "fb9ff6044c03664175185c9387bed972061cd1ebd970c97cd6a38d1e8462ec37"
+    },
+    {
+      "case_id": "edge_precise_pixels7/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "654c0fac6ae0e8aea7a32faf5c178ac4f0a6c4a51281de41f39e1835c3e3e6d5"
+    },
+    {
+      "case_id": "edge_precise_pixels7/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "fcd91beeb172a5a36e0fae223ca658a7b13090b717aa3f5d9147997717cb12fd"
+    },
+    {
+      "case_id": "edge_precise_pixels31/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "7e76fc80244bf70434e81ebd3b9aede301c0e7756b932754d940d2c08c2e9c9e"
+    },
+    {
+      "case_id": "edge_precise_pixels31/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "28a42504589c9e6844560fe9b2454a551c6d72e4f3ab19bf1244b603d315c3b5"
+    },
+    {
+      "case_id": "edge_precise_pixels32/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "1c7ddcc8335d98967815974cb5dd482e55663745a364c83adbe0d9f10bfff11d"
+    },
+    {
+      "case_id": "edge_precise_pixels32/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "7bd0d17ef55588094417ad5ffd9db5262bbd51c46a760fcaf402236e9086818e"
+    },
+    {
+      "case_id": "edge_precise_pixels33/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    {
+      "case_id": "edge_precise_pixels33/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "45fd3cb0bd353151d0f41dc36201fb7362309547fe053140871057d692fed34e"
+    },
+    {
+      "case_id": "edge_precise_pixels63/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    {
+      "case_id": "edge_precise_pixels63/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "6b5c9f0dc5ae9695628de9220ab630f33618af9fb8cda9e6b79dbcf1b5ff102d"
+    },
+    {
+      "case_id": "edge_precise_pixels64/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    {
+      "case_id": "edge_precise_pixels64/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "7d08eeeddecf21a1acc607e809debbf668056945fdc369487ee9eeb45b32bc29"
+    },
+    {
+      "case_id": "edge_precise_pixels500/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    {
+      "case_id": "edge_precise_pixels500/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "case_id": "edge_precise_pixels-3/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe"
+    },
+    {
+      "case_id": "edge_precise_pixels-3/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31"
+    },
+    {
+      "case_id": "edge_precise_ignored/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "ef3fcec76e62f258040fd94e4c9542d7cb1753517e3ab8a339d0fd5beabc2f1b"
+    },
+    {
+      "case_id": "edge_precise_ignored/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "8ff79c16a11bf22355526604f988a72fcada6c640f2ddaa33fbc16959689b956"
+    },
+    {
+      "case_id": "edge_round_softness1/1024/cpu",
+      "resolution": 1024,
+      "observed_max_abs": 0,
+      "reference_sha256": "3257a8151142f0bc797caf5b650799b56103a6468e0244a2374a14deb1bf26f3"
+    }
+  ],
+  "additional_1024": {
+    "cases": [
+      {
+        "case_id": "edge_round_default/1024/cpu",
+        "reference_sha256": "7f7a8bd2ab6021831f7e309a1b7ab43ac788e12cf8664d527ab5572e071366db",
+        "repeat_identical": true,
+        "observed_max_abs": 0
+      },
+      {
+        "case_id": "edge_round_on_ridge/1024/cpu",
+        "reference_sha256": "4433a688566751fd77b75f2da18a872c67aaa188da73eb5f67d92331eb6b042a",
+        "repeat_identical": true,
+        "observed_max_abs": 0
+      },
+      {
+        "case_id": "edge_round_softness1/1024/cpu",
+        "reference_sha256": "3257a8151142f0bc797caf5b650799b56103a6468e0244a2374a14deb1bf26f3",
+        "repeat_identical": true,
+        "observed_max_abs": 0
+      }
+    ],
+    "overlap_case": "edge_round_softness1/1024/cpu",
+    "counted_separately": false
+  },
+  "limitations": [
+    "Fixed recipes and declared scope only.",
+    "Effect renders are not reference-comparison images.",
+    "No new run, physical interaction or performance claim.",
+    "CPU evidence does not qualify GPU or engine execution."
+  ]
+}

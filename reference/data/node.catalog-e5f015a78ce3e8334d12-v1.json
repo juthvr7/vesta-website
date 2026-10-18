@@ -1,0 +1,1660 @@
+{
+  "id": "node.catalog-e5f015a78ce3e8334d12",
+  "operation_version": 1,
+  "contract_sha256": "0b98e39603a8a3da59dc187f1d79925f5e8e7aa9f246ba7f402324f952e60c76",
+  "catalog_snapshot_sha256": "d7ee63208e0e2e6f5fbdfe0208416c2e9a0f2bc09d48bfe2fb66a6457c9699ae",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 1,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      },
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 1,
+        "name": "masks_and_bedrock",
+        "required": false
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Main/General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "globalerosionrate",
+        "label": "Global Erosion Rate",
+        "max": 5,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Main/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_erodability",
+        "label": "Erodability",
+        "max": 2,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": null,
+        "group": "Main/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_erodabilitymaskmode",
+        "label": "hydro_erodabilitymaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "hydroerodabilitymask"
+        },
+        "disableWhen": null,
+        "group": "Main/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_erodabilitymasklayer",
+        "label": "Erodability Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.4
+        },
+        "disableWhen": null,
+        "group": "Main/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_erosionrate",
+        "label": "Erosion Rate",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 70
+        },
+        "disableWhen": null,
+        "group": "Main/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_bankangle",
+        "label": "Bank Angle",
+        "max": 90,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": null,
+        "group": "Main/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_bankanglemaskmode",
+        "label": "hydro_bankanglemaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "bankanglemask"
+        },
+        "disableWhen": null,
+        "group": "Main/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_bankanglemasklayer",
+        "label": "Bank Angle Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 40
+        },
+        "disableWhen": null,
+        "group": "Main/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "water_spreaditers",
+        "label": "Spread Iterations",
+        "max": 200,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Main/Thermal",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "thermal_erodability",
+        "label": "Erodability",
+        "max": 2,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": null,
+        "group": "Main/Thermal",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "thermal_erodabilitymaskmode",
+        "label": "thermal_erodabilitymaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "thermalerodabilitymask"
+        },
+        "disableWhen": null,
+        "group": "Main/Thermal",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "thermal_erodabilitymasklayer",
+        "label": "Erodability Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.03
+        },
+        "disableWhen": null,
+        "group": "Main/Thermal",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "thermal_erosionrate",
+        "label": "Erosion Rate",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 35
+        },
+        "disableWhen": null,
+        "group": "Main/Thermal",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "thermal_cutangle",
+        "label": "Cut Angle",
+        "max": 90,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": null,
+        "group": "Main/Thermal",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "thermal_cutanglemaskmode",
+        "label": "thermal_cutanglemaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "cutanglemask"
+        },
+        "disableWhen": null,
+        "group": "Main/Thermal",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "thermal_cutanglemasklayer",
+        "label": "Cut Angle Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.1
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_removalrate",
+        "label": "Removal Rate",
+        "max": 1,
+        "maxStrict": true,
+        "min": -1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_removalratemaskmode",
+        "label": "hydro_removalratemaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "hydroremovalratemask"
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_removalratemasklayer",
+        "label": "Removal Rate Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 5
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_maxdebrisdepth",
+        "label": "Max Debris Depth",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_gridbias",
+        "label": "Grid Bias",
+        "max": 1,
+        "maxStrict": true,
+        "min": -1,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_gridbiasmaskmode",
+        "label": "hydro_gridbiasmaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "hydrogridbiasmask"
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_gridbiasmasklayer",
+        "label": "Grid Bias Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 5
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_erodability_rampupiters",
+        "label": "Ramp-up Iterations",
+        "max": 100,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.5
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_erodability_initialfactor",
+        "label": "Initial Factor",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.8
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_erodability_slopefactor",
+        "label": "Slope Factor",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_bed_erosionratefactor",
+        "label": "Bed Erosion Rate Factor",
+        "max": 2,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.01
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_bed_depositionrate",
+        "label": "Bed Deposition Rate",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_bed_depositionratemaskmode",
+        "label": "hydro_bed_depositionratemaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "depositionratemask"
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_bed_depositionratemasklayer",
+        "label": "Bed Deposition Rate Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 10
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_bed_sedimentcap",
+        "label": "Sediment Capacity",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_bank_erosionratefactor",
+        "label": "Bank Erosion Rate Factor",
+        "max": 2,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.5
+        },
+        "disableWhen": null,
+        "group": "Advanced/Hydro",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hydro_bank_maxbankbedwaterratio",
+        "label": "Max Bank to Bed Water Ratio",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.7
+        },
+        "disableWhen": null,
+        "group": "Advanced/Thermal",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "thermal_removalrate",
+        "label": "Removal Rate",
+        "max": 1,
+        "maxStrict": true,
+        "min": -1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": null,
+        "group": "Advanced/Thermal",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "thermal_removalratemaskmode",
+        "label": "thermal_removalratemaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "thermalremovalratemask"
+        },
+        "disableWhen": null,
+        "group": "Advanced/Thermal",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "thermal_removalratemasklayer",
+        "label": "Removal Rate Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 5
+        },
+        "disableWhen": null,
+        "group": "Advanced/Thermal",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "thermal_maxdebrisdepth",
+        "label": "Max Debris Depth",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "Advanced/Thermal",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "thermal_gridbias",
+        "label": "Grid Bias",
+        "max": 1,
+        "maxStrict": true,
+        "min": -1,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": null,
+        "group": "Advanced/Thermal",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "thermal_gridbiasmaskmode",
+        "label": "thermal_gridbiasmaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "thermalgridbiasmask"
+        },
+        "disableWhen": null,
+        "group": "Advanced/Thermal",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "thermal_gridbiasmasklayer",
+        "label": "Grid Bias Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.2
+        },
+        "disableWhen": null,
+        "group": "Advanced/Precipitation",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rain_amount",
+        "label": "Amount",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": null,
+        "group": "Advanced/Precipitation",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rain_amountmaskmode",
+        "label": "rain_amountmaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "precipitation"
+        },
+        "disableWhen": null,
+        "group": "Advanced/Precipitation",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rain_amountmasklayer",
+        "label": "Amount Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.05
+        },
+        "disableWhen": null,
+        "group": "Advanced/Precipitation",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rain_density",
+        "label": "Density",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.04
+        },
+        "disableWhen": null,
+        "group": "Advanced/Precipitation",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rain_evaporation",
+        "label": "Evaporation Rate",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "Advanced/Precipitation",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rain_expandradius",
+        "label": "Expand Radius",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "Advanced/Precipitation",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rain_blurradius",
+        "label": "Blur Radius",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.05
+        },
+        "disableWhen": null,
+        "group": "Advanced/Water Flow",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "water_quant",
+        "label": "Quantization",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "Advanced/Water Flow",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "water_postsmooth",
+        "label": "Post Smooth",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 10
+        },
+        "disableWhen": null,
+        "group": "Advanced/Debris Flow",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "debris_spreaditers",
+        "label": "Spread Iterations",
+        "max": 100,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.25
+        },
+        "disableWhen": null,
+        "group": "Advanced/Debris Flow",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "debris_quant",
+        "label": "Quantization",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Advanced/Debris Flow",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "debris_postsmooth",
+        "label": "Post Smooth",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Advanced/Debris Flow",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "debris_waterabsorb",
+        "label": "Water Absorption",
+        "max": 1,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 3
+        },
+        "disableWhen": null,
+        "group": "Advanced/Debris Flow",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "debris_maxheight",
+        "label": "Max Height",
+        "max": 50,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 15
+        },
+        "disableWhen": null,
+        "group": "Advanced/Debris Flow",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "debris_reposeangle",
+        "label": "Repose Angle",
+        "max": 90,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maskoff",
+          "maskon"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "maskoff"
+        },
+        "disableWhen": null,
+        "group": "Advanced/Debris Flow",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "debris_reposeanglemaskmode",
+        "label": "debris_reposeanglemaskmode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "reposeanglemask"
+        },
+        "disableWhen": null,
+        "group": "Advanced/Debris Flow",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "debris_reposeanglemasklayer",
+        "label": "Repose Angle Mask",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 561
+        },
+        "disableWhen": null,
+        "group": "Advanced/Seed",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "seed",
+        "label": "Global Seed",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "height"
+        },
+        "disableWhen": null,
+        "group": "Bedrock/Override",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "bedrockoverridelayer",
+        "label": "Bedrock Override",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Bedrock/Override",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "douplift",
+        "label": "Adjust Height by Bedrock Change",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Bedrock/Strata",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "dostrata",
+        "label": "Adjust Erodability by Strata",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 10
+        },
+        "disableWhen": null,
+        "group": "Bedrock/Strata",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "strata_depth",
+        "label": "Strata Depth",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "Bedrock/Strata",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "strata_clamp",
+        "label": "Clamp at Strata Bounds",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Ramp",
+          "value": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        "disableWhen": null,
+        "group": "Bedrock/Strata",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "strata_ramp",
+        "label": "Strata Erodability",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Ramp"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "Layers/Composition",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "debris_removefromheight",
+        "label": "Remove Debris Layer from Input Height Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Layers/Composition",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "water_removefromheight",
+        "label": "Remove Water Layer from Input Height Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Layers/Composition",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "clearwater",
+        "label": "Reset Water Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Layers/Composition",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "cleardebris",
+        "label": "Reset Debris Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Layers/Composition",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "clearsediment",
+        "label": "Reset Sediment Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "Layers/Composition",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "debris_addtoheight",
+        "label": "Add Debris Layer to Final Height Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Layers/Composition",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "water_addtoheight",
+        "label": "Add Water Layer to Final Height Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "height"
+        },
+        "disableWhen": null,
+        "group": "Layer Bindings/Bindings",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "heightlayer",
+        "label": "Height Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "water"
+        },
+        "disableWhen": null,
+        "group": "Layer Bindings/Bindings",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "waterlayer",
+        "label": "Water Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "debris"
+        },
+        "disableWhen": null,
+        "group": "Layer Bindings/Bindings",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "materiallayer",
+        "label": "Material Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "sediment"
+        },
+        "disableWhen": null,
+        "group": "Layer Bindings/Bindings",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "sedimentlayer",
+        "label": "Sediment Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "bedrock"
+        },
+        "disableWhen": null,
+        "group": "Layer Bindings/Bindings",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "bedrocklayer",
+        "label": "Bedrock Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Simulation/Steps",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "simulation_steps",
+        "label": "Simulation Steps (Freeze - Start)",
+        "max": 100,
+        "maxStrict": true,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [
+      {
+        "disable_when": null,
+        "effect": {
+          "reason": "Original author action requires a Command/Executor host workflow that is not implemented",
+          "type": "unavailable"
+        },
+        "group": "General",
+        "hide_when": null,
+        "key": "resimulate",
+        "label": "Reset Simulation",
+        "requires": [],
+        "trigger": {
+          "type": "button"
+        },
+        "version": 1
+      },
+      {
+        "disable_when": "{ dovisualize == 0 }",
+        "effect": {
+          "reason": "Original author action requires a Command/Executor host workflow that is not implemented",
+          "type": "unavailable"
+        },
+        "group": "General",
+        "hide_when": null,
+        "key": "vis_computerange",
+        "label": "Compute Range",
+        "requires": [],
+        "trigger": {
+          "type": "button"
+        },
+        "version": 1
+      }
+    ],
+    "unimplementedParameters": []
+  }
+}

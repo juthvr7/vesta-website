@@ -1,0 +1,786 @@
+{
+  "id": "node.catalog-fd13fc00b36624231376",
+  "operation_version": 3,
+  "slug": "heightfield-mask-by-feature",
+  "generated_at": "2026-10-19",
+  "backend": "CPU",
+  "kind": "actual-result-render",
+  "profile": "terrain-comparison-v2",
+  "producer_sha256": "1215579356de6c40f500e93a3210a1259134aff899ae74f80703a9c6722404fc",
+  "pixel_size": [
+    1600,
+    1000
+  ],
+  "text_overlay": false,
+  "variants": [
+    {
+      "id": "input",
+      "en": "Input",
+      "zh": "输入",
+      "parameter": "",
+      "master_sha256": "cc623895fc1583b4e2a3a48a004a9499b86e4e49656a793ff27aa219f3760d29",
+      "source_result_sha256": "af863c8948239623d79fd76e06000e2bf2947a8dd87f2de8ae53e28242d52703",
+      "source_statistics": {
+        "resolution": [
+          101,
+          101
+        ],
+        "range": [
+          -62.8203010559082,
+          84.56719207763672
+        ],
+        "samples_f32_sha256": "3a2f0af6c2521dae68d2528fbf4bb488ec160ce98072ae815b78dbb5a19dd4b5"
+      },
+      "variants": [
+        {
+          "file": "input-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "17f58bfdff52d9d2fb28381c1633e73bcc5f31884b47b41fa11bdc85fd83a644"
+        },
+        {
+          "file": "input-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "aeef7e37831f1416ec5ab8ffb0ebe14c36385bf1b7e30b7b04a1a4379f5a5a39"
+        },
+        {
+          "file": "input.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "8ddb30545c065ff7992edc7b342c4edbf8d2ede31ee0ef3c2fb48f223473fa3a"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 2,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-f763b1c25454fc3d9ea5",
+            "operation_version": 2,
+            "parameters": {
+              "orient": {
+                "type": "Text",
+                "value": "zx"
+              },
+              "sampling": {
+                "type": "Text",
+                "value": "corner"
+              },
+              "initialheight": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "initialmask": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "divisionmode": {
+                "type": "Text",
+                "value": "size"
+              },
+              "gridspacing": {
+                "type": "ScalarF64",
+                "value": 10
+              },
+              "gridsamples": {
+                "type": "ScalarI64",
+                "value": 512
+              },
+              "scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "size": {
+                "type": "Vector2",
+                "value": [
+                  1000,
+                  1000
+                ]
+              },
+              "t": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-0ad4b6ad537e0eb54492",
+            "operation_version": 1,
+            "parameters": {
+              "layer": {
+                "type": "Text",
+                "value": "height"
+              },
+              "masklayer": {
+                "type": "Text",
+                "value": "mask"
+              },
+              "combine": {
+                "type": "Text",
+                "value": "add"
+              },
+              "blend": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "centernoise": {
+                "type": "Bool",
+                "value": true
+              },
+              "amp": {
+                "type": "ScalarF64",
+                "value": 500
+              },
+              "elementsize": {
+                "type": "ScalarF64",
+                "value": 500
+              },
+              "elementscale": {
+                "type": "Vector3",
+                "value": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "offset": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "basis": {
+                "type": "Text",
+                "value": "sparse"
+              },
+              "fractal": {
+                "type": "Text",
+                "value": "hmfT"
+              },
+              "period": {
+                "type": "Vector3",
+                "value": [
+                  2,
+                  2,
+                  2
+                ]
+              },
+              "oct": {
+                "type": "ScalarF64",
+                "value": 8
+              },
+              "lac": {
+                "type": "ScalarF64",
+                "value": 1.841
+              },
+              "rough": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "flowrot": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "fold": {
+                "type": "Bool",
+                "value": false
+              },
+              "complement": {
+                "type": "Bool",
+                "value": false
+              },
+              "dogain": {
+                "type": "Bool",
+                "value": false
+              },
+              "gain": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "dobias": {
+                "type": "Bool",
+                "value": false
+              },
+              "bias": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "clipmin": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "clipmax": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "dolwarp": {
+                "type": "Bool",
+                "value": false
+              },
+              "accuml": {
+                "type": "Bool",
+                "value": true
+              },
+              "disp": {
+                "type": "ScalarF64",
+                "value": 0.1405
+              },
+              "dispfreq": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "dogwarp": {
+                "type": "Bool",
+                "value": false
+              },
+              "accumg": {
+                "type": "Bool",
+                "value": false
+              },
+              "gflow": {
+                "type": "ScalarF64",
+                "value": 0
+              }
+            }
+          },
+          {
+            "id": 3,
+            "topic": "node.catalog-fd13fc00b36624231376",
+            "operation_version": 3,
+            "parameters": {
+              "smooth_radius": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "combine": {
+                "type": "Text",
+                "value": "replace"
+              },
+              "blend": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "invertmask": {
+                "type": "Bool",
+                "value": false
+              },
+              "maskbyslope": {
+                "type": "Bool",
+                "value": true
+              },
+              "min_slopeangle": {
+                "type": "ScalarF64",
+                "value": 20
+              },
+              "max_slopeangle": {
+                "type": "ScalarF64",
+                "value": 70
+              },
+              "maskbyheight": {
+                "type": "Bool",
+                "value": false
+              },
+              "minheight": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "maxheight": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "maskbycurvature": {
+                "type": "Bool",
+                "value": false
+              },
+              "max_curvature": {
+                "type": "ScalarF64",
+                "value": 10
+              },
+              "maskbydir": {
+                "type": "Bool",
+                "value": false
+              },
+              "goal_angle": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "angle_spread": {
+                "type": "ScalarF64",
+                "value": 30
+              },
+              "maskbyocclusion": {
+                "type": "Bool",
+                "value": false
+              },
+              "minexposure": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "maxexposure": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "viewdistance": {
+                "type": "ScalarF64",
+                "value": 200
+              },
+              "stepscale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "numsearches": {
+                "type": "ScalarI64",
+                "value": 16
+              },
+              "heightlayer": {
+                "type": "Text",
+                "value": "height"
+              },
+              "masklayer": {
+                "type": "Text",
+                "value": "mask"
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          },
+          {
+            "id": 2,
+            "from_node": 2,
+            "from_port": 0,
+            "to_node": 3,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "e1a84ea9ecf18938d7e9dd425cf9cd9ec733d469165890f56f168924e40d4fde",
+      "same_result_as_input": false
+    },
+    {
+      "id": "result",
+      "en": "Result",
+      "zh": "结果",
+      "parameter": "",
+      "master_sha256": "1768ed6b36eb0a42b9671b94454477722d725b4d98c7d9eef4292841d2e489e3",
+      "source_result_sha256": "01e3407550c0f7295923351a6554d0fd647c14acaaf39487536bd19404e65a68",
+      "source_statistics": {
+        "resolution": [
+          101,
+          101
+        ],
+        "range": [
+          0,
+          1
+        ],
+        "samples_f32_sha256": "f5162d8835884017f579dbe3da5a53cc994e7c39674429d221be230143946e86"
+      },
+      "variants": [
+        {
+          "file": "result-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "0e3746c285aed4f9201d5e99924c0d835c0e1f3c7963d2238732ea3ec5f185e7"
+        },
+        {
+          "file": "result-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "23fab6733910a03bfb4f152c475f4ffe1efe0dbf3268cd3c0ad784d3d5dc9ef5"
+        },
+        {
+          "file": "result.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "d40c2e550528a6b2a5f7986af8e2a128d08a4490aaa50f900f289a3ac825bc12"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 3,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-f763b1c25454fc3d9ea5",
+            "operation_version": 2,
+            "parameters": {
+              "orient": {
+                "type": "Text",
+                "value": "zx"
+              },
+              "sampling": {
+                "type": "Text",
+                "value": "corner"
+              },
+              "initialheight": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "initialmask": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "divisionmode": {
+                "type": "Text",
+                "value": "size"
+              },
+              "gridspacing": {
+                "type": "ScalarF64",
+                "value": 10
+              },
+              "gridsamples": {
+                "type": "ScalarI64",
+                "value": 512
+              },
+              "scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "size": {
+                "type": "Vector2",
+                "value": [
+                  1000,
+                  1000
+                ]
+              },
+              "t": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-0ad4b6ad537e0eb54492",
+            "operation_version": 1,
+            "parameters": {
+              "layer": {
+                "type": "Text",
+                "value": "height"
+              },
+              "masklayer": {
+                "type": "Text",
+                "value": "mask"
+              },
+              "combine": {
+                "type": "Text",
+                "value": "add"
+              },
+              "blend": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "centernoise": {
+                "type": "Bool",
+                "value": true
+              },
+              "amp": {
+                "type": "ScalarF64",
+                "value": 500
+              },
+              "elementsize": {
+                "type": "ScalarF64",
+                "value": 500
+              },
+              "elementscale": {
+                "type": "Vector3",
+                "value": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "offset": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "basis": {
+                "type": "Text",
+                "value": "sparse"
+              },
+              "fractal": {
+                "type": "Text",
+                "value": "hmfT"
+              },
+              "period": {
+                "type": "Vector3",
+                "value": [
+                  2,
+                  2,
+                  2
+                ]
+              },
+              "oct": {
+                "type": "ScalarF64",
+                "value": 8
+              },
+              "lac": {
+                "type": "ScalarF64",
+                "value": 1.841
+              },
+              "rough": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "flowrot": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "fold": {
+                "type": "Bool",
+                "value": false
+              },
+              "complement": {
+                "type": "Bool",
+                "value": false
+              },
+              "dogain": {
+                "type": "Bool",
+                "value": false
+              },
+              "gain": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "dobias": {
+                "type": "Bool",
+                "value": false
+              },
+              "bias": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "clipmin": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "clipmax": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "dolwarp": {
+                "type": "Bool",
+                "value": false
+              },
+              "accuml": {
+                "type": "Bool",
+                "value": true
+              },
+              "disp": {
+                "type": "ScalarF64",
+                "value": 0.1405
+              },
+              "dispfreq": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "dogwarp": {
+                "type": "Bool",
+                "value": false
+              },
+              "accumg": {
+                "type": "Bool",
+                "value": false
+              },
+              "gflow": {
+                "type": "ScalarF64",
+                "value": 0
+              }
+            }
+          },
+          {
+            "id": 3,
+            "topic": "node.catalog-fd13fc00b36624231376",
+            "operation_version": 3,
+            "parameters": {
+              "smooth_radius": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "combine": {
+                "type": "Text",
+                "value": "replace"
+              },
+              "blend": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "invertmask": {
+                "type": "Bool",
+                "value": false
+              },
+              "maskbyslope": {
+                "type": "Bool",
+                "value": true
+              },
+              "min_slopeangle": {
+                "type": "ScalarF64",
+                "value": 20
+              },
+              "max_slopeangle": {
+                "type": "ScalarF64",
+                "value": 70
+              },
+              "maskbyheight": {
+                "type": "Bool",
+                "value": false
+              },
+              "minheight": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "maxheight": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "maskbycurvature": {
+                "type": "Bool",
+                "value": false
+              },
+              "max_curvature": {
+                "type": "ScalarF64",
+                "value": 10
+              },
+              "maskbydir": {
+                "type": "Bool",
+                "value": false
+              },
+              "goal_angle": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "angle_spread": {
+                "type": "ScalarF64",
+                "value": 30
+              },
+              "maskbyocclusion": {
+                "type": "Bool",
+                "value": false
+              },
+              "minexposure": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "maxexposure": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "viewdistance": {
+                "type": "ScalarF64",
+                "value": 200
+              },
+              "stepscale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "numsearches": {
+                "type": "ScalarI64",
+                "value": 16
+              },
+              "heightlayer": {
+                "type": "Text",
+                "value": "height"
+              },
+              "masklayer": {
+                "type": "Text",
+                "value": "mask"
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          },
+          {
+            "id": 2,
+            "from_node": 2,
+            "from_port": 0,
+            "to_node": 3,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "fac6107be30a942506236ef4e0294af199dc32732382293e062e4014760899d9",
+      "same_result_as_input": false
+    }
+  ],
+  "display": {
+    "camera": [
+      32,
+      -62
+    ],
+    "common_color_range": [
+      -62.8203010559082,
+      84.56719207763672
+    ],
+    "height_offset": -62.8203010559082,
+    "height_multiplier": 0.0013569672415744524,
+    "extent": [
+      1,
+      1,
+      0.28
+    ],
+    "sample_stride": 1,
+    "vertical_scale_metadata_applied": false
+  }
+}

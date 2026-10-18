@@ -1,0 +1,270 @@
+{
+  "id": "node.catalog-f9959afb6cdb1605d412",
+  "operation_version": 3,
+  "contract_sha256": "0f960a2a624d48d4e9dbd2677e21e109d09f205090c41b2835d74706384c4c1a",
+  "catalog_snapshot_sha256": "1c476d1acd0b641c8a0d78a134bbf93216f8c822165567e8d42cbd7581e029ef",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "Points",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "point_group",
+        "label": "Point Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "unchanged",
+          "id",
+          "x",
+          "y",
+          "z",
+          "attribute"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "unchanged"
+        },
+        "disableWhen": null,
+        "group": "Points",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "point_order",
+        "label": "Point Order",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "chs(\"point_order\") != \"attribute\"",
+        "group": "Points",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "point_attribute",
+        "label": "Point Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 0
+        },
+        "disableWhen": "chs(\"point_order\") != \"attribute\"",
+        "group": "Points",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "point_component",
+        "label": "Point Attribute Component",
+        "max": 3,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Points",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "point_reverse",
+        "label": "Reverse Point Order",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "Primitives",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "primitive_group",
+        "label": "Primitive Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "unchanged",
+          "id",
+          "x",
+          "y",
+          "z",
+          "attribute"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "unchanged"
+        },
+        "disableWhen": null,
+        "group": "Primitives",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "primitive_order",
+        "label": "Primitive Order",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "chs(\"primitive_order\") != \"attribute\"",
+        "group": "Primitives",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "primitive_attribute",
+        "label": "Primitive Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 0
+        },
+        "disableWhen": "chs(\"primitive_order\") != \"attribute\"",
+        "group": "Primitives",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "primitive_component",
+        "label": "Primitive Attribute Component",
+        "max": 3,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Primitives",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "primitive_reverse",
+        "label": "Reverse Primitive Order",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Vertices",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "reorder_vertices",
+        "label": "Match Vertex Storage to Primitive Order",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

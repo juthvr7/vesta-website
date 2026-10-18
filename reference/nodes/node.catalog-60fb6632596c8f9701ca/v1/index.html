@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101713"><meta name="description" content="Fill the existing input grid with a constant height."><title>Constant · Node reference · User manual — Vesta</title>
+<meta name="validation-bundle" content="e814dc4ca7de3848e433c44c64f12d334f5110695285f9e6242f4630d1eef2f0"><link rel="canonical" href="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-60fb6632596c8f9701ca/v1/"><link rel="alternate" hreflang="en" href="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-60fb6632596c8f9701ca/v1/"><link rel="alternate" hreflang="zh-CN" href="https://juthvr7.github.io/vesta-website/zh/reference/nodes/node.catalog-60fb6632596c8f9701ca/v1/"><link rel="alternate" hreflang="x-default" href="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-60fb6632596c8f9701ca/v1/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Vesta"><meta property="og:locale" content="en_US"><meta property="og:title" content="Constant · Node reference · User manual — Vesta"><meta property="og:description" content="Fill the existing input grid with a constant height."><meta property="og:url" content="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-60fb6632596c8f9701ca/v1/"><meta property="og:image" content="https://juthvr7.github.io/vesta-website/assets/validation/help/constant/second.webp"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../../../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../../../vesta-site.css?v=20261019-implemented-help-v1"><link rel="stylesheet" href="../../../../validation.css?v=20261019-implemented-help-v1"><script src="../../../../validation.js?v=20261019-implemented-help-v1" defer></script><script src="../../../../manual-search-index.js?v=20261019-implemented-help-v1" defer></script><script src="../../../../manual-search.js?v=20261019-implemented-help-v1" data-manual-root="../../../../" defer></script></head>
+<body class="validation-page"><a class="skip" href="#main">Skip to content</a>
+<header class="header"><a class="logo" href="../../../../" aria-label="Vesta">vesta<span>.</span></a><nav id="navigation" aria-label="Navigation"><a href="../../../../">Home</a><a href="../../../../validation/" >User manual</a></nav><div class="languages"><a href="../../../../reference/nodes/node.catalog-60fb6632596c8f9701ca/v1/" data-language-link lang="en" aria-current="page">EN</a><span>/</span><a href="../../../../zh/reference/nodes/node.catalog-60fb6632596c8f9701ca/v1/" data-language-link lang="zh-CN" >中文</a></div><button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false" aria-label="Menu" data-open-label="Menu" data-close-label="Close">Menu ☰</button></header>
+<div class="framework-layout"><aside class="framework-sidebar"><details class="framework-directory" open><summary>Browse the framework</summary><label class="manual-search-box"><span>Search the manual</span><input type="search" data-manual-search placeholder="Search the manual" aria-label="Search the manual" autocomplete="off"></label><nav aria-label="Browse the framework"><a class="framework-start" href="../../../../validation/" >Start here</a><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/agent-creation/" ><span>01</span>Agent-led creation<small class="chapter-state">In development</small></a></div><div class="framework-group active-chapter"><a class="chapter-link" href="../../../../validation/guide/terrain/" ><span>02</span>Terrain<small class="chapter-state">Verified slices</small></a><div class="framework-branches"><a href="../../../../validation/guide/terrain/#generate">Generate a starting landform</a><a href="../../../../validation/guide/terrain/#shape">Reshape the terrain</a><div class="framework-leaves"><a href="../../../../validation/terrain/edge/" >Terrain boundaries</a><a href="../../../../validation/terrain/terraces/" >Layered slopes</a><a href="../../../../validation/terrain/fold/" >Height waveforms</a><a href="../../../../validation/terrain/soft-clip/" >Soft height control</a></div><a href="../../../../validation/guide/terrain/#simulate">Erosion and material change</a><a href="../../../../validation/guide/terrain/#layers">Masks and local control</a></div></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/geometry-tools/" ><span>03</span>Geometry and node tools<small class="chapter-state">Verified slices</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/world-systems/" ><span>04</span>Connected world systems<small class="chapter-state">Planned direction</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/graph-assets/" ><span>05</span>Graphs and reusable assets<small class="chapter-state">Verified slices</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/engine-delivery/" ><span>06</span>Engine delivery<small class="chapter-state">Verified slices</small></a><div class="framework-leaves"><a href="../../../../validation/workflows/vda-unreal/" >VDA → Unreal study</a></div></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/execution/" ><span>07</span>Data and execution<small class="chapter-state">Shared foundation</small></a></div></nav><nav class="reference-directory" aria-label="Node reference"><p>Node reference</p><a href="../../../../reference/library/" >Node library <small>644</small></a><a href="../../../../reference/library/#implemented">Implemented node references <small>111</small></a><a href="../../../../reference/nodes/node.edge/v1/" >Edge <small>v1</small></a><a href="../../../../reference/nodes/node.fold/v2/" >Fold <small>v2</small></a><a href="../../../../reference/nodes/node.soft-clip/v2/" >SoftClip <small>v2</small></a><a href="../../../../reference/nodes/node.terraces/v2/" >Terraces <small>v2</small></a></nav><a class="manual-download" data-offline-download href="../../../../downloads/vesta-manual.zip">Download offline manual ↓<small>HTML · search · local media</small></a></details></aside><main class="framework-main" id="main"><section class="manual-search-results wrap" hidden><h1>Search results</h1><button type="button" data-clear-search>Clear search</button><p role="status" data-search-status data-empty="No matching chapters or functions."></p><ol></ol></section><div class="manual-document-body"><article class="node-reference wrap"><p class="chapter-breadcrumb"><a href="../../../../reference/library/terrain-combine/#entry-node.catalog-60fb6632596c8f9701ca-v1">Compositing</a> / Node reference</p><p class="kicker">Parameter guide · v1</p><h1>Constant</h1><p class="framework-lead">Fill the existing input grid with a constant height.</p><dl class="chapter-io"><div><dt>Documentation edition</dt><dd>2026-10-19</dd></div><div><dt>Operation version</dt><dd>1</dd></div></dl><p class="reference-note">This page documents this exact operation version. Documentation edition and backend implementation versions are separate. All declared parameters are listed. Behavioral explanations and effect media are tracked separately.</p><nav class="chapter-toc"><a href="#ports">Inputs and outputs</a><a href="#parameters">Parameters (3)</a><a href="#examples">Examples and verification</a></nav><section class="capability-section" id="ports"><h2>Inputs and outputs</h2><div class="reference-ports"><section><h3>Inputs</h3><ol><li><strong>heightfield_0</strong> <code>Geometry</code> required</li></ol></section><section><h3>Outputs</h3><ol><li><strong>heightfield_0</strong> <code>Geometry</code> </li></ol></section></div></section><section class="capability-section" id="parameters"><h2>Parameters</h2><p>Contract fields come from a dated Catalog snapshot. Soft slider endpoints do not define hard validation limits. Numeric defaults use a readable display precision; exact typed values remain in the downloadable contract.</p><nav class="parameter-toc"><a href="#parameter-4f7574707574">Output</a><a href="#parameter-486569676874">Height</a><a href="#parameter-436f6c6f72">Color</a></nav><section class="parameter-reference" id="parameter-4f7574707574"><h3><a href="#parameter-4f7574707574">Output <span aria-hidden="true">#</span></a></h3><code>Output</code><p class="">Height is implemented. Color remains declared but is rejected as unimplemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Text</dd></div><div><dt>Default</dt><dd><code>Height</code></dd></div><div><dt>Accepted values</dt><dd>Height / Color</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-486569676874"><h3><a href="#parameter-486569676874">Height <span aria-hidden="true">#</span></a></h3><code>Height</code><p class="">Constant value written to all height samples in Height mode.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.5</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-436f6c6f72"><h3><a href="#parameter-436f6c6f72">Color <span aria-hidden="true">#</span></a></h3><code>Color</code><p class="">RGB color for the unimplemented Color output mode; it does not affect Height output.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Vector3</dd></div><div><dt>Default</dt><dd><code>[0,0,0]</code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section></section><section class="capability-section" id="examples"><h2>Examples and verification</h2><p>Actual output rendering · CPU · 2026-10-19</p><div class="reference-media-grid"><figure><button class="image-button" type="button" aria-label="Input" data-image="../../../../assets/validation/help/constant/input.webp" data-caption="Input"><img src="../../../../assets/validation/help/constant/input.webp" srcset="../../../../assets/validation/help/constant/input-768.webp 768w, ../../../../assets/validation/help/constant/input-1280.webp 1280w, ../../../../assets/validation/help/constant/input.webp 1600w" sizes="(max-width:760px) 100vw,48vw" alt="Input" width="1600" height="1000" loading="lazy" decoding="async"></button><figcaption>Input<details><summary>Sample parameters and output</summary><pre>{
+  &quot;parameters&quot;: {
+    &quot;orient&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;zx&quot;
+    },
+    &quot;sampling&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;center&quot;
+    },
+    &quot;initialheight&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;initialmask&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;divisionmode&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;size&quot;
+    },
+    &quot;gridspacing&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;gridsamples&quot;: {
+      &quot;type&quot;: &quot;ScalarI64&quot;,
+      &quot;value&quot;: 512
+    },
+    &quot;scale&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;size&quot;: {
+      &quot;type&quot;: &quot;Vector2&quot;,
+      &quot;value&quot;: [
+        64,
+        64
+      ]
+    },
+    &quot;t&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  &quot;output&quot;: {
+    &quot;resolution&quot;: [
+      64,
+      64
+    ],
+    &quot;range&quot;: [
+      0,
+      0
+    ],
+    &quot;samples_f32_sha256&quot;: &quot;4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe&quot;
+  }
+}</pre></details></figcaption></figure><figure><button class="image-button" type="button" aria-label="Height = 0.25" data-image="../../../../assets/validation/help/constant/first.webp" data-caption="Height = 0.25"><img src="../../../../assets/validation/help/constant/first.webp" srcset="../../../../assets/validation/help/constant/first-768.webp 768w, ../../../../assets/validation/help/constant/first-1280.webp 1280w, ../../../../assets/validation/help/constant/first.webp 1600w" sizes="(max-width:760px) 100vw,48vw" alt="Height = 0.25" width="1600" height="1000" loading="lazy" decoding="async"></button><figcaption>Height = 0.25<details><summary>Sample parameters and output</summary><pre>{
+  &quot;parameters&quot;: {
+    &quot;Output&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;Height&quot;
+    },
+    &quot;Height&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.25
+    },
+    &quot;Color&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  &quot;output&quot;: {
+    &quot;resolution&quot;: [
+      64,
+      64
+    ],
+    &quot;range&quot;: [
+      0.25,
+      0.25
+    ],
+    &quot;samples_f32_sha256&quot;: &quot;680aca77ba6b819a4489730f3e42f69ba9f6d7a5921e748a8a46eb1974d0867c&quot;
+  }
+}</pre></details></figcaption></figure><figure><button class="image-button" type="button" aria-label="Height = 0.75" data-image="../../../../assets/validation/help/constant/second.webp" data-caption="Height = 0.75"><img src="../../../../assets/validation/help/constant/second.webp" srcset="../../../../assets/validation/help/constant/second-768.webp 768w, ../../../../assets/validation/help/constant/second-1280.webp 1280w, ../../../../assets/validation/help/constant/second.webp 1600w" sizes="(max-width:760px) 100vw,48vw" alt="Height = 0.75" width="1600" height="1000" loading="lazy" decoding="async"></button><figcaption>Height = 0.75<details><summary>Sample parameters and output</summary><pre>{
+  &quot;parameters&quot;: {
+    &quot;Output&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;Height&quot;
+    },
+    &quot;Height&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.75
+    },
+    &quot;Color&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  &quot;output&quot;: {
+    &quot;resolution&quot;: [
+      64,
+      64
+    ],
+    &quot;range&quot;: [
+      0.75,
+      0.75
+    ],
+    &quot;samples_f32_sha256&quot;: &quot;0358736256df06c69655836839c1c761227306a739049c59ef95a9a91bc78d38&quot;
+  }
+}</pre></details></figcaption></figure></div><p>These samples illustrate the stated recipe and CPU output. They are not a new acceptance, GPU, performance or native-interaction test.</p><p><a href="../../../../reference/data/node.catalog-60fb6632596c8f9701ca-v1-media.json">Sample and display-treatment record ↗</a></p><p><a href="../../../../reference/data/node.catalog-60fb6632596c8f9701ca-v1.json">Download reference contract ↗</a></p><details class="record-details"><summary>Stable help topic</summary><code>node.catalog-60fb6632596c8f9701ca · v1</code><code class="snapshot-id">3360d466015ffcd8503be7e76609332ee03877063c3b120f76e870f5d4094d09</code></details></section></article></div></main></div>
+<footer class="validation-footer"><div class="wrap"><a class="logo" href="../../../../">vesta<span>.</span></a><div><p>AGENTIC WORLD CREATOR / IN DEVELOPMENT</p><span>Specific evidence, explicit scope. These records do not certify a complete product.</span></div><a href="../../../../validation/">User manual ↗</a></div></footer>
+<dialog class="lightbox" aria-label="The result study"><button class="lightbox-close" type="button" aria-label="Close">Close ×</button><img alt=""><p></p></dialog></body></html>

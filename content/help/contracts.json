@@ -1,0 +1,491 @@
+{
+  "schema_version": 1,
+  "edition": "2026-10-18",
+  "topics": [
+    {
+      "id": "node.edge",
+      "study": "edge",
+      "operation_version": 1,
+      "contract_sha256": "ce30b169ee8f1203963183b002a5a13e5a4136a5c5f7f70ec4282a6fbce87bfb",
+      "catalog_snapshot_sha256": "179cce6ca4f0458459b108d1c300caa0b449dec1dcb82b981db398883e18dea0",
+      "contract": {
+        "version": 1,
+        "inputs": [
+          {
+            "acceptedDataTypes": [
+              "Geometry"
+            ],
+            "dataType": "Geometry",
+            "id": 0,
+            "name": "heightfield_0",
+            "required": true
+          }
+        ],
+        "outputs": [
+          {
+            "dataType": "Geometry",
+            "id": 0,
+            "name": "heightfield_0",
+            "required": false
+          }
+        ],
+        "parameters": [
+          {
+            "allowedValues": [
+              "Round",
+              "Square",
+              "Precise"
+            ],
+            "default": {
+              "type": "Text",
+              "value": "Square"
+            },
+            "disableWhen": null,
+            "group": "General",
+            "hideWhen": null,
+            "joinWithNext": false,
+            "key": "Style",
+            "label": "Style",
+            "max": null,
+            "maxStrict": false,
+            "min": null,
+            "minStrict": false,
+            "multiparm": null,
+            "required": false,
+            "valueType": "Text"
+          },
+          {
+            "allowedValues": null,
+            "default": {
+              "type": "ScalarF64",
+              "value": 0.5
+            },
+            "disableWhen": null,
+            "group": "General",
+            "hideWhen": null,
+            "joinWithNext": false,
+            "key": "Size",
+            "label": "Size",
+            "max": 1,
+            "maxStrict": false,
+            "min": 0,
+            "minStrict": false,
+            "multiparm": null,
+            "required": false,
+            "valueType": "ScalarF64"
+          },
+          {
+            "allowedValues": null,
+            "default": {
+              "type": "ScalarI64",
+              "value": 2
+            },
+            "disableWhen": null,
+            "group": "General",
+            "hideWhen": null,
+            "joinWithNext": false,
+            "key": "Pixels",
+            "label": "Pixels",
+            "max": 500,
+            "maxStrict": false,
+            "min": 1,
+            "minStrict": false,
+            "multiparm": null,
+            "required": false,
+            "valueType": "ScalarI64"
+          },
+          {
+            "allowedValues": null,
+            "default": {
+              "type": "ScalarF64",
+              "value": 0.25
+            },
+            "disableWhen": null,
+            "group": "General",
+            "hideWhen": null,
+            "joinWithNext": false,
+            "key": "Softness",
+            "label": "Softness",
+            "max": 1,
+            "maxStrict": false,
+            "min": 0,
+            "minStrict": false,
+            "multiparm": null,
+            "required": false,
+            "valueType": "ScalarF64"
+          }
+        ],
+        "deterministic": true,
+        "granularity": "Whole",
+        "halo": null
+      }
+    },
+    {
+      "id": "node.fold",
+      "study": "fold",
+      "operation_version": 2,
+      "contract_sha256": "7e86e9c2224ef4c910fd670e9091dcc02c6fd435ae54274cdb75a2de315c6cf4",
+      "catalog_snapshot_sha256": "df8931dd2508911a8a11f88d5c68d8c7fc751be657164e40209811a8d5ccbfa6",
+      "contract": {
+        "version": 2,
+        "inputs": [
+          {
+            "acceptedDataTypes": [
+              "Geometry"
+            ],
+            "dataType": "Geometry",
+            "id": 0,
+            "name": "heightfield",
+            "required": true
+          },
+          {
+            "acceptedDataTypes": [
+              "Geometry"
+            ],
+            "dataType": "Geometry",
+            "id": 1,
+            "name": "folds",
+            "required": false
+          }
+        ],
+        "outputs": [
+          {
+            "dataType": "Geometry",
+            "id": 0,
+            "name": "heightfield_0",
+            "required": false
+          }
+        ],
+        "parameters": [
+          {
+            "allowedValues": [
+              "Sine",
+              "Triangle",
+              "Sawtooth"
+            ],
+            "default": {
+              "type": "Text",
+              "value": "Sine"
+            },
+            "disableWhen": null,
+            "group": "General",
+            "hideWhen": null,
+            "joinWithNext": false,
+            "key": "Waveform",
+            "label": "Waveform",
+            "max": null,
+            "maxStrict": false,
+            "min": null,
+            "minStrict": false,
+            "multiparm": null,
+            "required": false,
+            "valueType": "Text"
+          },
+          {
+            "allowedValues": null,
+            "default": {
+              "type": "ScalarF64",
+              "value": 2
+            },
+            "disableWhen": null,
+            "group": "General",
+            "hideWhen": null,
+            "joinWithNext": false,
+            "key": "Folds",
+            "label": "Folds",
+            "max": 10,
+            "maxStrict": false,
+            "min": 0,
+            "minStrict": false,
+            "multiparm": null,
+            "required": false,
+            "valueType": "ScalarF64"
+          },
+          {
+            "allowedValues": null,
+            "default": {
+              "type": "Bool",
+              "value": true
+            },
+            "disableWhen": null,
+            "group": "General",
+            "hideWhen": null,
+            "joinWithNext": false,
+            "key": "Symmetric",
+            "label": "Symmetric",
+            "max": null,
+            "maxStrict": false,
+            "min": null,
+            "minStrict": false,
+            "multiparm": null,
+            "required": false,
+            "valueType": "Bool"
+          }
+        ],
+        "deterministic": true,
+        "granularity": "Whole",
+        "halo": null
+      }
+    },
+    {
+      "id": "node.soft-clip",
+      "study": "soft-clip",
+      "operation_version": 2,
+      "contract_sha256": "a2f2d9285f0b9196172d356cedb3968f901219b5de8adce795e14348f4e220f5",
+      "catalog_snapshot_sha256": "c015dad0c49b29e2fee2d1f5d2dbab8c7e1214e7e8b1eab32fe24e06e91f8caa",
+      "contract": {
+        "version": 2,
+        "inputs": [
+          {
+            "acceptedDataTypes": [
+              "Geometry"
+            ],
+            "dataType": "Geometry",
+            "id": 0,
+            "name": "heightfield_0",
+            "required": true
+          },
+          {
+            "acceptedDataTypes": [
+              "Geometry"
+            ],
+            "dataType": "Geometry",
+            "id": 1,
+            "name": "Threshold",
+            "required": false
+          }
+        ],
+        "outputs": [
+          {
+            "dataType": "Geometry",
+            "id": 0,
+            "name": "heightfield_0",
+            "required": false
+          }
+        ],
+        "parameters": [
+          {
+            "allowedValues": [
+              "AboveThreshold",
+              "BelowThreshold"
+            ],
+            "default": {
+              "type": "Text",
+              "value": "AboveThreshold"
+            },
+            "disableWhen": null,
+            "group": "General",
+            "hideWhen": null,
+            "joinWithNext": false,
+            "key": "ClipMode",
+            "label": "Clip Mode",
+            "max": null,
+            "maxStrict": false,
+            "min": null,
+            "minStrict": false,
+            "multiparm": null,
+            "required": false,
+            "valueType": "Text"
+          },
+          {
+            "allowedValues": null,
+            "default": {
+              "type": "ScalarF64",
+              "value": 0.5
+            },
+            "disableWhen": null,
+            "group": "General",
+            "hideWhen": null,
+            "joinWithNext": false,
+            "key": "Threshold",
+            "label": "Threshold",
+            "max": 1,
+            "maxStrict": false,
+            "min": 0,
+            "minStrict": false,
+            "multiparm": null,
+            "required": false,
+            "valueType": "ScalarF64"
+          },
+          {
+            "allowedValues": null,
+            "default": {
+              "type": "ScalarF64",
+              "value": 0.10000000149011612
+            },
+            "disableWhen": null,
+            "group": "General",
+            "hideWhen": null,
+            "joinWithNext": false,
+            "key": "Softness",
+            "label": "Softness",
+            "max": 1,
+            "maxStrict": false,
+            "min": 0,
+            "minStrict": false,
+            "multiparm": null,
+            "required": false,
+            "valueType": "ScalarF64"
+          },
+          {
+            "allowedValues": null,
+            "default": {
+              "type": "ScalarF64",
+              "value": 1
+            },
+            "disableWhen": null,
+            "group": "General",
+            "hideWhen": null,
+            "joinWithNext": false,
+            "key": "Clipping",
+            "label": "Clipping",
+            "max": 1,
+            "maxStrict": false,
+            "min": 0,
+            "minStrict": false,
+            "multiparm": null,
+            "required": false,
+            "valueType": "ScalarF64"
+          }
+        ],
+        "deterministic": true,
+        "granularity": "Whole",
+        "halo": null
+      }
+    },
+    {
+      "id": "node.terraces",
+      "study": "terraces",
+      "operation_version": 2,
+      "contract_sha256": "b2ad5af9e6af097bc902860a7e95a495a3a3b9e843fb7f4758b7f11dfda03b60",
+      "catalog_snapshot_sha256": "ad13cd3f073542ed8435f1fd7938c5d772dcaf854ce117be635afce634defd11",
+      "contract": {
+        "version": 2,
+        "inputs": [
+          {
+            "acceptedDataTypes": [
+              "Geometry"
+            ],
+            "dataType": "Geometry",
+            "id": 0,
+            "name": "heightfield_0",
+            "required": true
+          }
+        ],
+        "outputs": [
+          {
+            "dataType": "Geometry",
+            "id": 0,
+            "name": "heightfield_0",
+            "required": false
+          }
+        ],
+        "parameters": [
+          {
+            "allowedValues": null,
+            "default": {
+              "type": "ScalarI64",
+              "value": 10
+            },
+            "disableWhen": null,
+            "group": "General",
+            "hideWhen": null,
+            "joinWithNext": false,
+            "key": "NumTerraces",
+            "label": "NumTerraces",
+            "max": 256,
+            "maxStrict": false,
+            "min": 3,
+            "minStrict": false,
+            "multiparm": null,
+            "required": false,
+            "valueType": "ScalarI64"
+          },
+          {
+            "allowedValues": null,
+            "default": {
+              "type": "ScalarF64",
+              "value": 0.6000000238418579
+            },
+            "disableWhen": null,
+            "group": "General",
+            "hideWhen": null,
+            "joinWithNext": false,
+            "key": "Uniformity",
+            "label": "Uniformity",
+            "max": 1,
+            "maxStrict": false,
+            "min": 0,
+            "minStrict": false,
+            "multiparm": null,
+            "required": false,
+            "valueType": "ScalarF64"
+          },
+          {
+            "allowedValues": null,
+            "default": {
+              "type": "ScalarF64",
+              "value": 0.20000000298023224
+            },
+            "disableWhen": null,
+            "group": "General",
+            "hideWhen": null,
+            "joinWithNext": false,
+            "key": "Steepness",
+            "label": "Steepness",
+            "max": 1,
+            "maxStrict": false,
+            "min": 0,
+            "minStrict": false,
+            "multiparm": null,
+            "required": false,
+            "valueType": "ScalarF64"
+          },
+          {
+            "allowedValues": null,
+            "default": {
+              "type": "ScalarF64",
+              "value": 1
+            },
+            "disableWhen": null,
+            "group": "General",
+            "hideWhen": null,
+            "joinWithNext": false,
+            "key": "Intensity",
+            "label": "Intensity",
+            "max": 1,
+            "maxStrict": false,
+            "min": 0,
+            "minStrict": false,
+            "multiparm": null,
+            "required": false,
+            "valueType": "ScalarF64"
+          },
+          {
+            "allowedValues": null,
+            "default": {
+              "type": "ScalarI64",
+              "value": 0
+            },
+            "disableWhen": null,
+            "group": "General",
+            "hideWhen": null,
+            "joinWithNext": false,
+            "key": "Seed",
+            "label": "Seed",
+            "max": 65535,
+            "maxStrict": false,
+            "min": 0,
+            "minStrict": false,
+            "multiparm": null,
+            "required": false,
+            "valueType": "ScalarI64"
+          }
+        ],
+        "deterministic": true,
+        "granularity": "Whole",
+        "halo": null
+      }
+    }
+  ]
+}

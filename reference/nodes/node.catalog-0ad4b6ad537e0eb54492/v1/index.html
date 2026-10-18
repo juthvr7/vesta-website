@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101713"><meta name="description" content="Generate layered procedural noise in a named heightfield layer with optional masking and domain warping."><title>heightfield_noise · Node reference · User manual — Vesta</title>
+<meta name="validation-bundle" content="e814dc4ca7de3848e433c44c64f12d334f5110695285f9e6242f4630d1eef2f0"><link rel="canonical" href="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-0ad4b6ad537e0eb54492/v1/"><link rel="alternate" hreflang="en" href="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-0ad4b6ad537e0eb54492/v1/"><link rel="alternate" hreflang="zh-CN" href="https://juthvr7.github.io/vesta-website/zh/reference/nodes/node.catalog-0ad4b6ad537e0eb54492/v1/"><link rel="alternate" hreflang="x-default" href="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-0ad4b6ad537e0eb54492/v1/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Vesta"><meta property="og:locale" content="en_US"><meta property="og:title" content="heightfield_noise · Node reference · User manual — Vesta"><meta property="og:description" content="Generate layered procedural noise in a named heightfield layer with optional masking and domain warping."><meta property="og:url" content="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-0ad4b6ad537e0eb54492/v1/"><meta property="og:image" content="https://juthvr7.github.io/vesta-website/assets/validation/help/heightfield-noise/result.webp"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../../../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../../../vesta-site.css?v=20261019-implemented-help-v1"><link rel="stylesheet" href="../../../../validation.css?v=20261019-implemented-help-v1"><script src="../../../../validation.js?v=20261019-implemented-help-v1" defer></script><script src="../../../../manual-search-index.js?v=20261019-implemented-help-v1" defer></script><script src="../../../../manual-search.js?v=20261019-implemented-help-v1" data-manual-root="../../../../" defer></script></head>
+<body class="validation-page"><a class="skip" href="#main">Skip to content</a>
+<header class="header"><a class="logo" href="../../../../" aria-label="Vesta">vesta<span>.</span></a><nav id="navigation" aria-label="Navigation"><a href="../../../../">Home</a><a href="../../../../validation/" >User manual</a></nav><div class="languages"><a href="../../../../reference/nodes/node.catalog-0ad4b6ad537e0eb54492/v1/" data-language-link lang="en" aria-current="page">EN</a><span>/</span><a href="../../../../zh/reference/nodes/node.catalog-0ad4b6ad537e0eb54492/v1/" data-language-link lang="zh-CN" >中文</a></div><button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false" aria-label="Menu" data-open-label="Menu" data-close-label="Close">Menu ☰</button></header>
+<div class="framework-layout"><aside class="framework-sidebar"><details class="framework-directory" open><summary>Browse the framework</summary><label class="manual-search-box"><span>Search the manual</span><input type="search" data-manual-search placeholder="Search the manual" aria-label="Search the manual" autocomplete="off"></label><nav aria-label="Browse the framework"><a class="framework-start" href="../../../../validation/" >Start here</a><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/agent-creation/" ><span>01</span>Agent-led creation<small class="chapter-state">In development</small></a></div><div class="framework-group active-chapter"><a class="chapter-link" href="../../../../validation/guide/terrain/" ><span>02</span>Terrain<small class="chapter-state">Verified slices</small></a><div class="framework-branches"><a href="../../../../validation/guide/terrain/#generate">Generate a starting landform</a><a href="../../../../validation/guide/terrain/#shape">Reshape the terrain</a><div class="framework-leaves"><a href="../../../../validation/terrain/edge/" >Terrain boundaries</a><a href="../../../../validation/terrain/terraces/" >Layered slopes</a><a href="../../../../validation/terrain/fold/" >Height waveforms</a><a href="../../../../validation/terrain/soft-clip/" >Soft height control</a></div><a href="../../../../validation/guide/terrain/#simulate">Erosion and material change</a><a href="../../../../validation/guide/terrain/#layers">Masks and local control</a></div></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/geometry-tools/" ><span>03</span>Geometry and node tools<small class="chapter-state">Verified slices</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/world-systems/" ><span>04</span>Connected world systems<small class="chapter-state">Planned direction</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/graph-assets/" ><span>05</span>Graphs and reusable assets<small class="chapter-state">Verified slices</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/engine-delivery/" ><span>06</span>Engine delivery<small class="chapter-state">Verified slices</small></a><div class="framework-leaves"><a href="../../../../validation/workflows/vda-unreal/" >VDA → Unreal study</a></div></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/execution/" ><span>07</span>Data and execution<small class="chapter-state">Shared foundation</small></a></div></nav><nav class="reference-directory" aria-label="Node reference"><p>Node reference</p><a href="../../../../reference/library/" >Node library <small>644</small></a><a href="../../../../reference/library/#implemented">Implemented node references <small>111</small></a><a href="../../../../reference/nodes/node.edge/v1/" >Edge <small>v1</small></a><a href="../../../../reference/nodes/node.fold/v2/" >Fold <small>v2</small></a><a href="../../../../reference/nodes/node.soft-clip/v2/" >SoftClip <small>v2</small></a><a href="../../../../reference/nodes/node.terraces/v2/" >Terraces <small>v2</small></a></nav><a class="manual-download" data-offline-download href="../../../../downloads/vesta-manual.zip">Download offline manual ↓<small>HTML · search · local media</small></a></details></aside><main class="framework-main" id="main"><section class="manual-search-results wrap" hidden><h1>Search results</h1><button type="button" data-clear-search>Clear search</button><p role="status" data-search-status data-empty="No matching chapters or functions."></p><ol></ol></section><div class="manual-document-body"><article class="node-reference wrap"><p class="chapter-breadcrumb"><a href="../../../../reference/library/terrain-heightfield/#entry-node.catalog-0ad4b6ad537e0eb54492-v1">Heightfield processing</a> / Node reference</p><p class="kicker">Parameter guide · v1</p><h1>heightfield_noise</h1><p class="framework-lead">Generate layered procedural noise in a named heightfield layer with optional masking and domain warping.</p><dl class="chapter-io"><div><dt>Documentation edition</dt><dd>2026-10-19</dd></div><div><dt>Operation version</dt><dd>1</dd></div></dl><p class="reference-note">This page documents this exact operation version. Documentation edition and backend implementation versions are separate. All declared parameters are listed. Behavioral explanations and effect media are tracked separately.</p><nav class="chapter-toc"><a href="#ports">Inputs and outputs</a><a href="#parameters">Parameters (31)</a><a href="#examples">Examples and verification</a></nav><section class="capability-section" id="ports"><h2>Inputs and outputs</h2><div class="reference-ports"><section><h3>Inputs</h3><ol><li><strong>heightfield</strong> <code>Geometry</code> required</li><li><strong>mask</strong> <code>Geometry</code> optional</li></ol></section><section><h3>Outputs</h3><ol><li><strong>heightfield_0</strong> <code>Geometry</code> </li></ol></section></div></section><section class="capability-section" id="parameters"><h2>Parameters</h2><p>Contract fields come from a dated Catalog snapshot. Soft slider endpoints do not define hard validation limits. Numeric defaults use a readable display precision; exact typed values remain in the downloadable contract.</p><nav class="parameter-toc"><a href="#parameter-6c61796572">Noise Layer</a><a href="#parameter-6d61736b6c61796572">Mask Layer</a><a href="#parameter-636f6d62696e65">Combine Method</a><a href="#parameter-626c656e64">Blend</a><a href="#parameter-63656e7465726e6f697365">Center Noise</a><a href="#parameter-616d70">Amplitude</a><a href="#parameter-656c656d656e7473697a65">Element Size</a><a href="#parameter-656c656d656e747363616c65">Scale</a><a href="#parameter-6f6666736574">Offset</a><a href="#parameter-6261736973">Noise Type</a><a href="#parameter-6672616374616c">Fractal</a><a href="#parameter-706572696f64">Period</a><a href="#parameter-6f6374">Max Octaves</a><a href="#parameter-6c6163">Lacunarity</a><a href="#parameter-726f756768">Roughness</a><a href="#parameter-666c6f77726f74">Flow Rotation</a><a href="#parameter-666f6c64">Fold</a><a href="#parameter-636f6d706c656d656e74">Complement</a><a href="#parameter-646f6761696e">Enable Gain</a><a href="#parameter-6761696e">Gain</a><a href="#parameter-646f62696173">Enable Bias</a><a href="#parameter-62696173">Bias</a><a href="#parameter-636c69706d696e">Clipping Minimum</a><a href="#parameter-636c69706d6178">Clipping Maximum</a><a href="#parameter-646f6c77617270">Enable Lattice Warp</a><a href="#parameter-616363756d6c">Accumulate Lattice Warp</a><a href="#parameter-64697370">Lattice Warp</a><a href="#parameter-6469737066726571">Freq</a><a href="#parameter-646f6777617270">Enable Gradient Warp</a><a href="#parameter-616363756d67">Accumulate Gradient Warp</a><a href="#parameter-67666c6f77">Gradient Warp</a></nav><section class="parameter-reference" id="parameter-6c61796572"><h3><a href="#parameter-6c61796572">Noise Layer <span aria-hidden="true">#</span></a></h3><code>layer</code><p class="">Destination layer receiving the combined noise.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Text</dd></div><div><dt>Default</dt><dd><code>height</code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-6d61736b6c61796572"><h3><a href="#parameter-6d61736b6c61796572">Mask Layer <span aria-hidden="true">#</span></a></h3><code>masklayer</code><p class="">Mask layer controlling where the noise is combined.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Text</dd></div><div><dt>Default</dt><dd><code>mask</code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p><p>Disabled / hidden when</p><pre>{
+  &quot;disableWhen&quot;: &quot;ninputs(\&quot;mask\&quot;) == 0&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-636f6d62696e65"><h3><a href="#parameter-636f6d62696e65">Combine Method <span aria-hidden="true">#</span></a></h3><code>combine</code><p class="">How noise and the existing layer are combined; blend uses the Blend amount.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Text</dd></div><div><dt>Default</dt><dd><code>add</code></dd></div><div><dt>Accepted values</dt><dd>replace / add / subtract / diff / multiply / max / min / blend</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-626c656e64"><h3><a href="#parameter-626c656e64">Blend <span aria-hidden="true">#</span></a></h3><code>blend</code><p class="">Mixing amount in blend mode.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.5</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p><p>Disabled / hidden when</p><pre>{
+  &quot;disableWhen&quot;: null,
+  &quot;hideWhen&quot;: &quot;ch(\&quot;combine\&quot;) != \&quot;blend\&quot;&quot;
+}</pre></details></section><section class="parameter-reference" id="parameter-63656e7465726e6f697365"><h3><a href="#parameter-63656e7465726e6f697365">Center Noise <span aria-hidden="true">#</span></a></h3><code>centernoise</code><p class="">Center the noise value distribution before scaling its amplitude.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Bool</dd></div><div><dt>Default</dt><dd><code>true</code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-616d70"><h3><a href="#parameter-616d70">Amplitude <span aria-hidden="true">#</span></a></h3><code>amp</code><p class="">Amplitude multiplier for generated noise.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>500</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 2000 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-656c656d656e7473697a65"><h3><a href="#parameter-656c656d656e7473697a65">Element Size <span aria-hidden="true">#</span></a></h3><code>elementsize</code><p class="">Characteristic spatial size of noise features. Larger values produce broader features.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>500</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1000 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-656c656d656e747363616c65"><h3><a href="#parameter-656c656d656e747363616c65">Scale <span aria-hidden="true">#</span></a></h3><code>elementscale</code><p class="">Per-axis anisotropic scaling of the noise domain.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Vector3</dd></div><div><dt>Default</dt><dd><code>[1,1,1]</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 10 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-6f6666736574"><h3><a href="#parameter-6f6666736574">Offset <span aria-hidden="true">#</span></a></h3><code>offset</code><p class="">Offset the noise sampling domain in three dimensions.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Vector3</dd></div><div><dt>Default</dt><dd><code>[0,0,0]</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 10 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-6261736973"><h3><a href="#parameter-6261736973">Noise Type <span aria-hidden="true">#</span></a></h3><code>basis</code><p class="">Underlying noise basis. Periodic and cellular bases retain their own domain behavior.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Text</dd></div><div><dt>Default</dt><dd><code>sparse</code></dd></div><div><dt>Accepted values</dt><dd>sine / perlin / pperlin / simplex / sparse / flow / pflow / worleyFA / worleyFB / mworleyFA / mworleyFB / cworleyFA / cworleyFB / alligator</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-6672616374616c"><h3><a href="#parameter-6672616374616c">Fractal <span aria-hidden="true">#</span></a></h3><code>fractal</code><p class="">Combine octaves as the selected fractal model, or use a single nonfractal basis.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Text</dd></div><div><dt>Default</dt><dd><code>hmfT</code></dd></div><div><dt>Accepted values</dt><dd>none / fBm / mfT / hmfT</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-706572696f64"><h3><a href="#parameter-706572696f64">Period <span aria-hidden="true">#</span></a></h3><code>period</code><p class="">Repeat interval for periodic noise bases.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Vector3</dd></div><div><dt>Default</dt><dd><code>[2,2,2]</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 10000 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p><p>Disabled / hidden when</p><pre>{
+  &quot;disableWhen&quot;: null,
+  &quot;hideWhen&quot;: &quot;ch(\&quot;basis\&quot;) != \&quot;pperlin\&quot; &amp;&amp; ch(\&quot;basis\&quot;) != \&quot;pflow\&quot;&quot;
+}</pre></details></section><section class="parameter-reference" id="parameter-6f6374"><h3><a href="#parameter-6f6374">Max Octaves <span aria-hidden="true">#</span></a></h3><code>oct</code><p class="">Maximum octave depth of the fractal construction; fractional depths are retained by the contract.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>8</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 16 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p><p>Disabled / hidden when</p><pre>{
+  &quot;disableWhen&quot;: null,
+  &quot;hideWhen&quot;: &quot;ch(\&quot;fractal\&quot;) == \&quot;none\&quot;&quot;
+}</pre></details></section><section class="parameter-reference" id="parameter-6c6163"><h3><a href="#parameter-6c6163">Lacunarity <span aria-hidden="true">#</span></a></h3><code>lac</code><p class="">Frequency multiplier between successive octaves.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>1.841</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 4 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p><p>Disabled / hidden when</p><pre>{
+  &quot;disableWhen&quot;: null,
+  &quot;hideWhen&quot;: &quot;ch(\&quot;fractal\&quot;) == \&quot;none\&quot;&quot;
+}</pre></details></section><section class="parameter-reference" id="parameter-726f756768"><h3><a href="#parameter-726f756768">Roughness <span aria-hidden="true">#</span></a></h3><code>rough</code><p class="">Relative contribution of finer octaves.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.5</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p><p>Disabled / hidden when</p><pre>{
+  &quot;disableWhen&quot;: null,
+  &quot;hideWhen&quot;: &quot;ch(\&quot;fractal\&quot;) == \&quot;none\&quot;&quot;
+}</pre></details></section><section class="parameter-reference" id="parameter-666c6f77726f74"><h3><a href="#parameter-666c6f77726f74">Flow Rotation <span aria-hidden="true">#</span></a></h3><code>flowrot</code><p class="">Flow rotation used by flow-noise bases.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p><p>Disabled / hidden when</p><pre>{
+  &quot;disableWhen&quot;: &quot;ch(\&quot;basis\&quot;) != \&quot;flow\&quot; &amp;&amp; ch(\&quot;basis\&quot;) != \&quot;pflow\&quot;&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-666f6c64"><h3><a href="#parameter-666f6c64">Fold <span aria-hidden="true">#</span></a></h3><code>fold</code><p class="">Fold the generated noise profile before final combination.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Bool</dd></div><div><dt>Default</dt><dd><code>false</code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-636f6d706c656d656e74"><h3><a href="#parameter-636f6d706c656d656e74">Complement <span aria-hidden="true">#</span></a></h3><code>complement</code><p class="">Complement the noise profile.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Bool</dd></div><div><dt>Default</dt><dd><code>false</code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-646f6761696e"><h3><a href="#parameter-646f6761696e">Enable Gain <span aria-hidden="true">#</span></a></h3><code>dogain</code><p class="">Enable the gain profile adjustment.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Bool</dd></div><div><dt>Default</dt><dd><code>false</code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-6761696e"><h3><a href="#parameter-6761696e">Gain <span aria-hidden="true">#</span></a></h3><code>gain</code><p class="">Gain amount used when its enable control is on.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.5</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p><p>Disabled / hidden when</p><pre>{
+  &quot;disableWhen&quot;: &quot;ch(\&quot;dogain\&quot;) == off&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-646f62696173"><h3><a href="#parameter-646f62696173">Enable Bias <span aria-hidden="true">#</span></a></h3><code>dobias</code><p class="">Enable bias adjustment of the noise distribution.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Bool</dd></div><div><dt>Default</dt><dd><code>false</code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-62696173"><h3><a href="#parameter-62696173">Bias <span aria-hidden="true">#</span></a></h3><code>bias</code><p class="">Bias amount used when its enable control is on.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.5</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p><p>Disabled / hidden when</p><pre>{
+  &quot;disableWhen&quot;: &quot;ch(\&quot;dobias\&quot;) == off&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-636c69706d696e"><h3><a href="#parameter-636c69706d696e">Clipping Minimum <span aria-hidden="true">#</span></a></h3><code>clipmin</code><p class="">Lower endpoint of noise range shaping before combination.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-636c69706d6178"><h3><a href="#parameter-636c69706d6178">Clipping Maximum <span aria-hidden="true">#</span></a></h3><code>clipmax</code><p class="">Upper endpoint of noise range shaping before combination.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>1</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-646f6c77617270"><h3><a href="#parameter-646f6c77617270">Enable Lattice Warp <span aria-hidden="true">#</span></a></h3><code>dolwarp</code><p class="">Enable lattice-domain warping.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Bool</dd></div><div><dt>Default</dt><dd><code>false</code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-616363756d6c"><h3><a href="#parameter-616363756d6c">Accumulate Lattice Warp <span aria-hidden="true">#</span></a></h3><code>accuml</code><p class="">Accumulate lattice warp across fractal layers.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Bool</dd></div><div><dt>Default</dt><dd><code>true</code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p><p>Disabled / hidden when</p><pre>{
+  &quot;disableWhen&quot;: &quot;ch(\&quot;dolwarp\&quot;) == off || ch(\&quot;fractal\&quot;) == \&quot;none\&quot;&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-64697370"><h3><a href="#parameter-64697370">Lattice Warp <span aria-hidden="true">#</span></a></h3><code>disp</code><p class="">Lattice warp displacement strength.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.1405</code></dd></div><div><dt>Range endpoints</dt><dd>-0.5 (soft) → 0.5 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p><p>Disabled / hidden when</p><pre>{
+  &quot;disableWhen&quot;: &quot;ch(\&quot;dolwarp\&quot;) == off&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-6469737066726571"><h3><a href="#parameter-6469737066726571">Freq <span aria-hidden="true">#</span></a></h3><code>dispfreq</code><p class="">Frequency of lattice warp displacement.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>1</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p><p>Disabled / hidden when</p><pre>{
+  &quot;disableWhen&quot;: &quot;ch(\&quot;dolwarp\&quot;) == off&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-646f6777617270"><h3><a href="#parameter-646f6777617270">Enable Gradient Warp <span aria-hidden="true">#</span></a></h3><code>dogwarp</code><p class="">Enable gradient-domain warping.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Bool</dd></div><div><dt>Default</dt><dd><code>false</code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-616363756d67"><h3><a href="#parameter-616363756d67">Accumulate Gradient Warp <span aria-hidden="true">#</span></a></h3><code>accumg</code><p class="">Accumulate gradient warp across fractal layers.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Bool</dd></div><div><dt>Default</dt><dd><code>false</code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p><p>Disabled / hidden when</p><pre>{
+  &quot;disableWhen&quot;: &quot;ch(\&quot;dogwarp\&quot;) == off || ch(\&quot;fractal\&quot;) == \&quot;none\&quot;&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-67666c6f77"><h3><a href="#parameter-67666c6f77">Gradient Warp <span aria-hidden="true">#</span></a></h3><code>gflow</code><p class="">Flow control for gradient warping.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0</code></dd></div><div><dt>Range endpoints</dt><dd>-0.5 (soft) → 0.5 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p><p>Disabled / hidden when</p><pre>{
+  &quot;disableWhen&quot;: &quot;ch(\&quot;dogwarp\&quot;) == off&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section></section><section class="capability-section" id="examples"><h2>Examples and verification</h2><p>Actual output rendering · CPU · 2026-10-19</p><div class="reference-media-grid"><figure><button class="image-button" type="button" aria-label="Input" data-image="../../../../assets/validation/help/heightfield-noise/input.webp" data-caption="Input"><img src="../../../../assets/validation/help/heightfield-noise/input.webp" srcset="../../../../assets/validation/help/heightfield-noise/input-768.webp 768w, ../../../../assets/validation/help/heightfield-noise/input-1280.webp 1280w, ../../../../assets/validation/help/heightfield-noise/input.webp 1600w" sizes="(max-width:760px) 100vw,48vw" alt="Input" width="1600" height="1000" loading="lazy" decoding="async"></button><figcaption>Input<details><summary>Sample parameters and output</summary><pre>{
+  &quot;parameters&quot;: {
+    &quot;orient&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;zx&quot;
+    },
+    &quot;sampling&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;corner&quot;
+    },
+    &quot;initialheight&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;initialmask&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;divisionmode&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;size&quot;
+    },
+    &quot;gridspacing&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 10
+    },
+    &quot;gridsamples&quot;: {
+      &quot;type&quot;: &quot;ScalarI64&quot;,
+      &quot;value&quot;: 512
+    },
+    &quot;scale&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;size&quot;: {
+      &quot;type&quot;: &quot;Vector2&quot;,
+      &quot;value&quot;: [
+        1000,
+        1000
+      ]
+    },
+    &quot;t&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  &quot;output&quot;: {
+    &quot;resolution&quot;: [
+      101,
+      101
+    ],
+    &quot;range&quot;: [
+      0,
+      0
+    ],
+    &quot;samples_f32_sha256&quot;: &quot;64e9f8d24d67e01192342a72ce54d6861163a567870d20df5cfa27a2170961db&quot;
+  }
+}</pre></details></figcaption></figure><figure><button class="image-button" type="button" aria-label="Result" data-image="../../../../assets/validation/help/heightfield-noise/result.webp" data-caption="Result"><img src="../../../../assets/validation/help/heightfield-noise/result.webp" srcset="../../../../assets/validation/help/heightfield-noise/result-768.webp 768w, ../../../../assets/validation/help/heightfield-noise/result-1280.webp 1280w, ../../../../assets/validation/help/heightfield-noise/result.webp 1600w" sizes="(max-width:760px) 100vw,48vw" alt="Result" width="1600" height="1000" loading="lazy" decoding="async"></button><figcaption>Result<details><summary>Sample parameters and output</summary><pre>{
+  &quot;parameters&quot;: {
+    &quot;layer&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;height&quot;
+    },
+    &quot;masklayer&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;mask&quot;
+    },
+    &quot;combine&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;add&quot;
+    },
+    &quot;blend&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;centernoise&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: true
+    },
+    &quot;amp&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 500
+    },
+    &quot;elementsize&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 500
+    },
+    &quot;elementscale&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        1,
+        1,
+        1
+      ]
+    },
+    &quot;offset&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        0,
+        0,
+        0
+      ]
+    },
+    &quot;basis&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;sparse&quot;
+    },
+    &quot;fractal&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;hmfT&quot;
+    },
+    &quot;period&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        2,
+        2,
+        2
+      ]
+    },
+    &quot;oct&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 8
+    },
+    &quot;lac&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1.841
+    },
+    &quot;rough&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;flowrot&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;fold&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;complement&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;dogain&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;gain&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;dobias&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;bias&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;clipmin&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;clipmax&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;dolwarp&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;accuml&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: true
+    },
+    &quot;disp&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.1405
+    },
+    &quot;dispfreq&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;dogwarp&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;accumg&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;gflow&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    }
+  },
+  &quot;output&quot;: {
+    &quot;resolution&quot;: [
+      101,
+      101
+    ],
+    &quot;range&quot;: [
+      -62.8203010559082,
+      84.56719207763672
+    ],
+    &quot;samples_f32_sha256&quot;: &quot;3a2f0af6c2521dae68d2528fbf4bb488ec160ce98072ae815b78dbb5a19dd4b5&quot;
+  }
+}</pre></details></figcaption></figure></div><p>These samples illustrate the stated recipe and CPU output. They are not a new acceptance, GPU, performance or native-interaction test.</p><p><a href="../../../../reference/data/node.catalog-0ad4b6ad537e0eb54492-v1-media.json">Sample and display-treatment record ↗</a></p><p><a href="../../../../reference/data/node.catalog-0ad4b6ad537e0eb54492-v1.json">Download reference contract ↗</a></p><details class="record-details"><summary>Stable help topic</summary><code>node.catalog-0ad4b6ad537e0eb54492 · v1</code><code class="snapshot-id">48d42445120ac2e261005b7ae04738f0f5a3f10aab878e4ee3c377415f181d7d</code></details></section><section class="chapter-next"><h2>Related content</h2><div><a href="../../../../reference/nodes/node.catalog-eaae98d9a24f8c4999f6/v3/">Heightfield Erode Hydro · v3 ↗</a><a href="../../../../reference/nodes/node.catalog-f763b1c25454fc3d9ea5/v2/">Heightfield · v2 ↗</a><a href="../../../../reference/nodes/node.catalog-23cc6cdcbebd201b055f/v3/">Heightfield Blur · v3 ↗</a><a href="../../../../reference/nodes/node.catalog-9ea2126dc27f2293581f/v4/">Heightfield Clip · v4 ↗</a><a href="../../../../reference/nodes/node.catalog-47a6f22e654fac34a8fb/v2/">Heightfield Combine · v2 ↗</a><a href="../../../../reference/nodes/node.catalog-00cea0b8a69a09a3a0a1/v2/">Heightfield Copylayer · v2 ↗</a><a href="../../../../reference/nodes/node.catalog-2fd8159ace6451ee577e/v2/">Heightfield Crop · v2 ↗</a><a href="../../../../reference/nodes/node.catalog-67cc63fa0e9c85227171/v3/">Heightfield Cutoutbyobject · v3 ↗</a></div></section></article></div></main></div>
+<footer class="validation-footer"><div class="wrap"><a class="logo" href="../../../../">vesta<span>.</span></a><div><p>AGENTIC WORLD CREATOR / IN DEVELOPMENT</p><span>Specific evidence, explicit scope. These records do not certify a complete product.</span></div><a href="../../../../validation/">User manual ↗</a></div></footer>
+<dialog class="lightbox" aria-label="The result study"><button class="lightbox-close" type="button" aria-label="Close">Close ×</button><img alt=""><p></p></dialog></body></html>

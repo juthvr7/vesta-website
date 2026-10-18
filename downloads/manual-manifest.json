@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "edition": "2026-10-19",
+  "format": "offline-html",
+  "entry": "index.html",
+  "languages": [
+    "en",
+    "zh-CN"
+  ],
+  "search_pages": 314,
+  "search_entries": 1602,
+  "help_targets_sha256": "83fc4dbc3bc1cab9456e4e3cd9f750f9c2b438123c02cf509ea49ef07d7f613c",
+  "requires_server": false,
+  "files": 741,
+  "bytes": 7354827,
+  "sha256": "844ccae83bca45f53f8f787966cd9aa15badf12a99a42fa22fe6018ed73a5e23"
+}

@@ -1,0 +1,464 @@
+{
+  "id": "node.catalog-a695f736133790a90aad",
+  "operation_version": 5,
+  "contract_sha256": "a09d756d8f61be341492410d0069f067962c12e99c47b170c121922f005dd1bb",
+  "catalog_snapshot_sha256": "65a8d6d8760013662103afc3194a9b90109d09f864fba6a02646be52ed7f4ad7",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 5,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "bounds_source",
+        "required": false
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "poly",
+          "polymesh",
+          "mesh",
+          "nurbs",
+          "bezier",
+          "points",
+          "prim"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "poly"
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "primitive_type",
+        "label": "Primitive Type",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "rows",
+          "cols",
+          "rowcol",
+          "triangles",
+          "quads",
+          "alttriangles",
+          "revtriangles"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "quads"
+        },
+        "disableWhen": "ch(\"primitive_type\") == \"poly\"",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "connectivity",
+        "label": "Connectivity",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "consolidate_corner_points",
+        "label": "Consolidate Corner Points",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            1,
+            1,
+            1
+          ]
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "size",
+        "label": "Size",
+        "max": 1,
+        "maxStrict": false,
+        "min": -1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "center",
+        "label": "Center",
+        "max": 1,
+        "maxStrict": false,
+        "min": -1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rotate",
+        "label": "Rotate",
+        "max": 360,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "uniform_scale",
+        "label": "Uniform Scale",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 4
+        },
+        "disableWhen": "ch(\"primitive_type\") != \"polymesh\" && ch(\"primitive_type\") != \"mesh\" && ch(\"primitive_type\") != \"nurbs\" && ch(\"primitive_type\") != \"bezier\"",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "axis_divisions_x",
+        "label": "Axis Divisions",
+        "max": 50,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 4
+        },
+        "disableWhen": "ch(\"primitive_type\") != \"polymesh\" && ch(\"primitive_type\") != \"mesh\" && ch(\"primitive_type\") != \"nurbs\" && ch(\"primitive_type\") != \"bezier\"",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "axis_divisions_y",
+        "label": "Axis Divisions",
+        "max": 50,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 4
+        },
+        "disableWhen": "ch(\"primitive_type\") != \"polymesh\" && ch(\"primitive_type\") != \"mesh\" && ch(\"primitive_type\") != \"nurbs\" && ch(\"primitive_type\") != \"bezier\"",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "axis_divisions_z",
+        "label": "Axis Divisions",
+        "max": 50,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 4
+        },
+        "disableWhen": "ch(\"primitive_type\") != \"polymesh\" && ch(\"primitive_type\") != \"mesh\" && ch(\"primitive_type\") != \"nurbs\" && ch(\"primitive_type\") != \"bezier\"",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "axis_orders_x",
+        "label": "Axis Orders",
+        "max": 11,
+        "maxStrict": true,
+        "min": 2,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 4
+        },
+        "disableWhen": "ch(\"primitive_type\") != \"polymesh\" && ch(\"primitive_type\") != \"mesh\" && ch(\"primitive_type\") != \"nurbs\" && ch(\"primitive_type\") != \"bezier\"",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "axis_orders_y",
+        "label": "Axis Orders",
+        "max": 11,
+        "maxStrict": true,
+        "min": 2,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 4
+        },
+        "disableWhen": "ch(\"primitive_type\") != \"polymesh\" && ch(\"primitive_type\") != \"mesh\" && ch(\"primitive_type\") != \"nurbs\" && ch(\"primitive_type\") != \"bezier\"",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "axis_orders_z",
+        "label": "Axis Orders",
+        "max": 11,
+        "maxStrict": true,
+        "min": 2,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": "ch(\"primitive_type\") != \"poly\" && ch(\"primitive_type\") != \"points\" && ch(\"primitive_type\") != \"prim\"",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": true,
+        "key": "divisions",
+        "label": "Divisions",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 3
+        },
+        "disableWhen": "ch(\"divisions\") == off || ch(\"primitive_type\") != \"poly\" && ch(\"primitive_type\") != \"points\" && ch(\"primitive_type\") != \"prim\"",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "divisions_x",
+        "label": "Divisions",
+        "max": 50,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 3
+        },
+        "disableWhen": "ch(\"divisions\") == off || ch(\"primitive_type\") != \"poly\" && ch(\"primitive_type\") != \"points\" && ch(\"primitive_type\") != \"prim\"",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "divisions_y",
+        "label": "Divisions",
+        "max": 50,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 3
+        },
+        "disableWhen": "ch(\"divisions\") == off || ch(\"primitive_type\") != \"poly\" && ch(\"primitive_type\") != \"points\" && ch(\"primitive_type\") != \"prim\"",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "divisions_z",
+        "label": "Divisions",
+        "max": 50,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": "ch(\"primitive_type\") != \"poly\" || ch(\"divisions\") == off",
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "enforcement_bars",
+        "label": "Enforcement Bars",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "add_vertex_normals",
+        "label": "Add Vertex Normals",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "oriented_bounding_box",
+        "label": "Oriented Bounding Box (points only)",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

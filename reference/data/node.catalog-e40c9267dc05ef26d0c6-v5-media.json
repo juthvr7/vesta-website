@@ -1,0 +1,224 @@
+{
+  "id": "node.catalog-e40c9267dc05ef26d0c6",
+  "operation_version": 5,
+  "slug": "grid",
+  "generated_at": "2026-10-19",
+  "backend": "CPU",
+  "kind": "actual-result-render",
+  "profile": "mesh-comparison-v2",
+  "producer_sha256": "5f1dcdbc65c2c6a6aec28566f6f7445b1a71316773a14a0116d849bf9bfa9c9c",
+  "pixel_size": [
+    1600,
+    1000
+  ],
+  "text_overlay": false,
+  "variants": [
+    {
+      "id": "first",
+      "en": "subdivisions_x = 2",
+      "zh": "subdivisions_x = 2",
+      "parameter": "subdivisions_x=2",
+      "master_sha256": "f4560012603fbabc96539896ac13682fac2138fe8fabf803d3fbeb4c569baa27",
+      "source_result_sha256": "687e2b27fba52801cc12096785b269e40481ac8438f7417a4091caf3eeba50d4",
+      "source_statistics": {
+        "points": 6,
+        "faces": 2
+      },
+      "variants": [
+        {
+          "file": "first-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "0f9e061b69a96a75da01ef8fb229eb47ab6720866da5956b04fe0ac62180c42a"
+        },
+        {
+          "file": "first-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "b81701df2ab812083aa41dc111bda540fc0903a41cdeb7128820719181c33363"
+        },
+        {
+          "file": "first.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "c39c5712c4a5f9ad7b3bb2140801125fa9391deba01d22895d245b98f060deb9"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 1,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-e40c9267dc05ef26d0c6",
+            "operation_version": 5,
+            "parameters": {
+              "primitive_type": {
+                "type": "Text",
+                "value": "poly"
+              },
+              "connectivity": {
+                "type": "Text",
+                "value": "quads"
+              },
+              "orient": {
+                "type": "Text",
+                "value": "xy"
+              },
+              "size_x": {
+                "type": "ScalarF64",
+                "value": 4
+              },
+              "size_y": {
+                "type": "ScalarF64",
+                "value": 2
+              },
+              "subdivisions_x": {
+                "type": "ScalarI64",
+                "value": 2
+              },
+              "subdivisions_y": {
+                "type": "ScalarI64",
+                "value": 1
+              }
+            }
+          }
+        ],
+        "connections": []
+      },
+      "recipe_sha256": "aadfc8b5b93fd58e371f553fe49bb838714fd8c673b495d5907aac6b90c1650f",
+      "same_result_as_input": false
+    },
+    {
+      "id": "second",
+      "en": "subdivisions_x = 12",
+      "zh": "subdivisions_x = 12",
+      "parameter": "subdivisions_x=12",
+      "master_sha256": "c252dad27c1c9b5250d27ab0327cec3d7c61326eec292142902fd606fa53ce91",
+      "source_result_sha256": "0d42d31fe043ffb16783c6d701e3b1391d56408852df482fcd2d4e4eb813c255",
+      "source_statistics": {
+        "points": 26,
+        "faces": 12
+      },
+      "variants": [
+        {
+          "file": "second-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "28176ad63e73fd4b71299671e0c8b92bed8f3fa973db891005bfa42d8528664e"
+        },
+        {
+          "file": "second-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "f604a3a6e792ce7cbae848227a47bc6815ef7bf38badc2dbdffdfe309b572d17"
+        },
+        {
+          "file": "second.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "7d942ece3d9f773a1f6f9e8956ae28086a39ee0b770454944ba6b011d1dc7ace"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 1,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-e40c9267dc05ef26d0c6",
+            "operation_version": 5,
+            "parameters": {
+              "primitive_type": {
+                "type": "Text",
+                "value": "poly"
+              },
+              "connectivity": {
+                "type": "Text",
+                "value": "quads"
+              },
+              "orient": {
+                "type": "Text",
+                "value": "xy"
+              },
+              "size_x": {
+                "type": "ScalarF64",
+                "value": 4
+              },
+              "size_y": {
+                "type": "ScalarF64",
+                "value": 2
+              },
+              "subdivisions_x": {
+                "type": "ScalarI64",
+                "value": 12
+              },
+              "subdivisions_y": {
+                "type": "ScalarI64",
+                "value": 1
+              }
+            }
+          }
+        ],
+        "connections": []
+      },
+      "recipe_sha256": "bb99c12ee91a1a03b98981833fe9ec5cfb6e9b99723e302030d0e43ef2dd87f2",
+      "same_result_as_input": false
+    }
+  ],
+  "display": {
+    "camera": [
+      32,
+      -62
+    ],
+    "world_to_display_axes": [
+      "x",
+      "z",
+      "y"
+    ],
+    "center": [
+      0,
+      0,
+      0
+    ],
+    "radius": 2.32,
+    "geometry_scale": 1,
+    "face_decimation": false,
+    "wire_overlay_below_faces": 1200,
+    "two_sided_lighting": true,
+    "ambient": 0.45,
+    "zoom": 1.2
+  }
+}

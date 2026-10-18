@@ -1,0 +1,147 @@
+{
+  "id": "node.catalog-aa6719092b83880d1cbd",
+  "operation_version": 2,
+  "contract_sha256": "6df4a426980704946ecccf2c038a9d8e77f374b97dce2ee381e568db4f0af3e7",
+  "catalog_snapshot_sha256": "0854da78ce8e2fde120e3819a2f15fa36d5a1b9360ab384f09844db36a8c826f",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "name"
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "attribname",
+        "label": "Name Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "primitive",
+          "point",
+          "vertex"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "primitive"
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "class",
+        "label": "Class",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "groupprefix",
+        "label": "Group Prefix",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "replace",
+          "union"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "replace"
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "conflict",
+        "label": "Conflict Op",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "ignore",
+          "forcevalid",
+          "encode"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "forcevalid"
+        },
+        "disableWhen": null,
+        "group": "",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "invalidnames",
+        "label": "Invalid Names",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

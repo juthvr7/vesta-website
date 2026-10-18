@@ -1,0 +1,76 @@
+{
+  "id": "node.catalog-e9ccca140785bb24c37e",
+  "operation_version": 3,
+  "contract_sha256": "65a6dbf2d507fbc9d0b3f52a054e16ed0bef49d1da203d3c57c21456e297d7c8",
+  "catalog_snapshot_sha256": "bf11343c9ef7419823899d4824851167829510620fcce3433562e681011995fa",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "pointset_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 5000
+        },
+        "disableWhen": null,
+        "group": "Tuning",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "count",
+        "label": "Count",
+        "max": null,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "Tuning",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "seed",
+        "label": "Seed",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

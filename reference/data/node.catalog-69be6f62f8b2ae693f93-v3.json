@@ -1,0 +1,549 @@
+{
+  "id": "node.catalog-69be6f62f8b2ae693f93",
+  "operation_version": 3,
+  "contract_sha256": "ce9b5926b8471b5133b17a186eaf13a2eebee4b8412e5ba48435df24b1bb6de8",
+  "catalog_snapshot_sha256": "bdf2869c8e5212c6ecd48167cabf17d116cfe6f7ffc7f65e95ceea766904679f",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "group",
+        "label": "Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "guess",
+          "vertices",
+          "edges",
+          "points",
+          "prims"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "guess"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "grouptype",
+        "label": "Group Type",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "uv"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "uvattrib",
+        "label": "UV Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "srt",
+          "str",
+          "rst",
+          "rts",
+          "tsr",
+          "trs"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "srt"
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": true,
+        "key": "xOrd",
+        "label": "Transform Order",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "xyz",
+          "xzy",
+          "yxz",
+          "yzx",
+          "zxy",
+          "zyx"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "xyz"
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rOrd",
+        "label": "Rotate Order",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "t",
+        "label": "Translate",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "r",
+        "label": "Rotate",
+        "max": 360,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            1,
+            1,
+            1
+          ]
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "s",
+        "label": "Scale",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "shear",
+        "label": "Shear",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "p",
+        "label": "Pivot",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "Soft Settings",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rad",
+        "label": "Soft Radius",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "linear",
+          "quadratic",
+          "cubic",
+          "meta"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "cubic"
+        },
+        "disableWhen": null,
+        "group": "Soft Settings",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "type",
+        "label": "Soft Type",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector2",
+          "value": [
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Soft Settings",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "tandeg",
+        "label": "Tangent Angles",
+        "max": 360,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector2"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "wyvill"
+        },
+        "disableWhen": null,
+        "group": "Soft Settings",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "kernel",
+        "label": "Kernel Function",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "uv",
+          "uvw",
+          "xyz"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "uv"
+        },
+        "disableWhen": null,
+        "group": "Soft Settings",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "metric",
+        "label": "Metric",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Soft Settings",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "global",
+        "label": "Ignore Point Connectivity",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Soft Settings",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "uvglobal",
+        "label": "Ignore UV Connectivity",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": [
+          "never",
+          "always",
+          "state"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "state"
+        },
+        "disableWhen": null,
+        "group": "Soft Settings",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "visualizefalloff",
+        "label": "Visualize Falloff",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": [
+      {
+        "default_honored": true,
+        "key": "xOrd",
+        "reason": "the kernel composes scale, then rotate, then translate (srt)",
+        "values": [
+          "str",
+          "rst",
+          "rts",
+          "tsr",
+          "trs"
+        ]
+      },
+      {
+        "default_honored": true,
+        "key": "rOrd",
+        "reason": "the kernel composes the rotation as xyz",
+        "values": [
+          "xzy",
+          "yxz",
+          "yzx",
+          "zxy",
+          "zyx"
+        ]
+      },
+      {
+        "default_honored": true,
+        "key": "group",
+        "reason": "every vertex is transformed; group filtering is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "grouptype",
+        "reason": "every vertex is transformed; group filtering is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "shear",
+        "reason": "shear is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "p",
+        "reason": "the transform pivots around the UV origin",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "rad",
+        "reason": "soft falloff is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "type",
+        "reason": "soft falloff is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "tandeg",
+        "reason": "soft falloff is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "kernel",
+        "reason": "soft falloff is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "metric",
+        "reason": "soft falloff is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "global",
+        "reason": "soft falloff is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "uvglobal",
+        "reason": "soft falloff is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "visualizefalloff",
+        "reason": "soft falloff is not implemented",
+        "values": []
+      }
+    ]
+  }
+}

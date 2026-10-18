@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101713"><meta name="description" content="This reference explains the current contract; its linked evidence qualifies only the stated backend and cases."><title>Heightfield Pattern · Node reference · User manual — Vesta</title>
+<meta name="validation-bundle" content="e814dc4ca7de3848e433c44c64f12d334f5110695285f9e6242f4630d1eef2f0"><link rel="canonical" href="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-ce0e23407c48902c7d0a/v2/"><link rel="alternate" hreflang="en" href="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-ce0e23407c48902c7d0a/v2/"><link rel="alternate" hreflang="zh-CN" href="https://juthvr7.github.io/vesta-website/zh/reference/nodes/node.catalog-ce0e23407c48902c7d0a/v2/"><link rel="alternate" hreflang="x-default" href="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-ce0e23407c48902c7d0a/v2/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Vesta"><meta property="og:locale" content="en_US"><meta property="og:title" content="Heightfield Pattern · Node reference · User manual — Vesta"><meta property="og:description" content="This reference explains the current contract; its linked evidence qualifies only the stated backend and cases."><meta property="og:url" content="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-ce0e23407c48902c7d0a/v2/"><meta property="og:image" content="https://juthvr7.github.io/vesta-website/assets/validation/help/heightfield-pattern/result.webp"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../../../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../../../vesta-site.css?v=20261019-implemented-help-v1"><link rel="stylesheet" href="../../../../validation.css?v=20261019-implemented-help-v1"><script src="../../../../validation.js?v=20261019-implemented-help-v1" defer></script><script src="../../../../manual-search-index.js?v=20261019-implemented-help-v1" defer></script><script src="../../../../manual-search.js?v=20261019-implemented-help-v1" data-manual-root="../../../../" defer></script></head>
+<body class="validation-page"><a class="skip" href="#main">Skip to content</a>
+<header class="header"><a class="logo" href="../../../../" aria-label="Vesta">vesta<span>.</span></a><nav id="navigation" aria-label="Navigation"><a href="../../../../">Home</a><a href="../../../../validation/" >User manual</a></nav><div class="languages"><a href="../../../../reference/nodes/node.catalog-ce0e23407c48902c7d0a/v2/" data-language-link lang="en" aria-current="page">EN</a><span>/</span><a href="../../../../zh/reference/nodes/node.catalog-ce0e23407c48902c7d0a/v2/" data-language-link lang="zh-CN" >中文</a></div><button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false" aria-label="Menu" data-open-label="Menu" data-close-label="Close">Menu ☰</button></header>
+<div class="framework-layout"><aside class="framework-sidebar"><details class="framework-directory" open><summary>Browse the framework</summary><label class="manual-search-box"><span>Search the manual</span><input type="search" data-manual-search placeholder="Search the manual" aria-label="Search the manual" autocomplete="off"></label><nav aria-label="Browse the framework"><a class="framework-start" href="../../../../validation/" >Start here</a><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/agent-creation/" ><span>01</span>Agent-led creation<small class="chapter-state">In development</small></a></div><div class="framework-group active-chapter"><a class="chapter-link" href="../../../../validation/guide/terrain/" ><span>02</span>Terrain<small class="chapter-state">Verified slices</small></a><div class="framework-branches"><a href="../../../../validation/guide/terrain/#generate">Generate a starting landform</a><a href="../../../../validation/guide/terrain/#shape">Reshape the terrain</a><div class="framework-leaves"><a href="../../../../validation/terrain/edge/" >Terrain boundaries</a><a href="../../../../validation/terrain/terraces/" >Layered slopes</a><a href="../../../../validation/terrain/fold/" >Height waveforms</a><a href="../../../../validation/terrain/soft-clip/" >Soft height control</a></div><a href="../../../../validation/guide/terrain/#simulate">Erosion and material change</a><a href="../../../../validation/guide/terrain/#layers">Masks and local control</a></div></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/geometry-tools/" ><span>03</span>Geometry and node tools<small class="chapter-state">Verified slices</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/world-systems/" ><span>04</span>Connected world systems<small class="chapter-state">Planned direction</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/graph-assets/" ><span>05</span>Graphs and reusable assets<small class="chapter-state">Verified slices</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/engine-delivery/" ><span>06</span>Engine delivery<small class="chapter-state">Verified slices</small></a><div class="framework-leaves"><a href="../../../../validation/workflows/vda-unreal/" >VDA → Unreal study</a></div></div><div class="framework-group "><a class="chapter-link" href="../../../../validation/guide/execution/" ><span>07</span>Data and execution<small class="chapter-state">Shared foundation</small></a></div></nav><nav class="reference-directory" aria-label="Node reference"><p>Node reference</p><a href="../../../../reference/library/" >Node library <small>644</small></a><a href="../../../../reference/library/#implemented">Implemented node references <small>111</small></a><a href="../../../../reference/nodes/node.edge/v1/" >Edge <small>v1</small></a><a href="../../../../reference/nodes/node.fold/v2/" >Fold <small>v2</small></a><a href="../../../../reference/nodes/node.soft-clip/v2/" >SoftClip <small>v2</small></a><a href="../../../../reference/nodes/node.terraces/v2/" >Terraces <small>v2</small></a></nav><a class="manual-download" data-offline-download href="../../../../downloads/vesta-manual.zip">Download offline manual ↓<small>HTML · search · local media</small></a></details></aside><main class="framework-main" id="main"><section class="manual-search-results wrap" hidden><h1>Search results</h1><button type="button" data-clear-search>Clear search</button><p role="status" data-search-status data-empty="No matching chapters or functions."></p><ol></ol></section><div class="manual-document-body"><article class="node-reference wrap"><p class="chapter-breadcrumb"><a href="../../../../reference/library/terrain-heightfield/#entry-node.catalog-ce0e23407c48902c7d0a-v2">Heightfield processing</a> / Node reference</p><p class="kicker">Contract reference · v2</p><h1>Heightfield Pattern</h1><p class="framework-lead">All declared parameters are listed. Behavioral explanations and effect media are tracked separately.</p><dl class="chapter-io"><div><dt>Documentation edition</dt><dd>2026-10-19</dd></div><div><dt>Operation version</dt><dd>2</dd></div></dl><p class="reference-note">This page documents this exact operation version. Documentation edition and backend implementation versions are separate. All declared parameters are listed. Behavioral explanations and effect media are tracked separately.</p><nav class="chapter-toc"><a href="#ports">Inputs and outputs</a><a href="#parameters">Parameters (40)</a><a href="#examples">Examples and verification</a></nav><section class="capability-section" id="ports"><h2>Inputs and outputs</h2><div class="reference-ports"><section><h3>Inputs</h3><ol><li><strong>heightfield</strong> <code>Geometry</code> required</li><li><strong>mask</strong> <code>Geometry</code> optional</li></ol></section><section><h3>Outputs</h3><ol><li><strong>heightfield_0</strong> <code>Geometry</code> </li></ol></section></div></section><section class="capability-section" id="parameters"><h2>Parameters</h2><p>Contract fields come from a dated Catalog snapshot. Soft slider endpoints do not define hard validation limits. Numeric defaults use a readable display precision; exact typed values remain in the downloadable contract.</p><nav class="parameter-toc"><a href="#parameter-6c61796572">Pattern Layer</a><a href="#parameter-6d61736b6c61796572">Mask Layer</a><a href="#parameter-636f6d62696e65">Combine with</a><a href="#parameter-626c656e64">Blend</a><a href="#parameter-686569676874">Height</a><a href="#parameter-62617365686569676874">Base Height</a><a href="#parameter-706f7374626c7572726164697573">Post Blur Radius</a><a href="#parameter-7061747465726e">Pattern</a><a href="#parameter-726f74617465">Rotate</a><a href="#parameter-73697a65">Size</a><a href="#parameter-7363616c65">Scale</a><a href="#parameter-74">Center</a><a href="#parameter-7068617365">Phase</a><a href="#parameter-72616d706d6f6465">Mode</a><a href="#parameter-72616d70726570656174">Repeat</a><a href="#parameter-72616d706d6972726f72">Mirror</a><a href="#parameter-726973656f76657272756e">Rise over Run</a><a href="#parameter-73746570686569676874">Step Height</a><a href="#parameter-73746570726566686569676874">Step Reference Height</a><a href="#parameter-7374726970657769647468">Stripe Width</a><a href="#parameter-736861706573697a65">Shape Size</a><a href="#parameter-736861706573697a6572616e646f6d">Size Randomness</a><a href="#parameter-7368617065726f74617465">Shape Rotate</a><a href="#parameter-7368617065616e676c6572616e646f6d">Rotate Randomness</a><a href="#parameter-73686170656a6974746572">Shape Jitter</a><a href="#parameter-73686170657369646573">Sides</a><a href="#parameter-736861706573686172706e657373">Sharpness</a><a href="#parameter-73686170656865786e657373">Starness</a><a href="#parameter-766f726f6e6f696a6974746572">Jitter</a><a href="#parameter-766f726f6e6f6977616c6c">Wall</a><a href="#parameter-646f646973746f7274696f6e">Distort Pattern</a><a href="#parameter-6e6f69736574797065">Noise Type</a><a href="#parameter-646973746f72745f616d70">Amplitude</a><a href="#parameter-646973746f72745f656c656d656e745f73697a65">Element Size</a><a href="#parameter-646973746f72745f656c656d656e745f7363616c65">Element Scale</a><a href="#parameter-646973746f72745f6f6666736574">Offset</a><a href="#parameter-646973746f72745f726f756768">Roughness</a><a href="#parameter-646973746f72745f6d61786f6374617665">Max Octaves</a><a href="#parameter-646973746f72745f74757262">Turbulence</a><a href="#parameter-646973746f72745f7374657073">Substeps</a></nav><section class="parameter-reference" id="parameter-6c61796572"><h3><a href="#parameter-6c61796572">Pattern Layer <span aria-hidden="true">#</span></a></h3><code>layer</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Text</dd></div><div><dt>Default</dt><dd><code>height</code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-6d61736b6c61796572"><h3><a href="#parameter-6d61736b6c61796572">Mask Layer <span aria-hidden="true">#</span></a></h3><code>masklayer</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Text</dd></div><div><dt>Default</dt><dd><code>mask</code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p><p>Disabled / hidden when</p><pre>{
+  &quot;disableWhen&quot;: &quot;ninputs(\&quot;mask\&quot;) == 0&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-636f6d62696e65"><h3><a href="#parameter-636f6d62696e65">Combine with <span aria-hidden="true">#</span></a></h3><code>combine</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Text</dd></div><div><dt>Default</dt><dd><code>replace</code></dd></div><div><dt>Accepted values</dt><dd>replace / add / subtract / diff / multiply / max / min / blend</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-626c656e64"><h3><a href="#parameter-626c656e64">Blend <span aria-hidden="true">#</span></a></h3><code>blend</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.5</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-686569676874"><h3><a href="#parameter-686569676874">Height <span aria-hidden="true">#</span></a></h3><code>height</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>100</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1000 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-62617365686569676874"><h3><a href="#parameter-62617365686569676874">Base Height <span aria-hidden="true">#</span></a></h3><code>baseheight</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1000 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-706f7374626c7572726164697573"><h3><a href="#parameter-706f7374626c7572726164697573">Post Blur Radius <span aria-hidden="true">#</span></a></h3><code>postblurradius</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0</code></dd></div><div><dt>Range endpoints</dt><dd>0 (strict) → 100 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-7061747465726e"><h3><a href="#parameter-7061747465726e">Pattern <span aria-hidden="true">#</span></a></h3><code>pattern</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Text</dd></div><div><dt>Default</dt><dd><code>stars</code></dd></div><div><dt>Accepted values</dt><dd>ramp / expramp / steps / stripes / stars / cells</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-726f74617465"><h3><a href="#parameter-726f74617465">Rotate <span aria-hidden="true">#</span></a></h3><code>rotate</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 360 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-73697a65"><h3><a href="#parameter-73697a65">Size <span aria-hidden="true">#</span></a></h3><code>size</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>100</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1000 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-7363616c65"><h3><a href="#parameter-7363616c65">Scale <span aria-hidden="true">#</span></a></h3><code>scale</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Vector2</dd></div><div><dt>Default</dt><dd><code>[1,1]</code></dd></div><div><dt>Range endpoints</dt><dd>-1 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-74"><h3><a href="#parameter-74">Center <span aria-hidden="true">#</span></a></h3><code>t</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Vector2</dd></div><div><dt>Default</dt><dd><code>[0,0]</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-7068617365"><h3><a href="#parameter-7068617365">Phase <span aria-hidden="true">#</span></a></h3><code>phase</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-72616d706d6f6465"><h3><a href="#parameter-72616d706d6f6465">Mode <span aria-hidden="true">#</span></a></h3><code>rampmode</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Text</dd></div><div><dt>Default</dt><dd><code>linear</code></dd></div><div><dt>Accepted values</dt><dd>linear / concentric / radial</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-72616d70726570656174"><h3><a href="#parameter-72616d70726570656174">Repeat <span aria-hidden="true">#</span></a></h3><code>ramprepeat</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Text</dd></div><div><dt>Default</dt><dd><code></code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-72616d706d6972726f72"><h3><a href="#parameter-72616d706d6972726f72">Mirror <span aria-hidden="true">#</span></a></h3><code>rampmirror</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Text</dd></div><div><dt>Default</dt><dd><code></code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-726973656f76657272756e"><h3><a href="#parameter-726973656f76657272756e">Rise over Run <span aria-hidden="true">#</span></a></h3><code>riseoverrun</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.25</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-73746570686569676874"><h3><a href="#parameter-73746570686569676874">Step Height <span aria-hidden="true">#</span></a></h3><code>stepheight</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>10</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1000 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-73746570726566686569676874"><h3><a href="#parameter-73746570726566686569676874">Step Reference Height <span aria-hidden="true">#</span></a></h3><code>steprefheight</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-7374726970657769647468"><h3><a href="#parameter-7374726970657769647468">Stripe Width <span aria-hidden="true">#</span></a></h3><code>stripewidth</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.337</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-736861706573697a65"><h3><a href="#parameter-736861706573697a65">Shape Size <span aria-hidden="true">#</span></a></h3><code>shapesize</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.5</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-736861706573697a6572616e646f6d"><h3><a href="#parameter-736861706573697a6572616e646f6d">Size Randomness <span aria-hidden="true">#</span></a></h3><code>shapesizerandom</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-7368617065726f74617465"><h3><a href="#parameter-7368617065726f74617465">Shape Rotate <span aria-hidden="true">#</span></a></h3><code>shaperotate</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 360 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-7368617065616e676c6572616e646f6d"><h3><a href="#parameter-7368617065616e676c6572616e646f6d">Rotate Randomness <span aria-hidden="true">#</span></a></h3><code>shapeanglerandom</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-73686170656a6974746572"><h3><a href="#parameter-73686170656a6974746572">Shape Jitter <span aria-hidden="true">#</span></a></h3><code>shapejitter</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-73686170657369646573"><h3><a href="#parameter-73686170657369646573">Sides <span aria-hidden="true">#</span></a></h3><code>shapesides</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarI64</dd></div><div><dt>Default</dt><dd><code>5</code></dd></div><div><dt>Range endpoints</dt><dd>0 (strict) → 10 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-736861706573686172706e657373"><h3><a href="#parameter-736861706573686172706e657373">Sharpness <span aria-hidden="true">#</span></a></h3><code>shapesharpness</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.5</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-73686170656865786e657373"><h3><a href="#parameter-73686170656865786e657373">Starness <span aria-hidden="true">#</span></a></h3><code>shapehexness</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.5</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-766f726f6e6f696a6974746572"><h3><a href="#parameter-766f726f6e6f696a6974746572">Jitter <span aria-hidden="true">#</span></a></h3><code>voronoijitter</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.5</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-766f726f6e6f6977616c6c"><h3><a href="#parameter-766f726f6e6f6977616c6c">Wall <span aria-hidden="true">#</span></a></h3><code>voronoiwall</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.1</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-646f646973746f7274696f6e"><h3><a href="#parameter-646f646973746f7274696f6e">Distort Pattern <span aria-hidden="true">#</span></a></h3><code>dodistortion</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Text</dd></div><div><dt>Default</dt><dd><code></code></dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-6e6f69736574797065"><h3><a href="#parameter-6e6f69736574797065">Noise Type <span aria-hidden="true">#</span></a></h3><code>noisetype</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Text</dd></div><div><dt>Default</dt><dd><code>curl</code></dd></div><div><dt>Accepted values</dt><dd>simplex / curl</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-646973746f72745f616d70"><h3><a href="#parameter-646973746f72745f616d70">Amplitude <span aria-hidden="true">#</span></a></h3><code>distort_amp</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>10</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1000 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-646973746f72745f656c656d656e745f73697a65"><h3><a href="#parameter-646973746f72745f656c656d656e745f73697a65">Element Size <span aria-hidden="true">#</span></a></h3><code>distort_element_size</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>100</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1000 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-646973746f72745f656c656d656e745f7363616c65"><h3><a href="#parameter-646973746f72745f656c656d656e745f7363616c65">Element Scale <span aria-hidden="true">#</span></a></h3><code>distort_element_scale</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Vector3</dd></div><div><dt>Default</dt><dd><code>[1,1,1]</code></dd></div><div><dt>Range endpoints</dt><dd>-1 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-646973746f72745f6f6666736574"><h3><a href="#parameter-646973746f72745f6f6666736574">Offset <span aria-hidden="true">#</span></a></h3><code>distort_offset</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>Vector3</dd></div><div><dt>Default</dt><dd><code>[0,0,0]</code></dd></div><div><dt>Range endpoints</dt><dd>-1 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-646973746f72745f726f756768"><h3><a href="#parameter-646973746f72745f726f756768">Roughness <span aria-hidden="true">#</span></a></h3><code>distort_rough</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarF64</dd></div><div><dt>Default</dt><dd><code>0.5</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 1 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-646973746f72745f6d61786f6374617665"><h3><a href="#parameter-646973746f72745f6d61786f6374617665">Max Octaves <span aria-hidden="true">#</span></a></h3><code>distort_maxoctave</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarI64</dd></div><div><dt>Default</dt><dd><code>8</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 16 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-646973746f72745f74757262"><h3><a href="#parameter-646973746f72745f74757262">Turbulence <span aria-hidden="true">#</span></a></h3><code>distort_turb</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarI64</dd></div><div><dt>Default</dt><dd><code>8</code></dd></div><div><dt>Range endpoints</dt><dd>0 (soft) → 10 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section><section class="parameter-reference" id="parameter-646973746f72745f7374657073"><h3><a href="#parameter-646973746f72745f7374657073">Substeps <span aria-hidden="true">#</span></a></h3><code>distort_steps</code><p class="explanation-pending">Behavioral explanation is pending. The dated type, default, choices and conditions below are preserved; they do not establish that every option is implemented.</p><dl class="parameter-contract"><div><dt>Type</dt><dd>ScalarI64</dd></div><div><dt>Default</dt><dd><code>1</code></dd></div><div><dt>Range endpoints</dt><dd>1 (strict) → 10 (soft)</dd></div></dl><details><summary>Conditions and repeated rows</summary><p>Group: General</p></details></section></section><section class="capability-section" id="examples"><h2>Examples and verification</h2><p>Actual output rendering · CPU · 2026-10-19</p><div class="reference-media-grid"><figure><button class="image-button" type="button" aria-label="Input" data-image="../../../../assets/validation/help/heightfield-pattern/input.webp" data-caption="Input"><img src="../../../../assets/validation/help/heightfield-pattern/input.webp" srcset="../../../../assets/validation/help/heightfield-pattern/input-768.webp 768w, ../../../../assets/validation/help/heightfield-pattern/input-1280.webp 1280w, ../../../../assets/validation/help/heightfield-pattern/input.webp 1600w" sizes="(max-width:760px) 100vw,48vw" alt="Input" width="1600" height="1000" loading="lazy" decoding="async"></button><figcaption>Input<details><summary>Sample parameters and output</summary><pre>{
+  &quot;parameters&quot;: {
+    &quot;layer&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;height&quot;
+    },
+    &quot;masklayer&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;mask&quot;
+    },
+    &quot;combine&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;add&quot;
+    },
+    &quot;blend&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;centernoise&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: true
+    },
+    &quot;amp&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 500
+    },
+    &quot;elementsize&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 500
+    },
+    &quot;elementscale&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        1,
+        1,
+        1
+      ]
+    },
+    &quot;offset&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        0,
+        0,
+        0
+      ]
+    },
+    &quot;basis&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;sparse&quot;
+    },
+    &quot;fractal&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;hmfT&quot;
+    },
+    &quot;period&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        2,
+        2,
+        2
+      ]
+    },
+    &quot;oct&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 8
+    },
+    &quot;lac&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1.841
+    },
+    &quot;rough&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;flowrot&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;fold&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;complement&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;dogain&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;gain&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;dobias&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;bias&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;clipmin&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;clipmax&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;dolwarp&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;accuml&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: true
+    },
+    &quot;disp&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.1405
+    },
+    &quot;dispfreq&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;dogwarp&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;accumg&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;gflow&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    }
+  },
+  &quot;output&quot;: {
+    &quot;resolution&quot;: [
+      101,
+      101
+    ],
+    &quot;range&quot;: [
+      -62.8203010559082,
+      84.56719207763672
+    ],
+    &quot;samples_f32_sha256&quot;: &quot;3a2f0af6c2521dae68d2528fbf4bb488ec160ce98072ae815b78dbb5a19dd4b5&quot;
+  }
+}</pre></details></figcaption></figure><figure><button class="image-button" type="button" aria-label="Result" data-image="../../../../assets/validation/help/heightfield-pattern/result.webp" data-caption="Result"><img src="../../../../assets/validation/help/heightfield-pattern/result.webp" srcset="../../../../assets/validation/help/heightfield-pattern/result-768.webp 768w, ../../../../assets/validation/help/heightfield-pattern/result-1280.webp 1280w, ../../../../assets/validation/help/heightfield-pattern/result.webp 1600w" sizes="(max-width:760px) 100vw,48vw" alt="Result" width="1600" height="1000" loading="lazy" decoding="async"></button><figcaption>Result<details><summary>Sample parameters and output</summary><pre>{
+  &quot;parameters&quot;: {
+    &quot;layer&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;height&quot;
+    },
+    &quot;masklayer&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;mask&quot;
+    },
+    &quot;combine&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;replace&quot;
+    },
+    &quot;blend&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;height&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 100
+    },
+    &quot;baseheight&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;postblurradius&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;pattern&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;stars&quot;
+    },
+    &quot;rotate&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;size&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 100
+    },
+    &quot;scale&quot;: {
+      &quot;type&quot;: &quot;Vector2&quot;,
+      &quot;value&quot;: [
+        1,
+        1
+      ]
+    },
+    &quot;t&quot;: {
+      &quot;type&quot;: &quot;Vector2&quot;,
+      &quot;value&quot;: [
+        0,
+        0
+      ]
+    },
+    &quot;phase&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;rampmode&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;linear&quot;
+    },
+    &quot;ramprepeat&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;&quot;
+    },
+    &quot;rampmirror&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;&quot;
+    },
+    &quot;riseoverrun&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.25
+    },
+    &quot;stepheight&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 10
+    },
+    &quot;steprefheight&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;stripewidth&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.337
+    },
+    &quot;shapesize&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;shapesizerandom&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;shaperotate&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;shapeanglerandom&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;shapejitter&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;shapesides&quot;: {
+      &quot;type&quot;: &quot;ScalarI64&quot;,
+      &quot;value&quot;: 5
+    },
+    &quot;shapesharpness&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;shapehexness&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;voronoijitter&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;voronoiwall&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.1
+    },
+    &quot;dodistortion&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;&quot;
+    },
+    &quot;noisetype&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;curl&quot;
+    },
+    &quot;distort_amp&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 10
+    },
+    &quot;distort_element_size&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 100
+    },
+    &quot;distort_element_scale&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        1,
+        1,
+        1
+      ]
+    },
+    &quot;distort_offset&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        0,
+        0,
+        0
+      ]
+    },
+    &quot;distort_rough&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;distort_maxoctave&quot;: {
+      &quot;type&quot;: &quot;ScalarI64&quot;,
+      &quot;value&quot;: 8
+    },
+    &quot;distort_turb&quot;: {
+      &quot;type&quot;: &quot;ScalarI64&quot;,
+      &quot;value&quot;: 8
+    },
+    &quot;distort_steps&quot;: {
+      &quot;type&quot;: &quot;ScalarI64&quot;,
+      &quot;value&quot;: 1
+    }
+  },
+  &quot;output&quot;: {
+    &quot;resolution&quot;: [
+      101,
+      101
+    ],
+    &quot;range&quot;: [
+      0,
+      100
+    ],
+    &quot;samples_f32_sha256&quot;: &quot;d09933c71339a940723b9b0dfa602eced6dcdeff3118fa0abca2398b3fd4a7bc&quot;
+  }
+}</pre></details></figcaption></figure></div><p>These samples illustrate the stated recipe and CPU output. They are not a new acceptance, GPU, performance or native-interaction test.</p><p><a href="../../../../reference/data/node.catalog-ce0e23407c48902c7d0a-v2-media.json">Sample and display-treatment record ↗</a></p><p><a href="../../../../reference/data/node.catalog-ce0e23407c48902c7d0a-v2.json">Download reference contract ↗</a></p><details class="record-details"><summary>Stable help topic</summary><code>node.catalog-ce0e23407c48902c7d0a · v2</code><code class="snapshot-id">a6d7d7d1f087e4714e8b344d0ba7bfef7be9aede804fb1382cddc2c010938928</code></details></section><section class="chapter-next"><h2>Related content</h2><div><a href="../../../../reference/nodes/node.catalog-eaae98d9a24f8c4999f6/v3/">Heightfield Erode Hydro · v3 ↗</a><a href="../../../../reference/nodes/node.catalog-f763b1c25454fc3d9ea5/v2/">Heightfield · v2 ↗</a><a href="../../../../reference/nodes/node.catalog-23cc6cdcbebd201b055f/v3/">Heightfield Blur · v3 ↗</a><a href="../../../../reference/nodes/node.catalog-9ea2126dc27f2293581f/v4/">Heightfield Clip · v4 ↗</a><a href="../../../../reference/nodes/node.catalog-47a6f22e654fac34a8fb/v2/">Heightfield Combine · v2 ↗</a><a href="../../../../reference/nodes/node.catalog-00cea0b8a69a09a3a0a1/v2/">Heightfield Copylayer · v2 ↗</a><a href="../../../../reference/nodes/node.catalog-2fd8159ace6451ee577e/v2/">Heightfield Crop · v2 ↗</a><a href="../../../../reference/nodes/node.catalog-67cc63fa0e9c85227171/v3/">Heightfield Cutoutbyobject · v3 ↗</a></div></section></article></div></main></div>
+<footer class="validation-footer"><div class="wrap"><a class="logo" href="../../../../">vesta<span>.</span></a><div><p>AGENTIC WORLD CREATOR / IN DEVELOPMENT</p><span>Specific evidence, explicit scope. These records do not certify a complete product.</span></div><a href="../../../../validation/">User manual ↗</a></div></footer>
+<dialog class="lightbox" aria-label="The result study"><button class="lightbox-close" type="button" aria-label="Close">Close ×</button><img alt=""><p></p></dialog></body></html>

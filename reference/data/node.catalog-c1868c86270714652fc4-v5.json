@@ -1,0 +1,241 @@
+{
+  "id": "node.catalog-c1868c86270714652fc4",
+  "operation_version": 5,
+  "contract_sha256": "92be7f65e24af87a910910c3fed98879a0cb83a95a47273c41935f92cea5daf7",
+  "catalog_snapshot_sha256": "a6189072a8869e0be376aff9120ab89daf34e79feefddfe110bf30c715b1661e",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 5,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "height"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "layer",
+        "label": "Height Layer",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "poly",
+          "polysoup",
+          "vdb"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "poly"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "conversion",
+        "label": "Convert to",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "rows",
+          "cols",
+          "rowcol",
+          "triangles",
+          "quads",
+          "alttriangles",
+          "revtriangles"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "quads"
+        },
+        "disableWhen": "ch(\"conversion\") == \"vdb\"",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "surftype",
+        "label": "Connectivity",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "lod",
+        "label": "Density",
+        "max": 5,
+        "maxStrict": false,
+        "min": 0.001,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "bakecd",
+        "label": "Bake Point Colors",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "doextrude",
+        "label": "Extrude Base",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": -1
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "depth",
+        "label": "Depth",
+        "max": 0,
+        "maxStrict": false,
+        "min": -10,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            1,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "basenormal",
+        "label": "Base Normal",
+        "max": 1,
+        "maxStrict": false,
+        "min": -1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "flat",
+        "label": "Flatten Base",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": [
+      {
+        "default_honored": true,
+        "key": "conversion",
+        "reason": "vdb 分支的输出是 Volume 而不是本端口声明的 Mesh；Vesta 按 vdb_from_polygons 的先例把 Heightfield → Volume 建成独立 Operation（见 vesta.foundation.heightfieldtovolume）",
+        "values": [
+          "vdb"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "id": "node.catalog-1969d1b68ba18b06b47a",
+  "operation_version": 3,
+  "contract_sha256": "a47ea5391a7d9afad822c04c8065ed54c766d689a7887b7a55e6bd33c61f2bf1",
+  "catalog_snapshot_sha256": "78f3cc6dc7ec8a2be935cf6d5c093034f401f6435a5fd9cbe6ee8f5bee5c7521",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "Selection",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "group",
+        "label": "Primitive Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "Selection",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "hard_edges",
+        "label": "Hard Edges Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Remeshing",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "iterations",
+        "label": "Iterations",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.2
+        },
+        "disableWhen": null,
+        "group": "Remeshing",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "target_edge",
+        "label": "Target Edge Length",
+        "max": null,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "Remeshing",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "smoothing_level",
+        "label": "Tangential Smoothing",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Remeshing",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "input_pts_only",
+        "label": "Use Input Points Only",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "Output",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "recompute_normals",
+        "label": "Recompute Point Normals",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

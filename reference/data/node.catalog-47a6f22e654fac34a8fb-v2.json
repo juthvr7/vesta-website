@@ -1,0 +1,92 @@
+{
+  "id": "node.catalog-47a6f22e654fac34a8fb",
+  "operation_version": 2,
+  "contract_sha256": "96e0b102508d8de75f04f8bfaa25a1192116256664afa7141ec24f628f3b34ae",
+  "catalog_snapshot_sha256": "87bef1b445cdeb6b86dda4e87de53bac7a70a6a787c2a28316f4790c0a5dc5ff",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      },
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 1,
+        "name": "heightfield_1",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "add",
+          "subtract",
+          "multiply",
+          "max",
+          "min",
+          "average"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "add"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "operation",
+        "label": "Operation",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Tuning",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "weight",
+        "label": "Weight",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

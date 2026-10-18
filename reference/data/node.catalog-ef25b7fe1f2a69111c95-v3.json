@@ -1,0 +1,237 @@
+{
+  "id": "node.catalog-ef25b7fe1f2a69111c95",
+  "operation_version": 3,
+  "contract_sha256": "02f8b0f83d02d4044fb2544bcef6d1e487fe8534d57042c62efa6b41d8f567dd",
+  "catalog_snapshot_sha256": "1e1e33cf40e7b3791ecf54de295994c2b3510b321ed27ddc25aa5c666eb3421b",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "group",
+        "label": "Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "perimeter",
+          "area",
+          "curvature",
+          "volume"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "perimeter"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "type",
+        "label": "Type",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Attribute",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "override",
+        "label": "Override Name",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "area"
+        },
+        "disableWhen": "ch(\"override\") == off",
+        "group": "Attribute",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "attribname",
+        "label": "Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "all",
+          "concave",
+          "conex"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "all"
+        },
+        "disableWhen": "ch(\"type\") != \"curvature\"",
+        "group": "Curvature",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "curvetype",
+        "label": "Curvature Type",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector2",
+          "value": [
+            0,
+            1000
+          ]
+        },
+        "disableWhen": "ch(\"type\") != \"curvature\"",
+        "group": "Curvature",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "curve",
+        "label": "Min/Max",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector2"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": "ch(\"type\") != \"volume\"",
+        "group": "Volume",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "t",
+        "label": "Center",
+        "max": 1,
+        "maxStrict": false,
+        "min": -1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": [
+      {
+        "default_honored": true,
+        "key": "type",
+        "reason": "curvature has no kernel; perimeter, area and volume are implemented",
+        "values": [
+          "curvature"
+        ]
+      },
+      {
+        "default_honored": true,
+        "key": "group",
+        "reason": "the measure is applied to the whole geometry; group filtering is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "override",
+        "reason": "the written attribute name is fixed by the measure type",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "attribname",
+        "reason": "the written attribute name is fixed by the measure type",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "curvetype",
+        "reason": "curvature has no kernel",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "curve",
+        "reason": "curvature has no kernel",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "t",
+        "reason": "the kernel requires a closed surface and does not use the fallback center",
+        "values": []
+      }
+    ]
+  }
+}

@@ -12,11 +12,19 @@ for (const file of [
   "sitemap.xml",
   "og.png",
   "favicon.svg",
+  "validation.css",
+  "validation.js",
+  "manual-search.js",
+  "manual-search-index.js",
+  "help-resolver.js",
+  "help-request.js",
+  "help-targets.js",
+  "help-targets.json",
 ]) {
   await cp(new URL(`../${file}`, import.meta.url), new URL(file, output));
 }
 
-for (const directory of ["assets/worlds", "zh"]) {
+for (const directory of ["assets/worlds", "assets/validation", "validation", "reference", "help", "zh", "downloads"]) {
   await cp(new URL(`../${directory}/`, import.meta.url), new URL(`${directory}/`, output), {
     recursive: true,
   });

@@ -1,5 +1,6 @@
 export const locales = {
   en: {
+    validationNav: "User manual",
     htmlLang: "en", ogLocale: "en_US", title: "Vesta — Worlds, by you.",
     description: "An Agent-centered world creation tool in development. Shape terrain, connect systems, and keep your worlds open to change.",
     skip: "Skip to content", home: "Vesta home", navLabel: "Main navigation",
@@ -60,6 +61,7 @@ export const locales = {
     footer: { state: "AGENTIC WORLD CREATOR / IN DEVELOPMENT", top: "Back to top", copyright: "© 2026 Vesta" }, lightboxClose: "Close image",
   },
   zh: {
+    validationNav: "用户手册",
     htmlLang: "zh-CN", ogLocale: "zh_CN", title: "Vesta — 世界，由你创造。",
     description: "正在构建的 Agent 中心世界创作工具。从地形出发，连接道路、建筑与生态，让每个世界都能持续编辑和演进。",
     skip: "跳至内容", home: "Vesta 首页", navLabel: "主导航", nav: ["世界愿景", "效果短片", "Unreal 实证", "Agent 创作", "开发进展"],

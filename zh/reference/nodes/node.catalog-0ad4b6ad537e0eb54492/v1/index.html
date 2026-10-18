@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101713"><meta name="description" content="在指定高度场图层中生成分层程序化噪声，可使用遮罩和域扭曲。"><title>heightfield_noise · 节点参考 · 用户手册 — Vesta</title>
+<meta name="validation-bundle" content="e814dc4ca7de3848e433c44c64f12d334f5110695285f9e6242f4630d1eef2f0"><link rel="canonical" href="https://juthvr7.github.io/vesta-website/zh/reference/nodes/node.catalog-0ad4b6ad537e0eb54492/v1/"><link rel="alternate" hreflang="en" href="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-0ad4b6ad537e0eb54492/v1/"><link rel="alternate" hreflang="zh-CN" href="https://juthvr7.github.io/vesta-website/zh/reference/nodes/node.catalog-0ad4b6ad537e0eb54492/v1/"><link rel="alternate" hreflang="x-default" href="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-0ad4b6ad537e0eb54492/v1/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Vesta"><meta property="og:locale" content="zh_CN"><meta property="og:title" content="heightfield_noise · 节点参考 · 用户手册 — Vesta"><meta property="og:description" content="在指定高度场图层中生成分层程序化噪声，可使用遮罩和域扭曲。"><meta property="og:url" content="https://juthvr7.github.io/vesta-website/zh/reference/nodes/node.catalog-0ad4b6ad537e0eb54492/v1/"><meta property="og:image" content="https://juthvr7.github.io/vesta-website/assets/validation/help/heightfield-noise/result.webp"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../../../../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../../../../vesta-site.css?v=20261019-implemented-help-v1"><link rel="stylesheet" href="../../../../../validation.css?v=20261019-implemented-help-v1"><script src="../../../../../validation.js?v=20261019-implemented-help-v1" defer></script><script src="../../../../../manual-search-index.js?v=20261019-implemented-help-v1" defer></script><script src="../../../../../manual-search.js?v=20261019-implemented-help-v1" data-manual-root="../../../../../" defer></script></head>
+<body class="validation-page"><a class="skip" href="#main">跳至内容</a>
+<header class="header"><a class="logo" href="../../../../../zh/" aria-label="Vesta">vesta<span>.</span></a><nav id="navigation" aria-label="导航"><a href="../../../../../zh/">首页</a><a href="../../../../../zh/validation/" >用户手册</a></nav><div class="languages"><a href="../../../../../reference/nodes/node.catalog-0ad4b6ad537e0eb54492/v1/" data-language-link lang="en" >EN</a><span>/</span><a href="../../../../../zh/reference/nodes/node.catalog-0ad4b6ad537e0eb54492/v1/" data-language-link lang="zh-CN" aria-current="page">中文</a></div><button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false" aria-label="菜单" data-open-label="菜单" data-close-label="关闭">菜单 ☰</button></header>
+<div class="framework-layout"><aside class="framework-sidebar"><details class="framework-directory" open><summary>浏览能力框架</summary><label class="manual-search-box"><span>搜索手册</span><input type="search" data-manual-search placeholder="搜索手册" aria-label="搜索手册" autocomplete="off"></label><nav aria-label="浏览能力框架"><a class="framework-start" href="../../../../../zh/validation/" >从这里开始</a><div class="framework-group "><a class="chapter-link" href="../../../../../zh/validation/guide/agent-creation/" ><span>01</span>Agent协作创作<small class="chapter-state">建设中</small></a></div><div class="framework-group active-chapter"><a class="chapter-link" href="../../../../../zh/validation/guide/terrain/" ><span>02</span>地形<small class="chapter-state">已有验证切片</small></a><div class="framework-branches"><a href="../../../../../zh/validation/guide/terrain/#generate">生成基础地貌</a><a href="../../../../../zh/validation/guide/terrain/#shape">地形塑形</a><div class="framework-leaves"><a href="../../../../../zh/validation/terrain/edge/" >地形收边</a><a href="../../../../../zh/validation/terrain/terraces/" >岩层分层</a><a href="../../../../../zh/validation/terrain/fold/" >波形重塑</a><a href="../../../../../zh/validation/terrain/soft-clip/" >柔性高度控制</a></div><a href="../../../../../zh/validation/guide/terrain/#simulate">侵蚀与物质变化</a><a href="../../../../../zh/validation/guide/terrain/#layers">遮罩、图层与局部控制</a></div></div><div class="framework-group "><a class="chapter-link" href="../../../../../zh/validation/guide/geometry-tools/" ><span>03</span>几何与节点工具<small class="chapter-state">已有验证切片</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../../zh/validation/guide/world-systems/" ><span>04</span>世界系统<small class="chapter-state">规划方向</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../../zh/validation/guide/graph-assets/" ><span>05</span>Graph与可复用资产<small class="chapter-state">已有验证切片</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../../zh/validation/guide/engine-delivery/" ><span>06</span>引擎交付<small class="chapter-state">已有验证切片</small></a><div class="framework-leaves"><a href="../../../../../zh/validation/workflows/vda-unreal/" >VDA → Unreal实证</a></div></div><div class="framework-group "><a class="chapter-link" href="../../../../../zh/validation/guide/execution/" ><span>07</span>数据与执行基础<small class="chapter-state">共享基础</small></a></div></nav><nav class="reference-directory" aria-label="节点参考"><p>节点参考</p><a href="../../../../../zh/reference/library/" >节点目录 <small>644</small></a><a href="../../../../../zh/reference/library/#implemented">已实现节点的参数参考 <small>111</small></a><a href="../../../../../zh/reference/nodes/node.edge/v1/" >Edge <small>v1</small></a><a href="../../../../../zh/reference/nodes/node.fold/v2/" >Fold <small>v2</small></a><a href="../../../../../zh/reference/nodes/node.soft-clip/v2/" >SoftClip <small>v2</small></a><a href="../../../../../zh/reference/nodes/node.terraces/v2/" >Terraces <small>v2</small></a></nav><a class="manual-download" data-offline-download href="../../../../../downloads/vesta-manual.zip">下载离线手册 ↓<small>HTML · 全文搜索 · 本地素材</small></a></details></aside><main class="framework-main" id="main"><section class="manual-search-results wrap" hidden><h1>搜索结果</h1><button type="button" data-clear-search>清除搜索</button><p role="status" data-search-status data-empty="没有匹配的章节或功能。"></p><ol></ol></section><div class="manual-document-body"><article class="node-reference wrap"><p class="chapter-breadcrumb"><a href="../../../../../zh/reference/library/terrain-heightfield/#entry-node.catalog-0ad4b6ad537e0eb54492-v1">高度场处理</a> / 节点参考</p><p class="kicker">逐参数使用说明 · v1</p><h1>heightfield_noise</h1><p class="framework-lead">在指定高度场图层中生成分层程序化噪声，可使用遮罩和域扭曲。</p><dl class="chapter-io"><div><dt>文档版本</dt><dd>2026-10-19</dd></div><div><dt>节点逻辑版本</dt><dd>1</dd></div></dl><p class="reference-note">本页对应这个确切的节点逻辑版本。文档打包版本与后端实现版本分别记录。 保留全部已声明参数；行为说明和效果媒体分别记录完成状态。</p><nav class="chapter-toc"><a href="#ports">输入与输出</a><a href="#parameters">参数 (31)</a><a href="#examples">效果示例与验证</a></nav><section class="capability-section" id="ports"><h2>输入与输出</h2><div class="reference-ports"><section><h3>输入</h3><ol><li><strong>heightfield</strong> <code>Geometry</code> 必需</li><li><strong>mask</strong> <code>Geometry</code> 可选</li></ol></section><section><h3>输出</h3><ol><li><strong>heightfield_0</strong> <code>Geometry</code> </li></ol></section></div></section><section class="capability-section" id="parameters"><h2>参数</h2><p>契约字段来自有日期的Catalog快照。滑块软范围端点不等于硬验证范围。 数值默认值采用便于阅读的显示精度，精确值保留在可下载契约中。</p><nav class="parameter-toc"><a href="#parameter-6c61796572">Noise Layer</a><a href="#parameter-6d61736b6c61796572">Mask Layer</a><a href="#parameter-636f6d62696e65">Combine Method</a><a href="#parameter-626c656e64">Blend</a><a href="#parameter-63656e7465726e6f697365">Center Noise</a><a href="#parameter-616d70">Amplitude</a><a href="#parameter-656c656d656e7473697a65">Element Size</a><a href="#parameter-656c656d656e747363616c65">Scale</a><a href="#parameter-6f6666736574">Offset</a><a href="#parameter-6261736973">Noise Type</a><a href="#parameter-6672616374616c">Fractal</a><a href="#parameter-706572696f64">Period</a><a href="#parameter-6f6374">Max Octaves</a><a href="#parameter-6c6163">Lacunarity</a><a href="#parameter-726f756768">Roughness</a><a href="#parameter-666c6f77726f74">Flow Rotation</a><a href="#parameter-666f6c64">Fold</a><a href="#parameter-636f6d706c656d656e74">Complement</a><a href="#parameter-646f6761696e">Enable Gain</a><a href="#parameter-6761696e">Gain</a><a href="#parameter-646f62696173">Enable Bias</a><a href="#parameter-62696173">Bias</a><a href="#parameter-636c69706d696e">Clipping Minimum</a><a href="#parameter-636c69706d6178">Clipping Maximum</a><a href="#parameter-646f6c77617270">Enable Lattice Warp</a><a href="#parameter-616363756d6c">Accumulate Lattice Warp</a><a href="#parameter-64697370">Lattice Warp</a><a href="#parameter-6469737066726571">Freq</a><a href="#parameter-646f6777617270">Enable Gradient Warp</a><a href="#parameter-616363756d67">Accumulate Gradient Warp</a><a href="#parameter-67666c6f77">Gradient Warp</a></nav><section class="parameter-reference" id="parameter-6c61796572"><h3><a href="#parameter-6c61796572">Noise Layer <span aria-hidden="true">#</span></a></h3><code>layer</code><p class="">接收噪声组合结果的目标图层。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Text</dd></div><div><dt>默认值</dt><dd><code>height</code></dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-6d61736b6c61796572"><h3><a href="#parameter-6d61736b6c61796572">Mask Layer <span aria-hidden="true">#</span></a></h3><code>masklayer</code><p class="">控制噪声组合范围的遮罩图层。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Text</dd></div><div><dt>默认值</dt><dd><code>mask</code></dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p><p>禁用／隐藏条件</p><pre>{
+  &quot;disableWhen&quot;: &quot;ninputs(\&quot;mask\&quot;) == 0&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-636f6d62696e65"><h3><a href="#parameter-636f6d62696e65">Combine Method <span aria-hidden="true">#</span></a></h3><code>combine</code><p class="">噪声与已有图层的组合方式；blend使用Blend混合量。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Text</dd></div><div><dt>默认值</dt><dd><code>add</code></dd></div><div><dt>允许值</dt><dd>replace / add / subtract / diff / multiply / max / min / blend</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-626c656e64"><h3><a href="#parameter-626c656e64">Blend <span aria-hidden="true">#</span></a></h3><code>blend</code><p class="">blend模式的混合量。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>ScalarF64</dd></div><div><dt>默认值</dt><dd><code>0.5</code></dd></div><div><dt>范围端点</dt><dd>0 (软范围) → 1 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p><p>禁用／隐藏条件</p><pre>{
+  &quot;disableWhen&quot;: null,
+  &quot;hideWhen&quot;: &quot;ch(\&quot;combine\&quot;) != \&quot;blend\&quot;&quot;
+}</pre></details></section><section class="parameter-reference" id="parameter-63656e7465726e6f697365"><h3><a href="#parameter-63656e7465726e6f697365">Center Noise <span aria-hidden="true">#</span></a></h3><code>centernoise</code><p class="">缩放振幅前，将噪声值分布居中。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Bool</dd></div><div><dt>默认值</dt><dd><code>true</code></dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-616d70"><h3><a href="#parameter-616d70">Amplitude <span aria-hidden="true">#</span></a></h3><code>amp</code><p class="">生成噪声的振幅倍数。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>ScalarF64</dd></div><div><dt>默认值</dt><dd><code>500</code></dd></div><div><dt>范围端点</dt><dd>0 (软范围) → 2000 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-656c656d656e7473697a65"><h3><a href="#parameter-656c656d656e7473697a65">Element Size <span aria-hidden="true">#</span></a></h3><code>elementsize</code><p class="">噪声特征的典型空间尺寸，值越大，特征越宽广。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>ScalarF64</dd></div><div><dt>默认值</dt><dd><code>500</code></dd></div><div><dt>范围端点</dt><dd>0 (软范围) → 1000 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-656c656d656e747363616c65"><h3><a href="#parameter-656c656d656e747363616c65">Scale <span aria-hidden="true">#</span></a></h3><code>elementscale</code><p class="">噪声域各轴的各向异性缩放。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Vector3</dd></div><div><dt>默认值</dt><dd><code>[1,1,1]</code></dd></div><div><dt>范围端点</dt><dd>0 (软范围) → 10 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-6f6666736574"><h3><a href="#parameter-6f6666736574">Offset <span aria-hidden="true">#</span></a></h3><code>offset</code><p class="">在三维中偏移噪声采样域。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Vector3</dd></div><div><dt>默认值</dt><dd><code>[0,0,0]</code></dd></div><div><dt>范围端点</dt><dd>0 (软范围) → 10 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-6261736973"><h3><a href="#parameter-6261736973">Noise Type <span aria-hidden="true">#</span></a></h3><code>basis</code><p class="">底层噪声基函数；周期和细胞基保留各自的域行为。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Text</dd></div><div><dt>默认值</dt><dd><code>sparse</code></dd></div><div><dt>允许值</dt><dd>sine / perlin / pperlin / simplex / sparse / flow / pflow / worleyFA / worleyFB / mworleyFA / mworleyFB / cworleyFA / cworleyFB / alligator</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-6672616374616c"><h3><a href="#parameter-6672616374616c">Fractal <span aria-hidden="true">#</span></a></h3><code>fractal</code><p class="">按所选分形模型组合多层噪声，或使用单层非分形基。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Text</dd></div><div><dt>默认值</dt><dd><code>hmfT</code></dd></div><div><dt>允许值</dt><dd>none / fBm / mfT / hmfT</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-706572696f64"><h3><a href="#parameter-706572696f64">Period <span aria-hidden="true">#</span></a></h3><code>period</code><p class="">周期噪声基的重复区间。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Vector3</dd></div><div><dt>默认值</dt><dd><code>[2,2,2]</code></dd></div><div><dt>范围端点</dt><dd>0 (软范围) → 10000 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p><p>禁用／隐藏条件</p><pre>{
+  &quot;disableWhen&quot;: null,
+  &quot;hideWhen&quot;: &quot;ch(\&quot;basis\&quot;) != \&quot;pperlin\&quot; &amp;&amp; ch(\&quot;basis\&quot;) != \&quot;pflow\&quot;&quot;
+}</pre></details></section><section class="parameter-reference" id="parameter-6f6374"><h3><a href="#parameter-6f6374">Max Octaves <span aria-hidden="true">#</span></a></h3><code>oct</code><p class="">分形构造的最大层深；契约保留非整数层深。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>ScalarF64</dd></div><div><dt>默认值</dt><dd><code>8</code></dd></div><div><dt>范围端点</dt><dd>0 (软范围) → 16 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p><p>禁用／隐藏条件</p><pre>{
+  &quot;disableWhen&quot;: null,
+  &quot;hideWhen&quot;: &quot;ch(\&quot;fractal\&quot;) == \&quot;none\&quot;&quot;
+}</pre></details></section><section class="parameter-reference" id="parameter-6c6163"><h3><a href="#parameter-6c6163">Lacunarity <span aria-hidden="true">#</span></a></h3><code>lac</code><p class="">相邻噪声层之间的频率倍数。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>ScalarF64</dd></div><div><dt>默认值</dt><dd><code>1.841</code></dd></div><div><dt>范围端点</dt><dd>0 (软范围) → 4 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p><p>禁用／隐藏条件</p><pre>{
+  &quot;disableWhen&quot;: null,
+  &quot;hideWhen&quot;: &quot;ch(\&quot;fractal\&quot;) == \&quot;none\&quot;&quot;
+}</pre></details></section><section class="parameter-reference" id="parameter-726f756768"><h3><a href="#parameter-726f756768">Roughness <span aria-hidden="true">#</span></a></h3><code>rough</code><p class="">较细噪声层的相对贡献。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>ScalarF64</dd></div><div><dt>默认值</dt><dd><code>0.5</code></dd></div><div><dt>范围端点</dt><dd>0 (软范围) → 1 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p><p>禁用／隐藏条件</p><pre>{
+  &quot;disableWhen&quot;: null,
+  &quot;hideWhen&quot;: &quot;ch(\&quot;fractal\&quot;) == \&quot;none\&quot;&quot;
+}</pre></details></section><section class="parameter-reference" id="parameter-666c6f77726f74"><h3><a href="#parameter-666c6f77726f74">Flow Rotation <span aria-hidden="true">#</span></a></h3><code>flowrot</code><p class="">流噪声基使用的流向旋转。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>ScalarF64</dd></div><div><dt>默认值</dt><dd><code>0</code></dd></div><div><dt>范围端点</dt><dd>0 (软范围) → 1 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p><p>禁用／隐藏条件</p><pre>{
+  &quot;disableWhen&quot;: &quot;ch(\&quot;basis\&quot;) != \&quot;flow\&quot; &amp;&amp; ch(\&quot;basis\&quot;) != \&quot;pflow\&quot;&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-666f6c64"><h3><a href="#parameter-666f6c64">Fold <span aria-hidden="true">#</span></a></h3><code>fold</code><p class="">在最终组合前折叠生成的噪声轮廓。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Bool</dd></div><div><dt>默认值</dt><dd><code>false</code></dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-636f6d706c656d656e74"><h3><a href="#parameter-636f6d706c656d656e74">Complement <span aria-hidden="true">#</span></a></h3><code>complement</code><p class="">对噪声轮廓取补。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Bool</dd></div><div><dt>默认值</dt><dd><code>false</code></dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-646f6761696e"><h3><a href="#parameter-646f6761696e">Enable Gain <span aria-hidden="true">#</span></a></h3><code>dogain</code><p class="">启用增益轮廓调整。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Bool</dd></div><div><dt>默认值</dt><dd><code>false</code></dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-6761696e"><h3><a href="#parameter-6761696e">Gain <span aria-hidden="true">#</span></a></h3><code>gain</code><p class="">启用增益控制时使用的增益量。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>ScalarF64</dd></div><div><dt>默认值</dt><dd><code>0.5</code></dd></div><div><dt>范围端点</dt><dd>0 (软范围) → 1 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p><p>禁用／隐藏条件</p><pre>{
+  &quot;disableWhen&quot;: &quot;ch(\&quot;dogain\&quot;) == off&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-646f62696173"><h3><a href="#parameter-646f62696173">Enable Bias <span aria-hidden="true">#</span></a></h3><code>dobias</code><p class="">启用噪声分布偏置调整。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Bool</dd></div><div><dt>默认值</dt><dd><code>false</code></dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-62696173"><h3><a href="#parameter-62696173">Bias <span aria-hidden="true">#</span></a></h3><code>bias</code><p class="">启用偏置控制时使用的偏置量。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>ScalarF64</dd></div><div><dt>默认值</dt><dd><code>0.5</code></dd></div><div><dt>范围端点</dt><dd>0 (软范围) → 1 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p><p>禁用／隐藏条件</p><pre>{
+  &quot;disableWhen&quot;: &quot;ch(\&quot;dobias\&quot;) == off&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-636c69706d696e"><h3><a href="#parameter-636c69706d696e">Clipping Minimum <span aria-hidden="true">#</span></a></h3><code>clipmin</code><p class="">组合前噪声范围塑形的下端点。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>ScalarF64</dd></div><div><dt>默认值</dt><dd><code>0</code></dd></div><div><dt>范围端点</dt><dd>0 (软范围) → 1 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-636c69706d6178"><h3><a href="#parameter-636c69706d6178">Clipping Maximum <span aria-hidden="true">#</span></a></h3><code>clipmax</code><p class="">组合前噪声范围塑形的上端点。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>ScalarF64</dd></div><div><dt>默认值</dt><dd><code>1</code></dd></div><div><dt>范围端点</dt><dd>0 (软范围) → 1 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-646f6c77617270"><h3><a href="#parameter-646f6c77617270">Enable Lattice Warp <span aria-hidden="true">#</span></a></h3><code>dolwarp</code><p class="">启用格点域扭曲。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Bool</dd></div><div><dt>默认值</dt><dd><code>false</code></dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-616363756d6c"><h3><a href="#parameter-616363756d6c">Accumulate Lattice Warp <span aria-hidden="true">#</span></a></h3><code>accuml</code><p class="">跨分形层累计格点扭曲。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Bool</dd></div><div><dt>默认值</dt><dd><code>true</code></dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p><p>禁用／隐藏条件</p><pre>{
+  &quot;disableWhen&quot;: &quot;ch(\&quot;dolwarp\&quot;) == off || ch(\&quot;fractal\&quot;) == \&quot;none\&quot;&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-64697370"><h3><a href="#parameter-64697370">Lattice Warp <span aria-hidden="true">#</span></a></h3><code>disp</code><p class="">格点扭曲位移强度。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>ScalarF64</dd></div><div><dt>默认值</dt><dd><code>0.1405</code></dd></div><div><dt>范围端点</dt><dd>-0.5 (软范围) → 0.5 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p><p>禁用／隐藏条件</p><pre>{
+  &quot;disableWhen&quot;: &quot;ch(\&quot;dolwarp\&quot;) == off&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-6469737066726571"><h3><a href="#parameter-6469737066726571">Freq <span aria-hidden="true">#</span></a></h3><code>dispfreq</code><p class="">格点扭曲位移的频率。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>ScalarF64</dd></div><div><dt>默认值</dt><dd><code>1</code></dd></div><div><dt>范围端点</dt><dd>0 (软范围) → 1 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p><p>禁用／隐藏条件</p><pre>{
+  &quot;disableWhen&quot;: &quot;ch(\&quot;dolwarp\&quot;) == off&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-646f6777617270"><h3><a href="#parameter-646f6777617270">Enable Gradient Warp <span aria-hidden="true">#</span></a></h3><code>dogwarp</code><p class="">启用梯度域扭曲。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Bool</dd></div><div><dt>默认值</dt><dd><code>false</code></dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-616363756d67"><h3><a href="#parameter-616363756d67">Accumulate Gradient Warp <span aria-hidden="true">#</span></a></h3><code>accumg</code><p class="">跨分形层累计梯度扭曲。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Bool</dd></div><div><dt>默认值</dt><dd><code>false</code></dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p><p>禁用／隐藏条件</p><pre>{
+  &quot;disableWhen&quot;: &quot;ch(\&quot;dogwarp\&quot;) == off || ch(\&quot;fractal\&quot;) == \&quot;none\&quot;&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section><section class="parameter-reference" id="parameter-67666c6f77"><h3><a href="#parameter-67666c6f77">Gradient Warp <span aria-hidden="true">#</span></a></h3><code>gflow</code><p class="">梯度扭曲的流向控制。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>ScalarF64</dd></div><div><dt>默认值</dt><dd><code>0</code></dd></div><div><dt>范围端点</dt><dd>-0.5 (软范围) → 0.5 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p><p>禁用／隐藏条件</p><pre>{
+  &quot;disableWhen&quot;: &quot;ch(\&quot;dogwarp\&quot;) == off&quot;,
+  &quot;hideWhen&quot;: null
+}</pre></details></section></section><section class="capability-section" id="examples"><h2>效果示例与验证</h2><p>真实输出的展示渲染 · CPU · 2026-10-19</p><div class="reference-media-grid"><figure><button class="image-button" type="button" aria-label="输入" data-image="../../../../../assets/validation/help/heightfield-noise/input.webp" data-caption="输入"><img src="../../../../../assets/validation/help/heightfield-noise/input.webp" srcset="../../../../../assets/validation/help/heightfield-noise/input-768.webp 768w, ../../../../../assets/validation/help/heightfield-noise/input-1280.webp 1280w, ../../../../../assets/validation/help/heightfield-noise/input.webp 1600w" sizes="(max-width:760px) 100vw,48vw" alt="输入" width="1600" height="1000" loading="lazy" decoding="async"></button><figcaption>输入<details><summary>样本参数与输出</summary><pre>{
+  &quot;parameters&quot;: {
+    &quot;orient&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;zx&quot;
+    },
+    &quot;sampling&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;corner&quot;
+    },
+    &quot;initialheight&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;initialmask&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;divisionmode&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;size&quot;
+    },
+    &quot;gridspacing&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 10
+    },
+    &quot;gridsamples&quot;: {
+      &quot;type&quot;: &quot;ScalarI64&quot;,
+      &quot;value&quot;: 512
+    },
+    &quot;scale&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;size&quot;: {
+      &quot;type&quot;: &quot;Vector2&quot;,
+      &quot;value&quot;: [
+        1000,
+        1000
+      ]
+    },
+    &quot;t&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  &quot;output&quot;: {
+    &quot;resolution&quot;: [
+      101,
+      101
+    ],
+    &quot;range&quot;: [
+      0,
+      0
+    ],
+    &quot;samples_f32_sha256&quot;: &quot;64e9f8d24d67e01192342a72ce54d6861163a567870d20df5cfa27a2170961db&quot;
+  }
+}</pre></details></figcaption></figure><figure><button class="image-button" type="button" aria-label="结果" data-image="../../../../../assets/validation/help/heightfield-noise/result.webp" data-caption="结果"><img src="../../../../../assets/validation/help/heightfield-noise/result.webp" srcset="../../../../../assets/validation/help/heightfield-noise/result-768.webp 768w, ../../../../../assets/validation/help/heightfield-noise/result-1280.webp 1280w, ../../../../../assets/validation/help/heightfield-noise/result.webp 1600w" sizes="(max-width:760px) 100vw,48vw" alt="结果" width="1600" height="1000" loading="lazy" decoding="async"></button><figcaption>结果<details><summary>样本参数与输出</summary><pre>{
+  &quot;parameters&quot;: {
+    &quot;layer&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;height&quot;
+    },
+    &quot;masklayer&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;mask&quot;
+    },
+    &quot;combine&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;add&quot;
+    },
+    &quot;blend&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;centernoise&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: true
+    },
+    &quot;amp&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 500
+    },
+    &quot;elementsize&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 500
+    },
+    &quot;elementscale&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        1,
+        1,
+        1
+      ]
+    },
+    &quot;offset&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        0,
+        0,
+        0
+      ]
+    },
+    &quot;basis&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;sparse&quot;
+    },
+    &quot;fractal&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;hmfT&quot;
+    },
+    &quot;period&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        2,
+        2,
+        2
+      ]
+    },
+    &quot;oct&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 8
+    },
+    &quot;lac&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1.841
+    },
+    &quot;rough&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;flowrot&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;fold&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;complement&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;dogain&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;gain&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;dobias&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;bias&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;clipmin&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;clipmax&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;dolwarp&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;accuml&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: true
+    },
+    &quot;disp&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.1405
+    },
+    &quot;dispfreq&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;dogwarp&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;accumg&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;gflow&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    }
+  },
+  &quot;output&quot;: {
+    &quot;resolution&quot;: [
+      101,
+      101
+    ],
+    &quot;range&quot;: [
+      -62.8203010559082,
+      84.56719207763672
+    ],
+    &quot;samples_f32_sha256&quot;: &quot;3a2f0af6c2521dae68d2528fbf4bb488ec160ce98072ae815b78dbb5a19dd4b5&quot;
+  }
+}</pre></details></figcaption></figure></div><p>这些样本展示所述配方与CPU输出，不构成新的数值验收、GPU、性能或原生交互测试。</p><p><a href="../../../../../reference/data/node.catalog-0ad4b6ad537e0eb54492-v1-media.json">样本与显示处理记录 ↗</a></p><p><a href="../../../../../reference/data/node.catalog-0ad4b6ad537e0eb54492-v1.json">下载参考契约 ↗</a></p><details class="record-details"><summary>稳定帮助身份</summary><code>node.catalog-0ad4b6ad537e0eb54492 · v1</code><code class="snapshot-id">48d42445120ac2e261005b7ae04738f0f5a3f10aab878e4ee3c377415f181d7d</code></details></section><section class="chapter-next"><h2>相关内容</h2><div><a href="../../../../../zh/reference/nodes/node.catalog-eaae98d9a24f8c4999f6/v3/">Heightfield Erode Hydro · v3 ↗</a><a href="../../../../../zh/reference/nodes/node.catalog-f763b1c25454fc3d9ea5/v2/">Heightfield · v2 ↗</a><a href="../../../../../zh/reference/nodes/node.catalog-23cc6cdcbebd201b055f/v3/">Heightfield Blur · v3 ↗</a><a href="../../../../../zh/reference/nodes/node.catalog-9ea2126dc27f2293581f/v4/">Heightfield Clip · v4 ↗</a><a href="../../../../../zh/reference/nodes/node.catalog-47a6f22e654fac34a8fb/v2/">Heightfield Combine · v2 ↗</a><a href="../../../../../zh/reference/nodes/node.catalog-00cea0b8a69a09a3a0a1/v2/">Heightfield Copylayer · v2 ↗</a><a href="../../../../../zh/reference/nodes/node.catalog-2fd8159ace6451ee577e/v2/">Heightfield Crop · v2 ↗</a><a href="../../../../../zh/reference/nodes/node.catalog-67cc63fa0e9c85227171/v3/">Heightfield Cutoutbyobject · v3 ↗</a></div></section></article></div></main></div>
+<footer class="validation-footer"><div class="wrap"><a class="logo" href="../../../../../zh/">vesta<span>.</span></a><div><p>AGENTIC WORLD CREATOR / IN DEVELOPMENT</p><span>每项证据都有具体范围，不代表完整产品或全部流程已经验收。</span></div><a href="../../../../../zh/validation/">用户手册 ↗</a></div></footer>
+<dialog class="lightbox" aria-label="效果研究"><button class="lightbox-close" type="button" aria-label="关闭">关闭 ×</button><img alt=""><p></p></dialog></body></html>

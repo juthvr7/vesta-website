@@ -1,0 +1,385 @@
+{
+  "id": "node.catalog-885ccca4867f6de64021",
+  "operation_version": 4,
+  "slug": "subdivide",
+  "generated_at": "2026-10-19",
+  "backend": "CPU",
+  "kind": "actual-result-render",
+  "profile": "mesh-comparison-v2",
+  "producer_sha256": "5f1dcdbc65c2c6a6aec28566f6f7445b1a71316773a14a0116d849bf9bfa9c9c",
+  "pixel_size": [
+    1600,
+    1000
+  ],
+  "text_overlay": false,
+  "variants": [
+    {
+      "id": "input",
+      "en": "Input",
+      "zh": "输入",
+      "parameter": "",
+      "master_sha256": "a780a1f9df626dc19d50c81a0cc0b90860673fa7d66a5f4023f70681c7ea746f",
+      "source_result_sha256": "2e70c82f85947f3557dff25afed0e9df3c6c7d4c0bd1d67d63906cd34ff4a3b4",
+      "source_statistics": {
+        "points": 4,
+        "faces": 1
+      },
+      "variants": [
+        {
+          "file": "input-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "9194d1a1d6e5b757c587fbe6db27b4f76e8a57fd3052af158d10354ede6299c1"
+        },
+        {
+          "file": "input-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "0767570fd6c112b7a99b24600b863549d36bc80c9198d77dbdd9135a56c7097d"
+        },
+        {
+          "file": "input.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "343568e7a85d699e4bf7d13c676811a6be67811437fb41c33bb4d9b5c5c5c596"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 1,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-e40c9267dc05ef26d0c6",
+            "operation_version": 5,
+            "parameters": {
+              "primitive_type": {
+                "type": "Text",
+                "value": "poly"
+              },
+              "connectivity": {
+                "type": "Text",
+                "value": "quads"
+              },
+              "orient": {
+                "type": "Text",
+                "value": "xy"
+              },
+              "size_x": {
+                "type": "ScalarF64",
+                "value": 2
+              },
+              "size_y": {
+                "type": "ScalarF64",
+                "value": 2
+              },
+              "subdivisions_x": {
+                "type": "ScalarI64",
+                "value": 1
+              },
+              "subdivisions_y": {
+                "type": "ScalarI64",
+                "value": 1
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-885ccca4867f6de64021",
+            "operation_version": 4,
+            "parameters": {
+              "algorithm": {
+                "type": "Text",
+                "value": "osdcc"
+              },
+              "iterations": {
+                "type": "ScalarI64",
+                "value": 2
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "844731ace4ccefb76fddb4d6019174445a7c091c122642617e0001e864898e89",
+      "same_result_as_input": false
+    },
+    {
+      "id": "first",
+      "en": "iterations = 1",
+      "zh": "iterations = 1",
+      "parameter": "iterations=1",
+      "master_sha256": "c66d2c722f1f016fda3f3f928e02c5efd5285cff9bcb1b32948ed137c420b49e",
+      "source_result_sha256": "1d7236fb853fe162f29478f32c240c33641b51c7410f49ea874899fd3f6f5efc",
+      "source_statistics": {
+        "points": 9,
+        "faces": 4
+      },
+      "variants": [
+        {
+          "file": "first-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "b204bc0230d1156d40e72aa87204be88131aa557490a2dfad7244197b4cf9cec"
+        },
+        {
+          "file": "first-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "4af3fe4e7f27ffc5da2888197e99105e8f235a83ebb066c9c3df76ad71fe66ab"
+        },
+        {
+          "file": "first.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "ee9004a1dfe6f9d57c4338e10a541f7bdf9e7770841120316c1cca9e9fc3dd7e"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 2,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-e40c9267dc05ef26d0c6",
+            "operation_version": 5,
+            "parameters": {
+              "primitive_type": {
+                "type": "Text",
+                "value": "poly"
+              },
+              "connectivity": {
+                "type": "Text",
+                "value": "quads"
+              },
+              "orient": {
+                "type": "Text",
+                "value": "xy"
+              },
+              "size_x": {
+                "type": "ScalarF64",
+                "value": 2
+              },
+              "size_y": {
+                "type": "ScalarF64",
+                "value": 2
+              },
+              "subdivisions_x": {
+                "type": "ScalarI64",
+                "value": 1
+              },
+              "subdivisions_y": {
+                "type": "ScalarI64",
+                "value": 1
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-885ccca4867f6de64021",
+            "operation_version": 4,
+            "parameters": {
+              "algorithm": {
+                "type": "Text",
+                "value": "osdcc"
+              },
+              "iterations": {
+                "type": "ScalarI64",
+                "value": 1
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "44efd0e5a075199272b6391e0eb4cbff6577d935b81498c516fb9f3f5172f0c9",
+      "same_result_as_input": false
+    },
+    {
+      "id": "second",
+      "en": "iterations = 2",
+      "zh": "iterations = 2",
+      "parameter": "iterations=2",
+      "master_sha256": "8324bf113ad9995339040ab90d6a5c95301fc30db96b88438e8a027b3e6d2496",
+      "source_result_sha256": "bad9b372a9319d4550dd46e94c50bde96cf6a9464d31ebdc801728989eb44791",
+      "source_statistics": {
+        "points": 25,
+        "faces": 16
+      },
+      "variants": [
+        {
+          "file": "second-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "c9633fedaed2ef86b4d2f3bbf47294257185afd9c5912f09c8dc43bd3b8207c3"
+        },
+        {
+          "file": "second-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "a371672e559565ad8e3e4267f625ad4d20225456bcb7f55e291f3f45f51a4fdf"
+        },
+        {
+          "file": "second.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "6ae2906eb8c771827a47de18dbf7ddf43ec9806cdf6ffc990b56dbf588fda121"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 2,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-e40c9267dc05ef26d0c6",
+            "operation_version": 5,
+            "parameters": {
+              "primitive_type": {
+                "type": "Text",
+                "value": "poly"
+              },
+              "connectivity": {
+                "type": "Text",
+                "value": "quads"
+              },
+              "orient": {
+                "type": "Text",
+                "value": "xy"
+              },
+              "size_x": {
+                "type": "ScalarF64",
+                "value": 2
+              },
+              "size_y": {
+                "type": "ScalarF64",
+                "value": 2
+              },
+              "subdivisions_x": {
+                "type": "ScalarI64",
+                "value": 1
+              },
+              "subdivisions_y": {
+                "type": "ScalarI64",
+                "value": 1
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-885ccca4867f6de64021",
+            "operation_version": 4,
+            "parameters": {
+              "algorithm": {
+                "type": "Text",
+                "value": "osdcc"
+              },
+              "iterations": {
+                "type": "ScalarI64",
+                "value": 2
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "c2a4bb7509100af98263597a10b1ed9b8dc44e7954dd11bb61f08e0df07d7725",
+      "same_result_as_input": false
+    }
+  ],
+  "display": {
+    "camera": [
+      32,
+      -62
+    ],
+    "world_to_display_axes": [
+      "x",
+      "z",
+      "y"
+    ],
+    "center": [
+      0,
+      0,
+      0
+    ],
+    "radius": 1.16,
+    "geometry_scale": 1,
+    "face_decimation": false,
+    "wire_overlay_below_faces": 1200,
+    "two_sided_lighting": true,
+    "ambient": 0.45,
+    "zoom": 1.2
+  }
+}

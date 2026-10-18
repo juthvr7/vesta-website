@@ -1,0 +1,679 @@
+{
+  "schema_version": 1,
+  "subject_id": "terrain.fold",
+  "snapshot_id": "fold-cpu-2026-10-16",
+  "verified_at": "2026-10-16",
+  "preserved_at": "2026-10-18",
+  "kind": "historical-run-summary",
+  "rerun": false,
+  "operation_version": 2,
+  "implementation_version": 1,
+  "backend": "cpu",
+  "host": "cli",
+  "case_count": 108,
+  "resolutions": [
+    64,
+    128
+  ],
+  "tolerance": 0.000002,
+  "observed_max_abs": 0,
+  "passed": true,
+  "source_report_sha256": "4e3b0b03c4b12f7244f14e0dc91762ee8bfeecade4e920de4f4d361c3d3ec941",
+  "executable_sha256": "dac9411227b51140cf530dc460b8df055bf32472e9d3d66898ea8d7810a132e8",
+  "cases": [
+    {
+      "case_id": "fold_sine_default/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "7cbcb56cb1b2d5e26fdfab947d3aa928c58e998adc4f2a07dfe02ee26652aebf"
+    },
+    {
+      "case_id": "fold_sine_default/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "5f3928880aab81ccb937d78c10c2d410076ac4a7e81c95a4d63977fcf77e3f94"
+    },
+    {
+      "case_id": "fold_sine_asymmetric/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "2b250d76739db4c86a245fc20307764efdad6b37120a7f9a07591d1ce803b273"
+    },
+    {
+      "case_id": "fold_sine_asymmetric/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "c75e299faa685b61844039f5d7fab8879b57f22ebf61883e5deca2a9f5818142"
+    },
+    {
+      "case_id": "fold_sine_freq_0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "fold_sine_freq_0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "fold_sine_freq_0p25/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "5820ce247016c0617cb40052c640e1155b6594e6c6cea68ddbe4e62667aa4233"
+    },
+    {
+      "case_id": "fold_sine_freq_0p25/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "536f8d4e513c549d776721385295d8c85985b1d77a7382464367942338bb223f"
+    },
+    {
+      "case_id": "fold_sine_freq_10/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "8b612ec1052b1f853a450339bc70bd88ea1d0ee04066e3e20279de2631fb68a5"
+    },
+    {
+      "case_id": "fold_sine_freq_10/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "1d5493f36b82160fe0e5e7bbb7329def80457020a182cd1a6c3ebe2ed55e79ee"
+    },
+    {
+      "case_id": "fold_sine_freq_neg1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "44deb5a9ef669f68c2796816b66743a3e28cbd4cb15781f581e5337c01418094"
+    },
+    {
+      "case_id": "fold_sine_freq_neg1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "44ec93ae21e401aa0fb9801f4aecc18907a81be79e424d8fdd6c0d4127d54175"
+    },
+    {
+      "case_id": "fold_sine_freq_11/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "9139299a27d5e996bb21a64715ca780e1fab18638c56b9c0a841478ade9fd519"
+    },
+    {
+      "case_id": "fold_sine_freq_11/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "bbd9dc216ca004894eccd43577e7f863108e24170309b4a71c7f6021d4f46815"
+    },
+    {
+      "case_id": "fold_sine_mod_2_true/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "38912c3bcf0da525002b1b3ed0004ecd869f543369baf78eee9f778c938161b7"
+    },
+    {
+      "case_id": "fold_sine_mod_2_true/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "543fe8972ab1a089e78ea8957008616c54bfa8d8e21f4024d4735d55116f9940"
+    },
+    {
+      "case_id": "fold_sine_mod_2_false/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "8b9eaca6b768007d221b83047aa7bc904bb91878a6f4b1eeeb0cd0ceeadeea79"
+    },
+    {
+      "case_id": "fold_sine_mod_2_false/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "c65b322a6fb34274cd1d323bd085f59dd0bf3c90130b47b53a6ba4fdb4b4374d"
+    },
+    {
+      "case_id": "fold_sine_mod_3_true/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "fold_sine_mod_3_true/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "fold_sine_mod_3_false/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "fold_sine_mod_3_false/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "fold_sine_mod_4_true/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "e3e51571dade73c54c1155380d2e020246ac40d1f9b8c26bcf41f9bb28732780"
+    },
+    {
+      "case_id": "fold_sine_mod_4_true/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "71236277777cd5a3c50257118afd05062913ada59e7738060121887d5f8b68f4"
+    },
+    {
+      "case_id": "fold_sine_mod_4_false/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "8c67d670ba1d698d0d437ee9358da0f59614e60d30c0306dfc0c89372b495c10"
+    },
+    {
+      "case_id": "fold_sine_mod_4_false/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "e448a0f167e5bca552259ea6fcc68206ac7602f8a4b53f72cd7efce7def222e8"
+    },
+    {
+      "case_id": "fold_sine_mod_5_true/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "72106d8c293dbcf2a7772329428757fa6f63f1a0ff529b896bdc3d518d4721ae"
+    },
+    {
+      "case_id": "fold_sine_mod_5_true/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "30a1cf29da9093874c7ee6154890430c3e9f7ba5fc10c6cbe8461caee6ce0539"
+    },
+    {
+      "case_id": "fold_sine_mod_5_false/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "1e05a51ef441a77d65374dd19082a20a515ba5f0c692a58f94c2905aade26438"
+    },
+    {
+      "case_id": "fold_sine_mod_5_false/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "86350e584d66e67a683708302b1a160c3469bc48b6f8f75eb3a78639d6ed2c50"
+    },
+    {
+      "case_id": "fold_sine_input_6/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "fold_sine_input_6/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "fold_sine_input_7/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "fold_sine_input_7/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "fold_sine_input_8/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "8265d13ef72ef09142ad2fd2e29419423ce8e58d447f34030955039810697f57"
+    },
+    {
+      "case_id": "fold_sine_input_8/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "685b40b1129443824b064ece5b54790bd4972a1aeaf730ac750bffab32dd3c2a"
+    },
+    {
+      "case_id": "fold_triangle_default/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "3bf93e5fc3e54938292f8c98f5b12710f52eb664132428a407b2d25c8e26150c"
+    },
+    {
+      "case_id": "fold_triangle_default/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "2f268c0d053221c735fc7dacf3630c99b66dfd44f6190561b029a781a46852f5"
+    },
+    {
+      "case_id": "fold_triangle_asymmetric/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "3bf93e5fc3e54938292f8c98f5b12710f52eb664132428a407b2d25c8e26150c"
+    },
+    {
+      "case_id": "fold_triangle_asymmetric/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "2f268c0d053221c735fc7dacf3630c99b66dfd44f6190561b029a781a46852f5"
+    },
+    {
+      "case_id": "fold_triangle_freq_0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "fold_triangle_freq_0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "fold_triangle_freq_0p25/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "eea108455deb719392c564f2da7cfd35134a7a644a1408a7a7313c631ca47dc9"
+    },
+    {
+      "case_id": "fold_triangle_freq_0p25/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "8d63908a38e483b682ceedf3f919eebd4545c272c50b1657b2b034b27b161de5"
+    },
+    {
+      "case_id": "fold_triangle_freq_10/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "0d4359306f7e99cf2b3ae1d135b439ebaa0f11f165a29c13052f58afba205c01"
+    },
+    {
+      "case_id": "fold_triangle_freq_10/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "d069887d4ebbeb531d34efa46e99592fbf07fbcf9ff31ca68de50f9e7f177106"
+    },
+    {
+      "case_id": "fold_triangle_freq_neg1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "0fa932c4c4fd5c1bca1e9ed7c3902eb075e3f61e355068c814629e6bb29057c0"
+    },
+    {
+      "case_id": "fold_triangle_freq_neg1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "8ca84597f202bf97a9bdc2eb94bd9b9179d97023f1fe627740c2c453151d1e41"
+    },
+    {
+      "case_id": "fold_triangle_freq_11/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "610c8c6a7bf4689cf31b13a22e48df67520ed333d6efcb57e038a7fc665ef86a"
+    },
+    {
+      "case_id": "fold_triangle_freq_11/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "cc0bf61546f5dc00994b635820e9401bc1277cc5efa6d467cfab471b4f7c7049"
+    },
+    {
+      "case_id": "fold_triangle_mod_2_true/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "9982b93fe6ddda13ab98ece14fd5f448e925d1710607150f80cef49fd847d302"
+    },
+    {
+      "case_id": "fold_triangle_mod_2_true/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "3f295dd72cf057f3110125b5136d912efa5c700bd2be63f88d25e9a7b5267d3c"
+    },
+    {
+      "case_id": "fold_triangle_mod_2_false/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "bd1e645e8792968cbdf35697ec06c1c6fd72147d5266c2c6ff781f121fdf0d5f"
+    },
+    {
+      "case_id": "fold_triangle_mod_2_false/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "cc29f28fd17cd358eb631e75fdd9a63c0c160b4196195637286e1f1ce68efbb1"
+    },
+    {
+      "case_id": "fold_triangle_mod_3_true/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "fold_triangle_mod_3_true/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "fold_triangle_mod_3_false/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "fold_triangle_mod_3_false/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "fold_triangle_mod_4_true/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "aa1ff2d52cda7cab85c7561c980e49fcdfab88a4f3bdc9a622bc94105497518a"
+    },
+    {
+      "case_id": "fold_triangle_mod_4_true/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "9631589d71d392e1cba1c7415451648aa2737e6c26d996d91ad226a567d165ab"
+    },
+    {
+      "case_id": "fold_triangle_mod_4_false/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "046ca3b34e9d05f6b9430360138d5aa12ac8a41de78bd94da9c916244e26bad0"
+    },
+    {
+      "case_id": "fold_triangle_mod_4_false/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "963d13d3d6f00e194289a412cf19c015a2b46e66e8c1e060f3b642b6aa8e91c8"
+    },
+    {
+      "case_id": "fold_triangle_mod_5_true/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "34257d9007e1fad0cd0c37748075c9fcf75027b6862204735e9795d69eb369ce"
+    },
+    {
+      "case_id": "fold_triangle_mod_5_true/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "b0872f7944025a07773f18609cba56800e7389bffb747ba0d0c2ed5e9bb68104"
+    },
+    {
+      "case_id": "fold_triangle_mod_5_false/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "de0cb8dc291b15911b0040659f5c003a0119389252351604f52c65b45c1eb0f6"
+    },
+    {
+      "case_id": "fold_triangle_mod_5_false/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "fe3b3754fbe3eb3d2ac8ecd1c1d9aec32d840afa2d3be9949aeb70f824d4ae55"
+    },
+    {
+      "case_id": "fold_triangle_input_6/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "fold_triangle_input_6/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "fold_triangle_input_7/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "fold_triangle_input_7/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "fold_triangle_input_8/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "8a31c09d9351b78c0963f6329c1ba6545b5c396388666e90c479c525334c49bf"
+    },
+    {
+      "case_id": "fold_triangle_input_8/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "154dcf8de2f6f7d5d562611bf31da1fa80446ae4cc72c10d563f8e4316d27304"
+    },
+    {
+      "case_id": "fold_sawtooth_default/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "533c9e804f5e55e7eed638acc80353c89775d647c9d1d918ab1ddbdc46b827ef"
+    },
+    {
+      "case_id": "fold_sawtooth_default/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "6e94d982a821a3f5c2bec7e05e4ebcf2fee3479f9a61e5458e3c12ce89a5d1fe"
+    },
+    {
+      "case_id": "fold_sawtooth_asymmetric/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "533c9e804f5e55e7eed638acc80353c89775d647c9d1d918ab1ddbdc46b827ef"
+    },
+    {
+      "case_id": "fold_sawtooth_asymmetric/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "6e94d982a821a3f5c2bec7e05e4ebcf2fee3479f9a61e5458e3c12ce89a5d1fe"
+    },
+    {
+      "case_id": "fold_sawtooth_freq_0/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "fold_sawtooth_freq_0/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "fold_sawtooth_freq_0p25/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "76cc000359a31b8e5590e948b734bb99ac0ab0d1ee0e91913967944d8420b073"
+    },
+    {
+      "case_id": "fold_sawtooth_freq_0p25/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "63d61dcbc8e04172978c8e83ddd0b2d7ab2c355c2de060136cb3eabda19e3ce8"
+    },
+    {
+      "case_id": "fold_sawtooth_freq_10/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "caa66bcda02044bf0b2055d0deb090c108dd960fe2c491f20b84a07dc3839ef8"
+    },
+    {
+      "case_id": "fold_sawtooth_freq_10/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "07bdc40b6c61b3f699668c301d74a93a62b507fb0962ec162692cfaeaf3c5d32"
+    },
+    {
+      "case_id": "fold_sawtooth_freq_neg1/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "55fd55beb362c4df0e4aada61b6a8c3e16214df02a1383e99bc4c30afe214698"
+    },
+    {
+      "case_id": "fold_sawtooth_freq_neg1/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "299313a2c384589addce0ba771ce94d0f5eac507f94e81b30f1ecf5faaa01786"
+    },
+    {
+      "case_id": "fold_sawtooth_freq_11/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66b32c6f4ff39f6ea80b4bd2ce734cc3260aba500023bcd06a20bebba7f977c3"
+    },
+    {
+      "case_id": "fold_sawtooth_freq_11/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "d5de112d35cc5ca34f4c7fdac2233383c8512cad611fa7d108ffda1118c2fa16"
+    },
+    {
+      "case_id": "fold_sawtooth_mod_2_true/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "e21ef59c51886282866a705e737e3431ab1a787d69aba93dd9a95e6f78e02476"
+    },
+    {
+      "case_id": "fold_sawtooth_mod_2_true/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "9ed1b50366700b5899db923a3bcf6075939031233f38e4bc8ce7934a494c958d"
+    },
+    {
+      "case_id": "fold_sawtooth_mod_2_false/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "80806637e4a908a52ba1811d354d98b045012e08f428ea9b1bc1fb7b8ea69cf6"
+    },
+    {
+      "case_id": "fold_sawtooth_mod_2_false/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "b7bb66ee7b99ec6d24486f2c4bf92fd6470dc72a0b89bc6064ff8ade3913dfbc"
+    },
+    {
+      "case_id": "fold_sawtooth_mod_3_true/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "fold_sawtooth_mod_3_true/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "fold_sawtooth_mod_3_false/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "fold_sawtooth_mod_3_false/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "fold_sawtooth_mod_4_true/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "44f3935f7f0caf1544f458608a748ef4435f688fdc37f07de1959890c9c8f689"
+    },
+    {
+      "case_id": "fold_sawtooth_mod_4_true/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "106ce4db698f7e8a1c6791172e6ee6ad029879eec22612d4889c28f91454a9d9"
+    },
+    {
+      "case_id": "fold_sawtooth_mod_4_false/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "563afe00e6d3ba3cc5e3784ed27fa2a197a83350dd7f56bcf54b7c7f39a8c848"
+    },
+    {
+      "case_id": "fold_sawtooth_mod_4_false/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "5f6d0d8c72b6e171ed50e8368085655b2d11ee76c0547c5dbd8a6a777620cf59"
+    },
+    {
+      "case_id": "fold_sawtooth_mod_5_true/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "95b6ddfbed7f6894c55882ed750f2619084f34c991083453d4a43fa511a4462c"
+    },
+    {
+      "case_id": "fold_sawtooth_mod_5_true/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "59417e5f965a98498a1650aaab79ed277938f6b90647273bb9a7c76158bb0a97"
+    },
+    {
+      "case_id": "fold_sawtooth_mod_5_false/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "2eace04f86e63ae62feef0b822b47dd000bc3dd5f8b51b2bdabc87c8fa3c0aa1"
+    },
+    {
+      "case_id": "fold_sawtooth_mod_5_false/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "df2971c130133f5f7ed38a2c96e1682d83ff6c035061e35fe575823b490936c1"
+    },
+    {
+      "case_id": "fold_sawtooth_input_6/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "fold_sawtooth_input_6/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "fold_sawtooth_input_7/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "66e39e41bccc0a57ae90a77b426f4075e81ba877b0653c3aabe0a9e00762769c"
+    },
+    {
+      "case_id": "fold_sawtooth_input_7/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "65c5dc2e17aca989538a8dd7e7b5138e837e58827f2deff2a46afd25c10557ca"
+    },
+    {
+      "case_id": "fold_sawtooth_input_8/64/cpu",
+      "resolution": 64,
+      "observed_max_abs": 0,
+      "reference_sha256": "e51f34c36351963206b5e408c7942dcdc43e16b17630f873088f5d717a986e19"
+    },
+    {
+      "case_id": "fold_sawtooth_input_8/128/cpu",
+      "resolution": 128,
+      "observed_max_abs": 0,
+      "reference_sha256": "e16f32eecb446fff00da2c2a8e417a07e26886ce20f15d79406f6b6b96351fe0"
+    }
+  ],
+  "limitations": [
+    "Fixed recipes and declared scope only.",
+    "Effect renders are not reference-comparison images.",
+    "No new execution or physical interaction claim.",
+    "CPU evidence does not qualify GPU or engine execution."
+  ]
+}

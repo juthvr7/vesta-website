@@ -1,0 +1,122 @@
+{
+  "id": "node.catalog-a992edab9c9930ae8d61",
+  "operation_version": 3,
+  "contract_sha256": "3e1bddc275ec36c99bc295b50c3f049927e83b0d20833ebc00212c6fede9f96b",
+  "catalog_snapshot_sha256": "1621d8b95d18bb2ef2ac7bbfdc24e640d68ebb4e6859a5d1098d54601ec1e595",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "Selection",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "group",
+        "label": "Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "guess",
+          "breakpoints",
+          "edges",
+          "points",
+          "prims"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "guess"
+        },
+        "disableWhen": null,
+        "group": "Selection",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "grouptype",
+        "label": "Group Type",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "Displacement",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "dist",
+        "label": "Distance",
+        "max": 10,
+        "maxStrict": false,
+        "min": -10,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "Output",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "updatenmls",
+        "label": "Recompute Point Normals",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

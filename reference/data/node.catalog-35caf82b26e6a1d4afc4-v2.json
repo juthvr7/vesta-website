@@ -1,0 +1,86 @@
+{
+  "id": "node.catalog-35caf82b26e6a1d4afc4",
+  "operation_version": 2,
+  "contract_sha256": "a8e2a39aa0cd1eee57b5cab546538dd3f256a3c610ef4ee4d93fdf13aabc6ecd",
+  "catalog_snapshot_sha256": "a6e4002b96221a5b46fedc15d127a003af1fab989aee5c8568c7627ab296ebc2",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "field",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "Random",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "seed",
+        "label": "Seed",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Noise",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "frequency",
+        "label": "Frequency",
+        "max": null,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Noise",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "amplitude",
+        "label": "Amplitude",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

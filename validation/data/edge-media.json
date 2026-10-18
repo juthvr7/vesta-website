@@ -1,0 +1,187 @@
+{
+  "render": {
+    "schema_version": 1,
+    "profile": "terrain-comparison-v1",
+    "producer_sha256": "0c7e41cc858744be872de38cded1ec0235c23abe815590bd54ed60a26a497f86",
+    "kind": "existing-result-render",
+    "pixel_size": [
+      1600,
+      1000
+    ],
+    "camera": {
+      "elevation": 40,
+      "azimuth": -65
+    },
+    "display": {
+      "baseline_index": 0,
+      "source_height_offset": 0,
+      "height_multiplier": 0.9621341819258652,
+      "z_limits": [
+        0,
+        0.24
+      ],
+      "color_range": [
+        0,
+        0.207871213555336
+      ],
+      "sample_stride": 7,
+      "text_overlay": false
+    },
+    "source_layout": {
+      "shape": [
+        1024,
+        1024
+      ],
+      "bounds": {
+        "height": 64,
+        "width": 64,
+        "x": -32,
+        "y": -32
+      }
+    },
+    "artifacts": [
+      {
+        "id": "input",
+        "file": "input.png",
+        "sha256": "bec39c1de7a306cf322220399a406502d5d5e758ce26dc41ebc1afe38ad49985",
+        "source_result_sha256": "cac33a9c538404a1998074e7335523f8e9dec4bbafb8b2fcbaa06dca10b662a9",
+        "source_samples_f32_sha256": "ac9b1841032c4b6fe2b55801706adbe6e0794543c97cf4fb2f5c0034cf48f377",
+        "source_resolution": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "id": "round",
+        "file": "round.png",
+        "sha256": "aa402132731c79d340a52809f8f567da5330faa9cf7974078036a4e5bc3e2ebc",
+        "source_result_sha256": "eaadb6018527ba3e27df65f5ef1af5f61a1da00d17ac1b5128dc563dc4203774",
+        "source_samples_f32_sha256": "b5b58e25812127cf56b6cf0ff105a2b84f8ccf0d8ff636166c185ae568e94bb3",
+        "source_resolution": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "id": "square",
+        "file": "square.png",
+        "sha256": "c7f3638ccfdb8848ee4ee120a1af92c81295b43cc9e7cd5a2b336ebb40dc61de",
+        "source_result_sha256": "12e59358096e68528f94057b97afce39a312e6db5ed441446e8b33f530e96906",
+        "source_samples_f32_sha256": "35ee6d98e4f0fee8514b82103a576c9da7fca4766401d95bf25d9b15edd1cf97",
+        "source_resolution": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "id": "precise",
+        "file": "precise.png",
+        "sha256": "653ee45d31204826ce376c24a0f7a4c86818268d8e381b666d9394c35ea5afcd",
+        "source_result_sha256": "0d3e584289d297b760263d7371aed9ce2ab7ca34f2cc0d6f6ba98e6dcdf23d6e",
+        "source_samples_f32_sha256": "dce278d3ed49ac1bb07ead96dfe0dd6987453c9f546a94dc652aec6857bfca5c",
+        "source_resolution": [
+          1024,
+          1024
+        ]
+      }
+    ]
+  },
+  "derivatives": [
+    {
+      "id": "input",
+      "master_sha256": "bec39c1de7a306cf322220399a406502d5d5e758ce26dc41ebc1afe38ad49985",
+      "variants": [
+        {
+          "file": "input-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "a559580ebc6d299364a72067d545a933be83982533e60333eda47ed2e2f10731"
+        },
+        {
+          "file": "input-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "25fd423715b8cfe183ec4078e558101cc8e7f90265656ef67750ec809a29ea76"
+        },
+        {
+          "file": "input.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "412f11ea7a7d9c89cdb32dad7074cb4c0d5bf60bf5856a197a80b52679d8ce96"
+        }
+      ]
+    },
+    {
+      "id": "round",
+      "master_sha256": "aa402132731c79d340a52809f8f567da5330faa9cf7974078036a4e5bc3e2ebc",
+      "variants": [
+        {
+          "file": "round-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "450bc4f0651780bcf806b9293d1c662dd48c92544a99004373e3a5e6e4b5a062"
+        },
+        {
+          "file": "round-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "2dc8450d1f9683018fde9e8cb86dd4750e150d3e14e0c511545ce6547a678969"
+        },
+        {
+          "file": "round.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "d8fc42132c4e824358c0b199f4a8cfa51def58cd3f7bef229c12c7e4349e5cf8"
+        }
+      ]
+    },
+    {
+      "id": "square",
+      "master_sha256": "c7f3638ccfdb8848ee4ee120a1af92c81295b43cc9e7cd5a2b336ebb40dc61de",
+      "variants": [
+        {
+          "file": "square-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "77af040713262dfca3433857e1c10a811cb3c13f2d50ca9d403d5c366e6d06e8"
+        },
+        {
+          "file": "square-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "77c0df7ee3d6b2999ad48c32158df92119fd538d8fd9a956d94937d9dac4faf3"
+        },
+        {
+          "file": "square.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "39c63f20272fd875347e4efb453794e4f09457cccf5cfddf0f03189fb16ed521"
+        }
+      ]
+    },
+    {
+      "id": "precise",
+      "master_sha256": "653ee45d31204826ce376c24a0f7a4c86818268d8e381b666d9394c35ea5afcd",
+      "variants": [
+        {
+          "file": "precise-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "3ca1298b33aff01067d2bd7bc0db81bbb405200e8c610fb9a6134726218f7d1e"
+        },
+        {
+          "file": "precise-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "8c231c6eae3c66714425a6bce5d665bca927592d71620342357c1273c5534e2f"
+        },
+        {
+          "file": "precise.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "b59df06123bec00d30a4245edc471aca1e3df8ca4a1b6d411b9dc75e73df7b49"
+        }
+      ]
+    }
+  ]
+}

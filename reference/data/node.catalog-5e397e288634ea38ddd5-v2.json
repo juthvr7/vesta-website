@@ -1,0 +1,140 @@
+{
+  "id": "node.catalog-5e397e288634ea38ddd5",
+  "operation_version": 2,
+  "contract_sha256": "139a79f4782d415cfc5896bd7ecdf4fa0fa1e503a65b8edf0ff9f556fe5693f2",
+  "catalog_snapshot_sha256": "17319427743e54078fdde618156e1d5a9b28e80db33feba8a3d62285c9cf2b97",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "planar",
+          "spherical",
+          "cylindrical"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "planar"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "type",
+        "label": "Texture Type",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "scale_u",
+        "label": "Scale U",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "scale_v",
+        "label": "Scale V",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "offset_u",
+        "label": "Offset U",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "offset_v",
+        "label": "Offset V",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

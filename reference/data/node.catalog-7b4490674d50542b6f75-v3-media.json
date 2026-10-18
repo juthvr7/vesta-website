@@ -1,0 +1,422 @@
+{
+  "id": "node.catalog-7b4490674d50542b6f75",
+  "operation_version": 3,
+  "slug": "fuse",
+  "generated_at": "2026-10-19",
+  "backend": "CPU",
+  "kind": "actual-result-render",
+  "profile": "mesh-comparison-v2",
+  "producer_sha256": "5f1dcdbc65c2c6a6aec28566f6f7445b1a71316773a14a0116d849bf9bfa9c9c",
+  "pixel_size": [
+    1600,
+    1000
+  ],
+  "text_overlay": false,
+  "variants": [
+    {
+      "id": "input",
+      "en": "Input",
+      "zh": "输入",
+      "parameter": "",
+      "master_sha256": "779d239ef1d5d19a277f8e8307614bc275a0f97c5f1905a33398230304281f70",
+      "source_result_sha256": "cbfbd0825e408afe163b5761f90c19077ec0fd52872d43196cd5d27dd0cf2d7b",
+      "source_statistics": {
+        "points": 8,
+        "faces": 6
+      },
+      "variants": [
+        {
+          "file": "input-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "1fa9cef30fe1cb76fd8d525bf13b9d9f3ee8d4477af5de53861faed95818a44b"
+        },
+        {
+          "file": "input-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "cc2da0c93de72b158c7fa62c90257b1fc1a454196d6562f1c151f495c6b535bb"
+        },
+        {
+          "file": "input.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "314e48a8181ed55bdd4ef8fe4eda504affca0256ccd15c272eda18d86b47b161"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 1,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-a695f736133790a90aad",
+            "operation_version": 5,
+            "parameters": {
+              "primitive_type": {
+                "type": "Text",
+                "value": "poly"
+              },
+              "connectivity": {
+                "type": "Text",
+                "value": "quads"
+              },
+              "consolidate_corner_points": {
+                "type": "Bool",
+                "value": true
+              },
+              "size": {
+                "type": "Vector3",
+                "value": [
+                  2,
+                  3,
+                  4
+                ]
+              },
+              "center": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotate": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "uniform_scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "axis_divisions_x": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "axis_divisions_y": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "axis_divisions_z": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "axis_orders_x": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "axis_orders_y": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "axis_orders_z": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "divisions": {
+                "type": "Bool",
+                "value": false
+              },
+              "divisions_x": {
+                "type": "ScalarI64",
+                "value": 3
+              },
+              "divisions_y": {
+                "type": "ScalarI64",
+                "value": 3
+              },
+              "divisions_z": {
+                "type": "ScalarI64",
+                "value": 3
+              },
+              "enforcement_bars": {
+                "type": "Bool",
+                "value": false
+              },
+              "add_vertex_normals": {
+                "type": "Bool",
+                "value": false
+              },
+              "oriented_bounding_box": {
+                "type": "Bool",
+                "value": false
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-7b4490674d50542b6f75",
+            "operation_version": 3,
+            "parameters": {
+              "group": {
+                "type": "Text",
+                "value": ""
+              },
+              "distance": {
+                "type": "ScalarF64",
+                "value": 0.01
+              },
+              "position_mode": {
+                "type": "Text",
+                "value": "average"
+              },
+              "remove_degenerate": {
+                "type": "Bool",
+                "value": true
+              },
+              "group_propagation": {
+                "type": "Text",
+                "value": "representative"
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "48863845592de0acfd5c5179b6ca9f426c7a416a98ce8c099bab6ba809b9287b",
+      "same_result_as_input": false
+    },
+    {
+      "id": "result",
+      "en": "Result",
+      "zh": "结果",
+      "parameter": "",
+      "master_sha256": "779d239ef1d5d19a277f8e8307614bc275a0f97c5f1905a33398230304281f70",
+      "source_result_sha256": "cbfbd0825e408afe163b5761f90c19077ec0fd52872d43196cd5d27dd0cf2d7b",
+      "source_statistics": {
+        "points": 8,
+        "faces": 6
+      },
+      "variants": [
+        {
+          "file": "result-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "1fa9cef30fe1cb76fd8d525bf13b9d9f3ee8d4477af5de53861faed95818a44b"
+        },
+        {
+          "file": "result-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "cc2da0c93de72b158c7fa62c90257b1fc1a454196d6562f1c151f495c6b535bb"
+        },
+        {
+          "file": "result.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "314e48a8181ed55bdd4ef8fe4eda504affca0256ccd15c272eda18d86b47b161"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 2,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-a695f736133790a90aad",
+            "operation_version": 5,
+            "parameters": {
+              "primitive_type": {
+                "type": "Text",
+                "value": "poly"
+              },
+              "connectivity": {
+                "type": "Text",
+                "value": "quads"
+              },
+              "consolidate_corner_points": {
+                "type": "Bool",
+                "value": true
+              },
+              "size": {
+                "type": "Vector3",
+                "value": [
+                  2,
+                  3,
+                  4
+                ]
+              },
+              "center": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotate": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "uniform_scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "axis_divisions_x": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "axis_divisions_y": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "axis_divisions_z": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "axis_orders_x": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "axis_orders_y": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "axis_orders_z": {
+                "type": "ScalarI64",
+                "value": 4
+              },
+              "divisions": {
+                "type": "Bool",
+                "value": false
+              },
+              "divisions_x": {
+                "type": "ScalarI64",
+                "value": 3
+              },
+              "divisions_y": {
+                "type": "ScalarI64",
+                "value": 3
+              },
+              "divisions_z": {
+                "type": "ScalarI64",
+                "value": 3
+              },
+              "enforcement_bars": {
+                "type": "Bool",
+                "value": false
+              },
+              "add_vertex_normals": {
+                "type": "Bool",
+                "value": false
+              },
+              "oriented_bounding_box": {
+                "type": "Bool",
+                "value": false
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-7b4490674d50542b6f75",
+            "operation_version": 3,
+            "parameters": {
+              "group": {
+                "type": "Text",
+                "value": ""
+              },
+              "distance": {
+                "type": "ScalarF64",
+                "value": 0.01
+              },
+              "position_mode": {
+                "type": "Text",
+                "value": "average"
+              },
+              "remove_degenerate": {
+                "type": "Bool",
+                "value": true
+              },
+              "group_propagation": {
+                "type": "Text",
+                "value": "representative"
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          }
+        ]
+      },
+      "recipe_sha256": "2ca267c9cb7a2891b8e3a1f447a78dfdbd5a3228f3af70779fa9de8b64b76824",
+      "same_result_as_input": true
+    }
+  ],
+  "display": {
+    "camera": [
+      32,
+      -62
+    ],
+    "world_to_display_axes": [
+      "x",
+      "z",
+      "y"
+    ],
+    "center": [
+      0,
+      0,
+      0
+    ],
+    "radius": 2.32,
+    "geometry_scale": 1,
+    "face_decimation": false,
+    "wire_overlay_below_faces": 1200,
+    "two_sided_lighting": true,
+    "ambient": 0.45,
+    "zoom": 1.2
+  }
+}

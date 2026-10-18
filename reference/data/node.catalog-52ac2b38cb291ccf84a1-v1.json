@@ -1,0 +1,25 @@
+{
+  "id": "node.catalog-52ac2b38cb291ccf84a1",
+  "operation_version": 1,
+  "contract_sha256": "ed8dd3b515f17b410a03b4adfcea11d6ec083b62cc067c4bae6504822a06dafc",
+  "catalog_snapshot_sha256": "9019b139f11e36109d5fef3a3c5054b381cdb638f69a71bc2c4f65e645c14a20",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 1,
+    "inputs": [],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": false
+      }
+    ],
+    "parameters": [],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

@@ -1,0 +1,458 @@
+{
+  "id": "node.catalog-fb6dbf2191877cdfa567",
+  "operation_version": 6,
+  "contract_sha256": "b09f0750f037b483ddf9134ddf11cacba38a42907ff3908b131a86f48d42e3ce",
+  "catalog_snapshot_sha256": "2a4eb5074dd23fa3379715b5e49d9432365b2daaed67d2885f214c8eb129b0f9",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 6,
+    "inputs": [],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "prim",
+          "poly",
+          "polymesh",
+          "mesh",
+          "nurbs",
+          "bezier",
+          "polysoup"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "polymesh"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "type",
+        "label": "Primitive Type",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "rows",
+          "cols",
+          "rowcol",
+          "triangles",
+          "quads",
+          "alttriangles",
+          "revtriangles"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "quads"
+        },
+        "disableWhen": "ch(\"type\") == \"prim\" || ch(\"type\") == \"poly\" || ch(\"type\") == \"polysoup\"",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "surftype",
+        "label": "Connectivity",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            1,
+            1,
+            1
+          ]
+        },
+        "disableWhen": null,
+        "group": "Size",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rad",
+        "label": "Radius",
+        "max": 1,
+        "maxStrict": false,
+        "min": -1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Size",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "t",
+        "label": "Center",
+        "max": 1,
+        "maxStrict": false,
+        "min": -1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Size",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "r",
+        "label": "Rotate",
+        "max": 360,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Size",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "scale",
+        "label": "Uniform Scale",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "x",
+          "y",
+          "z"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "y"
+        },
+        "disableWhen": null,
+        "group": "Size",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "orient",
+        "label": "Orientation",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 2
+        },
+        "disableWhen": "ch(\"type\") != \"poly\" && ch(\"type\") != \"polysoup\"",
+        "group": "Divisions",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "freq",
+        "label": "Frequency",
+        "max": 10,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 13
+        },
+        "disableWhen": "ch(\"type\") == \"prim\" || ch(\"type\") == \"poly\" || ch(\"type\") == \"polysoup\" || (ch(\"type\") == \"nurbs\" && ch(\"imperfect\") == off) || (ch(\"type\") == \"bezier\" && ch(\"imperfect\") == off)",
+        "group": "Divisions",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rows",
+        "label": "Rows",
+        "max": 50,
+        "maxStrict": false,
+        "min": 3,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 24
+        },
+        "disableWhen": "ch(\"type\") == \"prim\" || ch(\"type\") == \"poly\" || ch(\"type\") == \"polysoup\" || (ch(\"type\") == \"nurbs\" && ch(\"imperfect\") == off) || (ch(\"type\") == \"bezier\" && ch(\"imperfect\") == off)",
+        "group": "Divisions",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "cols",
+        "label": "Columns",
+        "max": 50,
+        "maxStrict": false,
+        "min": 3,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 4
+        },
+        "disableWhen": "ch(\"type\") != \"bezier\" && ch(\"type\") != \"nurbs\"",
+        "group": "Divisions",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "orderu",
+        "label": "U Order",
+        "max": 11,
+        "maxStrict": true,
+        "min": 2,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 4
+        },
+        "disableWhen": "ch(\"type\") != \"bezier\" && ch(\"type\") != \"nurbs\"",
+        "group": "Divisions",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "orderv",
+        "label": "V Order",
+        "max": 11,
+        "maxStrict": true,
+        "min": 2,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": "ch(\"type\") != \"bezier\" && ch(\"type\") != \"nurbs\"",
+        "group": "Divisions",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "imperfect",
+        "label": "Imperfect",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": "ch(\"type\") != \"polymesh\" && ch(\"type\") != \"mesh\"",
+        "group": "Poles",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "upole",
+        "label": "Unique Points per Pole",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "Poles",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "accurate",
+        "label": "Accurate Bounds",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": "ch(\"type\") != \"polymesh\" || (ch(\"type\") == \"polymesh\" && ch(\"surftype\") != \"quads\" && ch(\"surftype\") != \"rows\" && ch(\"surftype\") != \"cols\" && ch(\"surftype\") != \"rowcol\")",
+        "group": "Poles",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "triangularpoles",
+        "label": "Triangular Poles",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": [
+      {
+        "default_honored": true,
+        "key": "type",
+        "reason": "only the polygon-mesh sphere (polymesh and mesh, which use rows/cols) is generated",
+        "values": [
+          "prim",
+          "poly",
+          "nurbs",
+          "bezier",
+          "polysoup"
+        ]
+      },
+      {
+        "default_honored": true,
+        "key": "surftype",
+        "reason": "the generated topology is always quads",
+        "values": [
+          "rows",
+          "cols",
+          "rowcol",
+          "triangles",
+          "alttriangles",
+          "revtriangles"
+        ]
+      },
+      {
+        "default_honored": true,
+        "key": "r",
+        "reason": "the generated sphere is not rotated",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "orient",
+        "reason": "the generated sphere is Y-up; the pole axis is not selectable",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "freq",
+        "reason": "the polygon and polysoup sphere types have no kernel",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "orderu",
+        "reason": "NURBS and Bezier sphere types have no kernel",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "orderv",
+        "reason": "NURBS and Bezier sphere types have no kernel",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "imperfect",
+        "reason": "NURBS and Bezier sphere types have no kernel",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "upole",
+        "reason": "each pole is a single shared point",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "accurate",
+        "reason": "the source input-driven bounds mode has no kernel and Vesta has no input port",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "triangularpoles",
+        "reason": "pole rows are always generated as triangle fans",
+        "values": []
+      }
+    ]
+  }
+}

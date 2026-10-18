@@ -1,0 +1,189 @@
+{
+  "id": "node.catalog-e58edb32455abf6ae5f8",
+  "operation_version": 3,
+  "contract_sha256": "95e2634bd6b10236a7e97793fa212b3e25e58ddc1bb7a0d940013991f0029862",
+  "catalog_snapshot_sha256": "42cc64d0202c31855d321ec9c9d97596b1a271b61af9f340e2c6c252d0ae239e",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "fixedresample",
+        "label": "Specify Exact Resolution",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": "ch(\"fixedresample\") == on",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "resscale",
+        "label": "Resolution Scale",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": [
+          "maxaxis",
+          "size"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "size"
+        },
+        "disableWhen": "ch(\"fixedresample\") == off",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "divisionmode",
+        "label": "Division Mode",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 4
+        },
+        "disableWhen": "ch(\"fixedresample\") == off",
+        "group": "General",
+        "hideWhen": "ch(\"divisionmode\") != \"size\"",
+        "joinWithNext": false,
+        "key": "gridspacing",
+        "label": "Grid Spacing",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 256
+        },
+        "disableWhen": "ch(\"fixedresample\") == off",
+        "group": "General",
+        "hideWhen": "ch(\"divisionmode\") == \"size\"",
+        "joinWithNext": false,
+        "key": "gridsamples",
+        "label": "Grid Samples",
+        "max": 2048,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": [
+          "point",
+          "box",
+          "gauss",
+          "bartlett",
+          "sinc",
+          "catrom",
+          "hanning",
+          "blackman",
+          "mitchell"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "gauss"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "filter",
+        "label": "Filter",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1.5
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "filterscale",
+        "label": "Filter Scale",
+        "max": 5,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

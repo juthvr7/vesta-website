@@ -1,0 +1,964 @@
+{
+  "id": "node.catalog-ce0e23407c48902c7d0a",
+  "operation_version": 2,
+  "slug": "heightfield-pattern",
+  "generated_at": "2026-10-19",
+  "backend": "CPU",
+  "kind": "actual-result-render",
+  "profile": "terrain-comparison-v2",
+  "producer_sha256": "1215579356de6c40f500e93a3210a1259134aff899ae74f80703a9c6722404fc",
+  "pixel_size": [
+    1600,
+    1000
+  ],
+  "text_overlay": false,
+  "variants": [
+    {
+      "id": "input",
+      "en": "Input",
+      "zh": "输入",
+      "parameter": "",
+      "master_sha256": "e2f9b8e112facf4a4c59e1a8e1b5cee2256dd52d03c6d7f0770745dcd6f3b4eb",
+      "source_result_sha256": "af863c8948239623d79fd76e06000e2bf2947a8dd87f2de8ae53e28242d52703",
+      "source_statistics": {
+        "resolution": [
+          101,
+          101
+        ],
+        "range": [
+          -62.8203010559082,
+          84.56719207763672
+        ],
+        "samples_f32_sha256": "3a2f0af6c2521dae68d2528fbf4bb488ec160ce98072ae815b78dbb5a19dd4b5"
+      },
+      "variants": [
+        {
+          "file": "input-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "68f68a6a4e3a5fc3b3de263211cbd0ce389c20f53098f6d95f6b6767af3694ff"
+        },
+        {
+          "file": "input-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "419dcf76e9851f18cfd7ea3965348b371cff293eb0ecc6b5e41d539b99513849"
+        },
+        {
+          "file": "input.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "4879d02e74c6db2cb3554da20744300b4756a47824e2a54a1f6701e76e0fcf8f"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 2,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-f763b1c25454fc3d9ea5",
+            "operation_version": 2,
+            "parameters": {
+              "orient": {
+                "type": "Text",
+                "value": "zx"
+              },
+              "sampling": {
+                "type": "Text",
+                "value": "corner"
+              },
+              "initialheight": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "initialmask": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "divisionmode": {
+                "type": "Text",
+                "value": "size"
+              },
+              "gridspacing": {
+                "type": "ScalarF64",
+                "value": 10
+              },
+              "gridsamples": {
+                "type": "ScalarI64",
+                "value": 512
+              },
+              "scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "size": {
+                "type": "Vector2",
+                "value": [
+                  1000,
+                  1000
+                ]
+              },
+              "t": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-0ad4b6ad537e0eb54492",
+            "operation_version": 1,
+            "parameters": {
+              "layer": {
+                "type": "Text",
+                "value": "height"
+              },
+              "masklayer": {
+                "type": "Text",
+                "value": "mask"
+              },
+              "combine": {
+                "type": "Text",
+                "value": "add"
+              },
+              "blend": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "centernoise": {
+                "type": "Bool",
+                "value": true
+              },
+              "amp": {
+                "type": "ScalarF64",
+                "value": 500
+              },
+              "elementsize": {
+                "type": "ScalarF64",
+                "value": 500
+              },
+              "elementscale": {
+                "type": "Vector3",
+                "value": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "offset": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "basis": {
+                "type": "Text",
+                "value": "sparse"
+              },
+              "fractal": {
+                "type": "Text",
+                "value": "hmfT"
+              },
+              "period": {
+                "type": "Vector3",
+                "value": [
+                  2,
+                  2,
+                  2
+                ]
+              },
+              "oct": {
+                "type": "ScalarF64",
+                "value": 8
+              },
+              "lac": {
+                "type": "ScalarF64",
+                "value": 1.841
+              },
+              "rough": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "flowrot": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "fold": {
+                "type": "Bool",
+                "value": false
+              },
+              "complement": {
+                "type": "Bool",
+                "value": false
+              },
+              "dogain": {
+                "type": "Bool",
+                "value": false
+              },
+              "gain": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "dobias": {
+                "type": "Bool",
+                "value": false
+              },
+              "bias": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "clipmin": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "clipmax": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "dolwarp": {
+                "type": "Bool",
+                "value": false
+              },
+              "accuml": {
+                "type": "Bool",
+                "value": true
+              },
+              "disp": {
+                "type": "ScalarF64",
+                "value": 0.1405
+              },
+              "dispfreq": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "dogwarp": {
+                "type": "Bool",
+                "value": false
+              },
+              "accumg": {
+                "type": "Bool",
+                "value": false
+              },
+              "gflow": {
+                "type": "ScalarF64",
+                "value": 0
+              }
+            }
+          },
+          {
+            "id": 3,
+            "topic": "node.catalog-ce0e23407c48902c7d0a",
+            "operation_version": 2,
+            "parameters": {
+              "layer": {
+                "type": "Text",
+                "value": "height"
+              },
+              "masklayer": {
+                "type": "Text",
+                "value": "mask"
+              },
+              "combine": {
+                "type": "Text",
+                "value": "replace"
+              },
+              "blend": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "height": {
+                "type": "ScalarF64",
+                "value": 100
+              },
+              "baseheight": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "postblurradius": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "pattern": {
+                "type": "Text",
+                "value": "stars"
+              },
+              "rotate": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "size": {
+                "type": "ScalarF64",
+                "value": 100
+              },
+              "scale": {
+                "type": "Vector2",
+                "value": [
+                  1,
+                  1
+                ]
+              },
+              "t": {
+                "type": "Vector2",
+                "value": [
+                  0,
+                  0
+                ]
+              },
+              "phase": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "rampmode": {
+                "type": "Text",
+                "value": "linear"
+              },
+              "ramprepeat": {
+                "type": "Text",
+                "value": ""
+              },
+              "rampmirror": {
+                "type": "Text",
+                "value": ""
+              },
+              "riseoverrun": {
+                "type": "ScalarF64",
+                "value": 0.25
+              },
+              "stepheight": {
+                "type": "ScalarF64",
+                "value": 10
+              },
+              "steprefheight": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "stripewidth": {
+                "type": "ScalarF64",
+                "value": 0.337
+              },
+              "shapesize": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "shapesizerandom": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "shaperotate": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "shapeanglerandom": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "shapejitter": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "shapesides": {
+                "type": "ScalarI64",
+                "value": 5
+              },
+              "shapesharpness": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "shapehexness": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "voronoijitter": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "voronoiwall": {
+                "type": "ScalarF64",
+                "value": 0.1
+              },
+              "dodistortion": {
+                "type": "Text",
+                "value": ""
+              },
+              "noisetype": {
+                "type": "Text",
+                "value": "curl"
+              },
+              "distort_amp": {
+                "type": "ScalarF64",
+                "value": 10
+              },
+              "distort_element_size": {
+                "type": "ScalarF64",
+                "value": 100
+              },
+              "distort_element_scale": {
+                "type": "Vector3",
+                "value": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "distort_offset": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "distort_rough": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "distort_maxoctave": {
+                "type": "ScalarI64",
+                "value": 8
+              },
+              "distort_turb": {
+                "type": "ScalarI64",
+                "value": 8
+              },
+              "distort_steps": {
+                "type": "ScalarI64",
+                "value": 1
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          },
+          {
+            "id": 2,
+            "from_node": 2,
+            "from_port": 0,
+            "to_node": 3,
+            "to_port": 0
+          },
+          {
+            "id": 3,
+            "from_node": 2,
+            "from_port": 0,
+            "to_node": 3,
+            "to_port": 1
+          }
+        ]
+      },
+      "recipe_sha256": "8a97e4c6b6d1e1553bb21e95776bc9cf97ec3a628a55137ae421b46b3307d0db",
+      "same_result_as_input": false
+    },
+    {
+      "id": "result",
+      "en": "Result",
+      "zh": "结果",
+      "parameter": "",
+      "master_sha256": "2e658986d840713d5c73ad87717786e79e1230ea2779444d55e3afb07861ea65",
+      "source_result_sha256": "79df49949a8767a5d69569b1c135a4649af82638c43df5f483982916fdeb377f",
+      "source_statistics": {
+        "resolution": [
+          101,
+          101
+        ],
+        "range": [
+          0,
+          100
+        ],
+        "samples_f32_sha256": "d09933c71339a940723b9b0dfa602eced6dcdeff3118fa0abca2398b3fd4a7bc"
+      },
+      "variants": [
+        {
+          "file": "result-768.webp",
+          "width": 768,
+          "height": 480,
+          "sha256": "33aa25d9e7467486b2933c49228cf150abc5f02da58f66c112d9c47a4a46cdcc"
+        },
+        {
+          "file": "result-1280.webp",
+          "width": 1280,
+          "height": 800,
+          "sha256": "58a28c083ca0f2f08a3c2f68910f64ee0fee7ff906e8bb4e8879b5efb214583d"
+        },
+        {
+          "file": "result.webp",
+          "width": 1600,
+          "height": 1000,
+          "sha256": "69308d750f8e2a8948632c5f0f23439d1e0664bc39e4780a63a6793fc91ad28e"
+        }
+      ],
+      "recipe": {
+        "schema_version": 1,
+        "kind": "documentation-recipe",
+        "executable_author_document": false,
+        "target": 3,
+        "request": {
+          "backend": "CPU",
+          "resolution": [
+            32,
+            32
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "seed": 0
+        },
+        "nodes": [
+          {
+            "id": 1,
+            "topic": "node.catalog-f763b1c25454fc3d9ea5",
+            "operation_version": 2,
+            "parameters": {
+              "orient": {
+                "type": "Text",
+                "value": "zx"
+              },
+              "sampling": {
+                "type": "Text",
+                "value": "corner"
+              },
+              "initialheight": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "initialmask": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "divisionmode": {
+                "type": "Text",
+                "value": "size"
+              },
+              "gridspacing": {
+                "type": "ScalarF64",
+                "value": 10
+              },
+              "gridsamples": {
+                "type": "ScalarI64",
+                "value": 512
+              },
+              "scale": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "size": {
+                "type": "Vector2",
+                "value": [
+                  1000,
+                  1000
+                ]
+              },
+              "t": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              }
+            }
+          },
+          {
+            "id": 2,
+            "topic": "node.catalog-0ad4b6ad537e0eb54492",
+            "operation_version": 1,
+            "parameters": {
+              "layer": {
+                "type": "Text",
+                "value": "height"
+              },
+              "masklayer": {
+                "type": "Text",
+                "value": "mask"
+              },
+              "combine": {
+                "type": "Text",
+                "value": "add"
+              },
+              "blend": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "centernoise": {
+                "type": "Bool",
+                "value": true
+              },
+              "amp": {
+                "type": "ScalarF64",
+                "value": 500
+              },
+              "elementsize": {
+                "type": "ScalarF64",
+                "value": 500
+              },
+              "elementscale": {
+                "type": "Vector3",
+                "value": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "offset": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "basis": {
+                "type": "Text",
+                "value": "sparse"
+              },
+              "fractal": {
+                "type": "Text",
+                "value": "hmfT"
+              },
+              "period": {
+                "type": "Vector3",
+                "value": [
+                  2,
+                  2,
+                  2
+                ]
+              },
+              "oct": {
+                "type": "ScalarF64",
+                "value": 8
+              },
+              "lac": {
+                "type": "ScalarF64",
+                "value": 1.841
+              },
+              "rough": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "flowrot": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "fold": {
+                "type": "Bool",
+                "value": false
+              },
+              "complement": {
+                "type": "Bool",
+                "value": false
+              },
+              "dogain": {
+                "type": "Bool",
+                "value": false
+              },
+              "gain": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "dobias": {
+                "type": "Bool",
+                "value": false
+              },
+              "bias": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "clipmin": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "clipmax": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "dolwarp": {
+                "type": "Bool",
+                "value": false
+              },
+              "accuml": {
+                "type": "Bool",
+                "value": true
+              },
+              "disp": {
+                "type": "ScalarF64",
+                "value": 0.1405
+              },
+              "dispfreq": {
+                "type": "ScalarF64",
+                "value": 1
+              },
+              "dogwarp": {
+                "type": "Bool",
+                "value": false
+              },
+              "accumg": {
+                "type": "Bool",
+                "value": false
+              },
+              "gflow": {
+                "type": "ScalarF64",
+                "value": 0
+              }
+            }
+          },
+          {
+            "id": 3,
+            "topic": "node.catalog-ce0e23407c48902c7d0a",
+            "operation_version": 2,
+            "parameters": {
+              "layer": {
+                "type": "Text",
+                "value": "height"
+              },
+              "masklayer": {
+                "type": "Text",
+                "value": "mask"
+              },
+              "combine": {
+                "type": "Text",
+                "value": "replace"
+              },
+              "blend": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "height": {
+                "type": "ScalarF64",
+                "value": 100
+              },
+              "baseheight": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "postblurradius": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "pattern": {
+                "type": "Text",
+                "value": "stars"
+              },
+              "rotate": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "size": {
+                "type": "ScalarF64",
+                "value": 100
+              },
+              "scale": {
+                "type": "Vector2",
+                "value": [
+                  1,
+                  1
+                ]
+              },
+              "t": {
+                "type": "Vector2",
+                "value": [
+                  0,
+                  0
+                ]
+              },
+              "phase": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "rampmode": {
+                "type": "Text",
+                "value": "linear"
+              },
+              "ramprepeat": {
+                "type": "Text",
+                "value": ""
+              },
+              "rampmirror": {
+                "type": "Text",
+                "value": ""
+              },
+              "riseoverrun": {
+                "type": "ScalarF64",
+                "value": 0.25
+              },
+              "stepheight": {
+                "type": "ScalarF64",
+                "value": 10
+              },
+              "steprefheight": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "stripewidth": {
+                "type": "ScalarF64",
+                "value": 0.337
+              },
+              "shapesize": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "shapesizerandom": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "shaperotate": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "shapeanglerandom": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "shapejitter": {
+                "type": "ScalarF64",
+                "value": 0
+              },
+              "shapesides": {
+                "type": "ScalarI64",
+                "value": 5
+              },
+              "shapesharpness": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "shapehexness": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "voronoijitter": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "voronoiwall": {
+                "type": "ScalarF64",
+                "value": 0.1
+              },
+              "dodistortion": {
+                "type": "Text",
+                "value": ""
+              },
+              "noisetype": {
+                "type": "Text",
+                "value": "curl"
+              },
+              "distort_amp": {
+                "type": "ScalarF64",
+                "value": 10
+              },
+              "distort_element_size": {
+                "type": "ScalarF64",
+                "value": 100
+              },
+              "distort_element_scale": {
+                "type": "Vector3",
+                "value": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "distort_offset": {
+                "type": "Vector3",
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "distort_rough": {
+                "type": "ScalarF64",
+                "value": 0.5
+              },
+              "distort_maxoctave": {
+                "type": "ScalarI64",
+                "value": 8
+              },
+              "distort_turb": {
+                "type": "ScalarI64",
+                "value": 8
+              },
+              "distort_steps": {
+                "type": "ScalarI64",
+                "value": 1
+              }
+            }
+          }
+        ],
+        "connections": [
+          {
+            "id": 1,
+            "from_node": 1,
+            "from_port": 0,
+            "to_node": 2,
+            "to_port": 0
+          },
+          {
+            "id": 2,
+            "from_node": 2,
+            "from_port": 0,
+            "to_node": 3,
+            "to_port": 0
+          },
+          {
+            "id": 3,
+            "from_node": 2,
+            "from_port": 0,
+            "to_node": 3,
+            "to_port": 1
+          }
+        ]
+      },
+      "recipe_sha256": "bf6aa7a8a0e0e479db6a53afedbdbda0471d747d5dd278428b11197ad3c11227",
+      "same_result_as_input": false
+    }
+  ],
+  "display": {
+    "camera": [
+      32,
+      -62
+    ],
+    "common_color_range": [
+      -62.8203010559082,
+      100
+    ],
+    "height_offset": -62.8203010559082,
+    "height_multiplier": 0.0012283480542842461,
+    "extent": [
+      1,
+      1,
+      0.28
+    ],
+    "sample_stride": 1,
+    "vertical_scale_metadata_applied": false
+  }
+}

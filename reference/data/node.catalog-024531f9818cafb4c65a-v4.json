@@ -1,0 +1,327 @@
+{
+  "id": "node.catalog-024531f9818cafb4c65a",
+  "operation_version": 4,
+  "contract_sha256": "a77ae9979c4f072a81b1f028cd89feb52fda544c73c1df0c2ee29af0d17be1a1",
+  "catalog_snapshot_sha256": "2644998efc7316bd1ff92f3b2d113a34835b105c7ecf91462ceff2ff9c53b3c0",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 4,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": [
+          "point",
+          "prim"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "prim"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "connecttype",
+        "label": "Connectivity Type",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "primincgroup",
+        "label": "Primitive Include Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": "ch(\"connecttype\") != \"point\"",
+        "joinWithNext": false,
+        "key": "pointincgroup",
+        "label": "Point Include Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "class"
+        },
+        "disableWhen": null,
+        "group": "Attribute",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "attribname",
+        "label": "Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "int",
+          "string"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "int"
+        },
+        "disableWhen": null,
+        "group": "Attribute",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "attribtype",
+        "label": "Attribute Type",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "piece"
+        },
+        "disableWhen": "ch(\"attribtype\") != \"string\"",
+        "group": "Attribute",
+        "hideWhen": "ch(\"attribtype\") != \"string\"",
+        "joinWithNext": false,
+        "key": "prefix",
+        "label": "Prefix",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Variable Mapping",
+        "hideWhen": null,
+        "joinWithNext": true,
+        "key": "createvarmap",
+        "label": "Create Variable Mapping",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "ch(\"createvarmap\") == off",
+        "group": "Variable Mapping",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "varname",
+        "label": "Local Variable",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": "ch(\"connecttype\") == \"point\"",
+        "group": "Seams",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "seamgroup",
+        "label": "Seam Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": "ch(\"connecttype\") == \"point\" || ch(\"seamgroup\") != \"\"",
+        "group": "Seams",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "byuv",
+        "label": "Use UV Connectivity",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "uv"
+        },
+        "disableWhen": "ch(\"connecttype\") == \"point\" || ch(\"seamgroup\") != \"\" || ch(\"byuv\") == off",
+        "group": "Seams",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "uvattrib",
+        "label": "UV Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": [
+      {
+        "default_honored": true,
+        "key": "connecttype",
+        "reason": "only primitive connectivity (prim) is implemented; point connectivity has no kernel",
+        "values": [
+          "point"
+        ]
+      },
+      {
+        "default_honored": true,
+        "key": "primincgroup",
+        "reason": "connectivity covers every primitive; group filtering is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "pointincgroup",
+        "reason": "only primitive connectivity is implemented, so point groups are unused",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "attribtype",
+        "reason": "the component attribute is always Int; the string form is not implemented",
+        "values": [
+          "string"
+        ]
+      },
+      {
+        "default_honored": true,
+        "key": "prefix",
+        "reason": "only the Int attribute form is implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "createvarmap",
+        "reason": "local variable mapping is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "varname",
+        "reason": "local variable mapping is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "seamgroup",
+        "reason": "seam handling is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "byuv",
+        "reason": "UV connectivity is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "uvattrib",
+        "reason": "UV connectivity is not implemented",
+        "values": []
+      }
+    ]
+  }
+}

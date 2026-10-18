@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101713"><meta name="description" content="把遮罩区域压平到指定值或平均高度，或以未遮罩边界重建较平缓的坡面。"><title>Heightfield Flatten · 节点参考 · 用户手册 — Vesta</title>
+<meta name="validation-bundle" content="e814dc4ca7de3848e433c44c64f12d334f5110695285f9e6242f4630d1eef2f0"><link rel="canonical" href="https://juthvr7.github.io/vesta-website/zh/reference/nodes/node.catalog-2e883567bdb602ae3bdb/v2/"><link rel="alternate" hreflang="en" href="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-2e883567bdb602ae3bdb/v2/"><link rel="alternate" hreflang="zh-CN" href="https://juthvr7.github.io/vesta-website/zh/reference/nodes/node.catalog-2e883567bdb602ae3bdb/v2/"><link rel="alternate" hreflang="x-default" href="https://juthvr7.github.io/vesta-website/reference/nodes/node.catalog-2e883567bdb602ae3bdb/v2/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Vesta"><meta property="og:locale" content="zh_CN"><meta property="og:title" content="Heightfield Flatten · 节点参考 · 用户手册 — Vesta"><meta property="og:description" content="把遮罩区域压平到指定值或平均高度，或以未遮罩边界重建较平缓的坡面。"><meta property="og:url" content="https://juthvr7.github.io/vesta-website/zh/reference/nodes/node.catalog-2e883567bdb602ae3bdb/v2/"><meta property="og:image" content="https://juthvr7.github.io/vesta-website/assets/validation/help/heightfield-flatten/result.webp"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../../../../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../../../../../vesta-site.css?v=20261019-implemented-help-v1"><link rel="stylesheet" href="../../../../../validation.css?v=20261019-implemented-help-v1"><script src="../../../../../validation.js?v=20261019-implemented-help-v1" defer></script><script src="../../../../../manual-search-index.js?v=20261019-implemented-help-v1" defer></script><script src="../../../../../manual-search.js?v=20261019-implemented-help-v1" data-manual-root="../../../../../" defer></script></head>
+<body class="validation-page"><a class="skip" href="#main">跳至内容</a>
+<header class="header"><a class="logo" href="../../../../../zh/" aria-label="Vesta">vesta<span>.</span></a><nav id="navigation" aria-label="导航"><a href="../../../../../zh/">首页</a><a href="../../../../../zh/validation/" >用户手册</a></nav><div class="languages"><a href="../../../../../reference/nodes/node.catalog-2e883567bdb602ae3bdb/v2/" data-language-link lang="en" >EN</a><span>/</span><a href="../../../../../zh/reference/nodes/node.catalog-2e883567bdb602ae3bdb/v2/" data-language-link lang="zh-CN" aria-current="page">中文</a></div><button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false" aria-label="菜单" data-open-label="菜单" data-close-label="关闭">菜单 ☰</button></header>
+<div class="framework-layout"><aside class="framework-sidebar"><details class="framework-directory" open><summary>浏览能力框架</summary><label class="manual-search-box"><span>搜索手册</span><input type="search" data-manual-search placeholder="搜索手册" aria-label="搜索手册" autocomplete="off"></label><nav aria-label="浏览能力框架"><a class="framework-start" href="../../../../../zh/validation/" >从这里开始</a><div class="framework-group "><a class="chapter-link" href="../../../../../zh/validation/guide/agent-creation/" ><span>01</span>Agent协作创作<small class="chapter-state">建设中</small></a></div><div class="framework-group active-chapter"><a class="chapter-link" href="../../../../../zh/validation/guide/terrain/" ><span>02</span>地形<small class="chapter-state">已有验证切片</small></a><div class="framework-branches"><a href="../../../../../zh/validation/guide/terrain/#generate">生成基础地貌</a><a href="../../../../../zh/validation/guide/terrain/#shape">地形塑形</a><div class="framework-leaves"><a href="../../../../../zh/validation/terrain/edge/" >地形收边</a><a href="../../../../../zh/validation/terrain/terraces/" >岩层分层</a><a href="../../../../../zh/validation/terrain/fold/" >波形重塑</a><a href="../../../../../zh/validation/terrain/soft-clip/" >柔性高度控制</a></div><a href="../../../../../zh/validation/guide/terrain/#simulate">侵蚀与物质变化</a><a href="../../../../../zh/validation/guide/terrain/#layers">遮罩、图层与局部控制</a></div></div><div class="framework-group "><a class="chapter-link" href="../../../../../zh/validation/guide/geometry-tools/" ><span>03</span>几何与节点工具<small class="chapter-state">已有验证切片</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../../zh/validation/guide/world-systems/" ><span>04</span>世界系统<small class="chapter-state">规划方向</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../../zh/validation/guide/graph-assets/" ><span>05</span>Graph与可复用资产<small class="chapter-state">已有验证切片</small></a></div><div class="framework-group "><a class="chapter-link" href="../../../../../zh/validation/guide/engine-delivery/" ><span>06</span>引擎交付<small class="chapter-state">已有验证切片</small></a><div class="framework-leaves"><a href="../../../../../zh/validation/workflows/vda-unreal/" >VDA → Unreal实证</a></div></div><div class="framework-group "><a class="chapter-link" href="../../../../../zh/validation/guide/execution/" ><span>07</span>数据与执行基础<small class="chapter-state">共享基础</small></a></div></nav><nav class="reference-directory" aria-label="节点参考"><p>节点参考</p><a href="../../../../../zh/reference/library/" >节点目录 <small>644</small></a><a href="../../../../../zh/reference/library/#implemented">已实现节点的参数参考 <small>111</small></a><a href="../../../../../zh/reference/nodes/node.edge/v1/" >Edge <small>v1</small></a><a href="../../../../../zh/reference/nodes/node.fold/v2/" >Fold <small>v2</small></a><a href="../../../../../zh/reference/nodes/node.soft-clip/v2/" >SoftClip <small>v2</small></a><a href="../../../../../zh/reference/nodes/node.terraces/v2/" >Terraces <small>v2</small></a></nav><a class="manual-download" data-offline-download href="../../../../../downloads/vesta-manual.zip">下载离线手册 ↓<small>HTML · 全文搜索 · 本地素材</small></a></details></aside><main class="framework-main" id="main"><section class="manual-search-results wrap" hidden><h1>搜索结果</h1><button type="button" data-clear-search>清除搜索</button><p role="status" data-search-status data-empty="没有匹配的章节或功能。"></p><ol></ol></section><div class="manual-document-body"><article class="node-reference wrap"><p class="chapter-breadcrumb"><a href="../../../../../zh/reference/library/terrain-heightfield/#entry-node.catalog-2e883567bdb602ae3bdb-v2">高度场处理</a> / 节点参考</p><p class="kicker">逐参数使用说明 · v2</p><h1>Heightfield Flatten</h1><p class="framework-lead">把遮罩区域压平到指定值或平均高度，或以未遮罩边界重建较平缓的坡面。</p><dl class="chapter-io"><div><dt>文档版本</dt><dd>2026-10-19</dd></div><div><dt>节点逻辑版本</dt><dd>2</dd></div></dl><p class="reference-note">本页对应这个确切的节点逻辑版本。文档打包版本与后端实现版本分别记录。 保留全部已声明参数；行为说明和效果媒体分别记录完成状态。</p><nav class="chapter-toc"><a href="#ports">输入与输出</a><a href="#parameters">参数 (5)</a><a href="#examples">效果示例与验证</a></nav><section class="capability-section" id="ports"><h2>输入与输出</h2><div class="reference-ports"><section><h3>输入</h3><ol><li><strong>heightfield</strong> <code>Geometry</code> 必需</li></ol></section><section><h3>输出</h3><ol><li><strong>geometry</strong> <code>Geometry</code> </li></ol></section></div></section><section class="capability-section" id="parameters"><h2>参数</h2><p>契约字段来自有日期的Catalog快照。滑块软范围端点不等于硬验证范围。 数值默认值采用便于阅读的显示精度，精确值保留在可下载契约中。</p><nav class="parameter-toc"><a href="#parameter-6d61736b6c61796572">Mask Layer</a><a href="#parameter-6865696768746c61796572">Height Layer</a><a href="#parameter-6d6574686f64">Flatten Method</a><a href="#parameter-626c7572726164697573">Mask Blur Radius</a><a href="#parameter-686569676874">Height</a></nav><section class="parameter-reference" id="parameter-6d61736b6c61796572"><h3><a href="#parameter-6d61736b6c61796572">Mask Layer <span aria-hidden="true">#</span></a></h3><code>masklayer</code><p class="">控制压平影响范围的图层。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Text</dd></div><div><dt>默认值</dt><dd><code>mask</code></dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-6865696768746c61796572"><h3><a href="#parameter-6865696768746c61796572">Height Layer <span aria-hidden="true">#</span></a></h3><code>heightlayer</code><p class="">需要修改的高度图层。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Text</dd></div><div><dt>默认值</dt><dd><code>height</code></dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-6d6574686f64"><h3><a href="#parameter-6d6574686f64">Flatten Method <span aria-hidden="true">#</span></a></h3><code>method</code><p class="">value向Height混合；average使用遮罩加权平均；slope从边界重建区域，全域激活时当前以零为锚点。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>Text</dd></div><div><dt>默认值</dt><dd><code>slope</code></dd></div><div><dt>允许值</dt><dd>value / average / slope</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-626c7572726164697573"><h3><a href="#parameter-626c7572726164697573">Mask Blur Radius <span aria-hidden="true">#</span></a></h3><code>blurradius</code><p class="">压平前平滑遮罩过渡。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>ScalarF64</dd></div><div><dt>默认值</dt><dd><code>0</code></dd></div><div><dt>范围端点</dt><dd>0 (严格约束) → 100 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p></details></section><section class="parameter-reference" id="parameter-686569676874"><h3><a href="#parameter-686569676874">Height <span aria-hidden="true">#</span></a></h3><code>height</code><p class="">Method为value时使用的目标高度。</p><dl class="parameter-contract"><div><dt>类型</dt><dd>ScalarF64</dd></div><div><dt>默认值</dt><dd><code>0</code></dd></div><div><dt>范围端点</dt><dd>0 (软范围) → 100 (软范围)</dd></div></dl><details><summary>条件与重复行</summary><p>参数组: General</p><p>禁用／隐藏条件</p><pre>{
+  &quot;disableWhen&quot;: null,
+  &quot;hideWhen&quot;: &quot;ch(\&quot;method\&quot;) != \&quot;value\&quot;&quot;
+}</pre></details></section></section><section class="capability-section" id="examples"><h2>效果示例与验证</h2><p>真实输出的展示渲染 · CPU · 2026-10-19</p><div class="reference-media-grid"><figure><button class="image-button" type="button" aria-label="输入" data-image="../../../../../assets/validation/help/heightfield-flatten/input.webp" data-caption="输入"><img src="../../../../../assets/validation/help/heightfield-flatten/input.webp" srcset="../../../../../assets/validation/help/heightfield-flatten/input-768.webp 768w, ../../../../../assets/validation/help/heightfield-flatten/input-1280.webp 1280w, ../../../../../assets/validation/help/heightfield-flatten/input.webp 1600w" sizes="(max-width:760px) 100vw,48vw" alt="输入" width="1600" height="1000" loading="lazy" decoding="async"></button><figcaption>输入<details><summary>样本参数与输出</summary><pre>{
+  &quot;parameters&quot;: {
+    &quot;layer&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;height&quot;
+    },
+    &quot;masklayer&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;mask&quot;
+    },
+    &quot;combine&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;add&quot;
+    },
+    &quot;blend&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;centernoise&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: true
+    },
+    &quot;amp&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 500
+    },
+    &quot;elementsize&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 500
+    },
+    &quot;elementscale&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        1,
+        1,
+        1
+      ]
+    },
+    &quot;offset&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        0,
+        0,
+        0
+      ]
+    },
+    &quot;basis&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;sparse&quot;
+    },
+    &quot;fractal&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;hmfT&quot;
+    },
+    &quot;period&quot;: {
+      &quot;type&quot;: &quot;Vector3&quot;,
+      &quot;value&quot;: [
+        2,
+        2,
+        2
+      ]
+    },
+    &quot;oct&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 8
+    },
+    &quot;lac&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1.841
+    },
+    &quot;rough&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;flowrot&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;fold&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;complement&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;dogain&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;gain&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;dobias&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;bias&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.5
+    },
+    &quot;clipmin&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;clipmax&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;dolwarp&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;accuml&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: true
+    },
+    &quot;disp&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0.1405
+    },
+    &quot;dispfreq&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 1
+    },
+    &quot;dogwarp&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;accumg&quot;: {
+      &quot;type&quot;: &quot;Bool&quot;,
+      &quot;value&quot;: false
+    },
+    &quot;gflow&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    }
+  },
+  &quot;output&quot;: {
+    &quot;resolution&quot;: [
+      101,
+      101
+    ],
+    &quot;range&quot;: [
+      -62.8203010559082,
+      84.56719207763672
+    ],
+    &quot;samples_f32_sha256&quot;: &quot;3a2f0af6c2521dae68d2528fbf4bb488ec160ce98072ae815b78dbb5a19dd4b5&quot;
+  }
+}</pre></details></figcaption></figure><figure><button class="image-button" type="button" aria-label="结果" data-image="../../../../../assets/validation/help/heightfield-flatten/result.webp" data-caption="结果"><img src="../../../../../assets/validation/help/heightfield-flatten/result.webp" srcset="../../../../../assets/validation/help/heightfield-flatten/result-768.webp 768w, ../../../../../assets/validation/help/heightfield-flatten/result-1280.webp 1280w, ../../../../../assets/validation/help/heightfield-flatten/result.webp 1600w" sizes="(max-width:760px) 100vw,48vw" alt="结果" width="1600" height="1000" loading="lazy" decoding="async"></button><figcaption>结果<details><summary>样本参数与输出</summary><pre>{
+  &quot;parameters&quot;: {
+    &quot;masklayer&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;mask&quot;
+    },
+    &quot;heightlayer&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;height&quot;
+    },
+    &quot;method&quot;: {
+      &quot;type&quot;: &quot;Text&quot;,
+      &quot;value&quot;: &quot;slope&quot;
+    },
+    &quot;blurradius&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    },
+    &quot;height&quot;: {
+      &quot;type&quot;: &quot;ScalarF64&quot;,
+      &quot;value&quot;: 0
+    }
+  },
+  &quot;output&quot;: {
+    &quot;resolution&quot;: [
+      101,
+      101
+    ],
+    &quot;range&quot;: [
+      0,
+      0
+    ],
+    &quot;samples_f32_sha256&quot;: &quot;64e9f8d24d67e01192342a72ce54d6861163a567870d20df5cfa27a2170961db&quot;
+  }
+}</pre></details></figcaption></figure></div><p>这些样本展示所述配方与CPU输出，不构成新的数值验收、GPU、性能或原生交互测试。</p><p><a href="../../../../../reference/data/node.catalog-2e883567bdb602ae3bdb-v2-media.json">样本与显示处理记录 ↗</a></p><p><a href="../../../../../reference/data/node.catalog-2e883567bdb602ae3bdb-v2.json">下载参考契约 ↗</a></p><details class="record-details"><summary>稳定帮助身份</summary><code>node.catalog-2e883567bdb602ae3bdb · v2</code><code class="snapshot-id">c55b792fa0d1b44d121742b2d77e6fa11efc16d07362fa079356a56562906bbd</code></details></section><section class="chapter-next"><h2>相关内容</h2><div><a href="../../../../../zh/reference/nodes/node.catalog-eaae98d9a24f8c4999f6/v3/">Heightfield Erode Hydro · v3 ↗</a><a href="../../../../../zh/reference/nodes/node.catalog-f763b1c25454fc3d9ea5/v2/">Heightfield · v2 ↗</a><a href="../../../../../zh/reference/nodes/node.catalog-23cc6cdcbebd201b055f/v3/">Heightfield Blur · v3 ↗</a><a href="../../../../../zh/reference/nodes/node.catalog-9ea2126dc27f2293581f/v4/">Heightfield Clip · v4 ↗</a><a href="../../../../../zh/reference/nodes/node.catalog-47a6f22e654fac34a8fb/v2/">Heightfield Combine · v2 ↗</a><a href="../../../../../zh/reference/nodes/node.catalog-00cea0b8a69a09a3a0a1/v2/">Heightfield Copylayer · v2 ↗</a><a href="../../../../../zh/reference/nodes/node.catalog-2fd8159ace6451ee577e/v2/">Heightfield Crop · v2 ↗</a><a href="../../../../../zh/reference/nodes/node.catalog-67cc63fa0e9c85227171/v3/">Heightfield Cutoutbyobject · v3 ↗</a></div></section></article></div></main></div>
+<footer class="validation-footer"><div class="wrap"><a class="logo" href="../../../../../zh/">vesta<span>.</span></a><div><p>AGENTIC WORLD CREATOR / IN DEVELOPMENT</p><span>每项证据都有具体范围，不代表完整产品或全部流程已经验收。</span></div><a href="../../../../../zh/validation/">用户手册 ↗</a></div></footer>
+<dialog class="lightbox" aria-label="效果研究"><button class="lightbox-close" type="button" aria-label="关闭">关闭 ×</button><img alt=""><p></p></dialog></body></html>

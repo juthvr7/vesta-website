@@ -1,0 +1,625 @@
+{
+  "id": "node.catalog-c21cc61f5650da57197d",
+  "operation_version": 2,
+  "contract_sha256": "7cf9658b517a2e275602e53150197ee32bd4f4cb5ae456ab3dedde3bb7d2ce45",
+  "catalog_snapshot_sha256": "4465f555d89ff475be1bf239da1c10d3edeab44b29a61430ca4662d55d289011",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "mesh",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "Selection",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "group",
+        "label": "Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "points",
+          "vertices",
+          "primitives",
+          "edges"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "primitives"
+        },
+        "disableWhen": null,
+        "group": "Selection",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "group_type",
+        "label": "Group Type",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "srt",
+          "str",
+          "rst",
+          "rts",
+          "tsr",
+          "trs"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "srt"
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "transform_order",
+        "label": "Transform Order",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "xyz",
+          "xyx",
+          "yzx",
+          "yxy",
+          "zxy",
+          "zyx"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "xyz"
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rotate_order",
+        "label": "Rotate Order",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "translate",
+        "label": "Translate",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rotate",
+        "label": "Rotate",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            1,
+            1,
+            1
+          ]
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "scale",
+        "label": "Scale",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "shear",
+        "label": "Shear",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "uniform_scale",
+        "label": "Uniform Scale",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Pivot",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "pivot_translate",
+        "label": "Pivot Translate",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Pivot",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "pivot_rotate",
+        "label": "Pivot Rotation",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": [
+          "srt",
+          "str",
+          "rst",
+          "rts",
+          "tsr",
+          "trs"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "srt"
+        },
+        "disableWhen": null,
+        "group": "Pre-Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "pre_transform_order",
+        "label": "Pre-Transform Order",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "xyz",
+          "xyx",
+          "yzx",
+          "yxy",
+          "zxy",
+          "zyx"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "xyz"
+        },
+        "disableWhen": null,
+        "group": "Pre-Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "pre_rotate_order",
+        "label": "Ptr-Rotate Order",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Pre-Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "pre_translate",
+        "label": "Pre-Translate",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Pre-Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "pre_rotate",
+        "label": "Pre-Rotate",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            1,
+            1,
+            1
+          ]
+        },
+        "disableWhen": null,
+        "group": "Pre-Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "pre_scale",
+        "label": "Pre-Scale",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Vector3",
+          "value": [
+            0,
+            0,
+            0
+          ]
+        },
+        "disableWhen": null,
+        "group": "Pre-Transform",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "pre_shear",
+        "label": "Pre-Shear",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Vector3"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "Attributes",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "attributes",
+        "label": "Attributes",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "Attributes",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "recompute_point_normals",
+        "label": "Recompute Point Normals",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Attributes",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "recompute_affected_normals",
+        "label": "Recompute Affected Normals",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": true
+        },
+        "disableWhen": null,
+        "group": "Attributes",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "preserve_normal_length",
+        "label": "Preserve Normal Length",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Invert",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "invert_transformation",
+        "label": "Invert Transformation",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "Invert",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "output_attribute",
+        "label": "Output Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "post_multiply",
+          "pre_multiply"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "post_multiply"
+        },
+        "disableWhen": null,
+        "group": "Invert",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "combine",
+        "label": "Combine",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [
+      {
+        "disable_when": null,
+        "effect": {
+          "reason": "Original author action requires a Command/Executor host workflow that is not implemented",
+          "type": "unavailable"
+        },
+        "group": "General",
+        "hide_when": null,
+        "key": "movecentroid",
+        "label": "Move Centroid to Origin",
+        "requires": [],
+        "trigger": {
+          "type": "button"
+        },
+        "version": 1
+      },
+      {
+        "disable_when": null,
+        "effect": {
+          "reason": "Original author action requires a Command/Executor host workflow that is not implemented",
+          "type": "unavailable"
+        },
+        "group": "General",
+        "hide_when": null,
+        "key": "movepivot",
+        "label": "Move Pivot to Centroid",
+        "requires": [],
+        "trigger": {
+          "type": "button"
+        },
+        "version": 1
+      }
+    ],
+    "unimplementedParameters": []
+  }
+}

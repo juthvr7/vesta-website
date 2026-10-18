@@ -1,0 +1,498 @@
+{
+  "id": "node.catalog-85d98fbc3ba87f9b0e97",
+  "operation_version": 3,
+  "contract_sha256": "ee2a431a483bb8cbfd39f5cda8f893069db0f0eccaf58a75beb74b247b037d97",
+  "catalog_snapshot_sha256": "296a3144e1fae032581ca4d3510bfb68f4a2a9683c4bb9b00098e20ce39a4038",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 3,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "geometry",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "volume_0",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "points",
+        "label": "Group",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "attributes",
+        "label": "Attributes",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": true,
+        "key": "filterbysrcattrib",
+        "label": "Source Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "source_name"
+        },
+        "disableWhen": "ch(\"filterbysrcattrib\") == off",
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "srcattrib",
+        "label": "Source Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "*"
+        },
+        "disableWhen": null,
+        "group": "General",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "fogvolumes",
+        "label": "Visible Volumes",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "gauss"
+        },
+        "disableWhen": null,
+        "group": "Filter",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "filter",
+        "label": "Filter",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.1
+        },
+        "disableWhen": null,
+        "group": "Filter",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "voxelsize",
+        "label": "Voxel Size",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Filter",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "particlescale",
+        "label": "Particle Scale",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.75
+        },
+        "disableWhen": null,
+        "group": "Filter",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "minfilter",
+        "label": "Minimum Filter Size",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Velocity Blur",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "velocityblur",
+        "label": "Velocity Blur",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 0.5
+        },
+        "disableWhen": "ch(\"velocityblur\") == off",
+        "group": "Velocity Blur",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "shutter",
+        "label": "Shutter",
+        "max": 1,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": "ch(\"velocityblur\") == off",
+        "group": "Velocity Blur",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "shutteroffset",
+        "label": "Shutter Offset",
+        "max": 1,
+        "maxStrict": false,
+        "min": -1,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarI64",
+          "value": 4
+        },
+        "disableWhen": "ch(\"velocityblur\") == off",
+        "group": "Velocity Blur",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "blursamples",
+        "label": "Blur Samples",
+        "max": 10,
+        "maxStrict": false,
+        "min": 1,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarI64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": "density"
+        },
+        "disableWhen": null,
+        "group": "Coverage",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "densityattrib",
+        "label": "Coverage Attribute",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Coverage",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "densityscale",
+        "label": "Coverage Scale",
+        "max": 10,
+        "maxStrict": false,
+        "min": 0,
+        "minStrict": true,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Bool",
+          "value": false
+        },
+        "disableWhen": null,
+        "group": "Coverage",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "normalize",
+        "label": "Normalize by Clamped Coverage",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Bool"
+      },
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "Text",
+          "value": ""
+        },
+        "disableWhen": null,
+        "group": "Coverage",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "attribute#",
+        "label": "Attributes",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      },
+      {
+        "allowedValues": [
+          "wavg",
+          "threshold",
+          "accumulated",
+          "stochastic"
+        ],
+        "default": {
+          "type": "Text",
+          "value": "wavg"
+        },
+        "disableWhen": null,
+        "group": "Coverage",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "rule#",
+        "label": "Method",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "Text"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": [
+      {
+        "default_honored": true,
+        "key": "points",
+        "reason": "every mesh point is rasterized; group filtering is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "filterbysrcattrib",
+        "reason": "source-attribute filtering is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "srcattrib",
+        "reason": "source-attribute filtering is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "fogvolumes",
+        "reason": "volume naming is fixed by the kernel",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "filter",
+        "reason": "the kernel accumulates point values without a reconstruction filter",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "particlescale",
+        "reason": "point splat radius is one voxel",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "minfilter",
+        "reason": "the kernel accumulates point values without a reconstruction filter",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "velocityblur",
+        "reason": "velocity blur is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "shutter",
+        "reason": "velocity blur is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "shutteroffset",
+        "reason": "velocity blur is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "blursamples",
+        "reason": "velocity blur is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "densityattrib",
+        "reason": "coverage weighting is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "densityscale",
+        "reason": "coverage weighting is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "normalize",
+        "reason": "coverage normalization is not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "attribute#",
+        "reason": "per-attribute rasterization rules are not implemented",
+        "values": []
+      },
+      {
+        "default_honored": true,
+        "key": "rule#",
+        "reason": "per-attribute rasterization rules are not implemented",
+        "values": []
+      }
+    ]
+  }
+}

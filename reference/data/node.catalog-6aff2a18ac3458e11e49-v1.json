@@ -1,0 +1,44 @@
+{
+  "id": "node.catalog-6aff2a18ac3458e11e49",
+  "operation_version": 1,
+  "contract_sha256": "41f091f8343d3f47e54ee037e81dedc2ee7ad7dbeb78e5d78aaa98a60f495d02",
+  "catalog_snapshot_sha256": "6e1d97c02732348075865d44c01f43e0917486d8c40bc13e4afa8c5a0b5eeede",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 1,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "a",
+        "required": true
+      },
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 1,
+        "name": "b",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "field",
+        "required": false
+      }
+    ],
+    "parameters": [],
+    "deterministic": true,
+    "granularity": "Element",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}

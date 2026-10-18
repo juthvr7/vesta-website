@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "subject_id": "workflow.vda-unreal",
+  "snapshot_id": "vda-unreal-2026-10-15",
+  "verified_at": "2026-10-15",
+  "preserved_at": "2026-10-18",
+  "kind": "historical-engine-summary",
+  "rerun": false,
+  "host": "unreal",
+  "backend": "ue-rhi",
+  "asset_definition_version": 4,
+  "case_count": 1,
+  "sample_count": 1048576,
+  "resolutions": [
+    1024
+  ],
+  "landscape_resolution": [
+    1021,
+    1021
+  ],
+  "tolerance": 4.2,
+  "mean_tolerance": 0.24,
+  "observed_max_abs": 0.9331240653991699,
+  "observed_mean_abs": 0.01075157039736041,
+  "units": "meters",
+  "passed": true,
+  "backend_segments": [
+    {
+      "backend": "cpu",
+      "node_count": 2
+    },
+    {
+      "backend": "ue-rhi",
+      "node_count": 2
+    },
+    {
+      "backend": "cpu",
+      "node_count": 1
+    }
+  ],
+  "published_parameters": 29,
+  "source_result_sha256": "75dd6f0c9b7bb64ed65c4b8db34e84103c1f67fc84de72efad0e9efd5b1dba2e",
+  "reference_result_sha256": "6ffff4ad05bf2324aff82021242b2c43fe8dfbcd1c1025c73789e46aacf2baa0",
+  "limitations": [
+    "One preserved full-chain CPU/UE GPU comparison; selected terrain operations only.",
+    "Render of evaluated engine result data; not an editor screenshot.",
+    "No new engine execution, physical controls or production Bake qualification."
+  ]
+}

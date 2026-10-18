@@ -1,0 +1,56 @@
+{
+  "id": "node.catalog-d283be8bfe97e6546fb8",
+  "operation_version": 2,
+  "contract_sha256": "4a062b532aeae197815e3a39fbc7fe3d7684f12c7f753c8fe089e148b4fa25b5",
+  "catalog_snapshot_sha256": "22a028207fbe069a11631d5b9afd5e8082b33b166e7d2d6f8cd6a17ba6778527",
+  "presentation_aliases": false,
+  "contract": {
+    "version": 2,
+    "inputs": [
+      {
+        "acceptedDataTypes": [
+          "Geometry"
+        ],
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "field",
+        "required": true
+      }
+    ],
+    "outputs": [
+      {
+        "dataType": "Geometry",
+        "id": 0,
+        "name": "heightfield",
+        "required": false
+      }
+    ],
+    "parameters": [
+      {
+        "allowedValues": null,
+        "default": {
+          "type": "ScalarF64",
+          "value": 1
+        },
+        "disableWhen": null,
+        "group": "Value",
+        "hideWhen": null,
+        "joinWithNext": false,
+        "key": "vertical_scale",
+        "label": "Vertical Scale",
+        "max": null,
+        "maxStrict": false,
+        "min": null,
+        "minStrict": false,
+        "multiparm": null,
+        "required": false,
+        "valueType": "ScalarF64"
+      }
+    ],
+    "deterministic": true,
+    "granularity": "Whole",
+    "halo": null,
+    "authoringActions": [],
+    "unimplementedParameters": []
+  }
+}
