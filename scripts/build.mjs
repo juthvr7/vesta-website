@@ -20,11 +20,14 @@ for (const file of [
   "help-request.js",
   "help-targets.js",
   "help-targets.json",
+  "explorer.css",
+  "explorer.js",
+  "explorer-renderer.js",
 ]) {
   await cp(new URL(`../${file}`, import.meta.url), new URL(file, output));
 }
 
-for (const directory of ["assets/worlds", "assets/validation", "validation", "reference", "help", "zh", "downloads"]) {
+for (const directory of ["assets/worlds", "assets/validation", "assets/previews", "validation", "reference", "help", "zh", "downloads"]) {
   await cp(new URL(`../${directory}/`, import.meta.url), new URL(`${directory}/`, output), {
     recursive: true,
   });

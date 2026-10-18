@@ -1,5 +1,18 @@
 # Production media provenance
 
+## Interactive retained results
+
+`assets/previews/` contains display-only WASM and binary result data for five
+mesh models and Ridge. The manifest records exact neutral node versions, source
+result hashes, public asset hashes, counts and presentation conversion. Mesh
+polygons are fan triangulated; each mesh comparison shares its original fit.
+The main Ridge sample retains the existing 512² CLI source (hash 790b101f…8670),
+sampled to a 257² display grid; the two Definition presets use their original
+64² captures. These are real saved results. Water, contours, light, section and
+transform controls are presentation effects, not live generation or simulation.
+Private source paths and capture receipts remain in the Vesta repository.
+Images and their original acceptance scope remain unchanged.
+
 ## Vision concepts
 
 `world-hero.webp`, `world-city.webp` and `world-biome.webp` were generated with the built-in image generation tool for the October 16, 2026 visual proposal approved by the user. They depict the long-term world, city and ecosystem direction. They are not Vesta output. The page states this next to each image. Responsive 768/1280 variants contain the same image with routine resize and WebP encoding.

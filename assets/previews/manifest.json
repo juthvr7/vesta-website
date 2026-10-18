@@ -1,0 +1,383 @@
+{
+  "schema_version": 1,
+  "edition": "2026-10-19",
+  "display_only": true,
+  "operation_kernels_included": false,
+  "models": [
+    {
+      "id": "dragon",
+      "name": "Dragon",
+      "kind": "mesh",
+      "topic": "node.catalog-92d7f361ba014377c079",
+      "operation_version": 3,
+      "presets": [
+        {
+          "id": "result",
+          "name": {
+            "en": "Result",
+            "zh": "结果"
+          },
+          "file": "dragon-result.bin",
+          "bytes": 3633256,
+          "sha256": "851699d0a93d4eb615503dfdbcc984de89b582b69c11eaa8e404da9763c62358",
+          "source_result_sha256": "869244c69cd23138003879666ab32878eb8554e7d1a75466c63b6caae7c87e47",
+          "vertices": 100250,
+          "triangles": 202520,
+          "bounds": [
+            [
+              -0.9999999999999998,
+              -0.7544855359957604,
+              -0.7531456191185211
+            ],
+            [
+              1,
+              0.7544855359957602,
+              0.7531456191185215
+            ]
+          ],
+          "display": {
+            "common_fit_center": [
+              1.0206201849999998,
+              1.8915554,
+              2.9551726499999997
+            ],
+            "common_fit_scale": 0.9144005713577106
+          },
+          "precomputed": true
+        }
+      ]
+    },
+    {
+      "id": "bunny",
+      "name": "Bunny",
+      "kind": "mesh",
+      "topic": "node.catalog-2c621e59a0965b544c17",
+      "operation_version": 3,
+      "presets": [
+        {
+          "id": "result",
+          "name": {
+            "en": "Result",
+            "zh": "结果"
+          },
+          "file": "bunny-result.bin",
+          "bytes": 1264792,
+          "sha256": "e7f41b1e03a260f257946c962bde0bcb5553626583b3b9956527eb111112890f",
+          "source_result_sha256": "72629afafdf4dfd5473eab54ad9c8b6f538dcacbdd891e293ef59ad448d2d295",
+          "vertices": 35947,
+          "triangles": 69451,
+          "bounds": [
+            [
+              -1,
+              -0.6396224088150135,
+              -0.756372666185706
+            ],
+            [
+              1,
+              0.6396224088150134,
+              0.7563726661857056
+            ]
+          ],
+          "display": {
+            "common_fit_center": [
+              0.9655128749999999,
+              1.8061592800000001,
+              3.28516705
+            ],
+            "common_fit_scale": 0.7187996089658247
+          },
+          "precomputed": true
+        }
+      ]
+    },
+    {
+      "id": "teapot",
+      "name": "Teapot",
+      "kind": "mesh",
+      "topic": "node.catalog-dc6814932211a6f4ff94",
+      "operation_version": 3,
+      "presets": [
+        {
+          "id": "result",
+          "name": {
+            "en": "Result",
+            "zh": "结果"
+          },
+          "file": "teapot-result.bin",
+          "bytes": 18664,
+          "sha256": "34392c1c0d9c17bc00a1d6fe76f7f35863723c861127e552f10760c6209fa860",
+          "source_result_sha256": "8df6b98c2c6d682cf91d6826ce6e035bfd2ed677085071d9200c9e5618a91cbf",
+          "vertices": 530,
+          "triangles": 1024,
+          "bounds": [
+            [
+              -1,
+              -0.7294626937293809,
+              -0.9470436834946091
+            ],
+            [
+              1,
+              0.7294626937293809,
+              0.9470436834946091
+            ]
+          ],
+          "display": {
+            "common_fit_center": [
+              0.930365334,
+              2.07108055,
+              2.99992075
+            ],
+            "common_fit_scale": 1.0557791722823473
+          },
+          "precomputed": true
+        }
+      ]
+    },
+    {
+      "id": "torus",
+      "name": "Torus",
+      "kind": "mesh",
+      "topic": "node.catalog-b0458f77c1d9de39d734",
+      "operation_version": 2,
+      "presets": [
+        {
+          "id": "first",
+          "name": {
+            "en": "cols = 12",
+            "zh": "cols = 12"
+          },
+          "file": "torus-first.bin",
+          "bytes": 3040,
+          "sha256": "3f422e03e7acb7a54b887d606077e129b7e1f4b4c54b003a63cc5730490fd5f4",
+          "source_result_sha256": "9e6e17f5d29c24bdf91274dde670e2da031eee6b542531558a9e0013952431ed",
+          "vertices": 84,
+          "triangles": 168,
+          "bounds": [
+            [
+              -0.9749278641033192,
+              -0.21594038155990605,
+              -0.9999999999999999
+            ],
+            [
+              0.9749278641033192,
+              0.21594038155990605,
+              0.9999999999999999
+            ]
+          ],
+          "display": {
+            "common_fit_center": [
+              0.18815914999999994,
+              0,
+              -2.500000000349445e-7
+            ],
+            "common_fit_scale": 0.26992547694988256
+          },
+          "precomputed": true
+        },
+        {
+          "id": "second",
+          "name": {
+            "en": "cols = 36",
+            "zh": "cols = 36"
+          },
+          "file": "torus-second.bin",
+          "bytes": 9088,
+          "sha256": "42824b2761a52d2c2cd5d79e3cdf8bdd111650303301bb5d47147ae281cdafa6",
+          "source_result_sha256": "d84ce6a8f21628c61920b754c697c9804032e2e2ab0f9756d3ae5a4b21844511",
+          "vertices": 252,
+          "triangles": 504,
+          "bounds": [
+            [
+              -0.9749278641033192,
+              -0.21594038155990605,
+              -0.9999999999999999
+            ],
+            [
+              0.9749278641033192,
+              0.21594038155990605,
+              0.9999999999999999
+            ]
+          ],
+          "display": {
+            "common_fit_center": [
+              0.18815914999999994,
+              0,
+              -2.500000000349445e-7
+            ],
+            "common_fit_scale": 0.26992547694988256
+          },
+          "precomputed": true
+        }
+      ]
+    },
+    {
+      "id": "box",
+      "name": "Box",
+      "kind": "mesh",
+      "topic": "node.catalog-a695f736133790a90aad",
+      "operation_version": 5,
+      "presets": [
+        {
+          "id": "result",
+          "name": {
+            "en": "Captured result",
+            "zh": "已保存结果"
+          },
+          "file": "box-result.bin",
+          "bytes": 256,
+          "sha256": "c1182067f8a27b9e0a69a64aeb5de5cba329540cac1fd59e2aaed1b93950458c",
+          "source_result_sha256": "4ed51ae4251718f58090c9a314d3fdc1b15d53058aec828f9e0023e95513a5c9",
+          "vertices": 8,
+          "triangles": 12,
+          "bounds": [
+            [
+              -0.3333333333333333,
+              -0.6666666666666666,
+              -1
+            ],
+            [
+              0.3333333333333333,
+              0.6666666666666666,
+              1
+            ]
+          ],
+          "display": {
+            "common_fit_center": [
+              0,
+              0,
+              0
+            ],
+            "common_fit_scale": 0.6666666666666666
+          },
+          "precomputed": true
+        }
+      ]
+    },
+    {
+      "id": "ridge",
+      "name": "Ridge",
+      "kind": "terrain",
+      "topic": "node.catalog-3b6f268370b1db771192",
+      "operation_version": 1,
+      "presets": [
+        {
+          "id": "landscape",
+          "name": {
+            "en": "Landscape · 512² source",
+            "zh": "完整地貌 · 源512²"
+          },
+          "file": "ridge-landscape.bin",
+          "bytes": 2365468,
+          "sha256": "aa41c6546f4eea115d2dfd1ec4cffd62534695cb4495968988d5e0ae64685b01",
+          "source_result_sha256": "790b101f205845a543103480d852501d014c567fcfb8aca91598c3f5ff858670",
+          "vertices": 66049,
+          "triangles": 131072,
+          "bounds": [
+            [
+              -1,
+              -0.24956074712390547,
+              -1
+            ],
+            [
+              1,
+              0.28790521025657656,
+              1
+            ]
+          ],
+          "display": {
+            "source_resolution": [
+              512,
+              512
+            ],
+            "display_grid": [
+              257,
+              257
+            ],
+            "height_display_multiplier": 2.6
+          },
+          "precomputed": true
+        },
+        {
+          "id": "first",
+          "name": {
+            "en": "Definition = 0.2 · 64²",
+            "zh": "Definition = 0.2 · 64²"
+          },
+          "file": "ridge-first.bin",
+          "bytes": 144424,
+          "sha256": "c50ae009f645323aa9c06b48f80f3ea55f676a8b0cf56e2dcd4b6a7d3097ac11",
+          "source_result_sha256": "d7c3e290a44e9aadc69e498620476b1d77f452be6249054373be61385ed2a5be",
+          "vertices": 4096,
+          "triangles": 7938,
+          "bounds": [
+            [
+              -1,
+              -0.25,
+              -1
+            ],
+            [
+              1,
+              0.2698760300874711,
+              1
+            ]
+          ],
+          "display": {
+            "source_resolution": [
+              64,
+              64
+            ],
+            "display_grid": [
+              64,
+              64
+            ],
+            "height_display_multiplier": 2.6
+          },
+          "precomputed": true
+        },
+        {
+          "id": "second",
+          "name": {
+            "en": "Definition = 0.8 · 64²",
+            "zh": "Definition = 0.8 · 64²"
+          },
+          "file": "ridge-second.bin",
+          "bytes": 144424,
+          "sha256": "36484d2fc18c0b339c63f16a60dde8f83143d82c22db78b5f5a958aca145ce82",
+          "source_result_sha256": "b1ddbad2936edb5a7f2939efe09afc285dc5a069cd746835eb5c263f1f9589f5",
+          "vertices": 4096,
+          "triangles": 7938,
+          "bounds": [
+            [
+              -1,
+              -0.25,
+              -1
+            ],
+            [
+              1,
+              0.2617962121963501,
+              1
+            ]
+          ],
+          "display": {
+            "source_resolution": [
+              64,
+              64
+            ],
+            "display_grid": [
+              64,
+              64
+            ],
+            "height_display_multiplier": 2.6
+          },
+          "precomputed": true
+        }
+      ]
+    }
+  ],
+  "wasm": {
+    "file": "display.wasm",
+    "sha256": "a9a8572026e8d92489af5ff73e4b2e9def1ea4dedbd473c848da3a5b2b5602a0",
+    "bytes": 35040,
+    "abi_version": 1
+  }
+}

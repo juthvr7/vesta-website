@@ -22,6 +22,12 @@ for name in ("vesta-site.css", "validation.css", "validation.js", "manual-search
 
 def offline_html(name, content):
     html = content.decode("utf-8")
+    # Preserve a fully static local edition; Worker/module loading needs HTTP(S).
+    online = "https://juthvr7.github.io/vesta-website/" + name + "#interactive"
+    html = re.sub(r'<!-- explorer:start -->[\s\S]*?<!-- explorer:end -->',
+                  '<p class="reference-note"><a href="'+online+'">在线交互查看器 / Open interactive viewer ↗</a></p>', html)
+    html = re.sub(r'<link\b[^>]*href="[^"]*explorer\.css[^"]*"[^>]*>', '', html)
+    html = re.sub(r'<script\b[^>]*src="[^"]*explorer\.js[^"]*"[^>]*></script>', '', html)
     html = re.sub(r'<a\b[^>]*\bdata-offline-download\b[^>]*>[\s\S]*?</a>',
                   '<span class="manual-offline">离线版 / Offline edition</span>', html)
 

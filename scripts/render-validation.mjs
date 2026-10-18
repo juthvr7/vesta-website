@@ -10,6 +10,7 @@ import {referenceName,editorialCopy,explanationsComplete} from '../content/help/
 import {chapterHelpLinks} from '../content/help/chapter-links.mjs';
 import {nodeDirectory,libraryRoute,libraryCategories,libraryUi,categoryName} from '../content/node-library.mjs';
 import {libraryBody,librarySearchEntries} from './render-library.mjs';
+import {explorerBody,explorerModel} from './render-explorer.mjs';
 
 const imported=JSON.parse(await readFile(new URL('../content/validation/evidence.json',import.meta.url),'utf8'));
 export const validationRecords=imported.records;
@@ -55,11 +56,16 @@ function frame(lang,context,body) {
     const topic=helpContracts.topics.filter(t=>t.study===record.id).sort((a,b)=>b.operation_version-a.operation_version)[0];
     if(topic){const original=body;body=base=>`<div class="reference-access wrap"><a href="${base}${referenceRoute(lang,topic)}">${helpUi[lang].openReference} · v${topic.operation_version} ↗</a></div>`+original(base);}
   }
+  if(helpTopic&&explorerModel(helpTopic.id)){
+    const original=body;
+    const marker=`<section class="capability-section" id="examples"><h2>${helpUi[lang].examples}</h2>`;
+    body=base=>original(base).replace(marker,marker+explorerBody(lang,helpTopic.id,base));
+  }
   return `<!doctype html>
 <html lang="${u.lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101713"><meta name="description" content="${e(description)}"><title>${e(title)}</title>
 <meta name="validation-bundle" content="${bundleIdentity}"><link rel="canonical" href="${site.url}${path}"><link rel="alternate" hreflang="en" href="${alternate('en')}"><link rel="alternate" hreflang="zh-CN" href="${alternate('zh')}"><link rel="alternate" hreflang="x-default" href="${alternate('en')}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Vesta"><meta property="og:locale" content="${u.locale}"><meta property="og:title" content="${e(title)}"><meta property="og:description" content="${e(description)}"><meta property="og:url" content="${site.url}${path}"><meta property="og:image" content="${site.url}${shareImage}"><meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="${base}favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="${base}vesta-site.css?v=${site.version}"><link rel="stylesheet" href="${base}validation.css?v=${site.version}"><script src="${base}validation.js?v=${site.version}" defer></script><script src="${base}manual-search-index.js?v=${site.version}" defer></script><script src="${base}manual-search.js?v=${site.version}" data-manual-root="${base}" defer></script></head>
+<link rel="icon" href="${base}favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="${base}vesta-site.css?v=${site.version}"><link rel="stylesheet" href="${base}validation.css?v=${site.version}"><script src="${base}validation.js?v=${site.version}" defer></script>${helpTopic&&explorerModel(helpTopic.id)?`<link rel="stylesheet" href="${base}explorer.css?v=${site.version}"><script type="module" src="${base}explorer.js?v=${site.version}"></script>`:""}<script src="${base}manual-search-index.js?v=${site.version}" defer></script><script src="${base}manual-search.js?v=${site.version}" data-manual-root="${base}" defer></script></head>
 <body class="validation-page"><a class="skip" href="#main">${u.skip}</a>
 <header class="header"><a class="logo" href="${base}${lang==='zh'?'zh/':''}" aria-label="Vesta">vesta<span>.</span></a><nav id="navigation" aria-label="${u.navigation}"><a href="${base}${lang==='zh'?'zh/':''}">${u.home}</a><a href="${base}${route(lang)}" ${!record&&!chapter&&!isLibrary&&!helpTopic?'aria-current="page"':''}>${f.name}</a>${links}</nav><div class="languages"><a href="${base}${localAlternate('en')}" data-language-link lang="en" ${lang==='en'?'aria-current="page"':''}>EN</a><span>/</span><a href="${base}${localAlternate('zh')}" data-language-link lang="zh-CN" ${lang==='zh'?'aria-current="page"':''}>中文</a></div><button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false" aria-label="${u.menu}" data-open-label="${u.menu}" data-close-label="${u.close}">${u.menu} ☰</button></header>
 <div class="framework-layout">${directory(lang,base,context)}<main class="framework-main" id="main"><section class="manual-search-results wrap" hidden><h1>${f.searchResults}</h1><button type="button" data-clear-search>${f.clearSearch}</button><p role="status" data-search-status data-empty="${f.noResults}"></p><ol></ol></section><div class="manual-document-body">${body(base)}</div></main></div>

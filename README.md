@@ -48,3 +48,26 @@ The 111 CPU implementation registrations now have exact-version parameter refere
 `content/help/directory.json` projects all 644 CLI registry entries into 32 neutral categories. Catalog registration, CPU registration (111), parameter-reference availability (111), explained references (48), effect-media availability (34) and acceptance are different facts. `reference/data/help-coverage.json` exposes the documentation coverage. Names are display metadata; source identifiers and provenance stay internal. Do not manufacture parameter explanations or reuse unrelated images to make unfinished references look complete. The category renderer and per-entry search are shared by online and offline builds.
 
 The draft download may be rebuilt; a date alone is not an immutable release identity. Preserve previous operation versions and their matching prose when adding a new contract. Native Studio/Builder/Unreal help actions and immutable hosted releases remain future integration work.
+
+## Interactive result explorers
+
+Six references include an explicitly activated, shared WebGL2 viewer: Dragon,
+Bunny, Teapot, Torus, Box and Ridge. Five mesh models and nine captured presets
+share a dependency-free display WASM module (about 35 KB). WASM prepares normals,
+wire edges and camera/model matrices. It contains no Graph runtime, operation
+catalog, generation, noise or erosion kernel. Sample changes load saved results;
+scale, rotation, clipping, lighting, contours and water are display controls.
+
+`assets/previews/manifest.json` binds exact topic/version, source-result and
+packaged-asset hashes. The web worker validates hashes, bounded binary geometry
+and ABI version, cancels replaced downloads and rejects obsolete generations.
+Closing the viewer terminates its worker and deletes graphics resources.
+`scripts/check-explorer.mjs` verifies the actual WASM/data boundary in addition
+to the normal site checks. Vesta owns the display source and export/build tools
+under ADR-0449; the website build uses the already packaged assets independently.
+
+Interactive modules require HTTP/HTTPS and WebGL2. Static images remain present;
+the offline manual strips the interactive module and links to the online viewer.
+No external rendering library, remote evaluation service or user data upload is
+required. Result data is intentionally public; generator implementations are not
+included in this distribution.

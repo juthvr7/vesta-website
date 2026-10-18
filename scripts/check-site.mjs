@@ -192,3 +192,4 @@ console.log(`Bilingual parity, metadata, chapter links and ${checked.size} local
 console.log(`${galleryPaths.length} neutral gallery pages, same-study alternates, dated evidence and media hashes verified.`);
 console.log(`${chapters.length} capability chapters, local search corpus and downloadable offline manual verified.`);
 console.log(`${helpContracts.topics.length} versioned references, ${nodeDirectory.nodes.length} catalog entries and contextual-help v1/v2 resolution verified.`);
+await import('./check-explorer.mjs');
