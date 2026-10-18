@@ -1,0 +1,36 @@
+{
+  "kind": "Vesta CLI result visualization; not a live browser evaluation",
+  "source_files": [
+    {
+      "name": "relief-before.json",
+      "sha256": "790b101f205845a543103480d852501d014c567fcfb8aca91598c3f5ff858670"
+    },
+    {
+      "name": "relief-after.json",
+      "sha256": "ce0afc34acf47f8e2679d38f905bcc83821d917f59b34367ccd6b0fc0a65f884"
+    }
+  ],
+  "resolution": [
+    512,
+    512
+  ],
+  "chain": "Ridge -> Terraces",
+  "parameters": {
+    "NumTerraces": 12,
+    "Uniformity": 1.0,
+    "Steepness": 0.85,
+    "Intensity": 1.0,
+    "Seed": 0
+  },
+  "display": "Shared camera and display relief; before range occupies 20% of horizontal span.",
+  "sample_range": [
+    {
+      "min": 0.0,
+      "max": 0.20728462934494019
+    },
+    {
+      "min": 0.0,
+      "max": 0.25276243686676025
+    }
+  ]
+}
