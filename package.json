@@ -5,7 +5,7 @@
   "description": "Bilingual website for Vesta, an Agent-centered world creation tool",
   "scripts": {
     "render": "node scripts/render-site.mjs && python scripts/build-manual.py",
-    "check": "node scripts/render-site.mjs --check && node --check vesta-site.js && node --check validation.js && node --check manual-search.js && node --check help-resolver.js && node --check help-request.js && node --check scripts/render-site.mjs && node --check scripts/render-validation.mjs && node --check scripts/render-help.mjs && node --check scripts/render-implemented-help.mjs && node --check content/site-content.mjs && node --check content/site-config.mjs && node --check content/validation-content.mjs && node --check content/creation-framework.mjs && node --check content/help-model.mjs && node scripts/check-site.mjs",
+    "check": "node scripts/render-site.mjs --check && node --check vesta-site.js && node --check validation.js && node --check manual-search.js && node --check help-resolver.js && node --check help-request.js && node --check scripts/render-site.mjs && node --check scripts/render-validation.mjs && node --check scripts/render-help.mjs && node --check scripts/render-implemented-help.mjs && node --check content/site-content.mjs && node --check content/site-config.mjs && node --check content/validation-content.mjs && node --check content/creation-framework.mjs && node --check content/help-model.mjs && node scripts/check-site.mjs && node scripts/check-contract-snapshots.mjs",
     "build": "node scripts/render-site.mjs && python scripts/build-manual.py && node scripts/build.mjs"
   }
 }

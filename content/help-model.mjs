@@ -1,10 +1,14 @@
 import {readFileSync} from 'node:fs';
 import {nodeDirectory,libraryRoute,libraryAnchor} from './node-library.mjs';
 import {createHash} from 'node:crypto';
+import {applyContractSnapshots} from './help-contract-snapshots.mjs';
 const original=JSON.parse(readFileSync(new URL('./help/contracts.json',import.meta.url),'utf8'));
 const implemented=JSON.parse(readFileSync(new URL('./help/implemented-contracts.json',import.meta.url),'utf8'));
 // Preserve already published contracts byte-for-byte, including their identity.
-export const helpContracts={schema_version:1,edition:implemented.edition,topics:[...original.topics,...implemented.topics.filter(t=>!original.topics.some(p=>p.id===t.id&&p.operation_version===t.operation_version))]};
+const snapshots=JSON.parse(readFileSync(new URL('./help/contract-snapshots.json',import.meta.url),'utf8'));
+const projected=applyContractSnapshots([...original.topics,...implemented.topics.filter(t=>!original.topics.some(p=>p.id===t.id&&p.operation_version===t.operation_version))],snapshots);
+export const helpContractArchives=projected.archives;
+export const helpContracts={schema_version:1,edition:implemented.edition,topics:projected.topics};
 export const referenceRoute=(lang,t)=>`${lang==='zh'?'zh/':''}reference/nodes/${t.id}/v${t.operation_version}/`;
 // Full case-sensitive UTF-8 key avoids collisions from punctuation/case folding.
 export const parameterAnchor=key=>'parameter-'+Buffer.from(key,'utf8').toString('hex');

@@ -1,8 +1,8 @@
 {
   "id": "node.catalog-a3e1c4a26c7060f60c5b",
   "operation_version": 1,
-  "contract_sha256": "3870121e9033dfa81d503dfac95a9f6159c48ca9be6d011a9f52420f34b4ea85",
-  "catalog_snapshot_sha256": "93eb086cb431d6e850666de6b9c97790835c912dce617905bf6879bb12ec8cf0",
+  "contract_sha256": "fd8827416ee5e2d281ab92f8b8ded4a2631fad763e9373d16cbfe4529c274622",
+  "catalog_snapshot_sha256": "808fe3a589c59ef696e66e156f29e6a09f38afd8a67465efd55362860b0a12d3",
   "presentation_aliases": false,
   "contract": {
     "version": 1,
@@ -34,7 +34,7 @@
         },
         "disableWhen": null,
         "group": "General",
-        "hideWhen": null,
+        "hideWhen": "{ Automatic == 1 }",
         "joinWithNext": false,
         "key": "GammaValue",
         "label": "GammaValue",
@@ -72,5 +72,15 @@
     "halo": null,
     "authoringActions": [],
     "unimplementedParameters": []
+  },
+  "contract_snapshot": {
+    "id": "2026-10-19-conditions",
+    "previous_contract_sha256": "3870121e9033dfa81d503dfac95a9f6159c48ca9be6d011a9f52420f34b4ea85",
+    "summary": {
+      "en": "The manual curve control is shown when Automatic is off. Toggling Automatic retains the manual value. The operation version is unchanged.",
+      "zh": "手动曲线仅在关闭自动校正时显示；切换自动模式会保留手动值。节点逻辑版本不变。"
+    },
+    "record": "reference/snapshots/node.catalog-a3e1c4a26c7060f60c5b/v1/2026-10-19-conditions.json",
+    "previous": "reference/snapshots/node.catalog-a3e1c4a26c7060f60c5b/v1/2026-10-19-conditions-previous.json"
   }
 }

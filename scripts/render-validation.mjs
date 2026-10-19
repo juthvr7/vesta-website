@@ -2,7 +2,7 @@ import {readFile} from 'node:fs/promises';
 import {site} from '../content/site-config.mjs';
 import {validationUi, studies} from '../content/validation-content.mjs';
 import {frameworkUi, chapters} from '../content/creation-framework.mjs';
-import {helpContracts,helpTargets,referenceRoute} from '../content/help-model.mjs';
+import {helpContracts,helpTargets,referenceRoute,helpContractArchives} from '../content/help-model.mjs';
 import {helpUi} from '../content/help/reference-copy.mjs';
 import {referenceBody,helpEntry} from './render-help.mjs';
 import {implementedReferenceBody,helpMedia} from './render-implemented-help.mjs';
@@ -130,6 +130,7 @@ export function validationOutputs() {
   outputs.set('reference/data/help-coverage.json',JSON.stringify({schema_version:1,edition:helpContracts.edition,implementation_registration_is_acceptance:false,counts:{registered:nodeDirectory.nodes.length,contract_references:helpContracts.topics.length,behavior_explained:helpContracts.topics.filter(explanationsComplete).length,parameters:helpContracts.topics.reduce((n,t)=>n+t.contract.parameters.length,0)},topics:helpContracts.topics.map(t=>({id:t.id,operation_version:t.operation_version,name:referenceName(t),behavior_explained:explanationsComplete(t),media_available:Boolean(t.study||helpMedia.examples.some(m=>m.id===t.id&&m.operation_version===t.operation_version))}))},null,2)+'\n');
   outputs.set('help-targets.js',`window.VESTA_HELP_TARGETS = ${JSON.stringify(helpTargets).replaceAll('<','\\u003c')};\n`);
   for(const t of helpContracts.topics)outputs.set(`reference/data/${t.id}-v${t.operation_version}.json`,JSON.stringify(t,null,2)+'\n');
+  for(const [path,record] of helpContractArchives)outputs.set(path,JSON.stringify(record,null,2)+'\n');
   for(const m of helpMedia.examples)outputs.set(`reference/data/${m.id}-v${m.operation_version}-media.json`,JSON.stringify(m,null,2)+'\n');
   for(const r of validationRecords) {
     outputs.set(`validation/data/${r.id}.json`,JSON.stringify(r.evidence,null,2)+'\n');

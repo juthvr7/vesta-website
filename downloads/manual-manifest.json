@@ -9,9 +9,9 @@
   ],
   "search_pages": 314,
   "search_entries": 1602,
-  "help_targets_sha256": "83fc4dbc3bc1cab9456e4e3cd9f750f9c2b438123c02cf509ea49ef07d7f613c",
+  "help_targets_sha256": "380133eda96c3364e42f615aeaf549561b2dd44d17c5cbfe0eda9238908e9f3c",
   "requires_server": false,
-  "files": 756,
-  "bytes": 7447379,
-  "sha256": "687c4011a6530dc0e828cdcd031030339251eda42a6e8ad3a3e6ad2d0a27de21"
+  "files": 758,
+  "bytes": 7451761,
+  "sha256": "4c88bb865a093fd00801c7c8bb20d5f7d1e6e81b80e63bccc6e68245d01e23d3"
 }

@@ -1987,7 +1987,7 @@
       "kind": "reference",
       "id": "node.catalog-a3e1c4a26c7060f60c5b",
       "operation_version": 1,
-      "contract_sha256": "3870121e9033dfa81d503dfac95a9f6159c48ca9be6d011a9f52420f34b4ea85",
+      "contract_sha256": "fd8827416ee5e2d281ab92f8b8ded4a2631fad763e9373d16cbfe4529c274622",
       "paths": {
         "en": "reference/nodes/node.catalog-a3e1c4a26c7060f60c5b/v1/index.html",
         "zh-CN": "zh/reference/nodes/node.catalog-a3e1c4a26c7060f60c5b/v1/index.html"
