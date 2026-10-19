@@ -12,6 +12,7 @@ import {helpContracts,helpTargets,referenceRoute,parameterAnchor} from '../conte
 import {referenceCopy} from '../content/help/reference-copy.mjs';
 import {editorialCopy,explanationsComplete} from '../content/help/reference-status.mjs';
 import {helpMedia} from './render-implemented-help.mjs';
+import {mediaAssetDirectory} from './media-path.mjs';
 import helpResolver from '../help-resolver.js';
 import {nodeDirectory,libraryRoute,libraryAnchor,libraryCategories} from '../content/node-library.mjs';
 
@@ -132,6 +133,10 @@ for(const t of helpContracts.topics){
 }
 // Presentation assets are actual captured outputs, with separate source/master/
 // derivative identities. Their existence never adds numerical acceptance.
+assert.equal(mediaAssetDirectory({slug:'gamma'}),'gamma');
+assert.equal(mediaAssetDirectory({slug:'gamma',snapshot:'2026-10-19-correction'}),'gamma/2026-10-19-correction');
+assert.throws(()=>mediaAssetDirectory({slug:'gamma',snapshot:'../outside'}));
+assert.throws(()=>mediaAssetDirectory({slug:'/outside'}));
 for(const m of helpMedia.examples){
  assert(!/gaea|houdini|[A-Z]:[\\/]/i.test(JSON.stringify(m)));
  assert.equal(m.kind,'actual-result-render');assert.equal(m.backend,'CPU');
@@ -146,7 +151,7 @@ for(const m of helpMedia.examples){
   assert(variant.recipe.nodes.some(n=>n.id===variant.recipe.target));
   for(const key of ['master_sha256','source_result_sha256'])assert(/^[a-f0-9]{64}$/.test(variant[key]));
   for(const d of variant.variants){
-   const bytes=await readFile(resolve(root,`assets/validation/help/${m.slug}/${d.file}`));
+   const bytes=await readFile(resolve(root,`assets/validation/help/${mediaAssetDirectory(m)}/${d.file}`));
    assert.equal(createHash('sha256').update(bytes).digest('hex'),d.sha256);
    assert.equal(bytes.subarray(8,12).toString(),'WEBP');assert(bytes.length<1_500_000);
   }
