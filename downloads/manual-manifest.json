@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "edition": "2026-10-19",
+  "edition": "2026-10-27",
   "format": "offline-html",
   "entry": "index.html",
   "languages": [
@@ -12,6 +12,6 @@
   "help_targets_sha256": "380133eda96c3364e42f615aeaf549561b2dd44d17c5cbfe0eda9238908e9f3c",
   "requires_server": false,
   "files": 758,
-  "bytes": 7451761,
-  "sha256": "4c88bb865a093fd00801c7c8bb20d5f7d1e6e81b80e63bccc6e68245d01e23d3"
+  "bytes": 7453511,
+  "sha256": "6bd8acc1b4ecd51fc9fba3d428ea88c9c1e525d4fc2e54dbb24481a26d561c8a"
 }

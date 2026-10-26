@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "native-editor-capture",
+  "captured_on": "2026-10-27",
+  "application": "Vesta World Builder",
+  "pixel_size": [
+    1750,
+    1125
+  ],
+  "source_sha256": "5d633b9548340f03935224ad8053cca012c642ba162865626ab478a6348654bf",
+  "asset": "builder-dragon-20261027.webp",
+  "sha256": "89a99e8e26dceb34266a7941a1cf74af3c9893c6c409d1513127fc81b2128811",
+  "processing": "Lossless WebP encoding only. Full original frame; no crop, repainting or generative alteration.",
+  "scene": "Dragon followed by Attribute Delete, removing vertex N before display. Full topology retained.",
+  "points": 100250,
+  "triangles": 202520,
+  "rotate_degrees": [
+    0,
+    90,
+    0
+  ],
+  "scope": "Native development slice, not a performance benchmark or new operation acceptance."
+}

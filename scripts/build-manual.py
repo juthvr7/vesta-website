@@ -7,7 +7,9 @@ import re
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-stamp = (2026, 10, 19, 0, 0, 0)
+site_config = (ROOT / "content/site-config.mjs").read_text(encoding="utf-8")
+edition = re.search(r'updated:\s*"(\d{4}-\d{2}-\d{2})"', site_config).group(1)
+stamp = (*map(int, edition.split("-")), 0, 0, 0)
 files = {}
 
 for directory in ("validation", "zh/validation", "reference", "zh/reference", "help", "zh/help", "assets/validation"):
@@ -92,7 +94,7 @@ with zipfile.ZipFile(archive) as check:
     if check.testzip() is not None:
         raise ValueError("manual archive CRC failed")
 
-manifest = {"schema_version": 1, "edition": "2026-10-19", "format": "offline-html",
+manifest = {"schema_version": 1, "edition": edition, "format": "offline-html",
             "entry": "index.html", "languages": ["en", "zh-CN"],
             "search_pages": len({p["path"].split("#", 1)[0] for p in search}), "search_entries": len(search),
             "help_targets_sha256": hashlib.sha256(files["help-targets.json"]).hexdigest(),

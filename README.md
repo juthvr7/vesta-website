@@ -1,6 +1,6 @@
 # Vesta Website
 
-The bilingual public website for Vesta, an Agent-centered world creation tool in development. World Builder is the future creative environment; current Studio capabilities will progressively move into Builder.
+The bilingual public website for Vesta, an Agent-centered world creation tool in development. World Builder already brings together node editing, parameters and result display; the remaining Studio capabilities are moving across in stages. Developer Agent runs in Builder and as a standalone desktop app; external Agents connect to the running Builder through controlled tools.
 
 - English: `/`
 - 简体中文: `/zh/`
@@ -21,7 +21,7 @@ Preview the production package at `/dist/` and `/dist/zh/`. The package contains
 
 ## Media and product claims
 
-`assets/worlds/` is self-contained. Concept images illustrate the world-creation vision and are labeled as concepts. Terrain films visualize actual precomputed Vesta CLI heightfields; camera motion does not represent live generation or erosion time. The Unreal section uses an actual editor capture of an evaluated Erosion2 VDA. Studio is shown as current implementation evidence, not a second permanent product.
+`assets/worlds/` is self-contained. Concept images illustrate the world-creation vision and are labeled as concepts. Terrain films visualize actual precomputed Vesta CLI heightfields; camera motion does not represent live generation or erosion time. The Unreal section uses an actual editor capture of an evaluated Erosion2 VDA. The authoring section shows the October 27, 2026 native Builder Dragon capture, with its full node chain and preserved media provenance. The older Studio capture remains unchanged in the media archive.
 
 See [MEDIA.md](MEDIA.md) for source records and display treatment. Keep both languages equally explicit about implemented slices, work in progress and long-term direction.
 
@@ -29,7 +29,7 @@ The current checkout contains the replacement source and generated pages. Deploy
 
 ## Capability framework and offline manual
 
-`/validation/` and `/zh/validation/` follow seven chapters: Agent-led creation, terrain, geometry/node tools, world systems, Graph and assets, engine delivery, and execution foundations. A persistent chapter tree leads to supporting studies and the complete node directory. Planned capabilities remain explicit; the structure is not a gallery of available images.
+`/validation/` and `/zh/validation/` follow seven chapters: Agent-led creation, terrain, geometry/node tools, world systems, Graph and assets, engine delivery, and execution foundations. The collaboration chapter describes Builder, Developer Agent, external connections and manually maintained Task records. A persistent chapter tree leads to supporting studies and the complete node directory. Planned capabilities remain explicit; the structure is not a gallery of available images.
 
 `content/creation-framework.mjs` owns this editorial structure, `content/validation-content.mjs` owns study copy, and `content/validation/evidence.json` contains reviewed neutral snapshots imported from Vesta. These are presentation records, not another operation registry. Builds are self-contained and do not run Core or access the Vesta checkout.
 
@@ -47,7 +47,7 @@ The 111 CPU implementation registrations now have exact-version parameter refere
 
 `content/help/directory.json` projects all 644 CLI registry entries into 32 neutral categories. Catalog registration, CPU registration (111), parameter-reference availability (111), explained references (48), effect-media availability (34) and acceptance are different facts. `reference/data/help-coverage.json` exposes the documentation coverage. Names are display metadata; source identifiers and provenance stay internal. Do not manufacture parameter explanations or reuse unrelated images to make unfinished references look complete. The category renderer and per-entry search are shared by online and offline builds.
 
-The draft download may be rebuilt; a date alone is not an immutable release identity. Preserve previous operation versions and their matching prose when adding a new contract. Native Studio/Builder/Unreal help actions and immutable hosted releases remain future integration work.
+The draft download may be rebuilt; a date alone is not an immutable release identity. Its edition date comes from `content/site-config.mjs`, separately from each study's historical evidence date. Preserve previous operation versions and their matching prose when adding a new contract. Native help actions are being integrated and qualified by the hosts; immutable hosted releases remain future work.
 
 ## Interactive result explorers
 

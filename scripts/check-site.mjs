@@ -64,6 +64,9 @@ for (const [path, lang] of [["index.html", "en"], ["zh/index.html", "zh-CN"]]) {
   assert(html.includes('data-image="' + (lang === 'en' ? './' : '../') + site.media + 'unreal-vda.webp"'), `${path}: missing authentic UE capture`);
 }
 const sitemap = await readFile(resolve(root,"sitemap.xml"),"utf8");
+const builderCapture=JSON.parse(await readFile(resolve(root,'assets/worlds/builder-dragon-provenance.json'),'utf8'));
+assert.equal(builderCapture.kind,'native-editor-capture');
+assert.equal(createHash('sha256').update(await readFile(resolve(root,'assets/worlds',builderCapture.asset))).digest('hex'),builderCapture.sha256,'Native capture differs from its provenance');
 for (const path of ["", "zh/"]) assert(sitemap.includes(`<loc>${site.url}${path}</loc>`));
 
 const galleryPaths=['en','zh'].flatMap(lang=>[...[undefined,...validationRecords].map(r=>({path:validationRoute(lang,r),record:r,lang})),...chapters.map(c=>({path:chapterRoute(lang,c),chapter:c,lang})),...helpContracts.topics.map(t=>({path:referenceRoute(lang,t),topic:t,lang})),...[undefined,...libraryCategories].map(category=>({path:libraryRoute(lang,category),library:true,category,lang}))]);
@@ -190,6 +193,7 @@ for(const n of nodeDirectory.nodes){
  }
 }
 const manual=JSON.parse(await readFile(resolve(root,'downloads/manual-manifest.json'),'utf8'));
+assert.equal(manual.edition,site.updated,'Offline edition must match the shared content date');
 assert.equal(manual.search_pages,galleryPaths.length);assert.equal(manual.search_entries,search.length);assert.equal(manual.requires_server,false);
 assert.equal(manual.help_targets_sha256,createHash('sha256').update(await readFile(resolve(root,'help-targets.json'))).digest('hex'));
 assert.equal(createHash('sha256').update(await readFile(resolve(root,'downloads/vesta-manual.zip'))).digest('hex'),manual.sha256);

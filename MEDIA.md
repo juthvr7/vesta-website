@@ -29,7 +29,23 @@ Original generation identifiers:
 
 ## Current implementation captures
 
-`studio.webp` is an actual October 16, 2026 Studio Terraces VDA preview showing public parameters, graph and terrain. The page describes its planned migration into Builder.
+`builder-dragon-20261027.webp` is a full-window native Builder capture from
+October 27, 2026. The original 1750×1125 renderer PNG is preserved privately;
+the public derivative uses lossless WebP encoding, with no crop, repainting or
+generative alteration. The viewport, parameter panel and node chain are all
+from the actual standard desktop application. The Agent pane was hidden using
+the existing UI to give the model more space.
+
+The CPU-evaluated Dragon retains all 100,250 points and 202,520 triangles, with
+a 90-degree Y rotation. An ordinary Attribute Delete node removes vertex `N`
+before display; no points, faces or geometric detail are removed. Direct Dragon
+preview exceeded the current bounded transport frame, so this image represents
+the pictured two-node workflow, not unrestricted large-model transport. Public
+hashes and display treatment are in `assets/worlds/builder-dragon-provenance.json`.
+The capture is implementation evidence, not a new operation-acceptance or
+performance claim. Existing source media and historical evidence remain intact.
+
+`studio.webp` preserves the October 16, 2026 Studio Terraces VDA preview showing public parameters, graph and terrain. The homepage now uses the dated Builder capture above; this original remains unchanged.
 
 `unreal-vda.webp` is an actual October 16, 2026 UE 5.8 editor capture, showing the Erosion2 VDA in the VestaTest comparison map with public parameter controls and an evaluated Landscape. Capture preparation changed only the disposable editor session: lighting, a sky atmosphere and the camera; neither the map nor author assets were saved. The image is encoded to WebP without generative alteration. Evaluation uses a 1024² request with UE RHI GPU Ridge/Erosion2 segments and CPU input/output stages; the Landscape uses 1021² samples. This is evidence of the current Heightfield slice, not complete engine integration or every parameter-widget type.
 
